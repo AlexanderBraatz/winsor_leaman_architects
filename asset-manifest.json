@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/winsor-leaman-architects/static/css/main.073c9b0a.css",
-    "main.js": "/winsor-leaman-architects/static/js/main.0e70c2c2.js",
-    "static/js/787.b1956d31.chunk.js": "/winsor-leaman-architects/static/js/787.b1956d31.chunk.js",
-    "static/media/logo.svg": "/winsor-leaman-architects/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/winsor-leaman-architects/index.html",
-    "main.073c9b0a.css.map": "/winsor-leaman-architects/static/css/main.073c9b0a.css.map",
-    "main.0e70c2c2.js.map": "/winsor-leaman-architects/static/js/main.0e70c2c2.js.map",
-    "787.b1956d31.chunk.js.map": "/winsor-leaman-architects/static/js/787.b1956d31.chunk.js.map"
+    "main.css": "/winsor_leaman_architects/static/css/main.073c9b0a.css",
+    "main.js": "/winsor_leaman_architects/static/js/main.8c59b224.js",
+    "static/js/787.b1956d31.chunk.js": "/winsor_leaman_architects/static/js/787.b1956d31.chunk.js",
+    "static/media/logo.svg": "/winsor_leaman_architects/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/winsor_leaman_architects/index.html",
+    "main.073c9b0a.css.map": "/winsor_leaman_architects/static/css/main.073c9b0a.css.map",
+    "main.8c59b224.js.map": "/winsor_leaman_architects/static/js/main.8c59b224.js.map",
+    "787.b1956d31.chunk.js.map": "/winsor_leaman_architects/static/js/787.b1956d31.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.0e70c2c2.js"
+    "static/js/main.8c59b224.js"
   ]
 }
