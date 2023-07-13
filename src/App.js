@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import NavbarComponent from './Navbar/NavbarComponent';
-import Projects from './Pages/Projects/Projects';
-import Fees from './Pages/Fees/Fees';
-import About from './Pages/About/About';
-import Contact from './Pages/Contact/Contact';
+import NavbarComponent from './components/Navbar/NavbarComponent';
+import Projects from './components/Pages/Projects/Projects';
+import Fees from './components/Pages/Fees/Fees';
+import About from './components/Pages/About/About';
+import Contact from './components/Pages/Contact/Contact';
 
 const App = () => {
 	return (
