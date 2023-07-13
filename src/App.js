@@ -1,6 +1,9 @@
-import styled from 'styled-components';
+//libraries
+import { styled } from 'styled-components';
 import { Route, Routes } from 'react-router-dom';
+
 import './App.css';
+//components
 import NavbarComponent from './components/Navbar/NavbarComponent';
 import Projects from './components/Pages/Projects/Projects';
 import Fees from './components/Pages/Fees/Fees';
@@ -11,7 +14,6 @@ const App = () => {
 	return (
 		<div className="App">
 			<NavbarComponent />
-
 			<Container>
 				<Routes>
 					<Route

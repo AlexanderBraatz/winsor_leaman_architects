@@ -77,6 +77,6 @@ const StyledLink = styled(Link)`
 	padding: 0.25rem;
 	background-color: #777;
 	&.active {
-		background-color: red;
+		background-color: ${props => props.theme.desktop.grey1};
 	}
 `;
