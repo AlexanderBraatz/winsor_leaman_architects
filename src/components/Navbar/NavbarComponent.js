@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import { Link, useResolvedPath, useMatch } from 'react-router-dom';
 
-export default function NavbarComponent() {
+export default function NavbarComponent(props) {
 	return (
 		<Navbar>
 			<SiteTitle to="/">
-				<Logo />
-				<CompanyName>Winsor + Leaman Architects</CompanyName>
+				<LogoIcon />
+				<LogoName>Winsor + Leaman Architects</LogoName>
 			</SiteTitle>
 
 			<StyledLinkList>
@@ -24,7 +24,7 @@ function CustomLink({ to, children, ...props }) {
 	const isActive = useMatch({ path: resolvedPath.pathname, end: true });
 
 	return (
-		<li>
+		<StyledCustomLink>
 			<StyledLink
 				className={isActive ? 'active' : ''}
 				to={to}
@@ -32,57 +32,65 @@ function CustomLink({ to, children, ...props }) {
 			>
 				{children}
 			</StyledLink>
-		</li>
+		</StyledCustomLink>
 	);
 }
 
 const Navbar = styled.nav`
-	background-color: #333;
-	color: white;
 	display: flex;
 	justify-content: space-between;
-	align-items: stretch;
-	gap: 2rem;
-	padding: 0 1rem;
+	padding: 2rem 6.4rem;
 `;
 
+// Logo
+
 const SiteTitle = styled(Link)`
-	color: inherit;
+	color: ${props => props.theme.desktop.dark1};
 	text-decoration: none;
 	display: flex;
 	align-items: center;
-	gap: 1rem;
+	gap: 3rem;
 `;
-const Logo = styled.div`
+const LogoIcon = styled.div`
 	height: 64px;
 	width: 64px;
 	background-color: grey;
 `;
 
-const CompanyName = styled.h1`
-	font-size: 1.4rem;
-	font-family: 'test';
-	font-size: 4rem;
+const LogoName = styled.h1`
 	font-family: 'Logo';
 	font-size: 28px;
 `;
 
+// Navbar links
+
 const StyledLinkList = styled.ul`
 	list-style: none;
 	display: flex;
-	gap: 1rem;
+	justify-content: space-between;
+	width: 57.5rem;
 `;
-const StyledLink = styled(Link)`
-	color: inherit;
-	text-decoration: none;
+const StyledCustomLink = styled.li`
+	width: fit-content;
+
+	//centers the text vertically
 	height: 100%;
 	display: flex;
 	align-items: center;
-	padding: 0.25rem;
-	background-color: #777;
-	&.active {
-		background-color: ${props => props.theme.desktop.grey1};
-	}
-	font-family: 'Button';
+`;
+const StyledLink = styled(Link)`
+	color: ${props => props.theme.desktop.dark1};
+	font-family: 'Button', Arial, Serif;
 	font-size: 22px;
+	text-decoration: none;
+
+	padding: 0 0.3rem;
+
+	//maintains centering between active and inactive class being applied
+	border-bottom: 0.2rem solid transparent;
+	border-top: 0.2rem solid transparent;
+
+	&.active {
+		border-bottom: 0.2rem solid ${props => props.theme.desktop.dark1};
+	}
 `;

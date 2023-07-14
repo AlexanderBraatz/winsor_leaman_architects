@@ -28,8 +28,9 @@
 }
 @font-face {
 	font-family: 'Logo';
-	src: url(./jost-3-cufonfonts/Jost-Light.ttf) format('truetype');
-	/* font-weight:300; */
+	src: url(./jost-3-cufonfonts/Jost-ExtraLight.ttf) format('truetype');
+	/* font-weight:300; in design*/
+	/* font-weight:200; in development for it to look the same*/
 	/* font-size: 28px; */
 	/* p */
 }
