@@ -61,6 +61,10 @@ const Logo = styled.div`
 
 const CompanyName = styled.h1`
 	font-size: 1.4rem;
+	font-family: 'test';
+	font-size: 4rem;
+	font-family: 'Logo';
+	font-size: 28px;
 `;
 
 const StyledLinkList = styled.ul`
@@ -79,4 +83,6 @@ const StyledLink = styled(Link)`
 	&.active {
 		background-color: ${props => props.theme.desktop.grey1};
 	}
+	font-family: 'Button';
+	font-size: 22px;
 `;

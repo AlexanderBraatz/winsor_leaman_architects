@@ -1,0 +1,3 @@
+removes github pages library and package.json implementation
+removes unused font files 
+removes style guide page 
