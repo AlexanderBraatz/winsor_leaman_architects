@@ -1,16 +1,18 @@
 {
   "files": {
-    "main.css": "/winsor_leaman_architects/static/css/main.073c9b0a.css",
-    "main.js": "/winsor_leaman_architects/static/js/main.8c59b224.js",
-    "static/js/787.b1956d31.chunk.js": "/winsor_leaman_architects/static/js/787.b1956d31.chunk.js",
-    "static/media/logo.svg": "/winsor_leaman_architects/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/winsor_leaman_architects/static/css/main.8156b7af.css",
+    "main.js": "/winsor_leaman_architects/static/js/main.c3ab0783.js",
+    "static/media/Jost-SemiBold.ttf": "/winsor_leaman_architects/static/media/Jost-SemiBold.b3e45952eefe920d05d5.ttf",
+    "static/media/Jost-Medium.ttf": "/winsor_leaman_architects/static/media/Jost-Medium.7a41b4d34c78bbd83f08.ttf",
+    "static/media/Jost-Regular.ttf": "/winsor_leaman_architects/static/media/Jost-Regular.42b2ab77abff530bfc14.ttf",
+    "static/media/Jost-Light.ttf": "/winsor_leaman_architects/static/media/Jost-Light.11494acd939eb8d4d66b.ttf",
+    "static/media/Jost-ExtraLight.ttf": "/winsor_leaman_architects/static/media/Jost-ExtraLight.892212d364f7a63d843e.ttf",
     "index.html": "/winsor_leaman_architects/index.html",
-    "main.073c9b0a.css.map": "/winsor_leaman_architects/static/css/main.073c9b0a.css.map",
-    "main.8c59b224.js.map": "/winsor_leaman_architects/static/js/main.8c59b224.js.map",
-    "787.b1956d31.chunk.js.map": "/winsor_leaman_architects/static/js/787.b1956d31.chunk.js.map"
+    "main.8156b7af.css.map": "/winsor_leaman_architects/static/css/main.8156b7af.css.map",
+    "main.c3ab0783.js.map": "/winsor_leaman_architects/static/js/main.c3ab0783.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.8c59b224.js"
+    "static/css/main.8156b7af.css",
+    "static/js/main.c3ab0783.js"
   ]
 }
