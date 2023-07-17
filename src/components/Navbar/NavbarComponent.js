@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 import { Link, useResolvedPath, useMatch } from 'react-router-dom';
 
+import { ReactComponent as WLALogo } from '../../assets/images/WLALogo.svg';
+
 export default function NavbarComponent(props) {
 	return (
 		<Navbar>
 			<SiteTitle to="/">
-				<LogoIcon />
+				<StyledWLALogo />
 				<LogoName>Winsor + Leaman Architects</LogoName>
 			</SiteTitle>
 
@@ -51,10 +53,8 @@ const SiteTitle = styled(Link)`
 	align-items: center;
 	gap: 3rem;
 `;
-const LogoIcon = styled.div`
-	height: 64px;
+const StyledWLALogo = styled(WLALogo)`
 	width: 64px;
-	background-color: grey;
 `;
 
 const LogoName = styled.h1`
