@@ -2,3 +2,4 @@ removes github pages library and package.json implementation
 removes unused font files 
 removes style guide page 
 changes emailjs IDs to Client ids
+remove unused image assets

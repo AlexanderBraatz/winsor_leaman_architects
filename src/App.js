@@ -45,7 +45,7 @@ const App = () => {
 };
 
 const Container = styled.div`
-	margin: 1rem;
+	margin: 1rem 0;
 	text-align: center;
 `;
 export default App;
