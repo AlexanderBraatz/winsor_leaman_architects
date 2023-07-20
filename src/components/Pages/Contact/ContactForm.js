@@ -1,9 +1,38 @@
 import styled from 'styled-components';
 import SubmitButton from './SubmitButton';
 
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
 export default function ContactForm(props) {
+	//send email using emailjs
+	const form = useRef();
+	const sendEmail = e => {
+		e.preventDefault();
+
+		emailjs
+			.sendForm(
+				'service_45w02r2',
+				'template_dxo58a9',
+				form.current,
+				'bLntxgwfNxi6LqN3P'
+			)
+			.then(
+				result => {
+					console.log('message sent successfully');
+					e.target.reset();
+					// add success popup function here ?
+				},
+				error => {
+					console.log(error.text);
+				}
+			);
+	};
 	return (
-		<Form>
+		<Form
+			ref={form}
+			onSubmit={sendEmail}
+		>
 			<ContactFormPrompt>
 				Share your project ideas with us and we’ll be in touch soon
 			</ContactFormPrompt>
@@ -51,13 +80,13 @@ export default function ContactForm(props) {
 					<Label>Budget</Label>
 					<Input
 						type="text"
-						name="Budget"
+						name="budget"
 					/>
 				</InputWrapper>
 			</InputGroup>
 			<TextareaWrapper>
 				<Label>Other comments</Label>
-				<Textarea />
+				<Textarea name="comments" />
 			</TextareaWrapper>
 			<SubmitButton type="submit" />
 		</Form>
@@ -113,6 +142,7 @@ const TextareaWrapper = styled.div`
 	width: 44rem;
 	margin-top: 2rem;
 `;
+
 const Textarea = styled.textarea`
 	width: 44rem;
 	height: 12.4rem;
