@@ -3,3 +3,8 @@ in contact form
 - add email validation
 - add email validation notification 
 - add sent successfully notification
+- design an email template for the emails sent to the client through emailjs
+
+consistency across text color :should "contact us" etc. use dark1 or #000 
+
+in the fees page is the slight offset to the left intentional?  the 	transform: translateX(-3rem); 
