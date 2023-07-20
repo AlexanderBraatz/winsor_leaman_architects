@@ -27,6 +27,7 @@ const Button = styled.button`
 	border-radius: 0.5rem;
 	border: 0.1rem solid ${props => props.theme.desktop.grey4};
 	margin-top: 2.4rem;
+	cursor: pointer;
 
 	//effect properties
 	background-color: transparent;

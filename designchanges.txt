@@ -1,0 +1,5 @@
+in contact form 
+- does the button animation look as intended?
+- add email validation
+- add email validation notification 
+- add sent successfully notification
