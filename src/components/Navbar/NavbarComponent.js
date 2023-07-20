@@ -54,12 +54,12 @@ const SiteTitle = styled(Link)`
 	gap: 3rem;
 `;
 const StyledWLALogo = styled(WLALogo)`
-	width: 64px;
+	width: 6.4rem;
 `;
 
 const LogoName = styled.h1`
-	font-family: 'Logo';
-	font-size: 28px;
+	font-family: 'Logo', Arial, Serif;
+	font-size: 2.8rem;
 `;
 
 // Navbar links
@@ -81,7 +81,7 @@ const StyledCustomLink = styled.li`
 const StyledLink = styled(Link)`
 	color: ${props => props.theme.desktop.dark1};
 	font-family: 'Button', Arial, Serif;
-	font-size: 22px;
+	font-size: 2.2rem;
 	text-decoration: none;
 
 	padding: 0 0.3rem;
