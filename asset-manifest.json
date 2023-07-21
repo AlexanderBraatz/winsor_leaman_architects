@@ -1,8 +1,15 @@
 {
   "files": {
     "main.css": "/winsor_leaman_architects/static/css/main.8156b7af.css",
-    "main.js": "/winsor_leaman_architects/static/js/main.7042ff50.js",
+    "main.js": "/winsor_leaman_architects/static/js/main.f7fee0dc.js",
+    "static/media/View_allLargeCropped.jpeg": "/winsor_leaman_architects/static/media/View_allLargeCropped.1ce15afd15c8d34aa2e5.jpeg",
+    "static/media/FlatsLargeCropped.jpeg": "/winsor_leaman_architects/static/media/FlatsLargeCropped.591ee854675856b47a37.jpeg",
     "static/media/WhoWeAreLargeCropped.jpeg": "/winsor_leaman_architects/static/media/WhoWeAreLargeCropped.4c68762beb7199db22fd.jpeg",
+    "static/media/ChurchesLargeCropped.jpeg": "/winsor_leaman_architects/static/media/ChurchesLargeCropped.646def7229dce161c46e.jpeg",
+    "static/media/RenovationLargeCropped.jpeg": "/winsor_leaman_architects/static/media/RenovationLargeCropped.c9e3389c452a61726343.jpeg",
+    "static/media/LeisureLargeCropped.jpeg": "/winsor_leaman_architects/static/media/LeisureLargeCropped.335ef4d6431801cba602.jpeg",
+    "static/media/HousesLargeCropped.jpeg": "/winsor_leaman_architects/static/media/HousesLargeCropped.c73efd9bd12ac764a068.jpeg",
+    "static/media/ExtensionsImageLargeCropped.jpeg": "/winsor_leaman_architects/static/media/ExtensionsImageLargeCropped.6786bebbe233106ac742.jpeg",
     "static/media/ARBLogoLarge.jpeg": "/winsor_leaman_architects/static/media/ARBLogoLarge.7c6bf8928c88ecaf1944.jpeg",
     "static/media/Jost-SemiBold.ttf": "/winsor_leaman_architects/static/media/Jost-SemiBold.b3e45952eefe920d05d5.ttf",
     "static/media/Jost-Medium.ttf": "/winsor_leaman_architects/static/media/Jost-Medium.7a41b4d34c78bbd83f08.ttf",
@@ -12,11 +19,12 @@
     "static/media/CostExpensesGraph.svg": "/winsor_leaman_architects/static/media/CostExpensesGraph.51894a9d3a2608448d753181e363ce59.svg",
     "static/media/WLALogo.svg": "/winsor_leaman_architects/static/media/WLALogo.7350fd4f1307c41597a1a082843ed99f.svg",
     "index.html": "/winsor_leaman_architects/index.html",
+    "static/media/Arrow.svg": "/winsor_leaman_architects/static/media/Arrow.a9fa120e1b024c4354d83cbab19f077d.svg",
     "main.8156b7af.css.map": "/winsor_leaman_architects/static/css/main.8156b7af.css.map",
-    "main.7042ff50.js.map": "/winsor_leaman_architects/static/js/main.7042ff50.js.map"
+    "main.f7fee0dc.js.map": "/winsor_leaman_architects/static/js/main.f7fee0dc.js.map"
   },
   "entrypoints": [
     "static/css/main.8156b7af.css",
-    "static/js/main.7042ff50.js"
+    "static/js/main.f7fee0dc.js"
   ]
 }
