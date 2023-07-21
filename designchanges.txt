@@ -7,4 +7,11 @@ in contact form
 
 consistency across text color :should "contact us" etc. use dark1 or #000 
 
-in the fees page is the slight offset to the left intentional?  the 	transform: translateX(-3rem); 
+in the fees page is the slight offset to the left intentional?  the 	transform: translateX(-3rem);
+
+ask for clarification on animation
+- timing animations, scale differences  
+- does the haze increase in size with the image or stay fixed like the center text 
+
+clarification on Hazes 
+- what exactly should they look like? can the designer create cropped images with the haze applied? 

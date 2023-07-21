@@ -3,3 +3,4 @@ removes unused font files
 removes style guide page 
 changes emailjs IDs to Client ids
 remove unused image assets
+refactor pages cards into a map of an array
