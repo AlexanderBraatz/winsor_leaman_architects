@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+
 import ExtensionsImageLargeCropped from '../../../assets/images/ExtensionsImageLargeCropped.jpeg';
 import HousesLargeCropped from '../../../assets/images/HousesLargeCropped.jpeg';
 import RenovationLargeCropped from '../../../assets/images/RenovationLargeCropped.jpeg';
@@ -11,7 +13,10 @@ import { ReactComponent as Arrow } from '../../../assets/images/Arrow.svg';
 export default function Projects(props) {
 	return (
 		<Container>
-			<Card className="largeCard">
+			<Card
+				to="projects/extensions"
+				className="largeCard"
+			>
 				<Image
 					src={ExtensionsImageLargeCropped}
 					className="largeImage image"
@@ -25,7 +30,10 @@ export default function Projects(props) {
 					<Underline className="underline" />
 				</CardCenter>
 			</Card>
-			<Card className="largeCard">
+			<Card
+				to="projects/houses"
+				className="largeCard"
+			>
 				<Image
 					src={HousesLargeCropped}
 					className="largeImage image"
@@ -39,7 +47,10 @@ export default function Projects(props) {
 					<Underline className="underline" />
 				</CardCenter>
 			</Card>
-			<Card className="largeCard">
+			<Card
+				to="projects/renovation"
+				className="largeCard"
+			>
 				<Image
 					src={RenovationLargeCropped}
 					className="largeImage image"
@@ -53,7 +64,10 @@ export default function Projects(props) {
 					<Underline className="underline" />
 				</CardCenter>
 			</Card>
-			<Card className="smallCard">
+			<Card
+				to="projects/flats"
+				className="smallCard"
+			>
 				<Image
 					src={FlatsLargeCropped}
 					className="smallImage image"
@@ -67,7 +81,10 @@ export default function Projects(props) {
 					<Underline className="underline" />
 				</CardCenter>
 			</Card>
-			<Card className="smallCard">
+			<Card
+				to="projects/leisure"
+				className="smallCard"
+			>
 				<Image
 					src={LeisureLargeCropped}
 					className="smallImage image"
@@ -81,7 +98,10 @@ export default function Projects(props) {
 					<Underline className="underline" />
 				</CardCenter>
 			</Card>
-			<Card className="smallCard">
+			<Card
+				to="projects/churches"
+				className="smallCard"
+			>
 				<Image
 					src={ChurchesLargeCropped}
 					className="smallImage image"
@@ -95,7 +115,10 @@ export default function Projects(props) {
 					<Underline className="underline" />
 				</CardCenter>
 			</Card>
-			<Card className="smallCard">
+			<Card
+				to="projects/view_all"
+				className="smallCard"
+			>
 				<Image
 					src={View_allLargeCropped}
 					className="smallImage image"
@@ -121,18 +144,16 @@ const Container = styled.div`
 	margin: auto;
 `;
 
-const Card = styled.div`
+const Card = styled(Link)`
 	position: relative;
 	overflow: hidden;
 	&.largeCard {
 		width: 51.2rem;
 		height: 35.5rem;
-		background-color: black;
 	}
 	&.smallCard {
 		width: 38.4rem;
 		height: 22.5rem;
-		background-color: aqua;
 	}
 	&:hover > .image {
 		transform: scale(1.1);
