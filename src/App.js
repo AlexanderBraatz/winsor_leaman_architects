@@ -6,11 +6,12 @@ import './App.css';
 import './assets/fonts/fonts.css';
 //components
 import NavbarComponent from './components/Navbar/NavbarComponent';
-import Projects from './components/Pages/Projects/Projects';
+import Home from './components/Pages/Projects/Home';
 import Fees from './components/Pages/Fees/Fees';
 import About from './components/Pages/About/About';
 import Contact from './components/Pages/Contact/Contact';
 import StyleGuide from './components/Pages/StyleGuide/StyleGuide';
+import ProjectsContainer from './components/Pages/Projects/ProjectsContainer';
 import Extensions from './components/Pages/Projects/Extensions/Extensions';
 import Houses from './components/Pages/Projects/Houses/Houses';
 import Renovation from './components/Pages/Projects/Renovation/Renovation';
@@ -27,7 +28,7 @@ const App = () => {
 				<Routes>
 					<Route
 						path="/"
-						element={<Projects />}
+						element={<Home />}
 					/>
 					<Route
 						path="/about"
@@ -46,33 +47,38 @@ const App = () => {
 						element={<StyleGuide />}
 					/>
 					<Route
-						path="/projects/extensions"
-						element={<Extensions />}
-					/>
-					<Route
-						path="/projects/houses"
-						element={<Houses />}
-					/>
-					<Route
-						path="/projects/renovation"
-						element={<Renovation />}
-					/>
-					<Route
-						path="/projects/flats"
-						element={<Flats />}
-					/>
-					<Route
-						path="/projects/leisure"
-						element={<Leisure />}
-					/>
-					<Route
-						path="/projects/churches"
-						element={<Churches />}
-					/>
-					<Route
-						path="/projects/view_all"
-						element={<ViewAll />}
-					/>
+						path="/projects"
+						element={<ProjectsContainer />}
+					>
+						<Route
+							path="extensions"
+							element={<Extensions />}
+						/>
+						<Route
+							path="houses"
+							element={<Houses />}
+						/>
+						<Route
+							path="renovation"
+							element={<Renovation />}
+						/>
+						<Route
+							path="flats"
+							element={<Flats />}
+						/>
+						<Route
+							path="leisure"
+							element={<Leisure />}
+						/>
+						<Route
+							path="churches"
+							element={<Churches />}
+						/>
+						<Route
+							path="view_all"
+							element={<ViewAll />}
+						/>
+					</Route>
 				</Routes>
 			</Container>
 		</div>

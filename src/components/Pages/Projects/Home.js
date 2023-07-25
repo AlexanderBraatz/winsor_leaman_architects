@@ -10,7 +10,7 @@ import ChurchesLargeCropped from '../../../assets/images/ChurchesLargeCropped.jp
 import View_allLargeCropped from '../../../assets/images/View_allLargeCropped.jpeg';
 import { ReactComponent as Arrow } from '../../../assets/images/Arrow.svg';
 
-export default function Projects(props) {
+export default function Home(props) {
 	return (
 		<Container>
 			<Card
