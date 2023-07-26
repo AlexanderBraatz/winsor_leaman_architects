@@ -3,7 +3,7 @@ import { Link, Outlet, useResolvedPath, useMatch } from 'react-router-dom';
 
 const ProjectsContainer = children => {
 	return (
-		<div>
+		<StyledProjectsContainer>
 			<Navbar>
 				<StyledLinkList>
 					<CustomLink to="/projects/extensions">Extensions</CustomLink>
@@ -16,7 +16,7 @@ const ProjectsContainer = children => {
 				</StyledLinkList>
 			</Navbar>
 			<Outlet />
-		</div>
+		</StyledProjectsContainer>
 	);
 };
 
@@ -36,7 +36,9 @@ function CustomLink({ to, children, ...props }) {
 		</StyledCustomLink>
 	);
 }
-
+const StyledProjectsContainer = styled.div`
+	background-color: ${props => props.theme.desktop.dark1};
+`;
 const Navbar = styled.nav`
 	padding: 1rem 6.4rem;
 	height: 4.7rem;
@@ -62,7 +64,6 @@ const StyledCustomLink = styled.li`
 const StyledLink = styled(Link)`
 	color: ${props => props.theme.desktop.white};
 	font-family: 'Button', Arial, Serif;
-	font-size: 2.2rem;
 	text-decoration: none;
 	font-size: 1.6rem;
 	padding: 0 0.3rem;

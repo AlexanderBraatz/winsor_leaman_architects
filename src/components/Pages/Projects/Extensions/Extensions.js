@@ -1,5 +1,13 @@
+import React, { Fragment } from 'react';
+import Hero from './Hero';
+import styled from 'styled-components';
+
 const Extensions = () => {
-	return <h1>Extensions</h1>;
+	return (
+		<Fragment>
+			<Hero />
+		</Fragment>
+	);
 };
 
 export default Extensions;

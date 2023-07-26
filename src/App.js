@@ -51,7 +51,7 @@ const App = () => {
 						element={<ProjectsContainer />}
 					>
 						<Route
-							path="extensions"
+							path="extensions/:id?"
 							element={<Extensions />}
 						/>
 						<Route
