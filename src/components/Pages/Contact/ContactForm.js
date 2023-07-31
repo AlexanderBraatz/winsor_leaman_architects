@@ -1,11 +1,69 @@
 import styled from 'styled-components';
+import FormInput from './FormInput';
 import SubmitButton from './SubmitButton';
 
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+// import { initializeUseSelector } from 'react-redux/es/hooks/useSelector';
 
 export default function ContactForm(props) {
+	const inputs = [
+		{
+			id: 1,
+			label: 'First Name*',
+			type: 'text',
+			name: 'first_name',
+			required: true,
+			errorMessage: 'Please enter your first name*'
+		},
+		{
+			id: 2,
+			label: 'Last Name*',
+			type: 'text',
+			name: 'last_name',
+			required: true,
+			errorMessage: 'Please enter your last name*'
+		},
+		{
+			id: 3,
+			label: 'Email*',
+			type: 'email',
+			name: 'email',
+			required: true,
+			errorMessage: 'Please enter a valid email*',
+			pattern: ''
+		},
+		{
+			id: 4,
+			label: 'Phone',
+			type: 'tel',
+			name: 'phone'
+		},
+		{
+			id: 5,
+			label: 'Postcode of Project*',
+			type: 'text',
+			name: 'postcode_of_project',
+			required: true,
+			errorMessage: 'Please enter a valid postcode*',
+			pattern: ''
+		},
+		{
+			id: 6,
+			label: 'Budget',
+			type: 'text',
+			name: 'budget'
+		}
+		// {
+		// 	id: 7,
+		// 	label: 'Other comments',
+		// 	type: 'text',
+		// 	name: 'comments'
+		// }
+	];
+
 	//send email using emailjs
+
 	const form = useRef();
 	const sendEmail = e => {
 		e.preventDefault();
@@ -28,6 +86,26 @@ export default function ContactForm(props) {
 				}
 			);
 	};
+
+	const [values, setValues] = useState({
+		first_name: '',
+		last_name: 'test',
+		email: '',
+		phone: '',
+		postcode_of_project: '',
+		budget: '',
+		comments: ''
+	});
+
+	console.log(values);
+
+	const handleOnChange = e => {
+		setValues({ ...values, [e.target.name]: e.target.value });
+
+		console.log(values[e.target.name]);
+		console.log(`name: ${e.target.name}`);
+	};
+
 	return (
 		<Form
 			ref={form}
@@ -37,52 +115,16 @@ export default function ContactForm(props) {
 				Share your project ideas with us and we’ll be in touch soon
 			</ContactFormPrompt>
 			<InputGroup>
-				<InputWrapper>
-					<Label>First Name*</Label>
-					<Input
-						type="text"
-						name="first_name"
-						required
-					/>
-				</InputWrapper>
-				<InputWrapper>
-					<Label>Last Name*</Label>
-					<Input
-						type="text"
-						name="last_name"
-						required
-					/>
-				</InputWrapper>
-				<InputWrapper>
-					<Label>Email*</Label>
-					<Input
-						type="email"
-						name="email"
-						required
-					/>
-				</InputWrapper>
-				<InputWrapper>
-					<Label>Phone</Label>
-					<Input
-						type="tel"
-						name="phone"
-					/>
-				</InputWrapper>
-				<InputWrapper>
-					<Label>Postcode of Project*</Label>
-					<Input
-						type="text"
-						name="postcode_of_project"
-						required
-					/>
-				</InputWrapper>
-				<InputWrapper>
-					<Label>Budget</Label>
-					<Input
-						type="text"
-						name="budget"
-					/>
-				</InputWrapper>
+				{inputs.map(input => {
+					return (
+						<FormInput
+							key={input.id}
+							input={input}
+							onChange={handleOnChange}
+							value={values[input.name]}
+						/>
+					);
+				})}
 			</InputGroup>
 			<TextareaWrapper>
 				<Label>Other comments</Label>
