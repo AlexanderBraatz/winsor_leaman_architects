@@ -31,7 +31,8 @@ const colors = {
 	gradient2_light: '#AEE2D5',
 	gradient3_light: '#B2E3C8',
 	gradient4_light: '#BCE3B9',
-	button: '#89C3E3'
+	button: '#89C3E3',
+	error: '#943425'
 };
 
 export default colors;

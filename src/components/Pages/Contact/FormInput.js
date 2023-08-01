@@ -1,15 +1,35 @@
 import styled from 'styled-components';
 
-import React, { useRef, useState } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 
 export default function FormInput(props) {
+	const { label, type, name, required, errorMessage, pattern } = props.input;
+	const [valid, setValid] = useState(true);
+
+	const validateInput = useCallback(() => {
+		if (pattern) {
+			if (!pattern.test(props.value)) {
+				setValid(false);
+			} else {
+				setValid(true);
+			}
+		}
+	}, [pattern, props.value]);
+
+	useEffect(() => {
+		validateInput();
+	}, [props.value, validateInput]);
+
 	return (
 		<InputWrapper>
-			<Label>{props.input.label}</Label>
+			<Label className={!valid ? 'invalidLabel' : ''}>
+				{!valid ? errorMessage : label}
+			</Label>
 			<Input
-				type={props.input.type}
-				name={props.input.name}
-				required={props.input.required}
+				className={!valid ? 'invalidInput' : ''}
+				type={type}
+				name={name}
+				required={required}
 				onChange={props.onChange}
 				value={props.value}
 			/>
@@ -23,19 +43,14 @@ const InputWrapper = styled.div`
 	margin-bottom: 0.8rem;
 `;
 
-const InputGroup = styled.div`
-	width: 44rem;
-	height: 18.4rem;
-	flex-wrap: wrap;
-	display: flex;
-	column-gap: 1.6rem;
-`;
-
 const Label = styled.label`
 	color: ${props => props.theme.desktop.dark2};
 	font-family: 'SmallText', Arial, Serif;
 	font-size: 1.4rem;
 	padding-left: 1rem;
+	&.invalidLabel {
+		color: ${props => props.theme.desktop.error};
+	}
 `;
 
 const Input = styled.input`
@@ -48,4 +63,7 @@ const Input = styled.input`
 	font-family: 'SmallText', Arial, Serif;
 	font-size: 1.4rem;
 	padding-left: 1rem;
+	&.invalidInput {
+		border: 0.1rem solid ${props => props.theme.desktop.error};
+	}
 `;

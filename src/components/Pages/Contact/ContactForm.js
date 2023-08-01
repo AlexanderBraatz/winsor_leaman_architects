@@ -31,7 +31,7 @@ export default function ContactForm(props) {
 			name: 'email',
 			required: true,
 			errorMessage: 'Please enter a valid email*',
-			pattern: ''
+			pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
 		},
 		{
 			id: 4,
@@ -46,7 +46,8 @@ export default function ContactForm(props) {
 			name: 'postcode_of_project',
 			required: true,
 			errorMessage: 'Please enter a valid postcode*',
-			pattern: ''
+			pattern:
+				/^([Gg][Ii][Rr] 0[Aa]{2})|((([A-Za-z][0-9]{1,2})|(([A-Za-z][A-Ha-hJ-Yj-y][0-9]{1,2})|(([A-Za-z][0-9][A-Za-z])|([A-Za-z][A-Ha-hJ-Yj-y][0-9][A-Za-z]?))))\s?[0-9][A-Za-z]{2})$/
 		},
 		{
 			id: 6,
@@ -79,6 +80,15 @@ export default function ContactForm(props) {
 				result => {
 					console.log('message sent successfully');
 					e.target.reset();
+					setValues({
+						first_name: '',
+						last_name: '',
+						email: '',
+						phone: '',
+						postcode_of_project: '',
+						budget: '',
+						comments: ''
+					});
 					// add success popup function here ?
 				},
 				error => {
@@ -89,7 +99,7 @@ export default function ContactForm(props) {
 
 	const [values, setValues] = useState({
 		first_name: '',
-		last_name: 'test',
+		last_name: '',
 		email: '',
 		phone: '',
 		postcode_of_project: '',
@@ -160,24 +170,6 @@ const Label = styled.label`
 	font-family: 'SmallText', Arial, Serif;
 	font-size: 1.4rem;
 	padding-left: 1rem;
-`;
-
-const Input = styled.input`
-	width: 21.2rem;
-	height: 3.6rem;
-	border-radius: 0.5rem;
-	border: 0.1rem solid ${props => props.theme.desktop.grey4};
-
-	color: ${props => props.theme.desktop.dark2};
-	font-family: 'SmallText', Arial, Serif;
-	font-size: 1.4rem;
-	padding-left: 1rem;
-`;
-
-const InputWrapper = styled.div`
-	display: flex;
-	flex-direction: column;
-	margin-bottom: 0.8rem;
 `;
 
 const TextareaWrapper = styled.div`
