@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import ContactForm from './ContactForm.js';
+import ContactFormcopy from './ContactFormcopy.js';
 
 export default function Contact() {
 	return (
@@ -15,7 +15,7 @@ export default function Contact() {
 					<br /> Tel: 0117923xxxx
 				</ContactInfo>
 				<ContactFormWrapper>
-					<ContactForm />
+					<ContactFormcopy />
 				</ContactFormWrapper>
 			</StyledSection>
 		</Container>

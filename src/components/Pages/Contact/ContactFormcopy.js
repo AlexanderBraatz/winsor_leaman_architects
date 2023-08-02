@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import FormInput from './FormInput';
+import FormInputcopy from './FormInputcopy';
 import SubmitButton from './SubmitButton';
 
 import React, { useRef, useState, useEffect, useCallback } from 'react';
@@ -68,34 +68,32 @@ export default function ContactForm(props) {
 	const form = useRef();
 	const sendEmail = e => {
 		e.preventDefault();
-		if (emailIsValid) {
-			emailjs
-				.sendForm(
-					'service_45w02r2',
-					'template_dxo58a9',
-					form.current,
-					'bLntxgwfNxi6LqN3P'
-				)
-				.then(
-					result => {
-						console.log('message sent successfully');
-						e.target.reset();
-						setValues({
-							first_name: '',
-							last_name: '',
-							email: '',
-							phone: '',
-							postcode_of_project: '',
-							budget: '',
-							comments: ''
-						});
-						// add success popup function here ?
-					},
-					error => {
-						console.log(error.text);
-					}
-				);
-		}
+		emailjs
+			.sendForm(
+				'service_45w02r2',
+				'template_dxo58a9',
+				form.current,
+				'bLntxgwfNxi6LqN3P'
+			)
+			.then(
+				result => {
+					console.log('message sent successfully');
+					e.target.reset();
+					setValues({
+						first_name: '',
+						last_name: '',
+						email: '',
+						phone: '',
+						postcode_of_project: '',
+						budget: '',
+						comments: ''
+					});
+					// add success popup function here ?
+				},
+				error => {
+					console.log(error.text);
+				}
+			);
 	};
 
 	const [values, setValues] = useState({
@@ -107,6 +105,7 @@ export default function ContactForm(props) {
 		budget: '',
 		comments: ''
 	});
+
 	const handleOnChange = e => {
 		const { name, value } = e.target;
 		setValues(prevValues => ({
@@ -115,27 +114,47 @@ export default function ContactForm(props) {
 		}));
 	};
 
-	// validation of email and postcode
-	const [emailIsValid, setEmailIsValid] = useState(false);
+	const hasValidPattern = name => {
+		const postcodeInput = inputs.find(input => input.name === name);
+		const postcodePattern = postcodeInput.pattern;
 
-	const validateInput = useCallback(() => {
-		//get email pattern
-		const emailInput = inputs.find(input => input.name === 'email');
-		const emailPattern = emailInput.pattern;
-		//get email value
-		const emailValue = values.email;
-		//check if it is valid and set email is valid accordingly
-		if (!emailPattern.test(emailValue)) {
-			setEmailIsValid(false);
+		const postcodeValue = values[name];
+		if (!postcodePattern.test(postcodeValue)) {
+			return false;
 		} else {
-			setEmailIsValid(true);
+			return true;
 		}
-	}, [values, inputs]);
+	};
 
-	useEffect(() => {
-		validateInput();
-	}, [values.email, validateInput]);
-
+	const shouldShowError = (
+		name,
+		values,
+		isValidEmail,
+		isValidPostCode,
+		input
+	) => {
+		if (name === 'email') {
+			if (isValidEmail) {
+				return false;
+			} else {
+				console.log('email is not valid so should shoe error');
+				return true;
+			}
+		} else if (name === 'postcode_of_project') {
+			if (isValidPostCode) {
+				return false;
+			} else {
+				console.log('email is not valid so should shoe error');
+				return true;
+			}
+		} else if (!input.required) {
+			return false;
+		} else if (values[name].length > 0) {
+			return false;
+		} else {
+			return true;
+		}
+	};
 	return (
 		<Form
 			ref={form}
@@ -147,16 +166,26 @@ export default function ContactForm(props) {
 			<InputGroup>
 				{inputs.map(input => {
 					const { name, label, errorMessage } = input;
+
+					const isValidPostCode = hasValidPattern(
+						'postcode_of_project',
+						values
+					);
+					const isValidEmail = hasValidPattern('email', values);
+					const showError = shouldShowError(
+						name,
+						values,
+						isValidEmail,
+						isValidPostCode,
+						input
+					);
 					return (
-						<FormInput
+						<FormInputcopy
 							key={input.id}
 							input={input}
 							onChange={handleOnChange}
 							value={values[input.name]}
-							emailIsValid={emailIsValid}
-							showError={name !== 'email' ? false : emailIsValid ? true : false}
-							// this is my attempt but its npt working as intended , think ablut the if or logic
-							//1:25 worked so 5:30 in hthe day , night time work is actually rewardong and chill
+							showError={showError}
 						/>
 					);
 				})}

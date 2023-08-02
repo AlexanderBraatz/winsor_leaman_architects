@@ -5,17 +5,16 @@ import React, { useState, useCallback, useEffect } from 'react';
 export default function FormInput(props) {
 	const { id, label, type, name, required, errorMessage, pattern } =
 		props.input;
-	const validEmail = name === 'email' && props.emailIsValid;
-	console.log(name, validEmail, props.emailIsValid);
+	const { showError } = props;
+	console.log(name, showError);
 	return (
 		<InputWrapper>
 			<Label
-				className={`${name + 'Class'} ${!validEmail ? 'invalidLabel' : ''}`}
-				children={name !== 'email' ? label : !validEmail ? errorMessage : label}
-				// the above works cleanest for styling email in isolation , now i am trying to move the logic to the parent
+				className={showError ? 'invalidLabel' : ''}
+				children={showError ? errorMessage : label}
 			/>
 			<Input
-				className={`${name + 'Class'} ${!validEmail ? 'invalidInput' : ''}`}
+				className={showError ? 'invalidInput' : ''}
 				type={type}
 				name={name}
 				required={required}
@@ -37,7 +36,7 @@ const Label = styled.label`
 	font-family: 'SmallText', Arial, Serif;
 	font-size: 1.4rem;
 	padding-left: 1rem;
-	&.emailClass.invalidLabel {
+	&.invalidLabel {
 		color: ${props => props.theme.desktop.error};
 	}
 `;
@@ -52,7 +51,7 @@ const Input = styled.input`
 	font-family: 'SmallText', Arial, Serif;
 	font-size: 1.4rem;
 	padding-left: 1rem;
-	&.emailClass.invalidInput {
+	&.invalidInput {
 		border: 0.1rem solid ${props => props.theme.desktop.error};
 	}
 `;
