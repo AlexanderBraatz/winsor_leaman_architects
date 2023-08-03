@@ -23,11 +23,9 @@ export default function Contact() {
 }
 
 const Container = styled.div`
-	width: 74rem;
+	width: 84.8rem;
 	height: 80rem;
-	position: absolute;
-	left: 21vw;
-	margin-top: 4.5rem;
+	margin: 5rem auto 0 auto;
 `;
 
 const Heading = styled.h1`
@@ -43,15 +41,16 @@ const StyledSection = styled.div`
 	display: flex;
 	flex-direction: row;
 	width: 100%;
+	justify-content: space-between;
 `;
 
 const ContactInfo = styled.p`
 	font-family: 'Body', Arial, Serif;
 	font-size: 1.6rem;
 	text-align: left;
-	width: 33.8rem;
+	width: 12.1rem;
 `;
 
 const ContactFormWrapper = styled.div`
-	width: 45.6rem;
+	width: 56rem;
 `;

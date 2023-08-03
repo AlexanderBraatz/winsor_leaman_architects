@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import FormInput from './FormInput';
 import SubmitButton from './SubmitButton';
+import SuccessMessage from './SuccessMessage';
 
-import React, { useRef, useState, useEffect, useCallback } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 export default function ContactForm(props) {
@@ -147,6 +148,7 @@ export default function ContactForm(props) {
 	//send email using emailjs
 
 	const form = useRef();
+	const [messageHasSent, setMessageHasSent] = useState(false);
 	const sendEmail = e => {
 		e.preventDefault();
 		if (validEmailRef.current && validPostcodeRef.current) {
@@ -169,7 +171,7 @@ export default function ContactForm(props) {
 							budget: '',
 							comments: ''
 						});
-						// add success popup function here ?
+						setMessageHasSent(true);
 					},
 					error => {}
 				);
@@ -180,42 +182,49 @@ export default function ContactForm(props) {
 			ref={form}
 			onSubmit={sendEmail}
 		>
-			<ContactFormPrompt>
-				Share your project ideas with us and we’ll be in touch soon
-			</ContactFormPrompt>
-			<InputGroup>
-				{inputs.map(input => {
-					const isValidPostCode = hasValidPattern(
-						'postcode_of_project',
-						values
-					);
-					const isValidEmail = hasValidPattern('email', values);
-					const showError = shouldShowError(
-						input.name,
-						values,
-						isValidEmail,
-						isValidPostCode,
-						input,
-						validEmailRef,
-						validPostcodeRef
-					);
-					return (
-						<FormInput
-							key={input.id}
-							input={input}
-							onChange={handleOnChange}
-							onBlur={() => handleOnBlur(input.name)}
-							value={values[input.name]}
-							showError={showError}
-						/>
-					);
-				})}
-			</InputGroup>
-			<TextareaWrapper>
-				<Label>Other comments</Label>
-				<Textarea name="comments" />
-			</TextareaWrapper>
-			<SubmitButton type="submit" />
+			{' '}
+			{messageHasSent ? (
+				<SuccessMessage />
+			) : (
+				<React.Fragment>
+					<ContactFormPrompt>
+						Share your project ideas with us and we’ll be in touch soon
+					</ContactFormPrompt>
+					<InputGroup>
+						{inputs.map(input => {
+							const isValidPostCode = hasValidPattern(
+								'postcode_of_project',
+								values
+							);
+							const isValidEmail = hasValidPattern('email', values);
+							const showError = shouldShowError(
+								input.name,
+								values,
+								isValidEmail,
+								isValidPostCode,
+								input,
+								validEmailRef,
+								validPostcodeRef
+							);
+							return (
+								<FormInput
+									key={input.id}
+									input={input}
+									onChange={handleOnChange}
+									onBlur={() => handleOnBlur(input.name)}
+									value={values[input.name]}
+									showError={showError}
+								/>
+							);
+						})}
+					</InputGroup>
+					<TextareaWrapper>
+						<Label>Other comments</Label>
+						<Textarea name="comments" />
+					</TextareaWrapper>
+					<SubmitButton type="submit" />
+				</React.Fragment>
+			)}
 		</Form>
 	);
 }
@@ -233,7 +242,7 @@ const ContactFormPrompt = styled.p`
 `;
 
 const InputGroup = styled.div`
-	width: 44rem;
+	width: 56rem;
 	height: 18.4rem;
 	flex-wrap: wrap;
 	display: flex;
@@ -244,16 +253,18 @@ const Label = styled.label`
 	color: ${props => props.theme.desktop.dark2};
 	font-family: 'SmallText', Arial, Serif;
 	font-size: 1.4rem;
-	padding-left: 1rem;
+	padding-left: 0.4rem;
 `;
 
 const TextareaWrapper = styled.div`
-	width: 44rem;
+	width: 56rem;
 	margin-top: 2rem;
+	display: flex;
+	flex-direction: column;
 `;
 
 const Textarea = styled.textarea`
-	width: 44rem;
+	width: 56rem;
 	height: 12.4rem;
 	border-radius: 0.5rem;
 	border: 0.1rem solid ${props => props.theme.desktop.grey4};
