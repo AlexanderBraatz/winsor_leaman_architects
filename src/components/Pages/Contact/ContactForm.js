@@ -4,7 +4,6 @@ import SubmitButton from './SubmitButton';
 
 import React, { useRef, useState, useEffect, useCallback } from 'react';
 import emailjs from '@emailjs/browser';
-// import { initializeUseSelector } from 'react-redux/es/hooks/useSelector';
 
 export default function ContactForm(props) {
 	const inputs = [
@@ -55,20 +54,102 @@ export default function ContactForm(props) {
 			type: 'text',
 			name: 'budget'
 		}
-		// {
-		// 	id: 7,
-		// 	label: 'Other comments',
-		// 	type: 'text',
-		// 	name: 'comments'
-		// }
 	];
+
+	// track user input in state
+
+	const [values, setValues] = useState({
+		first_name: '',
+		last_name: '',
+		email: '',
+		phone: '',
+		postcode_of_project: '',
+		budget: '',
+		comments: ''
+	});
+
+	const handleOnChange = e => {
+		const { name, value } = e.target;
+		setValues(prevValues => ({
+			...prevValues,
+			[name]: value
+		}));
+	};
+	// determine error display and form submission based on onBlur, pattern match, and input presence
+	const hasValidPattern = currantName => {
+		const pattern = inputs.find(input => input.name === currantName).pattern;
+
+		return pattern.test(values[currantName]);
+	};
+
+	const [blurValues, setBlurValues] = useState({
+		first_name: false,
+		last_name: false,
+		email: false,
+		postcode_of_project: false
+	});
+
+	const handleOnBlur = name => {
+		setBlurValues({
+			...blurValues,
+			[name]: true
+		});
+	};
+
+	const validEmailRef = useRef(false);
+	const validPostcodeRef = useRef(false);
+
+	const shouldShowError = (
+		name,
+		values,
+		isValidEmail,
+		isValidPostCode,
+		input,
+		validEmailRef,
+		validPostcodeRef
+	) => {
+		// if the input is not required it never needs to show an error
+		if (!input.required) {
+			return false;
+			// only once it has been focused and unfocused should it start showing errors
+		} else if (blurValues[name]) {
+			//email shows and error if the input is tested against the regex pattern to be an invalid email
+			// email being valid or invalid is stored as ref and used in onSubmit event to prevent the form being submitted if the entered email is invalid
+			if (name === 'email') {
+				if (isValidEmail) {
+					validEmailRef.current = true;
+					return false;
+				} else {
+					validEmailRef.current = false;
+
+					return true;
+				}
+				// postcode_of_project shows error in the same way as email
+			} else if (name === 'postcode_of_project') {
+				if (isValidPostCode) {
+					validPostcodeRef.current = true;
+					return false;
+				} else {
+					validPostcodeRef.current = false;
+					return true;
+				}
+				//  other required values show an error if nothing was entered
+			} else if (values[name].length > 0) {
+				return false;
+			} else {
+				return true;
+			}
+		} else {
+			return false;
+		}
+	};
 
 	//send email using emailjs
 
 	const form = useRef();
 	const sendEmail = e => {
 		e.preventDefault();
-		if (emailIsValid) {
+		if (validEmailRef.current && validPostcodeRef.current) {
 			emailjs
 				.sendForm(
 					'service_45w02r2',
@@ -78,7 +159,6 @@ export default function ContactForm(props) {
 				)
 				.then(
 					result => {
-						console.log('message sent successfully');
 						e.target.reset();
 						setValues({
 							first_name: '',
@@ -91,51 +171,10 @@ export default function ContactForm(props) {
 						});
 						// add success popup function here ?
 					},
-					error => {
-						console.log(error.text);
-					}
+					error => {}
 				);
 		}
 	};
-
-	const [values, setValues] = useState({
-		first_name: '',
-		last_name: '',
-		email: '',
-		phone: '',
-		postcode_of_project: '',
-		budget: '',
-		comments: ''
-	});
-	const handleOnChange = e => {
-		const { name, value } = e.target;
-		setValues(prevValues => ({
-			...prevValues,
-			[name]: value
-		}));
-	};
-
-	// validation of email and postcode
-	const [emailIsValid, setEmailIsValid] = useState(false);
-
-	const validateInput = useCallback(() => {
-		//get email pattern
-		const emailInput = inputs.find(input => input.name === 'email');
-		const emailPattern = emailInput.pattern;
-		//get email value
-		const emailValue = values.email;
-		//check if it is valid and set email is valid accordingly
-		if (!emailPattern.test(emailValue)) {
-			setEmailIsValid(false);
-		} else {
-			setEmailIsValid(true);
-		}
-	}, [values, inputs]);
-
-	useEffect(() => {
-		validateInput();
-	}, [values.email, validateInput]);
-
 	return (
 		<Form
 			ref={form}
@@ -146,17 +185,28 @@ export default function ContactForm(props) {
 			</ContactFormPrompt>
 			<InputGroup>
 				{inputs.map(input => {
-					const { name, label, errorMessage } = input;
+					const isValidPostCode = hasValidPattern(
+						'postcode_of_project',
+						values
+					);
+					const isValidEmail = hasValidPattern('email', values);
+					const showError = shouldShowError(
+						input.name,
+						values,
+						isValidEmail,
+						isValidPostCode,
+						input,
+						validEmailRef,
+						validPostcodeRef
+					);
 					return (
 						<FormInput
 							key={input.id}
 							input={input}
 							onChange={handleOnChange}
+							onBlur={() => handleOnBlur(input.name)}
 							value={values[input.name]}
-							emailIsValid={emailIsValid}
-							showError={name !== 'email' ? false : emailIsValid ? true : false}
-							// this is my attempt but its npt working as intended , think ablut the if or logic
-							//1:25 worked so 5:30 in hthe day , night time work is actually rewardong and chill
+							showError={showError}
 						/>
 					);
 				})}
