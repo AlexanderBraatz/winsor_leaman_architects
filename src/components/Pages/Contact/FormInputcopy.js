@@ -1,25 +1,27 @@
 import styled from 'styled-components';
 
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState } from 'react';
 
 export default function FormInput(props) {
-	const { id, label, type, name, required, errorMessage, pattern } =
-		props.input;
+	const { label, type, name, required, errorMessage } = props.input;
+	const [hadFocus, setHadFocus] = useState(false);
 	const { showError } = props;
-	console.log(name, showError);
+	const nowShowError = hadFocus && showError;
+
 	return (
 		<InputWrapper>
 			<Label
-				className={showError ? 'invalidLabel' : ''}
-				children={showError ? errorMessage : label}
+				className={nowShowError ? 'invalidLabel' : ''}
+				children={nowShowError ? errorMessage : label}
 			/>
 			<Input
-				className={showError ? 'invalidInput' : ''}
+				className={nowShowError ? 'invalidInput' : ''}
 				type={type}
 				name={name}
 				required={required}
 				onChange={props.onChange}
 				value={props.value}
+				onBlur={() => setHadFocus(true)}
 			/>
 		</InputWrapper>
 	);

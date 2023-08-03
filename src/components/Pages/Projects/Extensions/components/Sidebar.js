@@ -9,7 +9,7 @@ import thumbnailImage5 from '../../../../../assets/images/ProjectHero/side5.png'
 import styled from 'styled-components';
 
 export default function Sidebar(props) {
-	const [thumbnails] = useState([
+	const thumbnails = [
 		{
 			id: '1',
 			to: '/projects/extensions/1',
@@ -37,14 +37,19 @@ export default function Sidebar(props) {
 			to: '/projects/extensions/5',
 			image: thumbnailImage5
 		}
-	]);
+	];
 	return (
 		<SideBar>
 			<SideHeading>Similar projects</SideHeading>
 			<SideNavBar>
 				<ImageList>
 					{thumbnails.map(thumbnail => {
-						return <CustomNavElement thumbnail={thumbnail} />;
+						return (
+							<CustomNavElement
+								key={thumbnail.id}
+								thumbnail={thumbnail}
+							/>
+						);
 					})}
 				</ImageList>
 			</SideNavBar>

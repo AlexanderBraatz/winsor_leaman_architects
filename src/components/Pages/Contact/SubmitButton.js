@@ -16,7 +16,7 @@ export default function SubmitButton(props) {
 			onMouseOut={handleMouseOut}
 		>
 			<Text>Submit</Text>
-			<Background hover={hover} />
+			<Background className={hover ? 'hasHover' : 'doesNotHaveHover'} />
 		</Button>
 	);
 }
@@ -44,12 +44,17 @@ const Background = styled.div`
 	height: 3.6rem;
 
 	//color fade effect
-	background-color: ${props =>
-		props.hover ? props.theme.desktop.button : props.theme.desktop.white};
+	&.hasHover {
+		background-color: ${props => props.theme.desktop.button};
+		left: 0%;
+	}
+	&.doesNotHaveHover {
+		background-color: ${props => props.theme.desktop.white};
+		left: -100%;
+	}
 
 	// swipe effect
 	position: absolute;
-	left: ${props => (props.hover ? '0%' : '-100%')};
 	top: 0%;
 	z-index: -1;
 

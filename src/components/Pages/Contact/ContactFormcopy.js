@@ -4,7 +4,6 @@ import SubmitButton from './SubmitButton';
 
 import React, { useRef, useState, useEffect, useCallback } from 'react';
 import emailjs from '@emailjs/browser';
-// import { initializeUseSelector } from 'react-redux/es/hooks/useSelector';
 
 export default function ContactForm(props) {
 	const inputs = [
@@ -55,12 +54,6 @@ export default function ContactForm(props) {
 			type: 'text',
 			name: 'budget'
 		}
-		// {
-		// 	id: 7,
-		// 	label: 'Other comments',
-		// 	type: 'text',
-		// 	name: 'comments'
-		// }
 	];
 
 	//send email using emailjs
@@ -68,32 +61,34 @@ export default function ContactForm(props) {
 	const form = useRef();
 	const sendEmail = e => {
 		e.preventDefault();
-		emailjs
-			.sendForm(
-				'service_45w02r2',
-				'template_dxo58a9',
-				form.current,
-				'bLntxgwfNxi6LqN3P'
-			)
-			.then(
-				result => {
-					console.log('message sent successfully');
-					e.target.reset();
-					setValues({
-						first_name: '',
-						last_name: '',
-						email: '',
-						phone: '',
-						postcode_of_project: '',
-						budget: '',
-						comments: ''
-					});
-					// add success popup function here ?
-				},
-				error => {
-					console.log(error.text);
-				}
-			);
+		if (validEmailRef.current && validPostcodeRef.current) {
+			emailjs
+				.sendForm(
+					'service_45w02r2',
+					'template_dxo58a9',
+					form.current,
+					'bLntxgwfNxi6LqN3P'
+				)
+				.then(
+					result => {
+						console.log('message sent successfully');
+						e.target.reset();
+						setValues({
+							first_name: '',
+							last_name: '',
+							email: '',
+							phone: '',
+							postcode_of_project: '',
+							budget: '',
+							comments: ''
+						});
+						// add success popup function here ?
+					},
+					error => {
+						console.log(error.text);
+					}
+				);
+		}
 	};
 
 	const [values, setValues] = useState({
@@ -126,25 +121,33 @@ export default function ContactForm(props) {
 		}
 	};
 
+	const validEmailRef = useRef(false);
+	const validPostcodeRef = useRef(false);
+
 	const shouldShowError = (
 		name,
 		values,
 		isValidEmail,
 		isValidPostCode,
-		input
+		input,
+		validEmailRef,
+		validPostcodeRef
 	) => {
 		if (name === 'email') {
 			if (isValidEmail) {
+				validEmailRef.current = true;
 				return false;
 			} else {
-				console.log('email is not valid so should shoe error');
+				validEmailRef.current = false;
+
 				return true;
 			}
 		} else if (name === 'postcode_of_project') {
 			if (isValidPostCode) {
+				validPostcodeRef.current = true;
 				return false;
 			} else {
-				console.log('email is not valid so should shoe error');
+				validPostcodeRef.current = false;
 				return true;
 			}
 		} else if (!input.required) {
@@ -165,19 +168,19 @@ export default function ContactForm(props) {
 			</ContactFormPrompt>
 			<InputGroup>
 				{inputs.map(input => {
-					const { name, label, errorMessage } = input;
-
 					const isValidPostCode = hasValidPattern(
 						'postcode_of_project',
 						values
 					);
 					const isValidEmail = hasValidPattern('email', values);
 					const showError = shouldShowError(
-						name,
+						input.name,
 						values,
 						isValidEmail,
 						isValidPostCode,
-						input
+						input,
+						validEmailRef,
+						validPostcodeRef
 					);
 					return (
 						<FormInputcopy
