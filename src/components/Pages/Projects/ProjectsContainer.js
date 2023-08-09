@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Link, Outlet, useResolvedPath, useMatch } from 'react-router-dom';
 
-const ProjectsContainer = children => {
+const ProjectsContainer = () => {
 	return (
 		<StyledProjectsContainer>
 			<Navbar>
@@ -58,7 +58,7 @@ const StyledCustomLink = styled.li`
 	flex-direction: column;
 	align-items: center;
 	&:hover > .underline {
-		background-color: ${props => props.theme.desktop.white};
+		width: 100%;
 	}
 `;
 const StyledLink = styled(Link)`
@@ -70,12 +70,12 @@ const StyledLink = styled(Link)`
 `;
 
 const Underline = styled.div`
-	width: 100%;
+	width: 0%;
 	height: 0.15rem;
-	background-color: transparent;
-	transition: background-color 0.3s;
+	background-color: ${props => props.theme.desktop.white};
+	transition: width 0.3s;
 	&.active {
-		background-color: ${props => props.theme.desktop.white};
+		width: 100%;
 	}
 `;
 

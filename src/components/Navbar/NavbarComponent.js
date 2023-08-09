@@ -64,6 +64,11 @@ function CustomLink({ to, onProjects, children, ...props }) {
 			>
 				{children}
 			</StyledLink>
+			<Underline
+				className={`underline ${onProjects ? 'onProjects' : 'notOnProjects'} ${
+					isActive ? 'active' : ''
+				}`}
+			/>
 		</StyledCustomLink>
 	);
 }
@@ -123,34 +128,46 @@ const StyledLinkList = styled.ul`
 `;
 const StyledCustomLink = styled.li`
 	width: fit-content;
-
-	//centers the text vertically
 	height: 100%;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
+	justify-content: center;
+
+	&:hover > .underline {
+		width: 100%;
+	}
 `;
 const StyledLink = styled(Link)`
-	/* color: ${props => props.theme.desktop.dark1}; */
 	font-family: 'Button', Arial, Serif;
 	font-size: 2.2rem;
 	text-decoration: none;
 
 	padding: 0 0.3rem;
 
-	//maintains centering between active and inactive class being applied
-	border-bottom: 0.2rem solid transparent;
-	border-top: 0.2rem solid transparent;
-
 	&.onProjects {
 		color: ${props => props.theme.desktop.grey5};
-		&.active {
-			border-bottom: 0.2rem solid ${props => props.theme.desktop.grey5};
-		}
 	}
 	&.notOnProjects {
 		color: ${props => props.theme.desktop.dark1};
+	}
+`;
+const Underline = styled.div`
+	width: 0%;
+	height: 0.2rem;
+	transition: width 0.3s;
+
+	&.onProjects {
+		background-color: ${props => props.theme.desktop.grey5};
 		&.active {
-			border-bottom: 0.2rem solid ${props => props.theme.desktop.dark1};
+			width: 100%;
+		}
+	}
+
+	&.notOnProjects {
+		background-color: ${props => props.theme.desktop.dark1};
+		&.active {
+			width: 100%;
 		}
 	}
 `;
