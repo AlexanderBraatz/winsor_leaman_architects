@@ -12,7 +12,7 @@ const ProjectsContainer = children => {
 					<CustomLink to="/projects/flats">Flats</CustomLink>
 					<CustomLink to="/projects/leisure">Leisure</CustomLink>
 					<CustomLink to="/projects/churches">Churches</CustomLink>
-					<CustomLink to="/projects/view_all">ViewAll</CustomLink>
+					<CustomLink to="/projects/view_all">View All</CustomLink>
 				</StyledLinkList>
 			</Navbar>
 			<Outlet />

@@ -14,7 +14,7 @@ export default function Home(props) {
 	return (
 		<Container>
 			<Card
-				to="projects/extensions"
+				to="extensions"
 				className="largeCard"
 			>
 				<Image
@@ -31,7 +31,7 @@ export default function Home(props) {
 				</CardCenter>
 			</Card>
 			<Card
-				to="projects/houses"
+				to="houses"
 				className="largeCard"
 			>
 				<Image
@@ -48,7 +48,7 @@ export default function Home(props) {
 				</CardCenter>
 			</Card>
 			<Card
-				to="projects/renovation"
+				to="renovation"
 				className="largeCard"
 			>
 				<Image
@@ -65,7 +65,7 @@ export default function Home(props) {
 				</CardCenter>
 			</Card>
 			<Card
-				to="projects/flats"
+				to="flats"
 				className="smallCard"
 			>
 				<Image
@@ -82,7 +82,7 @@ export default function Home(props) {
 				</CardCenter>
 			</Card>
 			<Card
-				to="projects/leisure"
+				to="leisure"
 				className="smallCard"
 			>
 				<Image
@@ -99,7 +99,7 @@ export default function Home(props) {
 				</CardCenter>
 			</Card>
 			<Card
-				to="projects/churches"
+				to="churches"
 				className="smallCard"
 			>
 				<Image
@@ -116,7 +116,7 @@ export default function Home(props) {
 				</CardCenter>
 			</Card>
 			<Card
-				to="projects/view_all"
+				to="view_all"
 				className="smallCard"
 			>
 				<Image
