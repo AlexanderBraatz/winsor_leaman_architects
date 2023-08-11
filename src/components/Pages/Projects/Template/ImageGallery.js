@@ -1,46 +1,6 @@
 import styled from 'styled-components';
-import image1 from '../../../../assets/images/PlaceholderImage.png';
 
-const Extensions = props => {
-	const images = [
-		{
-			key: 1,
-			image: image1,
-			width: '13.5rem',
-			description: 'description'
-		},
-		{
-			key: 2,
-			image: image1,
-			width: '20rem',
-			description: 'description'
-		},
-		{
-			key: 3,
-			image: image1,
-			width: '24.2rem',
-			description: 'description'
-		},
-		{
-			key: 4,
-			image: image1,
-			width: '18.7rem',
-			description: 'description'
-		},
-		{
-			key: 5,
-			image: image1,
-			width: '19.3rem',
-			description: 'description'
-		},
-		{
-			key: 6,
-			image: image1,
-			width: '19.6rem',
-			description: 'description'
-		}
-	];
-
+const Extensions = ({ imageGalleryProps: { images } }) => {
 	return (
 		<Container>
 			<ImageGalleryContainer>

@@ -1,23 +1,23 @@
 import React from 'react';
 
-import Sidebar from './components/Sidebar.js';
-
-import heroImage from '../../../../assets/images/ProjectHero/hero.png';
+import TSidebar from './components/TSidebar.js';
 
 import { ReactComponent as InfoIcon } from '../../../../assets/images/ProjectHero/Info-2.svg';
 
 import styled from 'styled-components';
-export default function Hero(props) {
+export default function Hero({
+	heroProps: { sideBarProps, heroImage, imageLabel }
+}) {
 	return (
 		<StyledHero>
-			<Sidebar />
+			<TSidebar sideBarProps={sideBarProps} />
 			<HeroImageContainer>
 				<HeroImage
-					src={heroImage}
-					alt="Farm in Pucklechurch"
+					src={heroImage.heroImage}
+					alt={heroImage.alt}
 				/>
 				<ImageLabel>
-					<LabelText>Farm in Pucklechurch</LabelText>
+					<LabelText>{imageLabel}</LabelText>
 					<LabelIcon />
 				</ImageLabel>
 			</HeroImageContainer>

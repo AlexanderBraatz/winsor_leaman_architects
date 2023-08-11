@@ -8,36 +8,9 @@ import thumbnailImage5 from '../../../../../assets/images/ProjectHero/side5.png'
 
 import styled from 'styled-components';
 
-export default function Sidebar(props) {
-	const thumbnails = [
-		{
-			id: '1',
-			to: '/projects/extensions/1',
-			image: thumbnailImage1,
-			hover: true,
-			isActive: true
-		},
-		{
-			id: '2',
-			to: '/projects/extensions/2',
-			image: thumbnailImage2
-		},
-		{
-			id: '3',
-			to: '/projects/extensions/3',
-			image: thumbnailImage3
-		},
-		{
-			id: '4',
-			to: '/projects/extensions/4',
-			image: thumbnailImage4
-		},
-		{
-			id: '5',
-			to: '/projects/extensions/5',
-			image: thumbnailImage5
-		}
-	];
+export default function Sidebar({ sideBarProps: { thumbnails } }) {
+	console.log('sidebar', thumbnails);
+
 	return (
 		<SideBar>
 			<SideHeading>Similar projects</SideHeading>

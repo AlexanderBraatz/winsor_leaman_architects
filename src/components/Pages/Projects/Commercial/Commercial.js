@@ -11,36 +11,36 @@ import thumbnailImage5 from '../../../../assets/images/ProjectHero/side5.png';
 //imageGallery
 import image1 from '../../../../assets/images/PlaceholderImage.png';
 
-const Churches = () => {
-	const churchesData = {
+const Commercial = () => {
+	const commercialData = {
 		heroProps: {
 			sideBarProps: {
 				thumbnails: [
 					{
 						id: '1',
-						to: '/projects/churches/1',
+						to: '/projects/commercial/1',
 						image: thumbnailImage1,
 						hover: true,
 						isActive: true
 					},
 					{
 						id: '2',
-						to: '/projects/churches/2',
+						to: '/projects/commercial/2',
 						image: thumbnailImage2
 					},
 					{
 						id: '3',
-						to: '/projects/churches/3',
+						to: '/projects/commercial/3',
 						image: thumbnailImage3
 					},
 					{
 						id: '4',
-						to: '/projects/churches/4',
+						to: '/projects/commercial/4',
 						image: thumbnailImage4
 					},
 					{
 						id: '5',
-						to: '/projects/churches/5',
+						to: '/projects/commercial/5',
 						image: thumbnailImage5
 					}
 				]
@@ -106,7 +106,7 @@ const Churches = () => {
 			]
 		}
 	};
-	return <Template data={churchesData} />;
+	return <Template data={commercialData} />;
 };
 
-export default Churches;
+export default Commercial;

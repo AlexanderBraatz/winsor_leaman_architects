@@ -6,13 +6,12 @@ const ProjectsContainer = () => {
 		<StyledProjectsContainer>
 			<Navbar>
 				<StyledLinkList>
-					<CustomLink to="/projects/extensions">Extensions</CustomLink>
-					<CustomLink to="/projects/houses">Houses</CustomLink>
-					<CustomLink to="/projects/renovation">Renovation</CustomLink>
-					<CustomLink to="/projects/flats">Flats</CustomLink>
-					<CustomLink to="/projects/leisure">Leisure</CustomLink>
-					<CustomLink to="/projects/churches">Churches</CustomLink>
-					<CustomLink to="/projects/view_all">View All</CustomLink>
+					<CustomLink to="/projects/houses/1">Houses</CustomLink>
+					<CustomLink to="/projects/extensions/1">Extensions</CustomLink>
+					<CustomLink to="/projects/flats/1">Flats</CustomLink>
+					<CustomLink to="/projects/renovation/1">Renovation</CustomLink>
+					<CustomLink to="/projects/churches/1">Churches</CustomLink>
+					<CustomLink to="/projects/commercial/1">Commercial</CustomLink>
 				</StyledLinkList>
 			</Navbar>
 			<Outlet />
@@ -22,7 +21,8 @@ const ProjectsContainer = () => {
 
 function CustomLink({ to, children, ...props }) {
 	const resolvedPath = useResolvedPath(to);
-	const isActive = useMatch({ path: resolvedPath.pathname, end: true });
+	const basePath = resolvedPath.pathname.replace(/\/1$/, '');
+	const isActive = useMatch({ path: basePath, end: false });
 
 	return (
 		<StyledCustomLink>

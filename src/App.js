@@ -16,9 +16,8 @@ import Extensions from './components/Pages/Projects/Extensions/Extensions';
 import Houses from './components/Pages/Projects/Houses/Houses';
 import Renovation from './components/Pages/Projects/Renovation/Renovation';
 import Flats from './components/Pages/Projects/Flats/Flats';
-import Leisure from './components/Pages/Projects/Leisure/Leisure';
 import Churches from './components/Pages/Projects/Churches/Churches';
-import ViewAll from './components/Pages/Projects/ViewAll/ViewAll';
+import Commercial from './components/Pages/Projects/Commercial/Commercial';
 
 const App = () => {
 	return (
@@ -55,28 +54,24 @@ const App = () => {
 							element={<Extensions />}
 						/>
 						<Route
-							path="houses"
+							path="houses/:id?"
 							element={<Houses />}
 						/>
 						<Route
-							path="renovation"
+							path="renovation/:id?"
 							element={<Renovation />}
 						/>
 						<Route
-							path="flats"
+							path="flats/:id?"
 							element={<Flats />}
 						/>
 						<Route
-							path="leisure"
-							element={<Leisure />}
-						/>
-						<Route
-							path="churches"
+							path="churches/:id?"
 							element={<Churches />}
 						/>
 						<Route
-							path="view_all"
-							element={<ViewAll />}
+							path="commercial/:id?"
+							element={<Commercial />}
 						/>
 					</Route>
 				</Routes>

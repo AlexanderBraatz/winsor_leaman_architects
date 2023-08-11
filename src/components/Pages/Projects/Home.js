@@ -5,7 +5,6 @@ import ExtensionsImageLargeCropped from '../../../assets/images/ExtensionsImageL
 import HousesLargeCropped from '../../../assets/images/HousesLargeCropped.jpeg';
 import RenovationLargeCropped from '../../../assets/images/RenovationLargeCropped.jpeg';
 import FlatsLargeCropped from '../../../assets/images/FlatsLargeCropped.jpeg';
-import LeisureLargeCropped from '../../../assets/images/LeisureLargeCropped.jpeg';
 import ChurchesLargeCropped from '../../../assets/images/ChurchesLargeCropped.jpeg';
 import View_allLargeCropped from '../../../assets/images/View_allLargeCropped.jpeg';
 import { ReactComponent as Arrow } from '../../../assets/images/Arrow.svg';
@@ -14,7 +13,7 @@ export default function Home(props) {
 	return (
 		<Container>
 			<Card
-				to="extensions"
+				to="extensions/1"
 				className="largeCard"
 			>
 				<Image
@@ -31,7 +30,7 @@ export default function Home(props) {
 				</CardCenter>
 			</Card>
 			<Card
-				to="houses"
+				to="houses/1"
 				className="largeCard"
 			>
 				<Image
@@ -48,8 +47,8 @@ export default function Home(props) {
 				</CardCenter>
 			</Card>
 			<Card
-				to="renovation"
-				className="largeCard"
+				to="renovation/1"
+				className="smallCard"
 			>
 				<Image
 					src={RenovationLargeCropped}
@@ -65,7 +64,7 @@ export default function Home(props) {
 				</CardCenter>
 			</Card>
 			<Card
-				to="flats"
+				to="flats/1"
 				className="smallCard"
 			>
 				<Image
@@ -82,24 +81,7 @@ export default function Home(props) {
 				</CardCenter>
 			</Card>
 			<Card
-				to="leisure"
-				className="smallCard"
-			>
-				<Image
-					src={LeisureLargeCropped}
-					className="smallImage image"
-				/>
-				<Haze className="brighter-gradient" />
-				<CardCenter className="center">
-					<TextContainer>
-						<Text className="smallText">Leisure</Text>
-						<StyledArrow className="smallArrow" />
-					</TextContainer>
-					<Underline className="underline" />
-				</CardCenter>
-			</Card>
-			<Card
-				to="churches"
+				to="churches/1"
 				className="smallCard"
 			>
 				<Image
@@ -116,7 +98,7 @@ export default function Home(props) {
 				</CardCenter>
 			</Card>
 			<Card
-				to="view_all"
+				to="commercial/1"
 				className="smallCard"
 			>
 				<Image
@@ -138,7 +120,7 @@ export default function Home(props) {
 
 const Container = styled.div`
 	width: 153.6rem;
-	height: 35.5rem;
+	height: 66.1rem;
 	display: flex;
 	flex-wrap: wrap;
 	margin: auto;
@@ -148,12 +130,12 @@ const Card = styled(Link)`
 	position: relative;
 	overflow: hidden;
 	&.largeCard {
-		width: 51.2rem;
-		height: 35.5rem;
+		width: 76.8rem;
+		height: 40.9rem;
 	}
 	&.smallCard {
 		width: 38.4rem;
-		height: 22.5rem;
+		height: 25.2rem;
 	}
 	&:hover > .image {
 		transform: scale(1.1);
@@ -172,19 +154,19 @@ const Image = styled.img`
 	transition: transform 0.3s linear;
 
 	&.largeImage {
-		width: 51.2rem;
-		height: 35.5rem;
+		width: 76.8rem;
+		height: 40.9rem;
 	}
 	&.smallImage {
 		width: 38.4rem;
-		height: 22.5rem;
+		height: 25.2rem;
 	}
 	pointer-events: none;
 `;
 
 const Haze = styled.div`
-	width: 51.2rem;
-	height: 35.5rem;
+	width: 76.8rem;
+	height: 40.9rem;
 	position: absolute;
 	z-index: 2;
 	top: 50%;
