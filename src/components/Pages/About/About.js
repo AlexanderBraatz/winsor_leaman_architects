@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-// import InteractiveElement from './InteractiveElement';
+import InteractiveTimeline from './InteractiveTimeline';
 import WhoWeAre from '../../../assets/images/WhoWeAreLargeCropped.jpeg';
 import RIBALogo from '../../../assets/images/RIBALogoLarge.png';
 import ARBLogo from '../../../assets/images/ARBLogoLarge.jpeg';
@@ -9,7 +9,7 @@ export default function About() {
 	return (
 		<React.Fragment>
 			<Heading>About</Heading>
-			<InteractiveElement />
+			<InteractiveTimeline />
 			<Content>
 				<SubHeading>Who we are</SubHeading>
 				<StyledDiv>
@@ -59,10 +59,10 @@ export default function About() {
 }
 
 const Heading = styled.h1`
-	width: 89.6rem;
+	width: 84.8rem;
 	margin: auto;
 	margin-top: 5.35rem;
-	margin-bottom: 2.8rem;
+	margin-bottom: 4.8rem;
 	text-align: left;
 	font-family: 'Heading2', Arial, Serif;
 	font-size: 4.8rem;
@@ -70,14 +70,8 @@ const Heading = styled.h1`
 	letter-spacing: -0.048rem;
 `;
 
-const InteractiveElement = styled.div`
-	background-color: ${props => props.theme.desktop.secondary5};
-	width: 100%;
-	height: 36.7rem;
-	padding: 4rem 0;
-`;
 const Content = styled.div`
-	width: 89.6rem;
+	width: 84.8rem;
 	margin: auto;
 	margin-top: 4.6rem;
 `;
