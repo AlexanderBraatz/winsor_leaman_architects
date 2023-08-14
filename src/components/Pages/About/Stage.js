@@ -5,6 +5,7 @@ import { ReactComponent as ArrowDownRight } from '../../../assets/images/ArrowDo
 
 export default function Stage({
 	stage: {
+		key,
 		color,
 		name,
 		bottom,
@@ -12,12 +13,16 @@ export default function Stage({
 		followedByArrow,
 		arrowGoesUp,
 		arrowLeft,
-		arrowBottom
+		arrowBottom,
+		updateSelectedStage
 	}
 }) {
 	return (
 		<React.Fragment>
-			<Circle style={{ backgroundColor: color, bottom: bottom, left: left }}>
+			<Circle
+				style={{ backgroundColor: color, bottom: bottom, left: left }}
+				onClick={() => updateSelectedStage(key)}
+			>
 				<Text>{name}</Text>
 			</Circle>
 			{!followedByArrow ? null : arrowGoesUp ? (
