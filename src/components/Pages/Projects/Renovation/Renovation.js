@@ -17,29 +17,22 @@ const Renovation = () => {
 			sideBarProps: {
 				thumbnails: [
 					{
-						id: '1',
 						to: '/projects/renovation/1',
-						image: thumbnailImage1,
-						hover: true,
-						isActive: true
+						image: thumbnailImage1
 					},
 					{
-						id: '2',
 						to: '/projects/renovation/2',
 						image: thumbnailImage2
 					},
 					{
-						id: '3',
 						to: '/projects/renovation/3',
 						image: thumbnailImage3
 					},
 					{
-						id: '4',
 						to: '/projects/renovation/4',
 						image: thumbnailImage4
 					},
 					{
-						id: '5',
 						to: '/projects/renovation/5',
 						image: thumbnailImage5
 					}
@@ -68,39 +61,45 @@ const Renovation = () => {
 		imageGalleryProps: {
 			images: [
 				{
-					key: 1,
 					image: image1,
+					largeImage: image1,
 					width: '13.5rem',
+					largeWidth: '27rem',
 					description: 'description'
 				},
 				{
-					key: 2,
 					image: image1,
+					largeImage: image1,
 					width: '20rem',
+					largeWidth: '40rem',
 					description: 'description'
 				},
 				{
-					key: 3,
 					image: image1,
+					largeImage: image1,
 					width: '24.2rem',
+					largeWidth: '28.4rem',
 					description: 'description'
 				},
 				{
-					key: 4,
 					image: image1,
+					largeImage: image1,
 					width: '18.7rem',
+					largeWidth: '37.4rem',
 					description: 'description'
 				},
 				{
-					key: 5,
 					image: image1,
+					largeImage: image1,
 					width: '19.3rem',
+					largeWidth: '38.6rem',
 					description: 'description'
 				},
 				{
-					key: 6,
 					image: image1,
+					largeImage: image1,
 					width: '19.6rem',
+					largeWidth: '39.2rem',
 					description: 'description'
 				}
 			]

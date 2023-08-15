@@ -1,6 +1,6 @@
 import React from 'react';
 
-import TSidebar from './components/TSidebar.js';
+import Sidebar from './components/Sidebar.js';
 
 import { ReactComponent as InfoIcon } from '../../../../assets/images/ProjectHero/Info-2.svg';
 
@@ -10,7 +10,7 @@ export default function Hero({
 }) {
 	return (
 		<StyledHero>
-			<TSidebar sideBarProps={sideBarProps} />
+			<Sidebar sideBarProps={sideBarProps} />
 			<HeroImageContainer>
 				<HeroImage
 					src={heroImage.heroImage}

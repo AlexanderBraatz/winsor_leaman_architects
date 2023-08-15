@@ -45,6 +45,23 @@ const Circle = styled.div`
 	justify-content: center;
 	box-shadow: 0px 1px 3px 0px #0000004d, 0px 4px 8px 3px #00000026;
 	position: absolute;
+	cursor: pointer;
+
+	&::before {
+		content: '';
+		height: 9.9rem;
+		width: 9.9rem;
+		border-radius: 100%;
+		position: absolute;
+		background-color: rgba(0, 0, 0, 0.15);
+		opacity: 0;
+		transition: opacity 0.3s;
+		pointer-events: none;
+		z-index: 1;
+	}
+	&:hover::before {
+		opacity: 1;
+	}
 `;
 
 const Text = styled.p`
@@ -52,7 +69,7 @@ const Text = styled.p`
 	font-family: 'Body', Arial, Serif;
 	font-size: 16px;
 	font-weight: 400;
-	line-height: 23px;
+	line-height: 2.3rem;
 	letter-spacing: 0em;
 	text-align: center;
 `;

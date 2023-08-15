@@ -153,7 +153,7 @@ const Heading = styled.div`
 const HeadingText = styled.h2`
 	color: ${props => props.theme.desktop.dark1};
 	font-family: 'Heading3', Arial, Serif;
-	font-size: 36px;
+	font-size: 3.6rem;
 	font-weight: 300;
 	line-height: 56px;
 	letter-spacing: 0em;

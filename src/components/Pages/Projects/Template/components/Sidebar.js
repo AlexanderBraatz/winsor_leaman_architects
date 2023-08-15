@@ -1,25 +1,17 @@
-import React, { useState } from 'react';
 import { Link, useResolvedPath, useMatch } from 'react-router-dom';
-import thumbnailImage1 from '../../../../../assets/images/ProjectHero/side1.png';
-import thumbnailImage2 from '../../../../../assets/images/ProjectHero/side2.png';
-import thumbnailImage3 from '../../../../../assets/images/ProjectHero/side3.png';
-import thumbnailImage4 from '../../../../../assets/images/ProjectHero/side4.png';
-import thumbnailImage5 from '../../../../../assets/images/ProjectHero/side5.png';
 
 import styled from 'styled-components';
 
 export default function Sidebar({ sideBarProps: { thumbnails } }) {
-	console.log('sidebar', thumbnails);
-
 	return (
 		<SideBar>
 			<SideHeading>Similar projects</SideHeading>
 			<SideNavBar>
 				<ImageList>
-					{thumbnails.map(thumbnail => {
+					{thumbnails.map((thumbnail, index) => {
 						return (
 							<CustomNavElement
-								key={thumbnail.id}
+								key={index}
 								thumbnail={thumbnail}
 							/>
 						);
@@ -34,7 +26,7 @@ const CustomNavElement = ({ thumbnail }) => {
 	const resolvedPath = useResolvedPath(thumbnail.to);
 	const isActive = useMatch({ path: resolvedPath.pathname, end: true });
 	return (
-		<NavElement key={thumbnail.id}>
+		<NavElement>
 			<Line className={isActive ? 'activeLine' : ''} />
 			<ImageContainer
 				className={`hoverImage ${isActive ? 'activeImage' : ''}`}

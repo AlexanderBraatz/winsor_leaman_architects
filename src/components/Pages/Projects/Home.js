@@ -108,7 +108,7 @@ export default function Home(props) {
 				<Haze className="brighter-gradient" />
 				<CardCenter className="center">
 					<TextContainer>
-						<Text className="smallText">View all</Text>
+						<Text className="smallText">Commercial</Text>
 						<StyledArrow className="smallArrow" />
 					</TextContainer>
 					<Underline className="underline" />

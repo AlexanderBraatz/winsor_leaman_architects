@@ -16,8 +16,8 @@ export default function StageDescription({
 					<StyledCancel />
 				</Circle>
 				<List>
-					{details.map(listItem => (
-						<ListItemContainer>
+					{details.map((listItem, index) => (
+						<ListItemContainer key={index}>
 							<ListItemDot>
 								<LittleCircle />
 							</ListItemDot>
@@ -43,7 +43,7 @@ const Circle = styled.div`
 	height: 9.9rem;
 	width: 9.9rem;
 	border-radius: 100%;
-
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	gap: 0.2rem;
@@ -51,6 +51,23 @@ const Circle = styled.div`
 	justify-content: center;
 	box-shadow: 0px 1px 3px 0px #0000004d, 0px 4px 8px 3px #00000026;
 	margin-left: 4.6rem;
+	cursor: pointer;
+
+	&::before {
+		content: '';
+		height: 9.9rem;
+		width: 9.9rem;
+		border-radius: 100%;
+		position: absolute;
+		background-color: rgba(0, 0, 0, 0.15);
+		opacity: 0;
+		transition: opacity 0.3s;
+		pointer-events: none;
+		z-index: 1;
+	}
+	&:hover::before {
+		opacity: 1;
+	}
 `;
 const StyledCancel = styled(Cancel)``;
 
