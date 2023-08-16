@@ -1,8 +1,8 @@
-import { Link, useResolvedPath, useMatch } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import styled from 'styled-components';
 
-export default function Sidebar({ sideBarProps: { thumbnails } }) {
+export default function Sidebar({ sideBarProps: { thumbnails }, id }) {
 	return (
 		<SideBar>
 			<SideHeading>Similar projects</SideHeading>
@@ -13,6 +13,7 @@ export default function Sidebar({ sideBarProps: { thumbnails } }) {
 							<CustomNavElement
 								key={index}
 								thumbnail={thumbnail}
+								id={id}
 							/>
 						);
 					})}
@@ -22,9 +23,9 @@ export default function Sidebar({ sideBarProps: { thumbnails } }) {
 	);
 }
 
-const CustomNavElement = ({ thumbnail }) => {
-	const resolvedPath = useResolvedPath(thumbnail.to);
-	const isActive = useMatch({ path: resolvedPath.pathname, end: true });
+const CustomNavElement = ({ thumbnail, id }) => {
+	const isActive = thumbnail.to.charAt(thumbnail.to.length - 1) === id;
+
 	return (
 		<NavElement>
 			<Line className={isActive ? 'activeLine' : ''} />

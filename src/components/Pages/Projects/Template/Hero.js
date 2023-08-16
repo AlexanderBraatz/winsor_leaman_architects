@@ -1,20 +1,23 @@
 import React from 'react';
-
 import Sidebar from './components/Sidebar.js';
-
 import { ReactComponent as InfoIcon } from '../../../../assets/images/ProjectHero/Info-2.svg';
-
 import styled from 'styled-components';
+
 export default function Hero({
-	heroProps: { sideBarProps, heroImage, imageLabel }
+	sideBarProps,
+	showcaseProps: { hero, imageLabel },
+	id
 }) {
 	return (
 		<StyledHero>
-			<Sidebar sideBarProps={sideBarProps} />
+			<Sidebar
+				sideBarProps={sideBarProps}
+				id={id}
+			/>
 			<HeroImageContainer>
 				<HeroImage
-					src={heroImage.heroImage}
-					alt={heroImage.alt}
+					src={hero.heroImage}
+					alt={hero.alt}
 				/>
 				<ImageLabel>
 					<LabelText>{imageLabel}</LabelText>
@@ -43,7 +46,7 @@ const HeroImage = styled.img`
 `;
 const ImageLabel = styled.div`
 	background-color: ${props => props.theme.desktop.secondary1};
-	width: 32.9rem;
+	width: fit-content;
 	height: 5.6rem;
 	position: absolute;
 	left: 0rem;
