@@ -10,133 +10,91 @@ import View_allLargeCropped from '../../../assets/images/View_allLargeCropped.jp
 import { ReactComponent as Arrow } from '../../../assets/images/Arrow.svg';
 
 export default function Home(props) {
+	const cards = [
+		{
+			name: 'card1',
+			src: ExtensionsImageLargeCropped,
+			text: 'Extensions',
+			size: 'large',
+			to: 'extensions/1'
+		},
+		{
+			name: 'card2',
+			src: HousesLargeCropped,
+			text: 'Houses',
+			size: 'large',
+			to: 'houses/1'
+		},
+		{
+			name: 'card3',
+			src: RenovationLargeCropped,
+			text: 'Renovation',
+			size: 'small',
+			to: 'renovation/1'
+		},
+		{
+			name: 'card4',
+			src: FlatsLargeCropped,
+			text: 'Flats',
+			size: 'small',
+			to: 'flats/1'
+		},
+		{
+			name: 'card5',
+			src: ChurchesLargeCropped,
+			text: 'Churches',
+			size: 'small',
+			to: 'churches/1'
+		},
+		{
+			name: 'card6',
+			src: View_allLargeCropped,
+			text: 'Commercial',
+			size: 'small',
+			to: 'commercial/1'
+		}
+	];
 	return (
-		<Container>
-			<Card
-				to="extensions/1"
-				className="largeCard"
-			>
-				<Image
-					src={ExtensionsImageLargeCropped}
-					className="largeImage image"
-				/>
-				<Haze className="darker-gradient" />
-				<CardCenter className="center">
-					<TextContainer>
-						<Text>Extensions</Text>
-						<StyledArrow />
-					</TextContainer>
-					<Underline className="underline" />
-				</CardCenter>
-			</Card>
-			<Card
-				to="houses/1"
-				className="largeCard"
-			>
-				<Image
-					src={HousesLargeCropped}
-					className="largeImage image"
-				/>
-				<Haze className="darker-gradient" />
-				<CardCenter className="center">
-					<TextContainer>
-						<Text>Houses</Text>
-						<StyledArrow />
-					</TextContainer>
-					<Underline className="underline" />
-				</CardCenter>
-			</Card>
-			<Card
-				to="renovation/1"
-				className="smallCard"
-			>
-				<Image
-					src={RenovationLargeCropped}
-					className="largeImage image"
-				/>
-				<Haze className="darker-gradient" />
-				<CardCenter className="center">
-					<TextContainer>
-						<Text>Renovation</Text>
-						<StyledArrow />
-					</TextContainer>
-					<Underline className="underline" />
-				</CardCenter>
-			</Card>
-			<Card
-				to="flats/1"
-				className="smallCard"
-			>
-				<Image
-					src={FlatsLargeCropped}
-					className="smallImage image"
-				/>
-				<Haze className="brighter-gradient" />
-				<CardCenter className="center">
-					<TextContainer>
-						<Text className="smallText">Flats</Text>
-						<StyledArrow className="smallArrow" />
-					</TextContainer>
-					<Underline className="underline" />
-				</CardCenter>
-			</Card>
-			<Card
-				to="churches/1"
-				className="smallCard"
-			>
-				<Image
-					src={ChurchesLargeCropped}
-					className="smallImage image"
-				/>
-				<Haze className="darker-gradient" />
-				<CardCenter className="center">
-					<TextContainer>
-						<Text className="smallText">Churches</Text>
-						<StyledArrow className="smallArrow" />
-					</TextContainer>
-					<Underline className="underline" />
-				</CardCenter>
-			</Card>
-			<Card
-				to="commercial/1"
-				className="smallCard"
-			>
-				<Image
-					src={View_allLargeCropped}
-					className="smallImage image"
-				/>
-				<Haze className="brighter-gradient" />
-				<CardCenter className="center">
-					<TextContainer>
-						<Text className="smallText">Commercial</Text>
-						<StyledArrow className="smallArrow" />
-					</TextContainer>
-					<Underline className="underline" />
-				</CardCenter>
-			</Card>
-		</Container>
+		<>
+			<Container>
+				{cards.map(card => (
+					<Card
+						className={card.name}
+						to={card.to}
+					>
+						<Image
+							className={'image'}
+							src={card.src}
+						/>
+						<Haze />
+						<CardCenter className="center">
+							<TextCOntainer>
+								<Text className={`${card.size}Text`}>{card.text}</Text>
+								<StyledArrow className={`${card.size}Arrow`} />
+							</TextCOntainer>
+							<Underline className="underline" />
+						</CardCenter>
+					</Card>
+				))}
+			</Container>
+		</>
 	);
 }
 
 const Container = styled.div`
-	width: 153.6rem;
-	height: 66.1rem;
-	display: flex;
-	flex-wrap: wrap;
-	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	grid-template-rows: 61.8% 38.2%;
+	max-width: 180rem;
+	max-height: 77.46rem;
+	margin: 0 auto;
+	height: calc(100vh - 10.4rem);
 `;
 
 const Card = styled(Link)`
+	cursor: pointer;
 	position: relative;
 	overflow: hidden;
-	&.largeCard {
-		width: 76.8rem;
-		height: 40.9rem;
-	}
-	&.smallCard {
-		width: 38.4rem;
-		height: 25.2rem;
-	}
 	&:hover > .image {
 		transform: scale(1.1);
 
@@ -145,49 +103,67 @@ const Card = styled(Link)`
 			background-color: ${props => props.theme.desktop.white};
 		}
 	}
+	&:hover > .haze {
+		transform: scale(1.1);
+	}
+
+	&.card1 {
+		grid-column: span 2;
+		grid-row: 1;
+	}
+
+	&.card2 {
+		grid-column: 3 / span 2;
+		grid-row: 1;
+	}
+
+	&.card3 {
+		grid-column: 1;
+		grid-row: 2;
+	}
+
+	&.card4 {
+		grid-column: 2;
+		grid-row: 2;
+	}
+	&.card5 {
+		grid-column: 3;
+		grid-row: 2;
+	}
+	&.card6 {
+		grid-column: 4;
+		grid-row: 2;
+	}
 `;
+
 const Image = styled.img`
 	position: absolute;
 	top: 0;
 	left: 0;
 	z-index: 1;
 	transition: transform 0.3s linear;
-
-	&.largeImage {
-		width: 76.8rem;
-		height: 40.9rem;
-	}
-	&.smallImage {
-		width: 38.4rem;
-		height: 25.2rem;
-	}
+	width: 100%;
+	height: 100%;
 	pointer-events: none;
+	object-fit: cover;
 `;
-
 const Haze = styled.div`
-	width: 76.8rem;
-	height: 40.9rem;
+	transition: transform 0.3s linear;
+	width: 100%;
+	height: 100%;
 	position: absolute;
 	z-index: 2;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	&.darker-gradient {
-		background: radial-gradient(
-			95.16% 29.93% at 50% 50%,
-			rgba(0, 0, 0, 0.6) 0%,
-			rgba(0, 0, 0, 0.27) 100%
-		);
-	}
-	&.brighter-gradient {
-		background: radial-gradient(
-			50% 50% at 50% 50%,
-			rgba(0, 0, 0, 0.7) 0%,
-			rgba(0, 0, 0, 0) 100%
-		);
-	}
+	top: 0;
+	left: 0;
+	transform: scale(1);
+	background: radial-gradient(
+		95.16% 29.93% at 50% 50%,
+		rgba(0, 0, 0, 0.6) 0%,
+		rgba(0, 0, 0, 0.27) 100%
+	);
 	pointer-events: none;
 `;
+
 const CardCenter = styled.div`
 	position: absolute;
 	z-index: 3;
@@ -200,10 +176,12 @@ const CardCenter = styled.div`
 	flex-direction: column;
 	align-items: center;
 `;
-const TextContainer = styled.div`
+
+const TextCOntainer = styled.div`
 	display: flex;
 	align-items: center;
 `;
+
 const Text = styled.p`
 	color: ${props => props.theme.desktop.white};
 	font-family: 'Subheading', Arial, Serif;

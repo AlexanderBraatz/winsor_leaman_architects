@@ -74,6 +74,7 @@ function CustomLink({ to, onProjects, children, ...props }) {
 }
 
 const Navbar = styled.nav`
+	height: 10.4rem;
 	display: flex;
 	justify-content: space-between;
 	padding: 2rem 6.4rem;
