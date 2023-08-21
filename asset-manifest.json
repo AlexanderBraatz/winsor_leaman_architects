@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/winsor_leaman_architects/static/css/main.8156b7af.css",
-    "main.js": "/winsor_leaman_architects/static/js/main.23c323a6.js",
+    "main.js": "/winsor_leaman_architects/static/js/main.c4a9d6e0.js",
     "static/media/View_allLargeCropped.jpeg": "/winsor_leaman_architects/static/media/View_allLargeCropped.1ce15afd15c8d34aa2e5.jpeg",
     "static/media/FlatsLargeCropped.jpeg": "/winsor_leaman_architects/static/media/FlatsLargeCropped.591ee854675856b47a37.jpeg",
     "static/media/WhoWeAreLargeCropped.jpeg": "/winsor_leaman_architects/static/media/WhoWeAreLargeCropped.4c68762beb7199db22fd.jpeg",
@@ -31,10 +31,10 @@
     "static/media/check.svg": "/winsor_leaman_architects/static/media/check.8ba23df6d7e2e05cc4a15cff5da77c10.svg",
     "static/media/Cancel.svg": "/winsor_leaman_architects/static/media/Cancel.5dc6ed7a9dac07bc390c457c6e9e0059.svg",
     "main.8156b7af.css.map": "/winsor_leaman_architects/static/css/main.8156b7af.css.map",
-    "main.23c323a6.js.map": "/winsor_leaman_architects/static/js/main.23c323a6.js.map"
+    "main.c4a9d6e0.js.map": "/winsor_leaman_architects/static/js/main.c4a9d6e0.js.map"
   },
   "entrypoints": [
     "static/css/main.8156b7af.css",
-    "static/js/main.23c323a6.js"
+    "static/js/main.c4a9d6e0.js"
   ]
 }
