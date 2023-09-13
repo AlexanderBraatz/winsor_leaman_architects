@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link, useResolvedPath, useMatch, useLocation } from 'react-router-dom';
-import { ReactComponent as WLALogo } from '../../assets/images/WLALogoNew.svg';
+import { ReactComponent as WLALogo } from '../../assets/images/LogoNew.svg';
 
 export default function NavbarComponent(props) {
 	const location = useLocation();

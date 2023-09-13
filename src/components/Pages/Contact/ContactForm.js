@@ -77,10 +77,12 @@ export default function ContactForm(props) {
 		}));
 	};
 	// determine error display and form submission based on onBlur, pattern match, and input presence
-	const hasValidPattern = currantName => {
-		const pattern = inputs.find(input => input.name === currantName).pattern;
+	const hasValidPattern = currentInputName => {
+		const pattern = inputs.find(
+			input => input.name === currentInputName
+		).pattern;
 
-		return pattern.test(values[currantName]);
+		return pattern.test(values[currentInputName]);
 	};
 
 	const [blurValues, setBlurValues] = useState({

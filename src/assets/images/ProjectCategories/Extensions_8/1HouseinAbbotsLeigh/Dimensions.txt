@@ -1,0 +1,13 @@
+~Hero images~
+- desktop 2400px (72ppi)
+- tablet 1366px (132ppi)
+- mobile 640px (163ppi)
+
+
+~Secondary images~
+2400px (163ppi)
+
+~Thumbnails~
+- desktop 450px (72ppi)
+- tablet 350px (132ppi)
+- mobile 250px (163ppi)

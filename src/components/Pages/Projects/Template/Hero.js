@@ -17,6 +17,13 @@ export default function Hero({
 			<HeroImageContainer>
 				<HeroImage
 					src={hero.heroImage}
+					sizes
+					srcset={`${hero.heroImageMobile} 1200w,${hero.heroImageTablet} 1366w,${hero.heroImageDesktop} 2400w`}
+					// 					srcset="
+					//     https://placehold.co/800x200/png   800w,
+					//     https://placehold.co/1600x400/png 1600w,
+					//     https://placehold.co/3200x800/png 3200w
+					//   "
 					alt={hero.alt}
 				/>
 				<ImageLabel>
@@ -29,20 +36,29 @@ export default function Hero({
 }
 
 const StyledHero = styled.div`
-	width: 153.6rem;
+	max-width: 153.6rem;
 	height: 61.5rem;
 	display: flex;
 	margin: auto;
+	justify-content: center;
 `;
 
 const HeroImageContainer = styled.div`
-	width: 130.9rem;
+	max-width: 130.9rem;
 	height: 61.5rem;
 	position: relative;
+	margin-left: 3.9rem;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 `;
 const HeroImage = styled.img`
-	width: 130.9rem;
-	height: 61.5rem;
+	max-width: 100%;
+	min-height: 100%;
+	max-height: auto;
+	object-fit: cover;
+	object-position: center;
 `;
 const ImageLabel = styled.div`
 	background-color: ${props => props.theme.desktop.secondary1};

@@ -1,7 +1,7 @@
 {
 	"name": "winsor_leaman_architects",
 	"version": "0.1.0",
-	"homepage": "https://AlexanderBraatz.github.io/winsor_leaman_architects",
+	"homepage": "http://winsor-leaman-architects.co.uk",
 	"private": true,
 	"dependencies": {
 		"@emailjs/browser": "^3.11.0",

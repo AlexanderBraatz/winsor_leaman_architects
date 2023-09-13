@@ -15,3 +15,10 @@ ask for clarification on animation
 
 clarification on Hazes 
 - what exactly should they look like? can the designer create cropped images with the haze applied? 
+
+
+breakpoints are 
+ screen width for 
+ 1536px desktop 
+ 834px tablet
+ 360px mobile

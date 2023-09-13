@@ -16,12 +16,14 @@ const TextContent = ({
 				<Divider />
 				<DescriptionText>{descriptionText}</DescriptionText>
 			</DescriptionContainer>
-			<FeedbackBackground>
-				<FeedbackContainer>
-					<FeedbackHeading>{feedbackHeading}</FeedbackHeading>
-					<FeedbackText>{feedbackText}</FeedbackText>
-				</FeedbackContainer>
-			</FeedbackBackground>
+			{feedbackHeading.length === 0 ? null : (
+				<FeedbackBackground>
+					<FeedbackContainer>
+						<FeedbackHeading>{feedbackHeading}</FeedbackHeading>
+						<FeedbackText>{feedbackText}</FeedbackText>
+					</FeedbackContainer>
+				</FeedbackBackground>
+			)}
 		</Container>
 	);
 };
