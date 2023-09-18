@@ -41,18 +41,25 @@ const CustomNavElement = ({ thumbnail, id }) => {
 
 const SideBar = styled.div`
 	width: 22.7rem;
-	padding-top: 3.7rem;
+
+	height: 61.3rem;
+
+	display: flex;
+	flex-direction: column;
 `;
 const SideHeading = styled.p`
 	color: ${props => props.theme.desktop.white};
 	font-family: 'Button', Arial, Serif;
 	font-size: 1.6rem;
 	padding-left: 6.4rem;
+	margin-top: 3.7rem;
 	text-align: left;
+	height: 6.1rem;
 `;
 const SideNavBar = styled.div`
 	width: 100%;
 	padding-top: 1.9rem;
+	height: 100%;
 `;
 const ImageList = styled.ul`
 	display: flex;
@@ -60,29 +67,34 @@ const ImageList = styled.ul`
 	flex-direction: column;
 	align-items: flex-start;
 	padding-left: 6.4rem;
+	height: 100%;
+	row-gap: 0.8rem;
 `;
 const NavElement = styled.li`
+	flex-grow: 1;
+
 	position: relative;
 	width: 12.7rem;
-	height: 10.7rem;
+	max-height: 10.7rem;
 	display: flex;
 	align-items: center;
 	&:hover > .hoverImage {
 		margin-left: 2rem;
 	}
 `;
+
 const Line = styled.div`
 	width: 0.15rem;
 	height: 0rem;
 	transition: height 0.2s;
 	background-color: ${props => props.theme.desktop.white};
 	&.activeLine {
-		height: 8rem;
+		height: 70%;
 	}
 `;
 const ImageContainer = styled(Link)`
 	width: 10.7rem;
-	height: 10.7rem;
+	height: 100%;
 	position: absolute;
 	display: flex;
 	justify-content: center;
@@ -96,7 +108,6 @@ const ImageContainer = styled(Link)`
 `;
 const Image = styled.img`
 	width: 10.7rem;
-	height: 10.7rem;
 	max-width: 100%;
-	max-height: 100%;
+	height: 100%;
 `;

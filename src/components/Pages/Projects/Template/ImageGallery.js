@@ -108,6 +108,7 @@ const StyledImage = styled.img`
 	min-width: 100%;
 	object-fit: cover;
 `;
+// enlarged Image styles ----------------------------------------
 
 const ScreenOverlay = styled.div`
 	position: fixed;
@@ -124,7 +125,8 @@ const ScreenOverlay = styled.div`
 const LargeImageContainer = styled.div`
 	position: fixed;
 	width: auto;
-	height: 80vh;
+	max-width: 90vw;
+	max-height: 80vh;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -135,7 +137,9 @@ const LargeImageContainer = styled.div`
 	align-items: center;
 `;
 const LargeStyledImage = styled.img`
-	height: 80vh;
+	width: auto;
+	max-width: 90vw;
+	max-height: 80vh;
 	background-color: ${props => props.theme.desktop.dark1};
 	width: auto;
 	text-align: center;
@@ -150,6 +154,7 @@ const Left = styled.div`
 	display: flex;
 	align-items: center;
 	padding-left: 2.4rem;
+	cursor: pointer;
 	&:hover > div {
 		transform: scale(1.3);
 	}
@@ -181,7 +186,7 @@ const Right = styled.div`
 	align-items: center;
 	justify-content: right;
 	padding-right: 2.4rem;
-
+	cursor: pointer;
 	&:hover > div {
 		transform: scale(1.3);
 	}
@@ -202,6 +207,7 @@ const TopRight = styled.div`
 	justify-content: right;
 	padding-top: 2rem;
 	padding-right: 2.4rem;
+	cursor: pointer;
 	&:hover > div {
 		transform: scale(1.3);
 	}

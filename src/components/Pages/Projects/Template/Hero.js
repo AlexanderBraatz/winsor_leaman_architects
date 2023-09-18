@@ -37,7 +37,7 @@ export default function Hero({
 
 const StyledHero = styled.div`
 	max-width: 153.6rem;
-	height: 61.5rem;
+	height: 61.3rem;
 	display: flex;
 	margin: auto;
 	justify-content: center;
@@ -45,7 +45,7 @@ const StyledHero = styled.div`
 
 const HeroImageContainer = styled.div`
 	max-width: 130.9rem;
-	height: 61.5rem;
+	height: 61.3rem;
 	position: relative;
 	margin-left: 3.9rem;
 	overflow: hidden;

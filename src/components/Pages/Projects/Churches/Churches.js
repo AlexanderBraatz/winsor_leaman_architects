@@ -27,6 +27,11 @@ import longThumbnailDesktop5 from '../../../../assets/images/ProjectCategories/C
 import thumbnailDesktop5 from '../../../../assets/images/ProjectCategories/Churches_6/5AxbridgeParish/Thumbnails/Thumbnail_desktop.jpg';
 import thumbnailTablet5 from '../../../../assets/images/ProjectCategories/Churches_6/5AxbridgeParish/Thumbnails/Thumbnail_tablet.jpg';
 import thumbnailMobile5 from '../../../../assets/images/ProjectCategories/Churches_6/5AxbridgeParish/Thumbnails/Thumbnail_mobile.jpg';
+//6BroadStreetChurch
+import longThumbnailDesktop6 from '../../../../assets/images/ProjectCategories/Churches_6/6BroadStreetChurch/Thumbnails/LongThumbnail_desktop.jpg';
+import thumbnailDesktop6 from '../../../../assets/images/ProjectCategories/Churches_6/6BroadStreetChurch/Thumbnails/Thumbnail_desktop.jpg';
+import thumbnailTablet6 from '../../../../assets/images/ProjectCategories/Churches_6/6BroadStreetChurch/Thumbnails/Thumbnail_tablet.jpg';
+import thumbnailMobile6 from '../../../../assets/images/ProjectCategories/Churches_6/6BroadStreetChurch/Thumbnails/Thumbnail_mobile.jpg';
 
 //hero ---------------------------------------------------------------------------------------------------
 import heroImage from '../../../../assets/images/ProjectHero/hero.png';
@@ -51,30 +56,43 @@ import heroImageMobile4 from '../../../../assets/images/ProjectCategories/Church
 import heroImageDesktop5 from '../../../../assets/images/ProjectCategories/Churches_6/5AxbridgeParish/HeroImages/Hero_desktop.jpg';
 import heroImageTablet5 from '../../../../assets/images/ProjectCategories/Churches_6/5AxbridgeParish/HeroImages/Hero_tablet.jpg';
 import heroImageMobile5 from '../../../../assets/images/ProjectCategories/Churches_6/5AxbridgeParish/HeroImages/Hero_mobile.jpg';
+//6BroadStreetChurch
+import heroImageDesktop6 from '../../../../assets/images/ProjectCategories/Churches_6/6BroadStreetChurch/HeroImages/Hero_desktop.jpg';
+import heroImageTablet6 from '../../../../assets/images/ProjectCategories/Churches_6/6BroadStreetChurch/HeroImages/Hero_tablet.jpg';
+import heroImageMobile6 from '../../../../assets/images/ProjectCategories/Churches_6/6BroadStreetChurch/HeroImages/Hero_mobile.jpg';
 
 //SecondaryImages ---------------------------------------------------------------------------------------------------
+//desktop
 
 //1BradleyStokeEvangelicalChurch
-//desktop
 import Secondary1_desktop1 from '../../../../assets/images/ProjectCategories/Churches_6/1BradleyStokeEvangelicalChurch/SecondaryImages/Desktop/Secondary1_desktop.jpg';
 import Secondary2_desktop1 from '../../../../assets/images/ProjectCategories/Churches_6/1BradleyStokeEvangelicalChurch/SecondaryImages/Desktop/Secondary2_desktop.jpg';
 import Secondary3_desktop1 from '../../../../assets/images/ProjectCategories/Churches_6/1BradleyStokeEvangelicalChurch/SecondaryImages/Desktop/Secondary3_desktop.jpg';
 import Secondary4_desktop1 from '../../../../assets/images/ProjectCategories/Churches_6/1BradleyStokeEvangelicalChurch/SecondaryImages/Desktop/Secondary4_desktop.jpg';
 import Secondary5_desktop1 from '../../../../assets/images/ProjectCategories/Churches_6/1BradleyStokeEvangelicalChurch/SecondaryImages/Desktop/Secondary5_desktop.jpg';
 //2TheOldChapel
-//src/assets/images/ProjectCategories/Churches_6/2TheOldChapel/SecondaryImages/Desktop/Secondary1_desktop.jpg
-//desktop
 import Secondary1_desktop2 from '../../../../assets/images/ProjectCategories/Churches_6/2TheOldChapel/SecondaryImages/Desktop/Secondary1_desktop.jpg';
 import Secondary2_desktop2 from '../../../../assets/images/ProjectCategories/Churches_6/2TheOldChapel/SecondaryImages/Desktop/Secondary2_desktop.jpg';
-
-//sidebar
-import thumbnailImage1 from '../../../../assets/images/ProjectHero/side1.png';
-import thumbnailImage2 from '../../../../assets/images/ProjectHero/side2.png';
-import thumbnailImage3 from '../../../../assets/images/ProjectHero/side3.png';
-import thumbnailImage4 from '../../../../assets/images/ProjectHero/side4.png';
-import thumbnailImage5 from '../../../../assets/images/ProjectHero/side5.png';
-//imageGallery
-import image1 from '../../../../assets/images/PlaceholderImage.png';
+//3RedlandParish
+import Secondary1_desktop3 from '../../../../assets/images/ProjectCategories/Churches_6/3RedlandParish/SecondaryImages/Desktop/Secondary1_desktop.jpg';
+import Secondary2_desktop3 from '../../../../assets/images/ProjectCategories/Churches_6/3RedlandParish/SecondaryImages/Desktop/Secondary2_desktop.jpg';
+//4StMaryontheQuay
+import Secondary1_desktop4 from '../../../../assets/images/ProjectCategories/Churches_6/4StMaryontheQuay/SecondaryImages/Desktop/Secondary1_desktop.jpg';
+import Secondary2_desktop4 from '../../../../assets/images/ProjectCategories/Churches_6/4StMaryontheQuay/SecondaryImages/Desktop/Secondary2_desktop.jpg';
+import Secondary3_desktop4 from '../../../../assets/images/ProjectCategories/Churches_6/4StMaryontheQuay/SecondaryImages/Desktop/Secondary3_desktop.jpg';
+import Secondary4_desktop4 from '../../../../assets/images/ProjectCategories/Churches_6/4StMaryontheQuay/SecondaryImages/Desktop/Secondary4_desktop.jpg';
+import Secondary5_desktop4 from '../../../../assets/images/ProjectCategories/Churches_6/4StMaryontheQuay/SecondaryImages/Desktop/Secondary5_desktop.jpg';
+import Secondary6_desktop4 from '../../../../assets/images/ProjectCategories/Churches_6/4StMaryontheQuay/SecondaryImages/Desktop/Secondary6_desktop.jpg';
+import Secondary7_desktop4 from '../../../../assets/images/ProjectCategories/Churches_6/4StMaryontheQuay/SecondaryImages/Desktop/Secondary7_desktop.jpg';
+//5AxbridgeParish
+import Secondary1_desktop5 from '../../../../assets/images/ProjectCategories/Churches_6/5AxbridgeParish/SecondaryImages/Desktop/Secondary1_desktop.jpg';
+import Secondary2_desktop5 from '../../../../assets/images/ProjectCategories/Churches_6/5AxbridgeParish/SecondaryImages/Desktop/Secondary2_desktop.jpg';
+import Secondary3_desktop5 from '../../../../assets/images/ProjectCategories/Churches_6/5AxbridgeParish/SecondaryImages/Desktop/Secondary3_desktop.jpg';
+import Secondary4_desktop5 from '../../../../assets/images/ProjectCategories/Churches_6/5AxbridgeParish/SecondaryImages/Desktop/Secondary4_desktop.jpg';
+import Secondary5_desktop5 from '../../../../assets/images/ProjectCategories/Churches_6/5AxbridgeParish/SecondaryImages/Desktop/Secondary5_desktop.jpg';
+//6BroadStreetChurch
+import Secondary1_desktop6 from '../../../../assets/images/ProjectCategories/Churches_6/6BroadStreetChurch/SecondaryImages/Desktop/Secondary1_desktop.jpg';
+import Secondary2_desktop6 from '../../../../assets/images/ProjectCategories/Churches_6/6BroadStreetChurch/SecondaryImages/Desktop/Secondary2_desktop.jpg';
 
 const Churches = () => {
 	const churchesData = {
@@ -83,7 +101,6 @@ const Churches = () => {
 				thumbnails: [
 					{
 						to: '/projects/churches/1',
-						image: thumbnailImage1,
 						longThumbnailDesktop: longThumbnailDesktop1,
 						thumbnailDesktop: thumbnailDesktop1,
 						thumbnailTablet: thumbnailTablet1,
@@ -91,7 +108,6 @@ const Churches = () => {
 					},
 					{
 						to: '/projects/churches/2',
-						image: thumbnailImage2,
 						longThumbnailDesktop: longThumbnailDesktop2,
 						thumbnailDesktop: thumbnailDesktop2,
 						thumbnailTablet: thumbnailTablet2,
@@ -99,7 +115,6 @@ const Churches = () => {
 					},
 					{
 						to: '/projects/churches/3',
-						image: thumbnailImage3,
 						longThumbnailDesktop: longThumbnailDesktop3,
 						thumbnailDesktop: thumbnailDesktop3,
 						thumbnailTablet: thumbnailTablet3,
@@ -107,7 +122,6 @@ const Churches = () => {
 					},
 					{
 						to: '/projects/churches/4',
-						image: thumbnailImage4,
 						longThumbnailDesktop: longThumbnailDesktop4,
 						thumbnailDesktop: thumbnailDesktop4,
 						thumbnailTablet: thumbnailTablet4,
@@ -115,11 +129,17 @@ const Churches = () => {
 					},
 					{
 						to: '/projects/churches/5',
-						image: thumbnailImage5,
 						longThumbnailDesktop: longThumbnailDesktop5,
 						thumbnailDesktop: thumbnailDesktop5,
 						thumbnailTablet: thumbnailTablet5,
 						thumbnailMobile: thumbnailMobile5
+					},
+					{
+						to: '/projects/churches/6',
+						longThumbnailDesktop: longThumbnailDesktop6,
+						thumbnailDesktop: thumbnailDesktop6,
+						thumbnailTablet: thumbnailTablet6,
+						thumbnailMobile: thumbnailMobile6
 					}
 				]
 			},
@@ -173,6 +193,16 @@ const Churches = () => {
 						alt: 'Axbridge Parish'
 					},
 					imageLabel: 'Axbridge Parish'
+				},
+				6: {
+					hero: {
+						heroImage,
+						heroImageDesktop: heroImageDesktop6,
+						heroImageTablet: heroImageTablet6,
+						heroImageMobile: heroImageMobile6,
+						alt: 'Broad Street Church'
+					},
+					imageLabel: 'Broad Street Church'
 				}
 			}
 		},
@@ -243,7 +273,7 @@ const Churches = () => {
 					},
 					{
 						image: Secondary2_desktop2,
-						largeImage: Secondary2_desktop1,
+						largeImage: Secondary2_desktop2,
 						width: '240px',
 						largeWidth: '27rem',
 						description: 'description'
@@ -253,61 +283,26 @@ const Churches = () => {
 		},
 		3: {
 			textContentProps: {
-				heading: 'Project Title 3',
-				year: 'Year',
-				descriptionText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.`,
-				feedbackHeading: 'Client Feedback',
-				feedbackText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua.`
+				heading: 'Redland Parish',
+				year: '2007 - 2011',
+				descriptionText: `Glyn Leaman completed a major extension of the church hall, which included a new office, upstairs meeting rooms, and a large storeroom. He also extended the vicarage with a new study and bedroom upstairs and landscaped the garden. Since then, another architect has further extended the building.`,
+				feedbackHeading: '',
+				feedbackText: ``
 			},
 			imageGalleryProps: {
 				images: [
 					{
-						image: image1,
-						largeImage: image1,
-						width: '13.5rem',
+						image: Secondary1_desktop3,
+						largeImage: Secondary1_desktop3,
+						width: '240px',
 						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '20rem',
-						largeWidth: '40rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '24.2rem',
-						largeWidth: '28.4rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '18.7rem',
-						largeWidth: '37.4rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '19.3rem',
-						largeWidth: '38.6rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '19.6rem',
-						largeWidth: '39.2rem',
+						image: Secondary2_desktop3,
+						largeImage: Secondary2_desktop3,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					}
 				]
@@ -315,61 +310,61 @@ const Churches = () => {
 		},
 		4: {
 			textContentProps: {
-				heading: 'Project Title 4',
-				year: 'Year',
-				descriptionText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.`,
-				feedbackHeading: 'Client Feedback',
-				feedbackText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua.`
+				heading: 'St Mary on the Quay',
+				year: '2013 - 2014',
+				descriptionText: `We renovated the crypt and hall and repaired the ceiling of the Sacristy. The crypt was converted into a cafe/restaurant, while we added a stage to one end of the hall.`,
+				feedbackHeading: '',
+				feedbackText: ``
 			},
 			imageGalleryProps: {
 				images: [
 					{
-						image: image1,
-						largeImage: image1,
-						width: '13.5rem',
+						image: Secondary1_desktop4,
+						largeImage: Secondary1_desktop4,
+						width: '240px',
 						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '20rem',
-						largeWidth: '40rem',
+						image: Secondary2_desktop4,
+						largeImage: Secondary2_desktop4,
+						width: '180px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '24.2rem',
-						largeWidth: '28.4rem',
+						image: Secondary3_desktop4,
+						largeImage: Secondary3_desktop4,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '18.7rem',
-						largeWidth: '37.4rem',
+						image: Secondary4_desktop4,
+						largeImage: Secondary4_desktop4,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '19.3rem',
-						largeWidth: '38.6rem',
+						image: Secondary5_desktop4,
+						largeImage: Secondary5_desktop4,
+						width: '180px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '19.6rem',
-						largeWidth: '39.2rem',
+						image: Secondary6_desktop4,
+						largeImage: Secondary6_desktop4,
+						width: '240px',
+						largeWidth: '27rem',
+						description: 'description'
+					},
+					{
+						image: Secondary7_desktop4,
+						largeImage: Secondary7_desktop4,
+						width: '180px',
+						largeWidth: '27rem',
 						description: 'description'
 					}
 				]
@@ -377,61 +372,74 @@ const Churches = () => {
 		},
 		5: {
 			textContentProps: {
-				heading: 'Project Title 5',
-				year: 'Year',
-				descriptionText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.`,
-				feedbackHeading: 'Client Feedback',
-				feedbackText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua.`
+				heading: 'Axbridge Parish',
+				year: '1990s',
+				descriptionText: `Glyn Leaman led numerous renovations to Axbridge Parish Church, which dates back to the late 13th Century. The renovations enhanced the medieval ceiling and added new glass entrance doors, engraved by Tracey Sheppard. The conservation and repair included new windows, reroofing with lead, and a slate roof on the chancelor. Glyn added a new roof over the boilerhouse and oversaw statue conservation on the tower.`,
+				feedbackHeading: '',
+				feedbackText: ``
 			},
 			imageGalleryProps: {
 				images: [
 					{
-						image: image1,
-						largeImage: image1,
-						width: '13.5rem',
+						image: Secondary1_desktop5,
+						largeImage: Secondary1_desktop5,
+						width: '169px',
 						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '20rem',
-						largeWidth: '40rem',
+						image: Secondary2_desktop5,
+						largeImage: Secondary2_desktop5,
+						width: '180px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '24.2rem',
-						largeWidth: '28.4rem',
+						image: Secondary3_desktop5,
+						largeImage: Secondary3_desktop5,
+						width: '590px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '18.7rem',
-						largeWidth: '37.4rem',
+						image: Secondary4_desktop5,
+						largeImage: Secondary4_desktop5,
+						width: '590px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '19.3rem',
-						largeWidth: '38.6rem',
+						image: Secondary5_desktop5,
+						largeImage: Secondary5_desktop5,
+						width: '196px',
+						largeWidth: '27rem',
+						description: 'description'
+					}
+				]
+			}
+		},
+		6: {
+			textContentProps: {
+				heading: 'Broad Street Church',
+				year: '2011',
+				descriptionText: `A proposed conversion of a car repair garage into a church.`,
+				feedbackHeading: '',
+				feedbackText: ``
+			},
+			imageGalleryProps: {
+				images: [
+					{
+						image: Secondary1_desktop6,
+						largeImage: Secondary1_desktop6,
+						width: '180px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '19.6rem',
-						largeWidth: '39.2rem',
+						image: Secondary2_desktop6,
+						largeImage: Secondary2_desktop6,
+						width: '180px',
+						largeWidth: '27rem',
 						description: 'description'
 					}
 				]
