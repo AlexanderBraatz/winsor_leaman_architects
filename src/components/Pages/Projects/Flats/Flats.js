@@ -1,15 +1,48 @@
 import Template from '../Template/Template.js';
 
-//hero
-import heroImage from '../../../../assets/images/ProjectHero/hero.png';
-//sidebar
-import thumbnailImage1 from '../../../../assets/images/ProjectHero/side1.png';
-import thumbnailImage2 from '../../../../assets/images/ProjectHero/side2.png';
-import thumbnailImage3 from '../../../../assets/images/ProjectHero/side3.png';
-import thumbnailImage4 from '../../../../assets/images/ProjectHero/side4.png';
-import thumbnailImage5 from '../../../../assets/images/ProjectHero/side5.png';
-//imageGallery
-import image1 from '../../../../assets/images/PlaceholderImage.png';
+//thumbnails ---------------------------------------------------------------------------------------------------
+
+//1FlatsinBedminster
+import thumbnailDesktop1 from '../../../../assets/images/ProjectCategories/Flats_4/1FlatsinBedminster/Thumbnails/Thumbnail_desktop.jpg';
+//2FlatsinCotham
+import thumbnailDesktop2 from '../../../../assets/images/ProjectCategories/Flats_4/2FlatsinCotham/Thumbnails/Thumbnail_desktop.jpg';
+//3PhoenixWorksFlats
+import thumbnailDesktop3 from '../../../../assets/images/ProjectCategories/Flats_4/3PhoenixWorksFlats/Thumbnails/Thumbnail_desktop.jpg';
+//4FlatsinWeston_Super_Mare
+import thumbnailDesktop4 from '../../../../assets/images/ProjectCategories/Flats_4/4FlatsinWeston_Super_Mare/Thumbnails/Thumbnail_desktop.jpg';
+
+//hero ---------------------------------------------------------------------------------------------------
+//1FlatsinBedminster
+import heroImageDesktop1 from '../../../../assets/images/ProjectCategories/Flats_4/1FlatsinBedminster/HeroImages/Hero_desktop.jpg';
+//2FlatsinCotham
+import heroImageDesktop2 from '../../../../assets/images/ProjectCategories/Flats_4/2FlatsinCotham/HeroImages/Hero_desktop.jpg';
+//3PhoenixWorksFlats
+import heroImageDesktop3 from '../../../../assets/images/ProjectCategories/Flats_4/3PhoenixWorksFlats/HeroImages/Hero_desktop.jpg';
+//4FlatsinWeston_Super_Mare
+import heroImageDesktop4 from '../../../../assets/images/ProjectCategories/Flats_4/4FlatsinWeston_Super_Mare/HeroImages/Hero_desktop.jpg';
+
+//SecondaryImages ---------------------------------------------------------------------------------------------------
+//desktop
+//1FlatsinBedminster
+import Secondary1_desktop1 from '../../../../assets/images/ProjectCategories/Flats_4/1FlatsinBedminster/SecondaryImages/Desktop/Secondary1_desktop.jpg';
+import Secondary2_desktop1 from '../../../../assets/images/ProjectCategories/Flats_4/1FlatsinBedminster/SecondaryImages/Desktop/Secondary2_desktop.jpg';
+import Secondary3_desktop1 from '../../../../assets/images/ProjectCategories/Flats_4/1FlatsinBedminster/SecondaryImages/Desktop/Secondary3_desktop.jpg';
+import Secondary4_desktop1 from '../../../../assets/images/ProjectCategories/Flats_4/1FlatsinBedminster/SecondaryImages/Desktop/Secondary4_desktop.jpg';
+import Secondary5_desktop1 from '../../../../assets/images/ProjectCategories/Flats_4/1FlatsinBedminster/SecondaryImages/Desktop/Secondary5_desktop.jpg';
+import Secondary6_desktop1 from '../../../../assets/images/ProjectCategories/Flats_4/1FlatsinBedminster/SecondaryImages/Desktop/Secondary6_desktop.jpg';
+
+//2FlatsinCotham
+import Secondary1_desktop2 from '../../../../assets/images/ProjectCategories/Flats_4/2FlatsinCotham/SecondaryImages/Desktop/Secondary1_desktop.jpg';
+import Secondary2_desktop2 from '../../../../assets/images/ProjectCategories/Flats_4/2FlatsinCotham/SecondaryImages/Desktop/Secondary2_desktop.jpg';
+import Secondary3_desktop2 from '../../../../assets/images/ProjectCategories/Flats_4/2FlatsinCotham/SecondaryImages/Desktop/Secondary3_desktop.jpg';
+import Secondary4_desktop2 from '../../../../assets/images/ProjectCategories/Flats_4/2FlatsinCotham/SecondaryImages/Desktop/Secondary4_desktop.jpg';
+import Secondary5_desktop2 from '../../../../assets/images/ProjectCategories/Flats_4/2FlatsinCotham/SecondaryImages/Desktop/Secondary5_desktop.jpg';
+//3PhoenixWorksFlats
+import Secondary1_desktop3 from '../../../../assets/images/ProjectCategories/Flats_4/3PhoenixWorksFlats/SecondaryImages/Desktop/Secondary1_desktop.jpg';
+import Secondary2_desktop3 from '../../../../assets/images/ProjectCategories/Flats_4/3PhoenixWorksFlats/SecondaryImages/Desktop/Secondary2_desktop.jpg';
+
+//4FlatsinWeston_Super_Mare
+//no secondary images provided by client
 
 const Flats = () => {
 	const churchesData = {
@@ -18,121 +51,103 @@ const Flats = () => {
 				thumbnails: [
 					{
 						to: '/projects/flats/1',
-						image: thumbnailImage1
+						thumbnailDesktop: thumbnailDesktop1
 					},
 					{
 						to: '/projects/flats/2',
-						image: thumbnailImage2
+						thumbnailDesktop: thumbnailDesktop2
 					},
 					{
 						to: '/projects/flats/3',
-						image: thumbnailImage3
+						thumbnailDesktop: thumbnailDesktop3
 					},
 					{
 						to: '/projects/flats/4',
-						image: thumbnailImage4
-					},
-					{
-						to: '/projects/flats/5',
-						image: thumbnailImage5
+						thumbnailDesktop: thumbnailDesktop4
 					}
 				]
 			},
 			showcaseProps: {
 				1: {
 					hero: {
-						heroImage,
-						alt: 'Farm in Pucklechurch'
+						heroImageDesktop: heroImageDesktop4,
+						alt: 'Flats in Bedminster'
 					},
-					imageLabel: 'Farm in Pucklechurch'
+					imageLabel: 'Flats in Bedminster'
 				},
 				2: {
 					hero: {
-						heroImage,
-						alt: 'Farm in Pucklechurch'
+						heroImageDesktop: heroImageDesktop1,
+						alt: 'Flats in Cotham'
 					},
-					imageLabel: 'Castle'
+					imageLabel: 'Flats in Cotham'
 				},
 				3: {
 					hero: {
-						heroImage,
-						alt: 'Farm in Pucklechurch'
+						heroImageDesktop: heroImageDesktop2,
+						alt: 'Phoenix Works Flats'
 					},
-					imageLabel: 'Park in the Green field of Bristol'
+					imageLabel: 'Phoenix Works Flats'
 				},
 				4: {
 					hero: {
-						heroImage,
-						alt: 'Farm in Pucklechurch'
+						heroImageDesktop: heroImageDesktop3,
+						alt: 'Flats in Weston-Super-Mare'
 					},
-					imageLabel: 'Tall Building'
-				},
-				5: {
-					hero: {
-						heroImage,
-						alt: 'Farm in Pucklechurch'
-					},
-					imageLabel: 'Addition to Front Room'
+					imageLabel: 'Flats in Weston-Super-Mare'
 				}
 			}
 		},
 		1: {
 			textContentProps: {
-				heading: 'Project Title 1',
-				year: 'Year',
-				descriptionText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.`,
-				feedbackHeading: 'Client Feedback',
-				feedbackText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua.`
+				heading: 'Flats in Bedminster',
+				year: '2013',
+				descriptionText: `We replaced an outdated building with eight flats and a maisonette to improve thermal and sound insulation. The second storey is set back from the façade, reducing the visibility of living areas from the road. The windows on the first floor are Juliet balconies, using clear glass instead of railings. We carefully designed the flats’ layout so that access is via a central staircase with balcony, reducing the need for internal corridors and giving extra living space. The ground floor is wheelchair accessible, and there is an internal courtyard available to residents for their own use or for communal entertaining.`,
+				feedbackHeading: '',
+				feedbackText: ``
 			},
 			imageGalleryProps: {
 				images: [
 					{
-						image: image1,
-						largeImage: image1,
-						width: '13.5rem',
+						image: Secondary1_desktop1,
+						largeImage: Secondary1_desktop1,
+						width: '240px',
 						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '20rem',
+						image: Secondary2_desktop1,
+						largeImage: Secondary2_desktop1,
+						width: '240px',
 						largeWidth: '40rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '24.2rem',
+						image: Secondary3_desktop1,
+						largeImage: Secondary3_desktop1,
+						width: '240px',
 						largeWidth: '28.4rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '18.7rem',
+						image: Secondary4_desktop1,
+						largeImage: Secondary4_desktop1,
+						width: '240px',
 						largeWidth: '37.4rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '19.3rem',
+						image: Secondary5_desktop1,
+						largeImage: Secondary5_desktop1,
+						width: '240px',
 						largeWidth: '38.6rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '19.6rem',
-						largeWidth: '39.2rem',
+						image: Secondary6_desktop1,
+						largeImage: Secondary6_desktop1,
+						width: '240px',
+						largeWidth: '38.6rem',
 						description: 'description'
 					}
 				]
@@ -140,61 +155,47 @@ const Flats = () => {
 		},
 		2: {
 			textContentProps: {
-				heading: 'Project Title 2',
-				year: 'Year',
-				descriptionText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.`,
-				feedbackHeading: 'Client Feedback',
-				feedbackText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua.`
+				heading: 'Flats in Cotham',
+				year: '2000s',
+				descriptionText: `We constructed around 10 timber-framed flats near the BRI.`,
+				feedbackHeading: '',
+				feedbackText: ``
 			},
 			imageGalleryProps: {
 				images: [
 					{
-						image: image1,
-						largeImage: image1,
-						width: '13.5rem',
+						image: Secondary1_desktop2,
+						largeImage: Secondary1_desktop2,
+						width: '180px',
 						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '20rem',
-						largeWidth: '40rem',
+						image: Secondary2_desktop2,
+						largeImage: Secondary2_desktop2,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '24.2rem',
-						largeWidth: '28.4rem',
+						image: Secondary3_desktop2,
+						largeImage: Secondary3_desktop2,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '18.7rem',
-						largeWidth: '37.4rem',
+						image: Secondary4_desktop2,
+						largeImage: Secondary4_desktop2,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '19.3rem',
-						largeWidth: '38.6rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '19.6rem',
-						largeWidth: '39.2rem',
+						image: Secondary5_desktop2,
+						largeImage: Secondary5_desktop2,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					}
 				]
@@ -202,61 +203,26 @@ const Flats = () => {
 		},
 		3: {
 			textContentProps: {
-				heading: 'Project Title 3',
-				year: 'Year',
-				descriptionText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.`,
-				feedbackHeading: 'Client Feedback',
-				feedbackText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua.`
+				heading: 'Phoenix Works Flats',
+				year: '',
+				descriptionText: ``,
+				feedbackHeading: '',
+				feedbackText: ``
 			},
 			imageGalleryProps: {
 				images: [
 					{
-						image: image1,
-						largeImage: image1,
-						width: '13.5rem',
+						image: Secondary1_desktop3,
+						largeImage: Secondary1_desktop3,
+						width: '240px',
 						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '20rem',
-						largeWidth: '40rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '24.2rem',
-						largeWidth: '28.4rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '18.7rem',
-						largeWidth: '37.4rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '19.3rem',
-						largeWidth: '38.6rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '19.6rem',
-						largeWidth: '39.2rem',
+						image: Secondary2_desktop3,
+						largeImage: Secondary2_desktop3,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					}
 				]
@@ -264,126 +230,14 @@ const Flats = () => {
 		},
 		4: {
 			textContentProps: {
-				heading: 'Project Title 4',
-				year: 'Year',
-				descriptionText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.`,
-				feedbackHeading: 'Client Feedback',
-				feedbackText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua.`
+				heading: 'Flats in Weston-Super-Mare',
+				year: '2017',
+				descriptionText: `Concept for flats`,
+				feedbackHeading: '',
+				feedbackText: ``
 			},
 			imageGalleryProps: {
-				images: [
-					{
-						image: image1,
-						largeImage: image1,
-						width: '13.5rem',
-						largeWidth: '27rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '20rem',
-						largeWidth: '40rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '24.2rem',
-						largeWidth: '28.4rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '18.7rem',
-						largeWidth: '37.4rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '19.3rem',
-						largeWidth: '38.6rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '19.6rem',
-						largeWidth: '39.2rem',
-						description: 'description'
-					}
-				]
-			}
-		},
-		5: {
-			textContentProps: {
-				heading: 'Project Title 5',
-				year: 'Year',
-				descriptionText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.`,
-				feedbackHeading: 'Client Feedback',
-				feedbackText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua.`
-			},
-			imageGalleryProps: {
-				images: [
-					{
-						image: image1,
-						largeImage: image1,
-						width: '13.5rem',
-						largeWidth: '27rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '20rem',
-						largeWidth: '40rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '24.2rem',
-						largeWidth: '28.4rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '18.7rem',
-						largeWidth: '37.4rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '19.3rem',
-						largeWidth: '38.6rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '19.6rem',
-						largeWidth: '39.2rem',
-						description: 'description'
-					}
-				]
+				images: []
 			}
 		}
 	};
