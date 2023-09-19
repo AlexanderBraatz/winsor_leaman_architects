@@ -1,15 +1,63 @@
 import Template from '../Template/Template.js';
 
-//hero
-import heroImage from '../../../../assets/images/ProjectHero/hero.png';
-//sidebar
-import thumbnailImage1 from '../../../../assets/images/ProjectHero/side1.png';
-import thumbnailImage2 from '../../../../assets/images/ProjectHero/side2.png';
-import thumbnailImage3 from '../../../../assets/images/ProjectHero/side3.png';
-import thumbnailImage4 from '../../../../assets/images/ProjectHero/side4.png';
-import thumbnailImage5 from '../../../../assets/images/ProjectHero/side5.png';
-//imageGallery
-import image1 from '../../../../assets/images/PlaceholderImage.png';
+//thumbnails ---------------------------------------------------------------------------------------------------
+
+//1StPetersHospiceGardenRoom
+import thumbnailDesktop1 from '../../../../assets/images/ProjectCategories/Commercial_5/1StPetersHospiceGardenRoom/Thumbnails/Thumbnail_desktop.jpg';
+//2BrunelManorHotel
+import thumbnailDesktop2 from '../../../../assets/images/ProjectCategories/Commercial_5/2BrunelManorHotel/Thumbnails/Thumbnail_desktop.jpg';
+//4DaisychainNursery from extensions
+import thumbnailDesktop3 from '../../../../assets/images/ProjectCategories/Extensions_8/4DaisychainNursery/Thumbnails/Thumbnail_desktop.jpg';
+//4VantagePark
+import thumbnailDesktop4 from '../../../../assets/images/ProjectCategories/Commercial_5/4VantagePark/Thumbnails/Thumbnail_desktop.jpg';
+//5KeynshamHotelandFlats
+import thumbnailDesktop5 from '../../../../assets/images/ProjectCategories/Commercial_5/5KeynshamHotelandFlats/Thumbnails/Thumbnail_desktop.jpg';
+
+//hero ---------------------------------------------------------------------------------------------------
+//1StPetersHospiceGardenRoom
+import heroImageDesktop1 from '../../../../assets/images/ProjectCategories/Commercial_5/1StPetersHospiceGardenRoom/HeroImages/Hero_desktop.jpg';
+//2BrunelManorHotel
+import heroImageDesktop2 from '../../../../assets/images/ProjectCategories/Commercial_5/2BrunelManorHotel/HeroImages/Hero_desktop.jpg';
+//4DaisychainNursery from extensions
+import heroImageDesktop3 from '../../../../assets/images/ProjectCategories/Extensions_8/4DaisychainNursery/HeroImages/Hero_desktop.jpg';
+
+//4VantagePark
+import heroImageDesktop4 from '../../../../assets/images/ProjectCategories/Commercial_5/4VantagePark/HeroImages/Hero_desktop.jpg';
+//5KeynshamHotelandFlats
+import heroImageDesktop5 from '../../../../assets/images/ProjectCategories/Commercial_5/5KeynshamHotelandFlats/HeroImages/Hero_desktop.jpg';
+
+//SecondaryImages ---------------------------------------------------------------------------------------------------
+//desktop
+//1StPetersHospiceGardenRoom
+import Secondary1_desktop1 from '../../../../assets/images/ProjectCategories/Commercial_5/1StPetersHospiceGardenRoom/SecondaryImages/Desktop/Secondary1_desktop.jpg';
+import Secondary2_desktop1 from '../../../../assets/images/ProjectCategories/Commercial_5/1StPetersHospiceGardenRoom/SecondaryImages/Desktop/Secondary2_desktop.jpg';
+import Secondary3_desktop1 from '../../../../assets/images/ProjectCategories/Commercial_5/1StPetersHospiceGardenRoom/SecondaryImages/Desktop/Secondary3_desktop.jpg';
+import Secondary4_desktop1 from '../../../../assets/images/ProjectCategories/Commercial_5/1StPetersHospiceGardenRoom/SecondaryImages/Desktop/Secondary4_desktop.jpg';
+import Secondary5_desktop1 from '../../../../assets/images/ProjectCategories/Commercial_5/1StPetersHospiceGardenRoom/SecondaryImages/Desktop/Secondary5_desktop.jpg';
+
+//2BrunelManorHotel
+import Secondary1_desktop2 from '../../../../assets/images/ProjectCategories/Commercial_5/2BrunelManorHotel/SecondaryImages/Desktop/Secondary1_desktop.jpg';
+import Secondary2_desktop2 from '../../../../assets/images/ProjectCategories/Commercial_5/2BrunelManorHotel/SecondaryImages/Desktop/Secondary2_desktop.jpg';
+import Secondary3_desktop2 from '../../../../assets/images/ProjectCategories/Commercial_5/2BrunelManorHotel/SecondaryImages/Desktop/Secondary3_desktop.jpg';
+import Secondary4_desktop2 from '../../../../assets/images/ProjectCategories/Commercial_5/2BrunelManorHotel/SecondaryImages/Desktop/Secondary4_desktop.jpg';
+
+//4DaisychainNursery from extensions
+
+import Secondary1_desktop3 from '../../../../assets/images/ProjectCategories/Extensions_8/4DaisychainNursery/SecondaryImages/Desktop/Secondary1_desktop.jpg';
+import Secondary2_desktop3 from '../../../../assets/images/ProjectCategories/Extensions_8/4DaisychainNursery/SecondaryImages/Desktop/Secondary2_desktop.jpg';
+import Secondary3_desktop3 from '../../../../assets/images/ProjectCategories/Extensions_8/4DaisychainNursery/SecondaryImages/Desktop/Secondary3_desktop.jpg';
+import Secondary4_desktop3 from '../../../../assets/images/ProjectCategories/Extensions_8/4DaisychainNursery/SecondaryImages/Desktop/Secondary4_desktop.jpg';
+import Secondary5_desktop3 from '../../../../assets/images/ProjectCategories/Extensions_8/4DaisychainNursery/SecondaryImages/Desktop/Secondary5_desktop.jpg';
+
+//4VantagePark
+import Secondary1_desktop4 from '../../../../assets/images/ProjectCategories/Commercial_5/4VantagePark/SecondaryImages/Desktop/Secondary1_desktop.jpg';
+
+//5KeynshamHotelandFlats
+import Secondary1_desktop5 from '../../../../assets/images/ProjectCategories/Commercial_5/5KeynshamHotelandFlats/SecondaryImages/Desktop/Secondary1_desktop.jpg';
+import Secondary2_desktop5 from '../../../../assets/images/ProjectCategories/Commercial_5/5KeynshamHotelandFlats/SecondaryImages/Desktop/Secondary2_desktop.jpg';
+import Secondary3_desktop5 from '../../../../assets/images/ProjectCategories/Commercial_5/5KeynshamHotelandFlats/SecondaryImages/Desktop/Secondary3_desktop.jpg';
+import Secondary4_desktop5 from '../../../../assets/images/ProjectCategories/Commercial_5/5KeynshamHotelandFlats/SecondaryImages/Desktop/Secondary4_desktop.jpg';
+import Secondary5_desktop5 from '../../../../assets/images/ProjectCategories/Commercial_5/5KeynshamHotelandFlats/SecondaryImages/Desktop/Secondary5_desktop.jpg';
 
 const Commercial = () => {
 	const commercialData = {
@@ -18,121 +66,107 @@ const Commercial = () => {
 				thumbnails: [
 					{
 						to: '/projects/commercial/1',
-						image: thumbnailImage1
+						thumbnailDesktop: thumbnailDesktop1
 					},
 					{
 						to: '/projects/commercial/2',
-						image: thumbnailImage2
+						thumbnailDesktop: thumbnailDesktop2
 					},
 					{
 						to: '/projects/commercial/3',
-						image: thumbnailImage3
+						thumbnailDesktop: thumbnailDesktop3
 					},
 					{
 						to: '/projects/commercial/4',
-						image: thumbnailImage4
+						thumbnailDesktop: thumbnailDesktop4
 					},
 					{
 						to: '/projects/commercial/5',
-						image: thumbnailImage5
+						thumbnailDesktop: thumbnailDesktop5
 					}
 				]
 			},
 			showcaseProps: {
 				1: {
 					hero: {
-						heroImage,
-						alt: 'Farm in Pucklechurch'
+						heroImageDesktop: heroImageDesktop1,
+						alt: `St Peter's Hospice Garden Room`
 					},
-					imageLabel: 'Farm in Pucklechurch'
+					imageLabel: `St Peter's Hospice Garden Room`
 				},
 				2: {
 					hero: {
-						heroImage,
-						alt: 'Farm in Pucklechurch'
+						heroImageDesktop: heroImageDesktop2,
+						alt: 'Brunel Manor Hotel'
 					},
-					imageLabel: 'Castle'
+					imageLabel: 'Brunel Manor Hotel'
 				},
 				3: {
 					hero: {
-						heroImage,
-						alt: 'Farm in Pucklechurch'
+						heroImageDesktop: heroImageDesktop3,
+						alt: 'Daisychain Nursery'
 					},
-					imageLabel: 'Park in the Green field of Bristol'
+					imageLabel: 'Daisychain Nursery'
 				},
 				4: {
 					hero: {
-						heroImage,
-						alt: 'Farm in Pucklechurch'
+						heroImageDesktop: heroImageDesktop4,
+						alt: 'Vantage Park'
 					},
-					imageLabel: 'Tall Building'
+					imageLabel: 'Vantage Park'
 				},
 				5: {
 					hero: {
-						heroImage,
-						alt: 'Farm in Pucklechurch'
+						heroImageDesktop: heroImageDesktop5,
+						alt: 'Keynsham Hotel and Flats'
 					},
-					imageLabel: 'Addition to Front Room'
+					imageLabel: 'Keynsham Hotel and Flats'
 				}
 			}
 		},
 		1: {
 			textContentProps: {
-				heading: 'Project Title 1',
-				year: 'Year',
-				descriptionText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.`,
+				heading: "St Peter's Hospice Garden Room",
+				year: '2013 - 2016',
+				descriptionText: `This building was designed to be an extension that provided space for the patients in the hospice to express themselves in music and art.`,
 				feedbackHeading: 'Client Feedback',
-				feedbackText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua.`
+				feedbackText: `Ian Trigg, Estates manager: The building is a beautiful addition to the main building with an oak structure and a beautiful roof finished in real slate.`
 			},
 			imageGalleryProps: {
 				images: [
 					{
-						image: image1,
-						largeImage: image1,
-						width: '13.5rem',
+						image: Secondary1_desktop1,
+						largeImage: Secondary1_desktop1,
+						width: '240px',
 						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '20rem',
+						image: Secondary2_desktop1,
+						largeImage: Secondary2_desktop1,
+						width: '240px',
 						largeWidth: '40rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '24.2rem',
+						image: Secondary3_desktop1,
+						largeImage: Secondary2_desktop1,
+						width: '240px',
 						largeWidth: '28.4rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '18.7rem',
+						image: Secondary4_desktop1,
+						largeImage: Secondary4_desktop1,
+						width: '240px',
 						largeWidth: '37.4rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '19.3rem',
+						image: Secondary5_desktop1,
+						largeImage: Secondary5_desktop1,
+						width: '240px',
 						largeWidth: '38.6rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '19.6rem',
-						largeWidth: '39.2rem',
 						description: 'description'
 					}
 				]
@@ -140,61 +174,40 @@ const Commercial = () => {
 		},
 		2: {
 			textContentProps: {
-				heading: 'Project Title 2',
-				year: 'Year',
-				descriptionText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.`,
-				feedbackHeading: 'Client Feedback',
-				feedbackText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua.`
+				heading: 'Brunel Manor Hotel',
+				year: '2006',
+				descriptionText: `Renovation creating bedrooms over the hall and a new swimming pool. Asked for all the broken tiles from the local tile shop for the mosaic.`,
+				feedbackHeading: '',
+				feedbackText: ``
 			},
 			imageGalleryProps: {
 				images: [
 					{
-						image: image1,
-						largeImage: image1,
-						width: '13.5rem',
+						image: Secondary1_desktop2,
+						largeImage: Secondary1_desktop2,
+						width: '240px',
 						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '20rem',
-						largeWidth: '40rem',
+						image: Secondary2_desktop2,
+						largeImage: Secondary2_desktop2,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '24.2rem',
-						largeWidth: '28.4rem',
+						image: Secondary3_desktop2,
+						largeImage: Secondary3_desktop2,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '18.7rem',
-						largeWidth: '37.4rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '19.3rem',
-						largeWidth: '38.6rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '19.6rem',
-						largeWidth: '39.2rem',
+						image: Secondary4_desktop2,
+						largeImage: Secondary4_desktop2,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					}
 				]
@@ -202,61 +215,48 @@ const Commercial = () => {
 		},
 		3: {
 			textContentProps: {
-				heading: 'Project Title 3',
-				year: 'Year',
-				descriptionText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.`,
-				feedbackHeading: 'Client Feedback',
-				feedbackText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua.`
+				heading: 'Daisychain Nursery',
+				year: '2014',
+				descriptionText:
+					'"We were tasked with creating a modern extension to this Grade II listed building. The difference between the playground and basement floor level at the rear made access difficult within this area. Additionally, the limited size of the basement meant that the nursery was unable to bring all the children together in one room.\nWe improved circulation by lowering the playground and providing a new hall, together with an office with a window overlooking the playground. The new hall enables the playground to be used during wet or showery weather and also allows more of the children to come together for assemblies."',
+				feedbackHeading: '',
+				feedbackText: ``
 			},
 			imageGalleryProps: {
 				images: [
 					{
-						image: image1,
-						largeImage: image1,
-						width: '13.5rem',
+						image: Secondary1_desktop3,
+						largeImage: Secondary1_desktop3,
+						width: '240px',
 						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '20rem',
-						largeWidth: '40rem',
+						image: Secondary2_desktop3,
+						largeImage: Secondary2_desktop3,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '24.2rem',
-						largeWidth: '28.4rem',
+						image: Secondary3_desktop3,
+						largeImage: Secondary3_desktop3,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '18.7rem',
-						largeWidth: '37.4rem',
+						image: Secondary4_desktop3,
+						largeImage: Secondary4_desktop3,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '19.3rem',
-						largeWidth: '38.6rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '19.6rem',
-						largeWidth: '39.2rem',
+						image: Secondary5_desktop3,
+						largeImage: Secondary5_desktop3,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					}
 				]
@@ -264,61 +264,19 @@ const Commercial = () => {
 		},
 		4: {
 			textContentProps: {
-				heading: 'Project Title 4',
-				year: 'Year',
-				descriptionText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.`,
-				feedbackHeading: 'Client Feedback',
-				feedbackText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua.`
+				heading: 'Vantage Park',
+				year: '2019 - Present',
+				descriptionText: `We were appointed as ‘Principal Designer’ on this renovated home for dementia patients.`,
+				feedbackHeading: '',
+				feedbackText: ``
 			},
 			imageGalleryProps: {
 				images: [
 					{
-						image: image1,
-						largeImage: image1,
-						width: '13.5rem',
+						image: Secondary1_desktop4,
+						largeImage: Secondary1_desktop4,
+						width: '240px',
 						largeWidth: '27rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '20rem',
-						largeWidth: '40rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '24.2rem',
-						largeWidth: '28.4rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '18.7rem',
-						largeWidth: '37.4rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '19.3rem',
-						largeWidth: '38.6rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '19.6rem',
-						largeWidth: '39.2rem',
 						description: 'description'
 					}
 				]
@@ -326,61 +284,47 @@ const Commercial = () => {
 		},
 		5: {
 			textContentProps: {
-				heading: 'Project Title 5',
-				year: 'Year',
-				descriptionText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.`,
-				feedbackHeading: 'Client Feedback',
-				feedbackText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua.`
+				heading: 'Keynsham Hotel and Flats',
+				year: '2019',
+				descriptionText: `We were commissioned to design a mixed development of shops, a restaurant, a hotel, flats and office space in Keynsham, to replace an old fire station. The use of characteristic building materials, including blue lias, similar to the Civic Centre, Bath stone cladding of the columns, glass panels similar to the Council offices and a modern zinc roof with copper front feature creates a building which successfully ties in with the character of the site whilst creating a modern, individual building which can be recognised within the high street`,
+				feedbackHeading: '',
+				feedbackText: ``
 			},
 			imageGalleryProps: {
 				images: [
 					{
-						image: image1,
-						largeImage: image1,
-						width: '13.5rem',
+						image: Secondary1_desktop5,
+						largeImage: Secondary1_desktop5,
+						width: '240px',
 						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '20rem',
-						largeWidth: '40rem',
+						image: Secondary2_desktop5,
+						largeImage: Secondary2_desktop5,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '24.2rem',
-						largeWidth: '28.4rem',
+						image: Secondary3_desktop5,
+						largeImage: Secondary3_desktop5,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '18.7rem',
-						largeWidth: '37.4rem',
+						image: Secondary4_desktop5,
+						largeImage: Secondary4_desktop5,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '19.3rem',
-						largeWidth: '38.6rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '19.6rem',
-						largeWidth: '39.2rem',
+						image: Secondary5_desktop5,
+						largeImage: Secondary5_desktop5,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					}
 				]
