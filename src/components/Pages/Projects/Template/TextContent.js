@@ -70,6 +70,7 @@ const DescriptionText = styled.p`
 	text-align: left;
 	margin-top: 2.4rem;
 	line-height: 32px;
+	white-space: pre-wrap;
 `;
 
 const FeedbackBackground = styled.div`

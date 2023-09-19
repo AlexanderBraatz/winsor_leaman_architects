@@ -218,7 +218,7 @@ const Commercial = () => {
 				heading: 'Daisychain Nursery',
 				year: '2014',
 				descriptionText:
-					'"We were tasked with creating a modern extension to this Grade II listed building. The difference between the playground and basement floor level at the rear made access difficult within this area. Additionally, the limited size of the basement meant that the nursery was unable to bring all the children together in one room.\nWe improved circulation by lowering the playground and providing a new hall, together with an office with a window overlooking the playground. The new hall enables the playground to be used during wet or showery weather and also allows more of the children to come together for assemblies."',
+					'"We were tasked with creating a modern extension to this Grade II listed building. The difference between the playground and basement floor level at the rear made access difficult within this area. Additionally, the limited size of the basement meant that the nursery was unable to bring all the children together in one room.\n\nWe improved circulation by lowering the playground and providing a new hall, together with an office with a window overlooking the playground. The new hall enables the playground to be used during wet or showery weather and also allows more of the children to come together for assemblies."',
 				feedbackHeading: '',
 				feedbackText: ``
 			},

@@ -1,15 +1,62 @@
 import Template from '../Template/Template.js';
+//thumbnails ---------------------------------------------------------------------------------------------------
 
-//hero
-import heroImage from '../../../../assets/images/ProjectHero/hero.png';
-//sidebar
-import thumbnailImage1 from '../../../../assets/images/ProjectHero/side1.png';
-import thumbnailImage2 from '../../../../assets/images/ProjectHero/side2.png';
-import thumbnailImage3 from '../../../../assets/images/ProjectHero/side3.png';
-import thumbnailImage4 from '../../../../assets/images/ProjectHero/side4.png';
-import thumbnailImage5 from '../../../../assets/images/ProjectHero/side5.png';
-//imageGallery
-import image1 from '../../../../assets/images/PlaceholderImage.png';
+//1HouseinAbbotsLeigh
+import thumbnailDesktop1 from '../../../../assets/images/ProjectCategories/Extensions_8/1HouseinAbbotsLeigh/Thumbnails/Thumbnail_desktop.jpg';
+//2HouseinWestbury_on_Trym
+import thumbnailDesktop2 from '../../../../assets/images/ProjectCategories/Extensions_8/2HouseinWestbury_on_Trym/Thumbnails/Thumbnail_desktop.jpg';
+//3GardenOffice
+import thumbnailDesktop3 from '../../../../assets/images/ProjectCategories/Extensions_8/3GardenOffice/Thumbnails/Thumbnail_desktop.jpg';
+//4DaisychainNursery
+import thumbnailDesktop4 from '../../../../assets/images/ProjectCategories/Extensions_8/4DaisychainNursery/Thumbnails/Thumbnail_desktop.jpg';
+//6HouseinRedland
+import thumbnailDesktop5 from '../../../../assets/images/ProjectCategories/Extensions_8/6HouseinRedland/Thumbnails/Thumbnail_desktop.jpg';
+
+//hero ---------------------------------------------------------------------------------------------------
+//1HouseinAbbotsLeigh
+import heroImageDesktop1 from '../../../../assets/images/ProjectCategories/Extensions_8/1HouseinAbbotsLeigh/HeroImages/Hero_desktop.jpg';
+//2HouseinWestbury_on_Trym
+import heroImageDesktop2 from '../../../../assets/images/ProjectCategories/Extensions_8/2HouseinWestbury_on_Trym/HeroImages/Hero_desktop.jpg';
+//3GardenOffice
+import heroImageDesktop3 from '../../../../assets/images/ProjectCategories/Extensions_8/3GardenOffice/HeroImages/Hero_desktop.jpg';
+//4DaisychainNursery
+import heroImageDesktop4 from '../../../../assets/images/ProjectCategories/Extensions_8/4DaisychainNursery/HeroImages/Hero_desktop.jpg';
+//6HouseinRedland
+import heroImageDesktop5 from '../../../../assets/images/ProjectCategories/Extensions_8/6HouseinRedland/HeroImages/Hero_desktop.jpg';
+
+//SecondaryImages ---------------------------------------------------------------------------------------------------
+//desktop
+//1HouseinAbbotsLeigh
+import Secondary1_desktop1 from '../../../../assets/images/ProjectCategories/Extensions_8/1HouseinAbbotsLeigh/SecondaryImages/Desktop/Secondary1_desktop.jpg';
+import Secondary2_desktop1 from '../../../../assets/images/ProjectCategories/Extensions_8/1HouseinAbbotsLeigh/SecondaryImages/Desktop/Secondary2_desktop.jpg';
+import Secondary3_desktop1 from '../../../../assets/images/ProjectCategories/Extensions_8/1HouseinAbbotsLeigh/SecondaryImages/Desktop/Secondary3_desktop.jpg';
+import Secondary4_desktop1 from '../../../../assets/images/ProjectCategories/Extensions_8/1HouseinAbbotsLeigh/SecondaryImages/Desktop/Secondary4_desktop.jpg';
+
+//2HouseinWestbury_on_Trym
+import Secondary1_desktop2 from '../../../../assets/images/ProjectCategories/Extensions_8/2HouseinWestbury_on_Trym/SecondaryImages/Desktop/Secondary1_desktop.jpg';
+import Secondary2_desktop2 from '../../../../assets/images/ProjectCategories/Extensions_8/2HouseinWestbury_on_Trym/SecondaryImages/Desktop/Secondary2_desktop.jpg';
+import Secondary3_desktop2 from '../../../../assets/images/ProjectCategories/Extensions_8/2HouseinWestbury_on_Trym/SecondaryImages/Desktop/Secondary3_desktop.jpg';
+import Secondary4_desktop2 from '../../../../assets/images/ProjectCategories/Extensions_8/2HouseinWestbury_on_Trym/SecondaryImages/Desktop/Secondary4_desktop.jpg';
+import Secondary5_desktop2 from '../../../../assets/images/ProjectCategories/Extensions_8/2HouseinWestbury_on_Trym/SecondaryImages/Desktop/Secondary5_desktop.jpg';
+import Secondary6_desktop2 from '../../../../assets/images/ProjectCategories/Extensions_8/2HouseinWestbury_on_Trym/SecondaryImages/Desktop/Secondary6_desktop.jpg';
+import Secondary7_desktop2 from '../../../../assets/images/ProjectCategories/Extensions_8/2HouseinWestbury_on_Trym/SecondaryImages/Desktop/Secondary7_desktop.jpg';
+import Secondary8_desktop2 from '../../../../assets/images/ProjectCategories/Extensions_8/2HouseinWestbury_on_Trym/SecondaryImages/Desktop/Secondary8_desktop.jpg';
+//src/assets/images/ProjectCategories/Extensions_8/2HouseinWestbury_on_Trym/Secondary Images/Desktop/Secondary8_desktop.jpg
+//3GardenOffice
+import Secondary1_desktop3 from '../../../../assets/images/ProjectCategories/Extensions_8/3GardenOffice/SecondaryImages/Desktop/Secondary1_desktop.jpg';
+
+//4DaisychainNursery
+
+import Secondary1_desktop4 from '../../../../assets/images/ProjectCategories/Extensions_8/4DaisychainNursery/SecondaryImages/Desktop/Secondary1_desktop.jpg';
+import Secondary2_desktop4 from '../../../../assets/images/ProjectCategories/Extensions_8/4DaisychainNursery/SecondaryImages/Desktop/Secondary2_desktop.jpg';
+import Secondary3_desktop4 from '../../../../assets/images/ProjectCategories/Extensions_8/4DaisychainNursery/SecondaryImages/Desktop/Secondary3_desktop.jpg';
+import Secondary4_desktop4 from '../../../../assets/images/ProjectCategories/Extensions_8/4DaisychainNursery/SecondaryImages/Desktop/Secondary4_desktop.jpg';
+import Secondary5_desktop4 from '../../../../assets/images/ProjectCategories/Extensions_8/4DaisychainNursery/SecondaryImages/Desktop/Secondary5_desktop.jpg';
+
+//6HouseinRedland
+import Secondary1_desktop5 from '../../../../assets/images/ProjectCategories/Extensions_8/6HouseinRedland/SecondaryImages/Desktop/Secondary1_desktop.jpg';
+import Secondary2_desktop5 from '../../../../assets/images/ProjectCategories/Extensions_8/6HouseinRedland/SecondaryImages/Desktop/Secondary2_desktop.jpg';
+import Secondary3_desktop5 from '../../../../assets/images/ProjectCategories/Extensions_8/6HouseinRedland/SecondaryImages/Desktop/Secondary3_desktop.jpg';
 
 const Extensions = () => {
 	const extensionsData = {
@@ -18,121 +65,100 @@ const Extensions = () => {
 				thumbnails: [
 					{
 						to: '/projects/extensions/1',
-						image: thumbnailImage1
+						thumbnailDesktop: thumbnailDesktop1
 					},
 					{
 						to: '/projects/extensions/2',
-						image: thumbnailImage2
+						thumbnailDesktop: thumbnailDesktop2
 					},
 					{
 						to: '/projects/extensions/3',
-						image: thumbnailImage3
+						thumbnailDesktop: thumbnailDesktop3
 					},
 					{
 						to: '/projects/extensions/4',
-						image: thumbnailImage4
+						thumbnailDesktop: thumbnailDesktop4
 					},
 					{
 						to: '/projects/extensions/5',
-						image: thumbnailImage5
+						thumbnailDesktop: thumbnailDesktop5
 					}
 				]
 			},
 			showcaseProps: {
 				1: {
 					hero: {
-						heroImage,
-						alt: 'Farm in Pucklechurch'
+						heroImageDesktop: heroImageDesktop1,
+						alt: 'Rownham Hill'
 					},
-					imageLabel: 'Farm in Pucklechurch'
+					imageLabel: 'Rownham Hill'
 				},
 				2: {
 					hero: {
-						heroImage,
-						alt: 'Farm in Pucklechurch'
+						heroImageDesktop: heroImageDesktop2,
+						alt: 'House in Westbury-on-Trym'
 					},
-					imageLabel: 'Castle'
+					imageLabel: 'House in Westbury-on-Trym'
 				},
 				3: {
 					hero: {
-						heroImage,
-						alt: 'Farm in Pucklechurch'
+						heroImageDesktop: heroImageDesktop3,
+						alt: 'Garden Office'
 					},
-					imageLabel: 'Park in the Green field of Bristol'
+					imageLabel: 'Garden Office'
 				},
 				4: {
 					hero: {
-						heroImage,
-						alt: 'Farm in Pucklechurch'
+						heroImageDesktop: heroImageDesktop4,
+						alt: 'Daisychain Nursery'
 					},
-					imageLabel: 'Tall Building'
+					imageLabel: 'Daisychain Nursery'
 				},
 				5: {
 					hero: {
-						heroImage,
-						alt: 'Farm in Pucklechurch'
+						heroImageDesktop: heroImageDesktop5,
+						alt: 'House in Redland'
 					},
-					imageLabel: 'Addition to Front Room'
+					imageLabel: 'House in Redland'
 				}
 			}
 		},
 		1: {
 			textContentProps: {
-				heading: 'Project Title 1',
-				year: 'Year',
-				descriptionText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.`,
-				feedbackHeading: 'Client Feedback',
-				feedbackText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua.`
+				heading: 'Rownham Hill',
+				year: '2009',
+				descriptionText: `This build project involved replacing a conservatory that was too hot in summer and too cold in winter. Additionally, we extended the ground floor kitchen area and entrance, added a new first-floor balcony from the master bedroom, and converted the second-floor sun terrace into a balcony and playroom. We also fitted solar panelling to the roof.`,
+				feedbackHeading: '',
+				feedbackText: ``
 			},
 			imageGalleryProps: {
 				images: [
 					{
-						image: image1,
-						largeImage: image1,
-						width: '13.5rem',
+						image: Secondary1_desktop1,
+						largeImage: Secondary1_desktop1,
+						width: '240px',
 						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '20rem',
+						image: Secondary2_desktop1,
+						largeImage: Secondary2_desktop1,
+						width: '189px',
 						largeWidth: '40rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '24.2rem',
+						image: Secondary3_desktop1,
+						largeImage: Secondary2_desktop1,
+						width: '240px',
 						largeWidth: '28.4rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '18.7rem',
+						image: Secondary4_desktop1,
+						largeImage: Secondary4_desktop1,
+						width: '240px',
 						largeWidth: '37.4rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '19.3rem',
-						largeWidth: '38.6rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '19.6rem',
-						largeWidth: '39.2rem',
 						description: 'description'
 					}
 				]
@@ -140,61 +166,68 @@ const Extensions = () => {
 		},
 		2: {
 			textContentProps: {
-				heading: 'Project Title 2',
-				year: 'Year',
-				descriptionText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.`,
-				feedbackHeading: 'Client Feedback',
-				feedbackText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua.`
+				heading: 'House in Westbury-on-Trym',
+				year: '2016 - 2018',
+				descriptionText: `This 1930s property has been expanded with a kitchen-dining extension and a lead-clad dormer at the rear to create a new guest bedroom and study with an ensuite bathroom in the attic. We also insulated the brickwork cavity to improve the EPC of the building. To make the space more comfortable, we reconfigured the ground floor for underfloor heating and added radiators on the first and attic floors.`,
+				feedbackHeading: '',
+				feedbackText: ``
 			},
 			imageGalleryProps: {
 				images: [
 					{
-						image: image1,
-						largeImage: image1,
-						width: '13.5rem',
+						image: Secondary1_desktop2,
+						largeImage: Secondary1_desktop2,
+						width: '240px',
 						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '20rem',
-						largeWidth: '40rem',
+						image: Secondary2_desktop2,
+						largeImage: Secondary2_desktop2,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '24.2rem',
-						largeWidth: '28.4rem',
+						image: Secondary3_desktop2,
+						largeImage: Secondary3_desktop2,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '18.7rem',
-						largeWidth: '37.4rem',
+						image: Secondary4_desktop2,
+						largeImage: Secondary4_desktop2,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '19.3rem',
-						largeWidth: '38.6rem',
+						image: Secondary5_desktop2,
+						largeImage: Secondary5_desktop2,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '19.6rem',
-						largeWidth: '39.2rem',
+						image: Secondary6_desktop2,
+						largeImage: Secondary6_desktop2,
+						width: '240px',
+						largeWidth: '27rem',
+						description: 'description'
+					},
+					{
+						image: Secondary7_desktop2,
+						largeImage: Secondary7_desktop2,
+						width: '240px',
+						largeWidth: '27rem',
+						description: 'description'
+					},
+					{
+						image: Secondary8_desktop2,
+						largeImage: Secondary8_desktop2,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					}
 				]
@@ -202,61 +235,19 @@ const Extensions = () => {
 		},
 		3: {
 			textContentProps: {
-				heading: 'Project Title 3',
-				year: 'Year',
-				descriptionText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.`,
-				feedbackHeading: 'Client Feedback',
-				feedbackText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua.`
+				heading: 'Garden Office',
+				year: '2008',
+				descriptionText: `This office was built for the client as a modern foil for their 1950s house.`,
+				feedbackHeading: '',
+				feedbackText: ``
 			},
 			imageGalleryProps: {
 				images: [
 					{
-						image: image1,
-						largeImage: image1,
-						width: '13.5rem',
+						image: Secondary1_desktop3,
+						largeImage: Secondary1_desktop3,
+						width: '240px',
 						largeWidth: '27rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '20rem',
-						largeWidth: '40rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '24.2rem',
-						largeWidth: '28.4rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '18.7rem',
-						largeWidth: '37.4rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '19.3rem',
-						largeWidth: '38.6rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '19.6rem',
-						largeWidth: '39.2rem',
 						description: 'description'
 					}
 				]
@@ -264,61 +255,48 @@ const Extensions = () => {
 		},
 		4: {
 			textContentProps: {
-				heading: 'Project Title 4',
-				year: 'Year',
-				descriptionText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.`,
-				feedbackHeading: 'Client Feedback',
-				feedbackText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua.`
+				heading: 'Daisychain Nursery',
+				year: '2014',
+				descriptionText:
+					'We were tasked with creating a modern extension to this Grade II listed building. The difference between the playground and basement floor level at the rear made access difficult within this area. Additionally, the limited size of the basement meant that the nursery was unable to bring all the children together in one room.\n\nWe improved circulation by lowering the playground and providing a new hall, together with an office with a window overlooking the playground. The new hall enables the playground to be used during wet or showery weather and also allows more of the children to come together for assemblies.',
+				feedbackHeading: '',
+				feedbackText: ``
 			},
 			imageGalleryProps: {
 				images: [
 					{
-						image: image1,
-						largeImage: image1,
-						width: '13.5rem',
+						image: Secondary1_desktop4,
+						largeImage: Secondary1_desktop4,
+						width: '240px',
 						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '20rem',
-						largeWidth: '40rem',
+						image: Secondary2_desktop4,
+						largeImage: Secondary2_desktop4,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '24.2rem',
-						largeWidth: '28.4rem',
+						image: Secondary3_desktop4,
+						largeImage: Secondary3_desktop4,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '18.7rem',
-						largeWidth: '37.4rem',
+						image: Secondary4_desktop4,
+						largeImage: Secondary4_desktop4,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '19.3rem',
-						largeWidth: '38.6rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '19.6rem',
-						largeWidth: '39.2rem',
+						image: Secondary5_desktop4,
+						largeImage: Secondary5_desktop4,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					}
 				]
@@ -326,61 +304,33 @@ const Extensions = () => {
 		},
 		5: {
 			textContentProps: {
-				heading: 'Project Title 5',
-				year: 'Year',
-				descriptionText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.`,
-				feedbackHeading: 'Client Feedback',
-				feedbackText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua.`
+				heading: 'House in Redland',
+				year: '2014',
+				descriptionText: `Our design for this project enlarged the open plan living/kitchen/dining area and used an all-timber construction. We took great care to ensure that the extension blended seamlessly with the existing property and had minimal visual impact on the neighbourhood.`,
+				feedbackHeading: '',
+				feedbackText: ``
 			},
 			imageGalleryProps: {
 				images: [
 					{
-						image: image1,
-						largeImage: image1,
-						width: '13.5rem',
+						image: Secondary1_desktop5,
+						largeImage: Secondary1_desktop5,
+						width: '240px',
 						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '20rem',
-						largeWidth: '40rem',
+						image: Secondary2_desktop5,
+						largeImage: Secondary2_desktop5,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '24.2rem',
-						largeWidth: '28.4rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '18.7rem',
-						largeWidth: '37.4rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '19.3rem',
-						largeWidth: '38.6rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '19.6rem',
-						largeWidth: '39.2rem',
+						image: Secondary3_desktop5,
+						largeImage: Secondary3_desktop5,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					}
 				]
