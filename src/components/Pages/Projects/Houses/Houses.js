@@ -1,15 +1,68 @@
 import Template from '../Template/Template.js';
 
-//hero
-import heroImage from '../../../../assets/images/ProjectHero/hero.png';
-//sidebar
-import thumbnailImage1 from '../../../../assets/images/ProjectHero/side1.png';
-import thumbnailImage2 from '../../../../assets/images/ProjectHero/side2.png';
-import thumbnailImage3 from '../../../../assets/images/ProjectHero/side3.png';
-import thumbnailImage4 from '../../../../assets/images/ProjectHero/side4.png';
-import thumbnailImage5 from '../../../../assets/images/ProjectHero/side5.png';
-//imageGallery
-import image1 from '../../../../assets/images/PlaceholderImage.png';
+//thumbnails ---------------------------------------------------------------------------------------------------
+
+//1MalboroughHouse
+import thumbnailDesktop1 from '../../../../assets/images/ProjectCategories/Houses_7/1MalboroughHouse/Thumbnails/Thumbnail_desktop.jpg';
+//2HouseinStapleton
+import thumbnailDesktop2 from '../../../../assets/images/ProjectCategories/Houses_7/2HouseinStapleton/Thumbnails/Thumbnail_desktop.jpg';
+//3HouseinClifton
+import thumbnailDesktop3 from '../../../../assets/images/ProjectCategories/Houses_7/3HouseinClifton/Thumbnails/Thumbnail_desktop.jpg';
+//4UndergroundHouse
+import thumbnailDesktop4 from '../../../../assets/images/ProjectCategories/Houses_7/4UndergroundHouse/Thumbnails/Thumbnail_desktop.jpg';
+//5HouseinKnowle
+import thumbnailDesktop5 from '../../../../assets/images/ProjectCategories/Houses_7/5HouseinKnowle/Thumbnails/Thumbnail_desktop.jpg';
+//6HouseinBrislington
+import thumbnailDesktop6 from '../../../../assets/images/ProjectCategories/Houses_7/6HouseinBrislington/Thumbnails/Thumbnail_desktop.jpg';
+
+//hero ---------------------------------------------------------------------------------------------------
+//1MalboroughHouse
+import heroImageDesktop1 from '../../../../assets/images/ProjectCategories/Houses_7/1MalboroughHouse/HeroImages/Hero_desktop.jpg';
+//2HouseinStapleton
+import heroImageDesktop2 from '../../../../assets/images/ProjectCategories/Houses_7/2HouseinStapleton/HeroImages/Hero_desktop.jpg';
+//3HouseinClifton
+import heroImageDesktop3 from '../../../../assets/images/ProjectCategories/Houses_7/3HouseinClifton/HeroImages/Hero_desktop.jpg';
+//4UndergroundHouse
+import heroImageDesktop4 from '../../../../assets/images/ProjectCategories/Houses_7/4UndergroundHouse/HeroImages/Hero_desktop.jpg';
+//5HouseinKnowle
+import heroImageDesktop5 from '../../../../assets/images/ProjectCategories/Houses_7/5HouseinKnowle/HeroImages/Hero_desktop.jpg';
+//6HouseinBrislington
+import heroImageDesktop6 from '../../../../assets/images/ProjectCategories/Houses_7/6HouseinBrislington/HeroImages/Hero_desktop.jpg';
+
+//SecondaryImages ---------------------------------------------------------------------------------------------------
+//desktop
+//1MalboroughHouse
+import Secondary1_desktop1 from '../../../../assets/images/ProjectCategories/Houses_7/1MalboroughHouse/SecondaryImages/Desktop/Secondary1_desktop.jpg';
+import Secondary2_desktop1 from '../../../../assets/images/ProjectCategories/Houses_7/1MalboroughHouse/SecondaryImages/Desktop/Secondary2_desktop.jpg';
+import Secondary3_desktop1 from '../../../../assets/images/ProjectCategories/Houses_7/1MalboroughHouse/SecondaryImages/Desktop/Secondary3_desktop.jpg';
+
+//2HouseinStapleton
+import Secondary1_desktop2 from '../../../../assets/images/ProjectCategories/Houses_7/2HouseinStapleton/SecondaryImages/Desktop/Secondary1_desktop.jpg';
+import Secondary2_desktop2 from '../../../../assets/images/ProjectCategories/Houses_7/2HouseinStapleton/SecondaryImages/Desktop/Secondary2_desktop.jpg';
+import Secondary3_desktop2 from '../../../../assets/images/ProjectCategories/Houses_7/2HouseinStapleton/SecondaryImages/Desktop/Secondary3_desktop.jpg';
+import Secondary4_desktop2 from '../../../../assets/images/ProjectCategories/Houses_7/2HouseinStapleton/SecondaryImages/Desktop/Secondary4_desktop.jpg';
+import Secondary5_desktop2 from '../../../../assets/images/ProjectCategories/Houses_7/2HouseinStapleton/SecondaryImages/Desktop/Secondary5_desktop.jpg';
+import Secondary6_desktop2 from '../../../../assets/images/ProjectCategories/Houses_7/2HouseinStapleton/SecondaryImages/Desktop/Secondary6_desktop.jpg';
+import Secondary7_desktop2 from '../../../../assets/images/ProjectCategories/Houses_7/2HouseinStapleton/SecondaryImages/Desktop/Secondary7_desktop.jpg';
+//3HouseinClifton
+import Secondary1_desktop3 from '../../../../assets/images/ProjectCategories/Houses_7/3HouseinClifton/SecondaryImages/Desktop/Secondary1_desktop.jpg';
+import Secondary2_desktop3 from '../../../../assets/images/ProjectCategories/Houses_7/3HouseinClifton/SecondaryImages/Desktop/Secondary2_desktop.jpg';
+import Secondary3_desktop3 from '../../../../assets/images/ProjectCategories/Houses_7/3HouseinClifton/SecondaryImages/Desktop/Secondary3_desktop.jpg';
+import Secondary4_desktop3 from '../../../../assets/images/ProjectCategories/Houses_7/3HouseinClifton/SecondaryImages/Desktop/Secondary4_desktop.jpg';
+import Secondary5_desktop3 from '../../../../assets/images/ProjectCategories/Houses_7/3HouseinClifton/SecondaryImages/Desktop/Secondary5_desktop.jpg';
+
+//4UndergroundHouse
+
+import Secondary1_desktop4 from '../../../../assets/images/ProjectCategories/Houses_7/4UndergroundHouse/SecondaryImages/Desktop/Secondary1_desktop.jpg';
+import Secondary2_desktop4 from '../../../../assets/images/ProjectCategories/Houses_7/4UndergroundHouse/SecondaryImages/Desktop/Secondary2_desktop.jpg';
+
+//5HouseinKnowle
+import Secondary1_desktop5 from '../../../../assets/images/ProjectCategories/Houses_7/5HouseinKnowle/SecondaryImages/Desktop/Secondary1_desktop.jpg';
+import Secondary2_desktop5 from '../../../../assets/images/ProjectCategories/Houses_7/5HouseinKnowle/SecondaryImages/Desktop/Secondary2_desktop.jpg';
+import Secondary3_desktop5 from '../../../../assets/images/ProjectCategories/Houses_7/5HouseinKnowle/SecondaryImages/Desktop/Secondary3_desktop.jpg';
+
+//6HouseinBrislington
+//no secondary images provided by client
 
 const Houses = () => {
 	const housesData = {
@@ -18,121 +71,104 @@ const Houses = () => {
 				thumbnails: [
 					{
 						to: '/projects/houses/1',
-						image: thumbnailImage1
+						thumbnailDesktop: thumbnailDesktop1
 					},
 					{
 						to: '/projects/houses/2',
-						image: thumbnailImage2
+						thumbnailDesktop: thumbnailDesktop2
 					},
 					{
 						to: '/projects/houses/3',
-						image: thumbnailImage3
+						thumbnailDesktop: thumbnailDesktop3
 					},
 					{
 						to: '/projects/houses/4',
-						image: thumbnailImage4
+						thumbnailDesktop: thumbnailDesktop4
 					},
 					{
 						to: '/projects/houses/5',
-						image: thumbnailImage5
+						thumbnailDesktop: thumbnailDesktop5
+					},
+					{
+						to: '/projects/houses/6',
+						thumbnailDesktop: thumbnailDesktop6
 					}
 				]
 			},
 			showcaseProps: {
 				1: {
 					hero: {
-						heroImage,
-						alt: 'Farm in Pucklechurch'
+						heroImageDesktop: heroImageDesktop1,
+						alt: 'Malborough House'
 					},
-					imageLabel: 'Farm in Pucklechurch'
+					imageLabel: 'Malborough House'
 				},
 				2: {
 					hero: {
-						heroImage,
-						alt: 'Farm in Pucklechurch'
+						heroImageDesktop: heroImageDesktop2,
+						alt: 'House in Stapleton'
 					},
-					imageLabel: 'Castle'
+					imageLabel: 'House in Stapleton'
 				},
 				3: {
 					hero: {
-						heroImage,
-						alt: 'Farm in Pucklechurch'
+						heroImageDesktop: heroImageDesktop3,
+						alt: 'House in Clifton'
 					},
-					imageLabel: 'Park in the Green field of Bristol'
+					imageLabel: 'House in Clifton'
 				},
 				4: {
 					hero: {
-						heroImage,
-						alt: 'Farm in Pucklechurch'
+						heroImageDesktop: heroImageDesktop4,
+						alt: 'Underground House'
 					},
-					imageLabel: 'Tall Building'
+					imageLabel: 'Underground House'
 				},
 				5: {
 					hero: {
-						heroImage,
-						alt: 'Farm in Pucklechurch'
+						heroImageDesktop: heroImageDesktop5,
+						alt: 'House in Knowle'
 					},
-					imageLabel: 'Addition to Front Room'
+					imageLabel: 'House in Knowle'
+				},
+				6: {
+					hero: {
+						heroImageDesktop: heroImageDesktop6,
+						alt: 'House in Brislington'
+					},
+					imageLabel: 'House in Brislington'
 				}
 			}
 		},
 		1: {
 			textContentProps: {
-				heading: 'Project Title 1',
-				year: 'Year',
-				descriptionText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.`,
-				feedbackHeading: 'Client Feedback',
-				feedbackText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua.`
+				heading: 'Malborough House',
+				year: '2021 - Present',
+				descriptionText: `We designed this sizable dwelling which includes a wine cellar, sauna, cinema, and swimming pool. The client has taken our plans and added his own flair and interior design ideas. He is currently taking on a lot of the building work himself.`,
+				feedbackHeading: '',
+				feedbackText: ``
 			},
 			imageGalleryProps: {
 				images: [
 					{
-						image: image1,
-						largeImage: image1,
-						width: '13.5rem',
+						image: Secondary1_desktop1,
+						largeImage: Secondary1_desktop1,
+						width: '240px',
 						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '20rem',
+						image: Secondary2_desktop1,
+						largeImage: Secondary2_desktop1,
+						width: '240px',
 						largeWidth: '40rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '24.2rem',
+						image: Secondary3_desktop1,
+						largeImage: Secondary3_desktop1,
+						width: '240px',
 						largeWidth: '28.4rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '18.7rem',
-						largeWidth: '37.4rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '19.3rem',
-						largeWidth: '38.6rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '19.6rem',
-						largeWidth: '39.2rem',
 						description: 'description'
 					}
 				]
@@ -140,61 +176,61 @@ const Houses = () => {
 		},
 		2: {
 			textContentProps: {
-				heading: 'Project Title 2',
-				year: 'Year',
-				descriptionText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.`,
-				feedbackHeading: 'Client Feedback',
-				feedbackText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua.`
+				heading: 'House in Stapleton',
+				year: '2006',
+				descriptionText: `Richard Winsor designed this house in the Arts and Crafts style. It is a comfortable home for a family with two children and has reasonably sized bedrooms.`,
+				feedbackHeading: '',
+				feedbackText: ``
 			},
 			imageGalleryProps: {
 				images: [
 					{
-						image: image1,
-						largeImage: image1,
-						width: '13.5rem',
+						image: Secondary1_desktop2,
+						largeImage: Secondary1_desktop2,
+						width: '240px',
 						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '20rem',
-						largeWidth: '40rem',
+						image: Secondary2_desktop2,
+						largeImage: Secondary2_desktop2,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '24.2rem',
-						largeWidth: '28.4rem',
+						image: Secondary3_desktop2,
+						largeImage: Secondary3_desktop2,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '18.7rem',
-						largeWidth: '37.4rem',
+						image: Secondary4_desktop2,
+						largeImage: Secondary4_desktop2,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '19.3rem',
-						largeWidth: '38.6rem',
+						image: Secondary5_desktop2,
+						largeImage: Secondary5_desktop2,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '19.6rem',
-						largeWidth: '39.2rem',
+						image: Secondary6_desktop2,
+						largeImage: Secondary6_desktop2,
+						width: '240px',
+						largeWidth: '27rem',
+						description: 'description'
+					},
+					{
+						image: Secondary7_desktop2,
+						largeImage: Secondary7_desktop2,
+						width: '180px',
+						largeWidth: '27rem',
 						description: 'description'
 					}
 				]
@@ -202,61 +238,47 @@ const Houses = () => {
 		},
 		3: {
 			textContentProps: {
-				heading: 'Project Title 3',
-				year: 'Year',
-				descriptionText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.`,
-				feedbackHeading: 'Client Feedback',
-				feedbackText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua.`
+				heading: 'House in Clifton',
+				year: '1969',
+				descriptionText: `These were two Edwardian-style houses built shortly after Richard Winsor qualified in architecture.`,
+				feedbackHeading: '',
+				feedbackText: ``
 			},
 			imageGalleryProps: {
 				images: [
 					{
-						image: image1,
-						largeImage: image1,
-						width: '13.5rem',
+						image: Secondary1_desktop3,
+						largeImage: Secondary1_desktop3,
+						width: '180px',
 						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '20rem',
-						largeWidth: '40rem',
+						image: Secondary2_desktop3,
+						largeImage: Secondary2_desktop3,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '24.2rem',
-						largeWidth: '28.4rem',
+						image: Secondary3_desktop3,
+						largeImage: Secondary3_desktop3,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '18.7rem',
-						largeWidth: '37.4rem',
+						image: Secondary4_desktop3,
+						largeImage: Secondary4_desktop3,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '19.3rem',
-						largeWidth: '38.6rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '19.6rem',
-						largeWidth: '39.2rem',
+						image: Secondary5_desktop3,
+						largeImage: Secondary5_desktop3,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					}
 				]
@@ -264,61 +286,26 @@ const Houses = () => {
 		},
 		4: {
 			textContentProps: {
-				heading: 'Project Title 4',
-				year: 'Year',
-				descriptionText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.`,
-				feedbackHeading: 'Client Feedback',
-				feedbackText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua.`
+				heading: 'Underground House',
+				year: '2012',
+				descriptionText: `"Proposal for a zero-carbon underground dwelling in a 'marked one' green belt area. The main features of this four-bedroom house are an uncovered subterranean courtyard, a hardstanding area with landscaping to provide natural screening and car parking below ground level.\n\nThe house has been designed as a 'passive house' with superior insulation, solar thermal collection, triple glazing and heat recovery systems. The features proposed go further than typical passive house designs with its utilization of the surrounding landscape. Since the earth's subsurface temperature is stable, the house would benefit from heat exchange and geothermal mass. A roof meadow will cover the entire green roof, providing additional benefits such as rainwater capture and increased ecological diversification on-site."`,
+				feedbackHeading: '',
+				feedbackText: ``
 			},
 			imageGalleryProps: {
 				images: [
 					{
-						image: image1,
-						largeImage: image1,
-						width: '13.5rem',
+						image: Secondary1_desktop4,
+						largeImage: Secondary1_desktop4,
+						width: '240px',
 						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '20rem',
-						largeWidth: '40rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '24.2rem',
-						largeWidth: '28.4rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '18.7rem',
-						largeWidth: '37.4rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '19.3rem',
-						largeWidth: '38.6rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '19.6rem',
-						largeWidth: '39.2rem',
+						image: Secondary2_desktop4,
+						largeImage: Secondary2_desktop4,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					}
 				]
@@ -326,64 +313,48 @@ const Houses = () => {
 		},
 		5: {
 			textContentProps: {
-				heading: 'Project Title 5',
-				year: 'Year',
-				descriptionText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.`,
-				feedbackHeading: 'Client Feedback',
-				feedbackText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua.`
+				heading: 'House in Knowle',
+				year: '2021 - Present',
+				descriptionText: `This new home is in the planning stages. It will consist of six bedrooms with a basement and a swimming pool.`,
+				feedbackHeading: '',
+				feedbackText: ``
 			},
 			imageGalleryProps: {
 				images: [
 					{
-						image: image1,
-						largeImage: image1,
-						width: '13.5rem',
+						image: Secondary1_desktop5,
+						largeImage: Secondary1_desktop5,
+						width: '240px',
 						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '20rem',
-						largeWidth: '40rem',
+						image: Secondary2_desktop5,
+						largeImage: Secondary2_desktop5,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '24.2rem',
-						largeWidth: '28.4rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '18.7rem',
-						largeWidth: '37.4rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '19.3rem',
-						largeWidth: '38.6rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '19.6rem',
-						largeWidth: '39.2rem',
+						image: Secondary3_desktop5,
+						largeImage: Secondary3_desktop5,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					}
 				]
+			}
+		},
+		6: {
+			textContentProps: {
+				heading: 'House in Brislington',
+				year: '2008',
+				descriptionText: `Concept for two 3 bedroom semi detached cottages`,
+				feedbackHeading: '',
+				feedbackText: ``
+			},
+			imageGalleryProps: {
+				images: []
 			}
 		}
 	};

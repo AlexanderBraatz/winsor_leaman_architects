@@ -107,6 +107,7 @@ const StyledImage = styled.img`
 	background-color: ${props => props.theme.desktop.dark1};
 	min-width: 100%;
 	object-fit: cover;
+	cursor: pointer;
 `;
 // enlarged Image styles ----------------------------------------
 
