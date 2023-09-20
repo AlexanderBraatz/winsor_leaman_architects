@@ -42,7 +42,8 @@ const CustomNavElement = ({ thumbnail, id }) => {
 const SideBar = styled.div`
 	width: 22.7rem;
 
-	height: 61.3rem;
+	/* height: 61.3rem; */
+	height: 100%;
 
 	display: flex;
 	flex-direction: column;
@@ -110,4 +111,5 @@ const Image = styled.img`
 	width: 10.7rem;
 	max-width: 100%;
 	height: 100%;
+	object-fit: cover;
 `;

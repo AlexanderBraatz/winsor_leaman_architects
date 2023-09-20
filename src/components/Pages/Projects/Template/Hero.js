@@ -36,16 +36,20 @@ export default function Hero({
 }
 
 const StyledHero = styled.div`
-	max-width: 153.6rem;
-	height: 61.3rem;
+	/* max-width: 153.6rem; */
+	width: 100vw;
+	/* height: 61.3rem; */
+	height: calc(
+		100vh - 4.7rem - 10.4rem
+	); // accounting for the ProjectsNavBar and PageNavbar
 	display: flex;
 	margin: auto;
-	justify-content: center;
+	justify-content: left;
 `;
 
 const HeroImageContainer = styled.div`
-	max-width: 130.9rem;
-	height: 61.3rem;
+	/* max-width: 130.9rem; */
+	height: 100%;
 	position: relative;
 	margin-left: 3.9rem;
 	overflow: hidden;

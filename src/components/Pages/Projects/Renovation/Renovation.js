@@ -1,15 +1,81 @@
 import Template from '../Template/Template.js';
 
-//hero
-import heroImage from '../../../../assets/images/ProjectHero/hero.png';
-//sidebar
-import thumbnailImage1 from '../../../../assets/images/ProjectHero/side1.png';
-import thumbnailImage2 from '../../../../assets/images/ProjectHero/side2.png';
-import thumbnailImage3 from '../../../../assets/images/ProjectHero/side3.png';
-import thumbnailImage4 from '../../../../assets/images/ProjectHero/side4.png';
-import thumbnailImage5 from '../../../../assets/images/ProjectHero/side5.png';
-//imageGallery
-import image1 from '../../../../assets/images/PlaceholderImage.png';
+//thumbnails ---------------------------------------------------------------------------------------------------
+
+//1FarminPucklechurch
+import thumbnailDesktop1 from '../../../../assets/images/ProjectCategories/Renovation_7/1FarminPucklechurch/Thumbnails/Thumbnail_desktop.jpg';
+//2HouseinLongAshton
+import thumbnailDesktop2 from '../../../../assets/images/ProjectCategories/Renovation_7/2HouseinLongAshton/Thumbnails/Thumbnail_desktop.jpg';
+//2TheOldChapel
+import thumbnailDesktop3 from '../../../../assets/images/ProjectCategories/Churches_6/2TheOldChapel/Thumbnails/Thumbnail_desktop.jpg';
+//4HouseinClifton
+import thumbnailDesktop4 from '../../../../assets/images/ProjectCategories/Renovation_7/4HouseinClifton/Thumbnails/Thumbnail_desktop.jpg';
+//2FlatsinCotham
+import thumbnailDesktop5 from '../../../../assets/images/ProjectCategories/Flats_4/2FlatsinCotham/Thumbnails/Thumbnail_desktop.jpg';
+//2BrunelManorHotel
+import thumbnailDesktop6 from '../../../../assets/images/ProjectCategories/Commercial_5/2BrunelManorHotel/Thumbnails/Thumbnail_desktop.jpg';
+//7HouseinFailand
+import thumbnailDesktop7 from '../../../../assets/images/ProjectCategories/Renovation_7/7HouseinFailand/Thumbnails/Thumbnail_desktop.jpg';
+
+//hero ---------------------------------------------------------------------------------------------------
+//1FarminPucklechurch
+import heroImageDesktop1 from '../../../../assets/images/ProjectCategories/Renovation_7/1FarminPucklechurch/HeroImages/Hero_desktop.jpg';
+//2HouseinLongAshton
+import heroImageDesktop2 from '../../../../assets/images/ProjectCategories/Renovation_7/2HouseinLongAshton/HeroImages/Hero_desktop.jpg';
+//2TheOldChapel
+import heroImageDesktop3 from '../../../../assets/images/ProjectCategories/Churches_6/2TheOldChapel/HeroImages/Hero_desktop.jpg';
+//4HouseinClifton
+import heroImageDesktop4 from '../../../../assets/images/ProjectCategories/Renovation_7/4HouseinClifton/HeroImages/Hero_desktop.jpg';
+//2FlatsinCotham
+import heroImageDesktop5 from '../../../../assets/images/ProjectCategories/Flats_4/2FlatsinCotham/HeroImages/Hero_desktop.jpg';
+//2BrunelManorHotel
+import heroImageDesktop6 from '../../../../assets/images/ProjectCategories/Commercial_5/2BrunelManorHotel/HeroImages/Hero_desktop.jpg';
+//7HouseinFailand
+import heroImageDesktop7 from '../../../../assets/images/ProjectCategories/Renovation_7/7HouseinFailand/HeroImages/Hero_desktop.jpg';
+
+//SecondaryImages ---------------------------------------------------------------------------------------------------
+//desktop
+//1FarminPucklechurch
+import Secondary1_desktop1 from '../../../../assets/images/ProjectCategories/Renovation_7/1FarminPucklechurch/SecondaryImages/Desktop/Secondary1_desktop.jpg';
+import Secondary2_desktop1 from '../../../../assets/images/ProjectCategories/Renovation_7/1FarminPucklechurch/SecondaryImages/Desktop/Secondary2_desktop.jpg';
+import Secondary3_desktop1 from '../../../../assets/images/ProjectCategories/Renovation_7/1FarminPucklechurch/SecondaryImages/Desktop/Secondary3_desktop.jpg';
+import Secondary4_desktop1 from '../../../../assets/images/ProjectCategories/Renovation_7/1FarminPucklechurch/SecondaryImages/Desktop/Secondary4_desktop.jpg';
+import Secondary5_desktop1 from '../../../../assets/images/ProjectCategories/Renovation_7/1FarminPucklechurch/SecondaryImages/Desktop/Secondary5_desktop.jpg';
+import Secondary6_desktop1 from '../../../../assets/images/ProjectCategories/Renovation_7/1FarminPucklechurch/SecondaryImages/Desktop/Secondary6_desktop.jpg';
+import Secondary7_desktop1 from '../../../../assets/images/ProjectCategories/Renovation_7/1FarminPucklechurch/SecondaryImages/Desktop/Secondary7_desktop.jpg';
+
+//2HouseinLongAshton
+import Secondary1_desktop2 from '../../../../assets/images/ProjectCategories/Renovation_7/2HouseinLongAshton/SecondaryImages/Desktop/Secondary1_desktop.jpg';
+import Secondary2_desktop2 from '../../../../assets/images/ProjectCategories/Renovation_7/2HouseinLongAshton/SecondaryImages/Desktop/Secondary2_desktop.jpg';
+import Secondary3_desktop2 from '../../../../assets/images/ProjectCategories/Renovation_7/2HouseinLongAshton/SecondaryImages/Desktop/Secondary3_desktop.jpg';
+import Secondary4_desktop2 from '../../../../assets/images/ProjectCategories/Renovation_7/2HouseinLongAshton/SecondaryImages/Desktop/Secondary4_desktop.jpg';
+import Secondary5_desktop2 from '../../../../assets/images/ProjectCategories/Renovation_7/2HouseinLongAshton/SecondaryImages/Desktop/Secondary5_desktop.jpg';
+
+//2TheOldChapel
+import Secondary1_desktop3 from '../../../../assets/images/ProjectCategories/Churches_6/2TheOldChapel/SecondaryImages/Desktop/Secondary1_desktop.jpg';
+import Secondary2_desktop3 from '../../../../assets/images/ProjectCategories/Churches_6/2TheOldChapel/SecondaryImages/Desktop/Secondary2_desktop.jpg';
+
+//4HouseinClifton
+
+import Secondary1_desktop4 from '../../../../assets/images/ProjectCategories/Renovation_7/4HouseinClifton/SecondaryImages/Desktop/Secondary1_desktop.jpg';
+import Secondary2_desktop4 from '../../../../assets/images/ProjectCategories/Renovation_7/4HouseinClifton/SecondaryImages/Desktop/Secondary2_desktop.jpg';
+import Secondary3_desktop4 from '../../../../assets/images/ProjectCategories/Renovation_7/4HouseinClifton/SecondaryImages/Desktop/Secondary3_desktop.jpg';
+import Secondary4_desktop4 from '../../../../assets/images/ProjectCategories/Renovation_7/4HouseinClifton/SecondaryImages/Desktop/Secondary4_desktop.jpg';
+import Secondary5_desktop4 from '../../../../assets/images/ProjectCategories/Renovation_7/4HouseinClifton/SecondaryImages/Desktop/Secondary5_desktop.jpg';
+
+//2FlatsinCotham
+import Secondary1_desktop5 from '../../../../assets/images/ProjectCategories/Flats_4/2FlatsinCotham/SecondaryImages/Desktop/Secondary1_desktop.jpg';
+import Secondary2_desktop5 from '../../../../assets/images/ProjectCategories/Flats_4/2FlatsinCotham/SecondaryImages/Desktop/Secondary2_desktop.jpg';
+import Secondary3_desktop5 from '../../../../assets/images/ProjectCategories/Flats_4/2FlatsinCotham/SecondaryImages/Desktop/Secondary3_desktop.jpg';
+import Secondary4_desktop5 from '../../../../assets/images/ProjectCategories/Flats_4/2FlatsinCotham/SecondaryImages/Desktop/Secondary4_desktop.jpg';
+import Secondary5_desktop5 from '../../../../assets/images/ProjectCategories/Flats_4/2FlatsinCotham/SecondaryImages/Desktop/Secondary5_desktop.jpg';
+//2BrunelManorHotel
+import Secondary1_desktop6 from '../../../../assets/images/ProjectCategories/Commercial_5/2BrunelManorHotel/SecondaryImages/Desktop/Secondary1_desktop.jpg';
+import Secondary2_desktop6 from '../../../../assets/images/ProjectCategories/Commercial_5/2BrunelManorHotel/SecondaryImages/Desktop/Secondary2_desktop.jpg';
+import Secondary3_desktop6 from '../../../../assets/images/ProjectCategories/Commercial_5/2BrunelManorHotel/SecondaryImages/Desktop/Secondary3_desktop.jpg';
+import Secondary4_desktop6 from '../../../../assets/images/ProjectCategories/Commercial_5/2BrunelManorHotel/SecondaryImages/Desktop/Secondary4_desktop.jpg';
+//7HouseinFailand
+import Secondary1_desktop7 from '../../../../assets/images/ProjectCategories/Renovation_7/7HouseinFailand/SecondaryImages/Desktop/Secondary1_desktop.jpg';
 
 const Renovation = () => {
 	const renovationsData = {
@@ -18,121 +84,143 @@ const Renovation = () => {
 				thumbnails: [
 					{
 						to: '/projects/renovation/1',
-						image: thumbnailImage1
+						thumbnailDesktop: thumbnailDesktop1
 					},
 					{
 						to: '/projects/renovation/2',
-						image: thumbnailImage2
+						thumbnailDesktop: thumbnailDesktop2
 					},
 					{
 						to: '/projects/renovation/3',
-						image: thumbnailImage3
+						thumbnailDesktop: thumbnailDesktop3
 					},
 					{
 						to: '/projects/renovation/4',
-						image: thumbnailImage4
+						thumbnailDesktop: thumbnailDesktop4
 					},
 					{
 						to: '/projects/renovation/5',
-						image: thumbnailImage5
+						thumbnailDesktop: thumbnailDesktop5
+					},
+					{
+						to: '/projects/renovation/6',
+						thumbnailDesktop: thumbnailDesktop6
+					},
+					{
+						to: '/projects/renovation/7',
+						thumbnailDesktop: thumbnailDesktop7
 					}
 				]
 			},
 			showcaseProps: {
 				1: {
 					hero: {
-						heroImage,
+						heroImageDesktop: heroImageDesktop1,
 						alt: 'Farm in Pucklechurch'
 					},
 					imageLabel: 'Farm in Pucklechurch'
 				},
 				2: {
 					hero: {
-						heroImage,
-						alt: 'Farm in Pucklechurch'
+						heroImageDesktop: heroImageDesktop2,
+						alt: 'House in Long Ashton'
 					},
-					imageLabel: 'Castle'
+					imageLabel: 'House in Long Ashton'
 				},
 				3: {
 					hero: {
-						heroImage,
-						alt: 'Farm in Pucklechurch'
+						heroImageDesktop: heroImageDesktop3,
+						alt: 'The Old Chapel'
 					},
-					imageLabel: 'Park in the Green field of Bristol'
+					imageLabel: 'The Old Chapel'
 				},
 				4: {
 					hero: {
-						heroImage,
-						alt: 'Farm in Pucklechurch'
+						heroImageDesktop: heroImageDesktop4,
+						alt: 'House in Clifton'
 					},
-					imageLabel: 'Tall Building'
+					imageLabel: 'House in Clifton'
 				},
 				5: {
 					hero: {
-						heroImage,
-						alt: 'Farm in Pucklechurch'
+						heroImageDesktop: heroImageDesktop5,
+						alt: 'Flats in Cotham'
 					},
-					imageLabel: 'Addition to Front Room'
+					imageLabel: 'Flats in Cotham'
+				},
+				6: {
+					hero: {
+						heroImageDesktop: heroImageDesktop6,
+						alt: 'Brunel Manor Hotel'
+					},
+					imageLabel: 'Brunel Manor Hotel'
+				},
+				7: {
+					hero: {
+						heroImageDesktop: heroImageDesktop7,
+						alt: 'House in Failand'
+					},
+					imageLabel: 'House in Failand'
 				}
 			}
 		},
 		1: {
 			textContentProps: {
-				heading: 'Project Title 1',
-				year: 'Year',
-				descriptionText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.`,
-				feedbackHeading: 'Client Feedback',
-				feedbackText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua.`
+				heading: 'Farm in Pucklechurch',
+				year: '2013',
+				descriptionText: `The renovation of these three barns turned existing farm buildings into pleasant dwellings.`,
+				feedbackHeading: '',
+				feedbackText: ``
 			},
 			imageGalleryProps: {
 				images: [
 					{
-						image: image1,
-						largeImage: image1,
-						width: '13.5rem',
+						image: Secondary1_desktop1,
+						largeImage: Secondary1_desktop1,
+						width: '240px',
 						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '20rem',
+						image: Secondary2_desktop1,
+						largeImage: Secondary2_desktop1,
+						width: '240px',
 						largeWidth: '40rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '24.2rem',
+						image: Secondary3_desktop1,
+						largeImage: Secondary3_desktop1,
+						width: '240px',
 						largeWidth: '28.4rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '18.7rem',
+						image: Secondary4_desktop1,
+						largeImage: Secondary4_desktop1,
+						width: '240px',
 						largeWidth: '37.4rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '19.3rem',
+						image: Secondary5_desktop1,
+						largeImage: Secondary5_desktop1,
+						width: '240px',
 						largeWidth: '38.6rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '19.6rem',
-						largeWidth: '39.2rem',
+						image: Secondary6_desktop1,
+						largeImage: Secondary6_desktop1,
+						width: '180px',
+						largeWidth: '38.6rem',
+						description: 'description'
+					},
+					{
+						image: Secondary7_desktop1,
+						largeImage: Secondary7_desktop1,
+						width: '240px',
+						largeWidth: '38.6rem',
 						description: 'description'
 					}
 				]
@@ -140,61 +228,47 @@ const Renovation = () => {
 		},
 		2: {
 			textContentProps: {
-				heading: 'Project Title 2',
-				year: 'Year',
-				descriptionText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.`,
-				feedbackHeading: 'Client Feedback',
-				feedbackText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua.`
+				heading: 'House in Long Ashton',
+				year: '2007',
+				descriptionText: `We renovated this Victorian house and added a rear extension.`,
+				feedbackHeading: '',
+				feedbackText: ``
 			},
 			imageGalleryProps: {
 				images: [
 					{
-						image: image1,
-						largeImage: image1,
-						width: '13.5rem',
+						image: Secondary1_desktop2,
+						largeImage: Secondary1_desktop2,
+						width: '180px',
 						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '20rem',
-						largeWidth: '40rem',
+						image: Secondary2_desktop2,
+						largeImage: Secondary2_desktop2,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '24.2rem',
-						largeWidth: '28.4rem',
+						image: Secondary3_desktop2,
+						largeImage: Secondary3_desktop2,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '18.7rem',
-						largeWidth: '37.4rem',
+						image: Secondary4_desktop2,
+						largeImage: Secondary4_desktop2,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '19.3rem',
-						largeWidth: '38.6rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '19.6rem',
-						largeWidth: '39.2rem',
+						image: Secondary5_desktop2,
+						largeImage: Secondary5_desktop2,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					}
 				]
@@ -202,61 +276,26 @@ const Renovation = () => {
 		},
 		3: {
 			textContentProps: {
-				heading: 'Project Title 3',
-				year: 'Year',
-				descriptionText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.`,
-				feedbackHeading: 'Client Feedback',
-				feedbackText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua.`
+				heading: 'The Old Chapel',
+				year: '2007- 2008',
+				descriptionText: `We converted a garage to an annex (with a bedroom and kitchenette) of a converted chapel. To fit in with the chapel, we ornamented the annex with cast stone windows.`,
+				feedbackHeading: '',
+				feedbackText: ``
 			},
 			imageGalleryProps: {
 				images: [
 					{
-						image: image1,
-						largeImage: image1,
-						width: '13.5rem',
+						image: Secondary1_desktop3,
+						largeImage: Secondary1_desktop3,
+						width: '240px',
 						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '20rem',
-						largeWidth: '40rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '24.2rem',
-						largeWidth: '28.4rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '18.7rem',
-						largeWidth: '37.4rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '19.3rem',
-						largeWidth: '38.6rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '19.6rem',
-						largeWidth: '39.2rem',
+						image: Secondary2_desktop3,
+						largeImage: Secondary2_desktop3,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					}
 				]
@@ -264,61 +303,47 @@ const Renovation = () => {
 		},
 		4: {
 			textContentProps: {
-				heading: 'Project Title 4',
-				year: 'Year',
-				descriptionText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.`,
+				heading: 'House in Clifton',
+				year: '2006',
+				descriptionText: `This house is an early Victorian building with a basement that was used for storage. The dividing wall between the kitchen and the dining room was removed to create a more informal kitchen-dining area. The basement floor was lowered and a new bedroom and sitting room created with an ensuite bathroom.`,
 				feedbackHeading: 'Client Feedback',
-				feedbackText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua.`
+				feedbackText: `Pippa: I think that Richard has done a wonderful job here, creating a lot more space for my growing family.`
 			},
 			imageGalleryProps: {
 				images: [
 					{
-						image: image1,
-						largeImage: image1,
-						width: '13.5rem',
+						image: Secondary1_desktop4,
+						largeImage: Secondary1_desktop4,
+						width: '240px',
 						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '20rem',
-						largeWidth: '40rem',
+						image: Secondary2_desktop4,
+						largeImage: Secondary2_desktop4,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '24.2rem',
-						largeWidth: '28.4rem',
+						image: Secondary3_desktop4,
+						largeImage: Secondary3_desktop4,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '18.7rem',
-						largeWidth: '37.4rem',
+						image: Secondary4_desktop4,
+						largeImage: Secondary4_desktop4,
+						width: '180px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '19.3rem',
-						largeWidth: '38.6rem',
-						description: 'description'
-					},
-					{
-						image: image1,
-						largeImage: image1,
-						width: '19.6rem',
-						largeWidth: '39.2rem',
+						image: Secondary5_desktop4,
+						largeImage: Secondary5_desktop4,
+						width: '180px',
+						largeWidth: '27rem',
 						description: 'description'
 					}
 				]
@@ -326,61 +351,108 @@ const Renovation = () => {
 		},
 		5: {
 			textContentProps: {
-				heading: 'Project Title 5',
-				year: 'Year',
-				descriptionText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum.`,
-				feedbackHeading: 'Client Feedback',
-				feedbackText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua.`
+				heading: 'Flats in Cotham',
+				year: '2000s',
+				descriptionText: `We constructed around 10 timber-framed flats near the BRI.`,
+				feedbackHeading: '',
+				feedbackText: ``
 			},
 			imageGalleryProps: {
 				images: [
 					{
-						image: image1,
-						largeImage: image1,
-						width: '13.5rem',
+						image: Secondary1_desktop5,
+						largeImage: Secondary1_desktop5,
+						width: '180px',
 						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '20rem',
-						largeWidth: '40rem',
+						image: Secondary2_desktop5,
+						largeImage: Secondary2_desktop5,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '24.2rem',
-						largeWidth: '28.4rem',
+						image: Secondary3_desktop5,
+						largeImage: Secondary3_desktop5,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '18.7rem',
-						largeWidth: '37.4rem',
+						image: Secondary4_desktop5,
+						largeImage: Secondary4_desktop5,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '19.3rem',
-						largeWidth: '38.6rem',
+						image: Secondary5_desktop5,
+						largeImage: Secondary5_desktop5,
+						width: '240px',
+						largeWidth: '27rem',
+						description: 'description'
+					}
+				]
+			}
+		},
+		6: {
+			textContentProps: {
+				heading: 'Brunel Manor Hotel',
+				year: '2006',
+				descriptionText: `Renovation creating bedrooms over the hall and a new swimming pool. Asked for all the broken tiles from the local tile shop for the mosaic.`,
+				feedbackHeading: '',
+				feedbackText: ``
+			},
+			imageGalleryProps: {
+				images: [
+					{
+						image: Secondary1_desktop6,
+						largeImage: Secondary1_desktop6,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					},
 					{
-						image: image1,
-						largeImage: image1,
-						width: '19.6rem',
-						largeWidth: '39.2rem',
+						image: Secondary2_desktop6,
+						largeImage: Secondary2_desktop6,
+						width: '240px',
+						largeWidth: '27rem',
+						description: 'description'
+					},
+					{
+						image: Secondary3_desktop6,
+						largeImage: Secondary3_desktop6,
+						width: '240px',
+						largeWidth: '27rem',
+						description: 'description'
+					},
+					{
+						image: Secondary4_desktop6,
+						largeImage: Secondary4_desktop6,
+						width: '180px',
+						largeWidth: '27rem',
+						description: 'description'
+					}
+				]
+			}
+		},
+		7: {
+			textContentProps: {
+				heading: 'House in Failand',
+				year: '2017',
+				descriptionText: `The clients wished to remodel their bungalow to create a dwelling more suited to their needs. This involved extending the roof to make space for bedrooms, with the garage at the side to be used as an annex for an elderly relative.`,
+				feedbackHeading: '',
+				feedbackText: ``
+			},
+			imageGalleryProps: {
+				images: [
+					{
+						image: Secondary1_desktop7,
+						largeImage: Secondary1_desktop7,
+						width: '240px',
+						largeWidth: '27rem',
 						description: 'description'
 					}
 				]

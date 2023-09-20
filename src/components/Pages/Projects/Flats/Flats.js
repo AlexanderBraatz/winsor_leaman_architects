@@ -70,28 +70,28 @@ const Flats = () => {
 			showcaseProps: {
 				1: {
 					hero: {
-						heroImageDesktop: heroImageDesktop4,
+						heroImageDesktop: heroImageDesktop1,
 						alt: 'Flats in Bedminster'
 					},
 					imageLabel: 'Flats in Bedminster'
 				},
 				2: {
 					hero: {
-						heroImageDesktop: heroImageDesktop1,
+						heroImageDesktop: heroImageDesktop2,
 						alt: 'Flats in Cotham'
 					},
 					imageLabel: 'Flats in Cotham'
 				},
 				3: {
 					hero: {
-						heroImageDesktop: heroImageDesktop2,
+						heroImageDesktop: heroImageDesktop3,
 						alt: 'Phoenix Works Flats'
 					},
 					imageLabel: 'Phoenix Works Flats'
 				},
 				4: {
 					hero: {
-						heroImageDesktop: heroImageDesktop3,
+						heroImageDesktop: heroImageDesktop4,
 						alt: 'Flats in Weston-Super-Mare'
 					},
 					imageLabel: 'Flats in Weston-Super-Mare'

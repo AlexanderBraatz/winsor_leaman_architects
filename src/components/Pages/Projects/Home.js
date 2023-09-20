@@ -1,54 +1,55 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-import ExtensionsImageLargeCropped from '../../../assets/images/ExtensionsImageLargeCropped.jpeg';
-import HousesLargeCropped from '../../../assets/images/HousesLargeCropped.jpeg';
-import RenovationLargeCropped from '../../../assets/images/RenovationLargeCropped.jpeg';
-import FlatsLargeCropped from '../../../assets/images/FlatsLargeCropped.jpeg';
-import ChurchesLargeCropped from '../../../assets/images/ChurchesLargeCropped.jpeg';
-import View_allLargeCropped from '../../../assets/images/View_allLargeCropped.jpeg';
+import housesHome_desktop from '../../../assets/images/ProjectCategories/Houses_7/1MalboroughHouse/HeroImages/Hero_desktop.jpg';
+import extensionsHome_desktop from '../../../assets/images/ProjectCategories/Extensions_8/1HouseinAbbotsLeigh/SecondaryImages/Desktop/Secondary1_desktop.jpg';
+import renovationHome_desktop from '../../../assets/images/ProjectCategories/Renovation_7/2HouseinLongAshton/HeroImages/Hero_desktop.jpg';
+import flatHome_desktop from '../../../assets/images/ProjectCategories/Flats_4/3PhoenixWorksFlats/HeroImages/Hero_desktop.jpg';
+import churchesHome_desktop from '../../../assets/images/ProjectCategories/Churches_6/2TheOldChapel/HeroImages/Hero_desktop.jpg';
+import heroImageDesktop1commercial from '../../../assets/images/ProjectCategories/Commercial_5/1StPetersHospiceGardenRoom/HeroImages/Hero_desktop.jpg';
+
 import { ReactComponent as Arrow } from '../../../assets/images/Arrow.svg';
 
 export default function Home(props) {
 	const cards = [
 		{
 			name: 'card1',
-			src: ExtensionsImageLargeCropped,
-			text: 'Extensions',
-			size: 'large',
-			to: 'extensions/1'
-		},
-		{
-			name: 'card2',
-			src: HousesLargeCropped,
+			src: housesHome_desktop,
 			text: 'Houses',
 			size: 'large',
 			to: 'houses/1'
 		},
 		{
+			name: 'card2',
+			src: extensionsHome_desktop,
+			text: 'Extensions',
+			size: 'large',
+			to: 'extensions/1'
+		},
+		{
 			name: 'card3',
-			src: RenovationLargeCropped,
+			src: renovationHome_desktop,
 			text: 'Renovation',
 			size: 'small',
 			to: 'renovation/1'
 		},
 		{
 			name: 'card4',
-			src: FlatsLargeCropped,
+			src: flatHome_desktop,
 			text: 'Flats',
 			size: 'small',
 			to: 'flats/1'
 		},
 		{
 			name: 'card5',
-			src: ChurchesLargeCropped,
+			src: churchesHome_desktop,
 			text: 'Churches',
 			size: 'small',
 			to: 'churches/1'
 		},
 		{
 			name: 'card6',
-			src: View_allLargeCropped,
+			src: heroImageDesktop1commercial,
 			text: 'Commercial',
 			size: 'small',
 			to: 'commercial/1'
@@ -86,7 +87,8 @@ const Container = styled.div`
 	grid-template-columns: repeat(4, minmax(0, 1fr));
 	grid-template-rows: 61.8% 38.2%;
 	max-width: 180rem;
-	max-height: 77.46rem;
+	max-height: 90rem;
+	height: 100%;
 	margin: 0 auto;
 	height: calc(100vh - 10.4rem);
 `;
@@ -137,6 +139,7 @@ const Card = styled(Link)`
 `;
 
 const Image = styled.img`
+	transform: scale(1.01);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -158,9 +161,10 @@ const Haze = styled.div`
 	transform: scale(1);
 	background: radial-gradient(
 		95.16% 29.93% at 50% 50%,
-		rgba(0, 0, 0, 0.6) 0%,
-		rgba(0, 0, 0, 0.27) 100%
+		rgba(32, 43, 48, 0.6) 0%,
+		rgba(32, 43, 48, 0.228) 100%
 	);
+
 	pointer-events: none;
 `;
 
