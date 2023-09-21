@@ -26,6 +26,10 @@ const App = () => {
 			<Container>
 				<Routes>
 					<Route
+						path=""
+						element={<Home />}
+					/>
+					<Route
 						path="/projects"
 						element={<Home />}
 					/>
