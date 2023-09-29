@@ -21,70 +21,102 @@ import Commercial from './components/Pages/Projects/Commercial/Commercial';
 
 const App = () => {
 	return (
-		<div className="App">
-			<NavbarComponent />
-			<Container>
-				<Routes>
-					<Route
-						path=""
-						element={<Home />}
-					/>
-					<Route
-						path="/projects"
-						element={<Home />}
-					/>
-					<Route
-						path="/about"
-						element={<About />}
-					/>
-					<Route
-						path="/fees"
-						element={<Fees />}
-					/>
-					<Route
-						path="/contact"
-						element={<Contact />}
-					/>
-					<Route
-						path="/styleGuide"
-						element={<StyleGuide />}
-					/>
-					<Route
-						path="/projects"
-						element={<ProjectsContainer />}
-					>
+		<>
+			<StyledApp className="App">
+				<NavbarComponent />
+				<Container>
+					<Routes>
 						<Route
-							path="extensions/:id?"
-							element={<Extensions />}
+							path=""
+							element={<Home />}
 						/>
 						<Route
-							path="houses/:id?"
-							element={<Houses />}
+							path="/projects"
+							element={<Home />}
 						/>
 						<Route
-							path="renovation/:id?"
-							element={<Renovation />}
+							path="/about"
+							element={<About />}
 						/>
 						<Route
-							path="flats/:id?"
-							element={<Flats />}
+							path="/fees"
+							element={<Fees />}
 						/>
 						<Route
-							path="churches/:id?"
-							element={<Churches />}
+							path="/contact"
+							element={<Contact />}
 						/>
 						<Route
-							path="commercial/:id?"
-							element={<Commercial />}
+							path="/styleGuide"
+							element={<StyleGuide />}
 						/>
-					</Route>
-				</Routes>
-			</Container>
-		</div>
+						<Route
+							path="/projects"
+							element={<ProjectsContainer />}
+						>
+							<Route
+								path="extensions/:id?"
+								element={<Extensions />}
+							/>
+							<Route
+								path="houses/:id?"
+								element={<Houses />}
+							/>
+							<Route
+								path="renovation/:id?"
+								element={<Renovation />}
+							/>
+							<Route
+								path="flats/:id?"
+								element={<Flats />}
+							/>
+							<Route
+								path="churches/:id?"
+								element={<Churches />}
+							/>
+							<Route
+								path="commercial/:id?"
+								element={<Commercial />}
+							/>
+						</Route>
+					</Routes>
+				</Container>
+			</StyledApp>
+			<StyledMobileDisclaimer>
+				<Text>
+					Please view this website on a desktop screen wider than 1200px.
+				</Text>
+				<Text>
+					The mobile and tablet versions of the website are currently under
+					production and will be available soon!
+				</Text>
+			</StyledMobileDisclaimer>
+		</>
 	);
 };
 
 const Container = styled.div`
 	text-align: center;
 `;
+const StyledApp = styled.div`
+	@media (max-width: 1200px) {
+		display: none;
+	}
+`;
+
+const StyledMobileDisclaimer = styled.div`
+	background-color: black;
+	height: 100vh;
+	width: 100vw;
+	text-align: center;
+	padding-top: 6rem;
+`;
+const Text = styled.div`
+	color: white;
+	width: 100vw;
+	font-family: monospace;
+	font-size: 1.5rem;
+	line-height: 3rem;
+`;
+
 export default App;
