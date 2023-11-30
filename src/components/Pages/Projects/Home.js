@@ -102,7 +102,7 @@ const Card = styled(Link)`
 
 		& ~ .center > .underline {
 			width: 100%;
-			background-color: ${props => props.theme.desktop.white};
+			background-color: ${props => props.theme.desktop.grey_5};
 		}
 	}
 	&:hover > .haze {
@@ -187,7 +187,7 @@ const TextCOntainer = styled.div`
 `;
 
 const Text = styled.p`
-	color: ${props => props.theme.desktop.white};
+	color: ${props => props.theme.desktop.grey_5};
 	font-family: 'Subheading', Arial, Serif;
 	font-size: 36px;
 	font-style: normal;

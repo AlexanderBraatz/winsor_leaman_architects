@@ -151,9 +151,11 @@ export default function ContactForm(props) {
 
 	const form = useRef();
 	const [messageHasSent, setMessageHasSent] = useState(false);
+	const [clicked, setClicked] = useState(false);
 	const sendEmail = e => {
 		e.preventDefault();
 		if (validEmailRef.current && validPostcodeRef.current) {
+			setClicked(true);
 			emailjs
 				.sendForm(
 					'service_45w02r2',
@@ -224,7 +226,10 @@ export default function ContactForm(props) {
 						<Label>Other comments</Label>
 						<Textarea name="comments" />
 					</TextareaWrapper>
-					<SubmitButton type="submit" />
+					<SubmitButton
+						clicked={clicked}
+						type="submit"
+					/>
 				</React.Fragment>
 			)}
 		</Form>
@@ -252,7 +257,7 @@ const InputGroup = styled.div`
 `;
 
 const Label = styled.label`
-	color: ${props => props.theme.desktop.dark2};
+	color: ${props => props.theme.desktop.grey_3};
 	font-family: 'SmallText', Arial, Serif;
 	font-size: 1.4rem;
 	padding-left: 0.4rem;
@@ -269,9 +274,10 @@ const Textarea = styled.textarea`
 	width: 56rem;
 	height: 12.4rem;
 	border-radius: 0.5rem;
-	border: 0.1rem solid ${props => props.theme.desktop.grey4};
+	border: 0.1rem solid ${props => props.theme.desktop.dark_3};
+	background-color: ${props => props.theme.desktop.dark_3};
 
-	color: ${props => props.theme.desktop.dark2};
+	color: ${props => props.theme.desktop.grey_5};
 	font-family: 'SmallText', Arial, Serif;
 	font-size: 1.4rem;
 	padding: 0.7rem 1rem;

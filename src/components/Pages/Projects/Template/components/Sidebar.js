@@ -49,7 +49,7 @@ const SideBar = styled.div`
 	flex-direction: column;
 `;
 const SideHeading = styled.p`
-	color: ${props => props.theme.desktop.white};
+	color: ${props => props.theme.desktop.grey_5};
 	font-family: 'Button', Arial, Serif;
 	font-size: 1.6rem;
 	padding-left: 6.4rem;
@@ -88,7 +88,7 @@ const Line = styled.div`
 	width: 0.15rem;
 	height: 0rem;
 	transition: height 0.2s;
-	background-color: ${props => props.theme.desktop.white};
+	background-color: ${props => props.theme.desktop.grey_5};
 	&.activeLine {
 		height: 70%;
 	}

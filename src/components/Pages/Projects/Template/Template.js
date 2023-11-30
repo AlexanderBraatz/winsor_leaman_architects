@@ -6,7 +6,6 @@ import { useParams } from 'react-router-dom';
 
 const Template = ({ data }) => {
 	let { id } = useParams();
-	// console.log(data.heroProps.showcaseProps[id]);
 	return (
 		<Fragment>
 			<Hero

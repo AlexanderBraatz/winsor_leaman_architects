@@ -30,7 +30,7 @@ const TextContent = ({
 const Container = styled.div`
 	display: flex;
 	flex-direction: column;
-	color: ${props => props.theme.desktop.grey5};
+	color: ${props => props.theme.desktop.grey_5};
 	margin-top: 4rem;
 `;
 const DescriptionContainer = styled.div`
@@ -52,12 +52,12 @@ const Year = styled.p`
 	line-height: 40px;
 	letter-spacing: 0em;
 	text-align: left;
-	color: ${props => props.theme.desktop.grey2};
+	color: ${props => props.theme.desktop.grey_2};
 `;
 const Divider = styled.div`
 	width: 100%;
 	height: 0.2rem;
-	background-color: ${props => props.theme.desktop.dark3};
+	background-color: ${props => props.theme.desktop.dark_4};
 	margin-top: 2.4rem;
 `;
 
@@ -74,7 +74,7 @@ const DescriptionText = styled.p`
 `;
 
 const FeedbackBackground = styled.div`
-	background-color: ${props => props.theme.desktop.dark2};
+	background-color: ${props => props.theme.desktop.dark_3};
 	margin-top: 4rem;
 `;
 const FeedbackContainer = styled.div`

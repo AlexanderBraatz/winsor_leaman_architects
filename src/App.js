@@ -99,6 +99,7 @@ const Container = styled.div`
 	text-align: center;
 `;
 const StyledApp = styled.div`
+	background-color: ${props => props.theme.desktop.dark_1};
 	@media (max-width: 1200px) {
 		display: none;
 	}

@@ -26,6 +26,7 @@ const Container = styled.div`
 	width: 84.8rem;
 	height: 80rem;
 	margin: 5rem auto 0 auto;
+	color: ${props => props.theme.desktop.grey_5};
 `;
 
 const Heading = styled.h1`

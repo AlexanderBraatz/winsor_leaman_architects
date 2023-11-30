@@ -31,7 +31,7 @@ const Container = styled.div`
 	transform: translateX(-3rem);
 `;
 const Heading = styled.h1`
-	color: ${props => props.theme.desktop.dark1};
+	color: ${props => props.theme.desktop.grey_5};
 	font-family: 'Heading2', Arial, Serif;
 	font-size: 4.8rem;
 	font-weight: 400;
@@ -44,7 +44,7 @@ const Content = styled.div`
 	justify-content: space-between;
 `;
 const Text = styled.p`
-	color: ${props => props.theme.desktop.dark1};
+	color: ${props => props.theme.desktop.grey_5};
 	font-family: 'Body', Arial, Serif;
 	font-size: 1.6rem;
 	text-align: left;

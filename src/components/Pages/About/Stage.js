@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ReactComponent as ArrowUpRight } from '../../../assets/images/ArrowUpRight.svg';
-import { ReactComponent as ArrowDownRight } from '../../../assets/images/ArrowDownRight.svg';
+import { ReactComponent as ArrowUpRight } from '../../../assets/images/ArrowUpRightDark_5.svg';
+import { ReactComponent as ArrowDownRight } from '../../../assets/images/ArrowDownRightDark_5.svg';
 
 export default function Stage({
 	stage: {
@@ -65,7 +65,7 @@ const Circle = styled.div`
 `;
 
 const Text = styled.p`
-	color: ${props => props.theme.desktop.dark1};
+	color: ${props => props.theme.desktop.grey_5};
 	font-family: 'Body', Arial, Serif;
 	font-size: 16px;
 	font-weight: 400;

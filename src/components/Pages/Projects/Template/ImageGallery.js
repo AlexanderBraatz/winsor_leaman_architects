@@ -98,13 +98,13 @@ const ImageGalleryContainer = styled.div`
 const ImageContainer = styled.div`
 	flex-grow: 1;
 	height: 37.7rem;
-	background-color: ${props => props.theme.desktop.dark1};
+	background-color: ${props => props.theme.desktop.dark_1};
 	width: ${props => props.width};
 	margin-bottom: 1.6rem;
 `;
 const StyledImage = styled.img`
 	height: 100%;
-	background-color: ${props => props.theme.desktop.dark1};
+	background-color: ${props => props.theme.desktop.dark_1};
 	min-width: 100%;
 	object-fit: cover;
 	cursor: pointer;
@@ -141,7 +141,7 @@ const LargeStyledImage = styled.img`
 	width: auto;
 	max-width: 90vw;
 	max-height: 80vh;
-	background-color: ${props => props.theme.desktop.dark1};
+	background-color: ${props => props.theme.desktop.dark_1};
 	width: auto;
 	text-align: center;
 `;

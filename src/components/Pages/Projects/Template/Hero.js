@@ -65,7 +65,7 @@ const HeroImage = styled.img`
 	object-position: center;
 `;
 const ImageLabel = styled.div`
-	background-color: ${props => props.theme.desktop.secondary1};
+	background-color: ${props => props.theme.desktop.dark_3};
 	width: fit-content;
 	height: 5.6rem;
 	position: absolute;
@@ -76,7 +76,7 @@ const ImageLabel = styled.div`
 	padding: 0.8rem 1.6rem;
 `;
 const LabelText = styled.p`
-	color: ${props => props.theme.desktop.grey5};
+	color: ${props => props.theme.desktop.grey_5};
 	text-align: right;
 	font-family: 'SubHeading', Arial, Serif;
 	font-size: 2.8rem;

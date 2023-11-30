@@ -9,41 +9,16 @@ export default function NavbarComponent(props) {
 
 	return (
 		<Navbar className={onProjects ? 'onProjects' : 'notOnProjects'}>
-			<SiteTitle
-				className={onProjects ? 'onProjects' : 'notOnProjects'}
-				to="/projects"
-			>
-				<StyledWLALogo
-					className={onProjects ? 'onProjects' : 'notOnProjects'}
-				/>
+			<SiteTitle to="/projects">
+				<StyledWLALogo />
 				<LogoName>Winsor + Leaman Architects</LogoName>
 			</SiteTitle>
 
 			<StyledLinkList>
-				<CustomLink
-					onProjects={onProjects}
-					to="/projects"
-				>
-					Projects
-				</CustomLink>
-				<CustomLink
-					onProjects={onProjects}
-					to="/about"
-				>
-					About
-				</CustomLink>
-				<CustomLink
-					onProjects={onProjects}
-					to="/fees"
-				>
-					Fees
-				</CustomLink>
-				<CustomLink
-					onProjects={onProjects}
-					to="/contact"
-				>
-					Contact
-				</CustomLink>
+				<CustomLink to="/projects">Projects</CustomLink>
+				<CustomLink to="/about">About</CustomLink>
+				<CustomLink to="/fees">Fees</CustomLink>
+				<CustomLink to="/contact">Contact</CustomLink>
 			</StyledLinkList>
 		</Navbar>
 	);
@@ -56,19 +31,13 @@ function CustomLink({ to, onProjects, children, ...props }) {
 	return (
 		<StyledCustomLink>
 			<StyledLink
-				className={`${onProjects ? 'onProjects' : 'notOnProjects'} ${
-					isActive ? 'active' : ''
-				}`}
+				className={` ${isActive ? 'active' : ''}`}
 				to={to}
 				{...props}
 			>
 				{children}
 			</StyledLink>
-			<Underline
-				className={`underline ${onProjects ? 'onProjects' : 'notOnProjects'} ${
-					isActive ? 'active' : ''
-				}`}
-			/>
+			<Underline className={`underline ${isActive ? 'active' : ''}`} />
 		</StyledCustomLink>
 	);
 }
@@ -79,10 +48,10 @@ const Navbar = styled.nav`
 	justify-content: space-between;
 	padding: 2rem 6.4rem;
 	&.onProjects {
-		background-color: ${props => props.theme.desktop.dark2};
+		background-color: ${props => props.theme.desktop.dark_3};
 	}
 	&.notOnProjects {
-		background-color: ${props => props.theme.desktop.white};
+		background-color: ${props => props.theme.desktop.dark_1};
 	}
 `;
 
@@ -93,24 +62,12 @@ const SiteTitle = styled(Link)`
 	display: flex;
 	align-items: center;
 	gap: 3rem;
-	&.onProjects {
-		color: ${props => props.theme.desktop.grey5};
-	}
-	&.notOnProjects {
-		color: ${props => props.theme.desktop.dark1};
-	}
+	color: ${props => props.theme.desktop.grey_5};
 `;
 const StyledWLALogo = styled(WLALogo)`
 	width: 6.4rem;
-	&.onProjects {
-		& path {
-			fill: ${props => props.theme.desktop.grey5};
-		}
-	}
-	&.notOnProjects {
-		& path {
-			fill: ${props => props.theme.desktop.dark1};
-		}
+	path {
+		fill: ${props => props.theme.desktop.grey_5};
 	}
 `;
 
@@ -146,29 +103,15 @@ const StyledLink = styled(Link)`
 
 	padding: 0 0.3rem;
 
-	&.onProjects {
-		color: ${props => props.theme.desktop.grey5};
-	}
-	&.notOnProjects {
-		color: ${props => props.theme.desktop.dark1};
-	}
+	color: ${props => props.theme.desktop.grey_5};
 `;
 const Underline = styled.div`
 	width: 0%;
 	height: 0.2rem;
 	transition: width 0.3s;
 
-	&.onProjects {
-		background-color: ${props => props.theme.desktop.grey5};
-		&.active {
-			width: 100%;
-		}
-	}
-
-	&.notOnProjects {
-		background-color: ${props => props.theme.desktop.dark1};
-		&.active {
-			width: 100%;
-		}
+	background-color: ${props => props.theme.desktop.grey_5};
+	&.active {
+		width: 100%;
 	}
 `;

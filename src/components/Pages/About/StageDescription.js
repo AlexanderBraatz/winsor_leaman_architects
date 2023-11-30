@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ReactComponent as Cancel } from '../../../assets/images/Cancel.svg';
+import { ReactComponent as Cancel } from '../../../assets/images/CancelGrey_5.svg';
 
 export default function StageDescription({
 	stage: { color, name, details, updateSelectedStage }
@@ -72,7 +72,7 @@ const Circle = styled.div`
 const StyledCancel = styled(Cancel)``;
 
 const Text = styled.p`
-	color: ${props => props.theme.desktop.dark1};
+	color: ${props => props.theme.desktop.grey_5};
 	font-family: 'Body', Arial, Serif;
 	font-size: 16px;
 	font-weight: 400;
@@ -98,11 +98,11 @@ const LittleCircle = styled.div`
 	width: 0.2rem;
 	height: 0.2rem;
 	border-radius: 100%;
-	background-color: ${props => props.theme.desktop.dark1};
+	background-color: ${props => props.theme.desktop.dark_1};
 `;
 
 const StyledListItem = styled.li`
-	color: ${props => props.theme.desktop.dark1};
+	color: ${props => props.theme.desktop.grey_5};
 	font-family: 'Body', Arial, Serif;
 
 	font-size: 16px;

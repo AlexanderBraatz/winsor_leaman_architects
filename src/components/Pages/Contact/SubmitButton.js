@@ -11,31 +11,48 @@ export default function SubmitButton(props) {
 		setHover(false);
 	};
 	return (
-		<Button
-			onMouseOver={handleMouseOver}
-			onMouseOut={handleMouseOut}
-		>
-			<Text>Submit</Text>
-			<Background className={hover ? 'hasHover' : 'doesNotHaveHover'} />
-		</Button>
+		<>
+			{props.clicked ? (
+				<Loader />
+			) : (
+				<Container>
+					<Button
+						onMouseOver={handleMouseOver}
+						onMouseOut={handleMouseOut}
+					>
+						<Text>Submit</Text>
+					</Button>
+					<Background className={hover ? 'hasHover' : 'doesNotHaveHover'} />
+				</Container>
+			)}
+		</>
 	);
 }
+
+const Container = styled.div`
+	background-color: ${props => props.theme.desktop.dark_4};
+	position: relative;
+	width: fit-content;
+	overflow: hidden;
+	margin-top: 2.4rem;
+	border-radius: 0.5rem;
+`;
 const Button = styled.button`
 	//styles
 	width: 8.9rem;
 	height: 3.6rem;
 	border-radius: 0.5rem;
-	border: 0.1rem solid ${props => props.theme.desktop.grey4};
-	margin-top: 2.4rem;
+	border: none;
+
 	cursor: pointer;
 
 	//effect properties
 	background-color: transparent;
 	position: relative;
-	overflow: hidden;
+	z-index: 2;
 `;
 const Text = styled.p`
-	color: ${props => props.theme.desktop.dark1};
+	color: ${props => props.theme.desktop.grey_5};
 	font-family: 'Button', Arial, Serif;
 	font-size: 1.6rem;
 `;
@@ -45,19 +62,38 @@ const Background = styled.div`
 
 	//color fade effect
 	&.hasHover {
-		background-color: ${props => props.theme.desktop.button};
+		background-color: ${props => props.theme.desktop.primary};
 		left: 0%;
 	}
 	&.doesNotHaveHover {
-		background-color: ${props => props.theme.desktop.white};
+		background-color: ${props => props.theme.desktop.dark_3};
 		left: -100%;
 	}
-
 	// swipe effect
 	position: absolute;
-	top: 0%;
-	z-index: -1;
+	bottom: 0%;
+	z-index: 1;
 
 	// effect transition timing
 	transition: left 0.4s linear, background-color 0.4s linear;
+`;
+
+const Loader = styled.div`
+	margin-top: 2.4rem;
+	margin-left: 0.4rem;
+	border: 0.6rem solid ${props => props.theme.desktop.grey_2};
+	border-top: 0.6rem solid ${props => props.theme.desktop.grey_5};
+	border-radius: 50%;
+	width: 3.6rem;
+	height: 3.6rem;
+	animation: spin 1s linear infinite;
+
+	@keyframes spin {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
 `;

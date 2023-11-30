@@ -68,6 +68,7 @@ const Heading = styled.h1`
 	font-size: 4.8rem;
 	font-weight: 400;
 	letter-spacing: -0.048rem;
+	color: ${props => props.theme.desktop.grey_5};
 `;
 
 const Content = styled.div`
@@ -81,6 +82,7 @@ const SubHeading = styled.h2`
 	font-weight: 300;
 	text-align: left;
 	height: 5.2rem;
+	color: ${props => props.theme.desktop.grey_5};
 `;
 const StyledDiv = styled.div`
 	width: 100%;
@@ -89,7 +91,7 @@ const StyledDiv = styled.div`
 	padding: 4rem 0;
 `;
 const Text = styled.p`
-	color: ${props => props.theme.desktop.dark1};
+	color: ${props => props.theme.desktop.grey_5};
 	font-family: 'Body', Arial, Serif;
 	font-size: 1.6rem;
 	text-align: left;
@@ -113,6 +115,7 @@ const ImageLabel = styled.p`
 	font-family: 'Body', Arial, Serif;
 	font-size: 1.6rem;
 	text-align: left;
+	color: ${props => props.theme.desktop.grey_5};
 `;
 const LogoWrapper = styled.div`
 	width: 8.96rem;

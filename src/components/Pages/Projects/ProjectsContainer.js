@@ -37,12 +37,12 @@ function CustomLink({ to, children, ...props }) {
 	);
 }
 const StyledProjectsContainer = styled.div`
-	background-color: ${props => props.theme.desktop.dark1};
+	background-color: ${props => props.theme.desktop.dark_1};
 `;
 const Navbar = styled.nav`
 	padding: 1rem 6.4rem;
 	height: 4.7rem;
-	background-color: ${props => props.theme.desktop.dark1_2};
+	background-color: ${props => props.theme.desktop.dark_2};
 `;
 
 const StyledLinkList = styled.ul`
@@ -62,7 +62,7 @@ const StyledCustomLink = styled.li`
 	}
 `;
 const StyledLink = styled(Link)`
-	color: ${props => props.theme.desktop.white};
+	color: ${props => props.theme.desktop.grey_5};
 	font-family: 'Button', Arial, Serif;
 	text-decoration: none;
 	font-size: 1.6rem;
@@ -72,7 +72,7 @@ const StyledLink = styled(Link)`
 const Underline = styled.div`
 	width: 0%;
 	height: 0.15rem;
-	background-color: ${props => props.theme.desktop.white};
+	background-color: ${props => props.theme.desktop.grey_5};
 	transition: width 0.3s;
 	&.active {
 		width: 100%;

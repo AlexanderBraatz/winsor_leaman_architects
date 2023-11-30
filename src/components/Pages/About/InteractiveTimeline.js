@@ -15,7 +15,7 @@ export default function InteractiveTimeline(props) {
 		{
 			key: 1,
 			name: 'Design',
-			color: theme.desktop.primary4,
+			color: theme.desktop.primary,
 			updateSelectedStage: updateSelectedStage,
 			bottom: '0rem',
 			left: '0rem',
@@ -34,7 +34,7 @@ export default function InteractiveTimeline(props) {
 		{
 			key: 2,
 			name: 'Planning',
-			color: theme.desktop.gradient1_light,
+			color: theme.desktop.gradient_1,
 			onClickHandler: '',
 			updateSelectedStage: updateSelectedStage,
 			bottom: '7.6rem',
@@ -54,7 +54,7 @@ export default function InteractiveTimeline(props) {
 			key: 3,
 			name: `Pre-
 			construction`,
-			color: theme.desktop.gradient2_light,
+			color: theme.desktop.gradient_2,
 			onClickHandler: '',
 			updateSelectedStage: updateSelectedStage,
 			bottom: '0rem',
@@ -75,7 +75,7 @@ export default function InteractiveTimeline(props) {
 		{
 			key: 4,
 			name: 'Construction',
-			color: theme.desktop.gradient3_light,
+			color: theme.desktop.gradient_3,
 			onClickHandler: '',
 			updateSelectedStage: updateSelectedStage,
 			bottom: '7.6rem',
@@ -94,7 +94,7 @@ export default function InteractiveTimeline(props) {
 		{
 			key: 5,
 			name: 'Completion',
-			color: theme.desktop.gradient4_light,
+			color: theme.desktop.gradient_4,
 			onClickHandler: '',
 			updateSelectedStage: updateSelectedStage,
 			bottom: '0rem',
@@ -135,7 +135,7 @@ export default function InteractiveTimeline(props) {
 }
 
 const Background = styled.div`
-	background-color: ${props => props.theme.desktop.secondary5};
+	background-color: ${props => props.theme.desktop.dark_2};
 	width: 100%;
 	height: 37rem;
 	padding: 4rem 0;
@@ -151,7 +151,7 @@ const Heading = styled.div`
 `;
 
 const HeadingText = styled.h2`
-	color: ${props => props.theme.desktop.dark1};
+	color: ${props => props.theme.desktop.grey_5};
 	font-family: 'Heading3', Arial, Serif;
 	font-size: 3.6rem;
 	font-weight: 300;
@@ -161,7 +161,7 @@ const HeadingText = styled.h2`
 `;
 
 const Instruction = styled.p`
-	color: ${props => props.theme.desktop.dark5};
+	color: ${props => props.theme.desktop.grey_2};
 	font-family: 'Body', Arial, Serif;
 	font-size: 16px;
 	font-weight: 400;
