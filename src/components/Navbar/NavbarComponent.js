@@ -1,19 +1,21 @@
 import styled from 'styled-components';
 import { Link, useResolvedPath, useMatch, useLocation } from 'react-router-dom';
 import { ReactComponent as WLALogo } from '../../assets/images/LogoNew.svg';
+import React, { useContext } from 'react';
+import { ResponsiveContext } from '../../ResponsiveContext';
 
 export default function NavbarComponent(props) {
 	const location = useLocation();
 	const path = location.pathname;
 	const onProjects = /\/projects.+/.test(path);
+	const { isTablet } = useContext(ResponsiveContext);
 
 	return (
 		<Navbar className={onProjects ? 'onProjects' : 'notOnProjects'}>
 			<SiteTitle to="/projects">
 				<StyledWLALogo />
-				<LogoName>Winsor + Leaman Architects</LogoName>
+				<LogoName>{`Winsor + Leaman ${isTablet ? '' : 'Architects'}`}</LogoName>
 			</SiteTitle>
-
 			<StyledLinkList>
 				<CustomLink to="/projects">Projects</CustomLink>
 				<CustomLink to="/about">About</CustomLink>
@@ -53,6 +55,10 @@ const Navbar = styled.nav`
 	&.notOnProjects {
 		background-color: ${props => props.theme.desktop.dark_1};
 	}
+	@media (max-width: 843px) {
+		height: 9.6rem;
+		padding: 2rem 2.4rem;
+	}
 `;
 
 // Logo
@@ -61,8 +67,10 @@ const SiteTitle = styled(Link)`
 	text-decoration: none;
 	display: flex;
 	align-items: center;
-	gap: 3rem;
 	color: ${props => props.theme.desktop.grey_5};
+	margin-right: 2rem;
+	@media (max-width: 843px) {
+	}
 `;
 const StyledWLALogo = styled(WLALogo)`
 	width: 6.4rem;
@@ -74,6 +82,13 @@ const StyledWLALogo = styled(WLALogo)`
 const LogoName = styled.h1`
 	font-family: 'Logo', Arial, Serif;
 	font-size: 2.8rem;
+	margin-left: 1.6rem;
+	@media (max-width: 1150px) {
+		font-size: 2rem;
+	}
+	@media (max-width: 843px) {
+		width: 16rem;
+	}
 `;
 
 // Navbar links
@@ -83,6 +98,9 @@ const StyledLinkList = styled.ul`
 	display: flex;
 	justify-content: space-between;
 	width: 57.5rem;
+	@media (max-width: 843px) {
+		width: 43rem;
+	}
 `;
 const StyledCustomLink = styled.li`
 	width: fit-content;
@@ -104,6 +122,12 @@ const StyledLink = styled(Link)`
 	padding: 0 0.3rem;
 
 	color: ${props => props.theme.desktop.grey_5};
+	@media (max-width: 843px) {
+		font-size: 2rem;
+	}
+	@media (max-width: 600px) {
+		font-size: 1.5rem;
+	}
 `;
 const Underline = styled.div`
 	width: 0%;

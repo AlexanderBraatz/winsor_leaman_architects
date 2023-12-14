@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import React from 'react';
 
 import housesHome_desktop from '../../../assets/images/ProjectCategories/Houses_7/1MalboroughHouse/HeroImages/Hero_desktop.jpg';
 import extensionsHome_desktop from '../../../assets/images/ProjectCategories/Extensions_8/1HouseinAbbotsLeigh/SecondaryImages/Desktop/Secondary1_desktop.jpg';
@@ -84,13 +85,22 @@ export default function Home(props) {
 
 const Container = styled.div`
 	display: grid;
-	grid-template-columns: repeat(4, minmax(0, 1fr));
-	grid-template-rows: 61.8% 38.2%;
+
 	max-width: 180rem;
 	max-height: 90rem;
 	height: 100%;
 	margin: 0 auto;
-	height: calc(100vh - 10.4rem);
+
+	@media (min-width: 843px) {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		grid-template-rows: 61.8% 38.2%;
+		height: calc(100vh - 10.4rem);
+	}
+	@media (max-width: 843px) {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		grid-template-rows: 33.3%, 33.3%, 33.3%;
+		height: calc(100vh - 6.4rem);
+	}
 `;
 
 const Card = styled(Link)`
@@ -112,11 +122,17 @@ const Card = styled(Link)`
 	&.card1 {
 		grid-column: span 2;
 		grid-row: 1;
+		@media (max-width: 843px) {
+			grid-column: 1;
+		}
 	}
 
 	&.card2 {
 		grid-column: 3 / span 2;
 		grid-row: 1;
+		@media (max-width: 843px) {
+			grid-column: 2;
+		}
 	}
 
 	&.card3 {
@@ -131,10 +147,18 @@ const Card = styled(Link)`
 	&.card5 {
 		grid-column: 3;
 		grid-row: 2;
+		@media (max-width: 843px) {
+			grid-column: 1;
+			grid-row: 3;
+		}
 	}
 	&.card6 {
 		grid-column: 4;
 		grid-row: 2;
+		@media (max-width: 843px) {
+			grid-column: 2;
+			grid-row: 3;
+		}
 	}
 `;
 
@@ -188,10 +212,9 @@ const TextCOntainer = styled.div`
 
 const Text = styled.p`
 	color: ${props => props.theme.desktop.grey_5};
-	font-family: 'Subheading', Arial, Serif;
-	font-size: 36px;
+
 	font-style: normal;
-	font-weight: 200;
+
 	line-height: normal;
 	position: relative;
 	z-index: 10;
@@ -200,17 +223,42 @@ const Text = styled.p`
 	/* added transform: translateZ(0); to fix letter jiggling in safari */
 	/* added to force the browser to use hardware acceleration and improve the rendering during the transition. */
 	transform: translateZ(0);
-	margin-right: 1rem;
-	&.smallText {
-		font-size: 2.8rem;
+
+	@media (min-width: 843px) {
+		font-family: 'Subheading', Arial, Serif;
+		font-weight: 200;
+		margin-right: 1rem;
+		font-size: 3.6rem;
+
+		&.smallText {
+			font-size: 2.8rem;
+		}
+	}
+	@media (min-width: 480px) and (max-width: 843px) {
+		font-family: 'Subheading', Arial, Serif;
+		font-weight: 200;
+		margin-right: 1rem;
+		font-size: 3.6rem;
+	}
+	@media (max-width: 480px) {
+		font-family: 'Heading3', Arial, Serif;
+		font-weight: 300;
+		margin-right: 0.6rem;
+		font-size: 2.2rem;
 	}
 `;
 const StyledArrow = styled(Arrow)`
 	width: 3.8rem;
 	height: 3.8rem;
-	&.smallArrow {
-		width: 2.95rem;
-		height: 2.95rem;
+	@media (min-width: 843px) {
+		&.smallArrow {
+			width: 2.95rem;
+			height: 2.95rem;
+		}
+	}
+	@media (max-width: 480px) {
+		width: 2.5rem;
+		height: 2.4rem;
 	}
 `;
 
