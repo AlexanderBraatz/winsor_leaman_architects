@@ -45,6 +45,9 @@ const StyledHero = styled.div`
 	display: flex;
 	margin: auto;
 	justify-content: left;
+	@media (max-width: 843px) {
+		flex-direction: column;
+	}
 `;
 
 const HeroImageContainer = styled.div`

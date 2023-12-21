@@ -26,66 +26,68 @@ const App = () => {
 	return (
 		<>
 			{true ? (
-				<StyledApp className="App">
-					<ResponsiveNavbar />
-					<Container>
-						<Routes>
-							<Route
-								path=""
-								element={<Home />}
-							/>
-							<Route
-								path="/projects"
-								element={<Home />}
-							/>
-							<Route
-								path="/about"
-								element={<About />}
-							/>
-							<Route
-								path="/fees"
-								element={<Fees />}
-							/>
-							<Route
-								path="/contact"
-								element={<Contact />}
-							/>
-							<Route
-								path="/styleGuide"
-								element={<StyleGuide />}
-							/>
-							<Route
-								path="/projects"
-								element={<ProjectsContainer />}
-							>
+				<Container>
+					<StyledApp className="App">
+						<ResponsiveNavbar />
+						<BodyContainer>
+							<Routes>
 								<Route
-									path="extensions/:id?"
-									element={<Extensions />}
+									path=""
+									element={<Home />}
 								/>
 								<Route
-									path="houses/:id?"
-									element={<Houses />}
+									path="/projects"
+									element={<Home />}
 								/>
 								<Route
-									path="renovation/:id?"
-									element={<Renovation />}
+									path="/about"
+									element={<About />}
 								/>
 								<Route
-									path="flats/:id?"
-									element={<Flats />}
+									path="/fees"
+									element={<Fees />}
 								/>
 								<Route
-									path="churches/:id?"
-									element={<Churches />}
+									path="/contact"
+									element={<Contact />}
 								/>
 								<Route
-									path="commercial/:id?"
-									element={<Commercial />}
+									path="/styleGuide"
+									element={<StyleGuide />}
 								/>
-							</Route>
-						</Routes>
-					</Container>
-				</StyledApp>
+								<Route
+									path="/projects"
+									element={<ProjectsContainer />}
+								>
+									<Route
+										path="extensions/:id?"
+										element={<Extensions />}
+									/>
+									<Route
+										path="houses/:id?"
+										element={<Houses />}
+									/>
+									<Route
+										path="renovation/:id?"
+										element={<Renovation />}
+									/>
+									<Route
+										path="flats/:id?"
+										element={<Flats />}
+									/>
+									<Route
+										path="churches/:id?"
+										element={<Churches />}
+									/>
+									<Route
+										path="commercial/:id?"
+										element={<Commercial />}
+									/>
+								</Route>
+							</Routes>
+						</BodyContainer>
+					</StyledApp>
+				</Container>
 			) : (
 				<StyledMobileDisclaimer>
 					<Text>
@@ -102,15 +104,20 @@ const App = () => {
 };
 
 const Container = styled.div`
-	text-align: center;
+	width: 100vw;
+	overflow-x: hidden;
 `;
 const StyledApp = styled.div`
 	background-color: ${props => props.theme.desktop.dark_1};
 	/* @media (max-width: 1200px) {
 		display: none;
 	} */
+	width: 100vw;
+	/* overflow-x: hidden; */
 `;
-
+const BodyContainer = styled.div`
+	text-align: center;
+`;
 const StyledMobileDisclaimer = styled.div`
 	background-color: black;
 	height: 100vh;

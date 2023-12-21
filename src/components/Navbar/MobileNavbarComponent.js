@@ -11,9 +11,20 @@ export default function MobileNavbarComponent(props) {
 	const onProjects = /\/projects.+/.test(path);
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const [isProjectsMenuOpen, setIsProjectsMenuOpen] = useState(false);
+	const [isMenuHidden, setMenuHidden] = useState(true);
 
 	const handleClickForMenu = () => {
-		setIsMenuOpen(prevDropdown => !prevDropdown);
+		if (isMenuOpen) {
+			setTimeout(() => {
+				setMenuHidden(true);
+			}, 400);
+		} else {
+			setMenuHidden(false);
+		}
+		setTimeout(() => {
+			setIsMenuOpen(prevDropdown => !prevDropdown);
+		}, 1);
+
 		setTimeout(() => {
 			setIsProjectsMenuOpen(false);
 		}, 400);
@@ -33,7 +44,10 @@ export default function MobileNavbarComponent(props) {
 					{isMenuOpen ? <StyledHamburgerExit /> : <StyledHamburgerMenu />}
 				</DropdownToggle>
 			</Navbar>
-			<DropdownMenu isMenuOpen={isMenuOpen}>
+			<DropdownMenu
+				isMenuOpen={isMenuOpen}
+				isMenuHidden={isMenuHidden}
+			>
 				<StyledLinkList>
 					<CustomLink
 						to="/projects"
@@ -107,9 +121,13 @@ export default function MobileNavbarComponent(props) {
 	);
 }
 
-function DropdownMenu({ isMenuOpen, children, ...props }) {
+function DropdownMenu({ isMenuOpen, isMenuHidden, children, ...props }) {
 	return (
-		<StyledDropdownMenu className={` ${isMenuOpen ? 'isMenuOpen' : ''}`}>
+		<StyledDropdownMenu
+			className={` ${isMenuOpen ? 'isMenuOpen' : ''} ${
+				isMenuHidden ? 'isMenuHidden' : ''
+			}`}
+		>
 			{children}
 		</StyledDropdownMenu>
 	);
@@ -187,16 +205,19 @@ const StyledHamburgerExit = styled(HamburgerExit)`
 
 const StyledDropdownMenu = styled.div`
 	width: 100vw;
-	min-height: calc(100vh - 6.4rem);
+	min-height: calc(100vh - 6.3rem);
 	background-color: ${props => props.theme.desktop.dark_1};
 	position: absolute;
-	top: 6.4rem;
+	top: 6.3rem;
 	z-index: 4;
 	left: 100vw;
 	transition: left 0.3s ease-in-out;
-
+	display: block;
 	&.isMenuOpen {
 		left: 0vw;
+	}
+	&.isMenuHidden {
+		display: none;
 	}
 `;
 const StyledLinkList = styled.ul`
@@ -205,8 +226,9 @@ const StyledLinkList = styled.ul`
 	flex-direction: column;
 	justify-content: top;
 	width: 100vw;
-	margin-top: 1.6rem;
-	margin-left: 2.4rem;
+	padding-top: 1.6rem;
+	padding-left: 2.4rem;
+	y-offset: ;
 `;
 const ProjectsMenu = styled.ul`
 	list-style: none;
