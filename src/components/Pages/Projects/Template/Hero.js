@@ -16,9 +16,9 @@ export default function Hero({
 			/>
 			<HeroImageContainer>
 				<HeroImage
-					src={hero.heroImage}
-					sizes
-					srcset={`${hero.heroImageMobile} 1200w,${hero.heroImageTablet} 1366w,${hero.heroImageDesktop} 2400w`}
+					src={hero.heroImageDesktop}
+					sizes=""
+					// srcSet={`${hero.heroImageMobile} 1200w,${hero.heroImageTablet} 1366w,${hero.heroImageDesktop} 2400w`}
 					// 					srcset="
 					//     https://placehold.co/800x200/png   800w,
 					//     https://placehold.co/1600x400/png 1600w,
@@ -47,6 +47,11 @@ const StyledHero = styled.div`
 	justify-content: left;
 	@media (max-width: 843px) {
 		flex-direction: column;
+		/* height: calc(100vh - 9.6rem - 4.7rem); */
+		height: fit-content;
+	}
+	@media (max-width: 480px) {
+		/* height: calc(100vh - 6.4rem); */
 	}
 `;
 
@@ -59,6 +64,9 @@ const HeroImageContainer = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	@media (max-width: 843px) {
+		margin-left: 0rem;
+	}
 `;
 const HeroImage = styled.img`
 	max-width: 100%;
@@ -66,6 +74,14 @@ const HeroImage = styled.img`
 	max-height: auto;
 	object-fit: cover;
 	object-position: center;
+	@media (max-width: 843px) {
+		min-width: 100%;
+		max-width: auto;
+		max-height: 56vh;
+	}
+	@media (max-width: 480px) {
+		max-height: 42vh;
+	}
 `;
 const ImageLabel = styled.div`
 	background-color: ${props => props.theme.desktop.dark_3};
@@ -77,6 +93,9 @@ const ImageLabel = styled.div`
 	display: flex;
 	align-items: center;
 	padding: 0.8rem 1.6rem;
+	@media (max-width: 843px) {
+		display: none;
+	}
 `;
 const LabelText = styled.p`
 	color: ${props => props.theme.desktop.grey_5};

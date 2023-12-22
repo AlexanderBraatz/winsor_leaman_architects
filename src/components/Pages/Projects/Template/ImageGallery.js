@@ -60,7 +60,7 @@ const ImageGallery = ({ imageGalleryProps: { images } }) => {
 
 const Image = ({ image, handleClick }) => {
 	return (
-		<ImageContainer>
+		<ImageContainer width={image.width}>
 			<StyledImage
 				src={image.image}
 				width={image.width}
@@ -93,14 +93,47 @@ const ImageGalleryContainer = styled.div`
 	& div:last-child {
 		max-width: 48.686%; //calculated from half the row minus half the width of the grid gap of 16px
 	}
+	@media (max-width: 843px) {
+		max-width: 38.6rem;
+		column-gap: 0.8rem;
+	}
+
+	@media (max-width: 480px) {
+		max-width: 37rem;
+		column-gap: 0.8rem;
+		padding: 0 0.8rem;
+	}
+	@media (max-width: 375px) {
+		max-width: 34rem;
+	}
+	@media (max-width: 340px) {
+		max-width: 30rem;
+	}
+	@media (max-width: 300px) {
+		max-width: 27rem;
+	}
 `;
 
 const ImageContainer = styled.div`
 	flex-grow: 1;
 	height: 37.7rem;
 	background-color: ${props => props.theme.desktop.dark_1};
-	width: ${props => props.width};
+	width: calc(${props => props.width});
 	margin-bottom: 1.6rem;
+	@media (max-width: 843px) {
+		height: 16.4rem;
+		width: calc(${props => props.width} / 1.5);
+		margin-bottom: 0.8rem;
+	}
+	@media (max-width: 480px) {
+		height: 14rem;
+		width: calc(${props => props.width} / 1.8);
+		margin-bottom: 0.8rem;
+	}
+	@media (max-width: 300px) {
+		height: 10rem;
+		width: calc(${props => props.width} / 2.8);
+	}
 `;
 const StyledImage = styled.img`
 	height: 100%;
@@ -108,6 +141,7 @@ const StyledImage = styled.img`
 	min-width: 100%;
 	object-fit: cover;
 	cursor: pointer;
+	width: 100%;
 `;
 // enlarged Image styles ----------------------------------------
 
@@ -149,7 +183,7 @@ const LargeStyledImage = styled.img`
 const Left = styled.div`
 	position: absolute;
 	height: 60%;
-	width: 20rem;
+	width: 30%;
 	z-index: 30;
 	left: 0rem;
 	display: flex;
@@ -159,6 +193,18 @@ const Left = styled.div`
 	&:hover > div {
 		transform: scale(1.3);
 	}
+
+	@media (max-width: 480px) {
+		& div {
+			transform: scale(0.5);
+		}
+		&:hover > div {
+			transform: scale(calc(0.5 * 1.3));
+		}
+		padding-left: 0rem;
+	}
+
+	//adjust size thats it i think
 `;
 const Gradient = styled.div`
 	display: flex;
@@ -180,7 +226,7 @@ const LeftArrow = styled(Chevron_left)`
 const Right = styled.div`
 	position: absolute;
 	height: 60%;
-	width: 20rem;
+	width: 30%;
 	z-index: 30;
 	right: 0rem;
 	display: flex;
@@ -191,6 +237,15 @@ const Right = styled.div`
 	&:hover > div {
 		transform: scale(1.3);
 	}
+	@media (max-width: 480px) {
+		& div {
+			transform: scale(0.5);
+		}
+		&:hover > div {
+			transform: scale(calc(0.5 * 1.3));
+		}
+		padding-right: 0rem;
+	}
 `;
 const RightArrow = styled(Chevron_right)`
 	width: 1.7rem;
@@ -199,7 +254,7 @@ const RightArrow = styled(Chevron_right)`
 const TopRight = styled.div`
 	position: absolute;
 	height: 20%;
-	width: 20rem;
+	width: 30%;
 	z-index: 30;
 	right: 0rem;
 	top: 0rem;
@@ -211,6 +266,16 @@ const TopRight = styled.div`
 	cursor: pointer;
 	&:hover > div {
 		transform: scale(1.3);
+	}
+	@media (max-width: 480px) {
+		& div {
+			transform: scale(0.5);
+		}
+		&:hover > div {
+			transform: scale(calc(0.5 * 1.3));
+		}
+		padding-top: 0rem;
+		padding-right: 0rem;
 	}
 `;
 const X = styled(Close)``;

@@ -59,10 +59,11 @@ export default function Home(props) {
 	return (
 		<>
 			<Container>
-				{cards.map(card => (
+				{cards.map((card, i) => (
 					<Card
 						className={card.name}
 						to={card.to}
+						key={i}
 					>
 						<Image
 							className={'image'}

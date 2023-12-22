@@ -32,10 +32,20 @@ const Container = styled.div`
 	flex-direction: column;
 	color: ${props => props.theme.desktop.grey_5};
 	margin-top: 4rem;
+	@media (max-width: 843px) {
+		margin-top: 3.2rem;
+	}
+	@media (max-width: 480px) {
+		margin-top: 2.4rem;
+	}
 `;
 const DescriptionContainer = styled.div`
-	width: 60.8rem;
+	max-width: 60.8rem;
 	margin: auto;
+	@media (max-width: 843px) {
+		max-width: 38.5rem;
+		padding: 0 1.6rem;
+	}
 `;
 const Heading = styled.h2`
 	font-family: 'Heading2';
@@ -44,6 +54,11 @@ const Heading = styled.h2`
 	line-height: 80px;
 	letter-spacing: -0.01em;
 	text-align: left;
+	@media (max-width: 843px) {
+		font-size: 28px;
+		line-height: 40px;
+		font-family: 'Heading3';
+	}
 `;
 const Year = styled.p`
 	font-family: 'Body';
@@ -53,6 +68,12 @@ const Year = styled.p`
 	letter-spacing: 0em;
 	text-align: left;
 	color: ${props => props.theme.desktop.grey_2};
+	@media (max-width: 843px) {
+		font-size: 18px;
+		font-weight: 300;
+		line-height: 26px;
+		font-family: 'Heading3';
+	}
 `;
 const Divider = styled.div`
 	width: 100%;
@@ -71,6 +92,16 @@ const DescriptionText = styled.p`
 	margin-top: 2.4rem;
 	line-height: 32px;
 	white-space: pre-wrap;
+	@media (max-width: 843px) {
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 22px;
+	}
+	@media (max-width: 480px) {
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 20px;
+	}
 `;
 
 const FeedbackBackground = styled.div`
@@ -89,6 +120,16 @@ const FeedbackHeading = styled.div`
 	line-height: 56px;
 	letter-spacing: 0em;
 	text-align: left;
+	@media (max-width: 843px) {
+		font-size: 22px;
+		font-weight: 300;
+		line-height: 32px;
+	}
+	@media (max-width: 480px) {
+		font-size: 18px;
+		font-weight: 300;
+		line-height: 26px;
+	}
 `;
 const FeedbackText = styled.div`
 	font-family: 'SmallText';
@@ -98,6 +139,16 @@ const FeedbackText = styled.div`
 	letter-spacing: 0em;
 	text-align: left;
 	margin-top: 2.4rem;
+	@media (max-width: 843px) {
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 22px;
+	}
+	@media (max-width: 480px) {
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 20px;
+	}
 `;
 
 export default TextContent;
