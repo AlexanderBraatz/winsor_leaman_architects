@@ -11,6 +11,8 @@ export default function SuccessMessage() {
 		}, 100);
 	}, []);
 
+	useEffect(() => window.scrollTo({ top: 0, behavior: 'smooth' }), []);
+
 	return (
 		<Wrapper>
 			<Message style={{ top: `${position}rem` }}>
@@ -33,6 +35,12 @@ const Message = styled.p`
 	font-size: 1.6rem;
 	position: absolute;
 	top: ${props => props.style.top};
-	transition: top 0.5s ease-out;
+	transition: top 0.8s ease-out;
+	@media (max-width: 843px) {
+		font-size: 1.4rem;
+	}
+	@media (max-width: 350px) {
+		font-size: 1rem;
+	}
 `;
 const StyledCheck = styled(Check)``;

@@ -228,8 +228,8 @@ const StyledLinkList = styled.ul`
 	width: 100vw;
 	padding-top: 1.6rem;
 	padding-left: 2.4rem;
-	y-offset: ;
 `;
+
 const ProjectsMenu = styled.ul`
 	list-style: none;
 	display: flex;

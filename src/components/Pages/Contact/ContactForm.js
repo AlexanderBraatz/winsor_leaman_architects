@@ -14,7 +14,8 @@ export default function ContactForm(props) {
 			type: 'text',
 			name: 'first_name',
 			required: true,
-			errorMessage: 'Please enter your first name*'
+			errorMessage: 'Please enter your first name*',
+			shortErrorMessage: 'First Name*'
 		},
 		{
 			id: 2,
@@ -22,7 +23,8 @@ export default function ContactForm(props) {
 			type: 'text',
 			name: 'last_name',
 			required: true,
-			errorMessage: 'Please enter your last name*'
+			errorMessage: 'Please enter your last name*',
+			shortErrorMessage: 'Last Name*'
 		},
 		{
 			id: 3,
@@ -31,6 +33,7 @@ export default function ContactForm(props) {
 			name: 'email',
 			required: true,
 			errorMessage: 'Please enter a valid email*',
+			shortErrorMessage: 'valid email*',
 			pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
 		},
 		{
@@ -46,6 +49,7 @@ export default function ContactForm(props) {
 			name: 'postcode_of_project',
 			required: true,
 			errorMessage: 'Please enter a valid postcode*',
+			shortErrorMessage: 'valid postcode*',
 			pattern:
 				/^([Gg][Ii][Rr] 0[Aa]{2})|((([A-Za-z][0-9]{1,2})|(([A-Za-z][A-Ha-hJ-Yj-y][0-9]{1,2})|(([A-Za-z][0-9][A-Za-z])|([A-Za-z][A-Ha-hJ-Yj-y][0-9][A-Za-z]?))))\s?[0-9][A-Za-z]{2})$/
 		},
@@ -186,13 +190,12 @@ export default function ContactForm(props) {
 			ref={form}
 			onSubmit={sendEmail}
 		>
-			{' '}
 			{messageHasSent ? (
 				<SuccessMessage />
 			) : (
 				<React.Fragment>
 					<ContactFormPrompt>
-						Share your project ideas with us and we’ll be in touch soon
+						Share your project ideas with us and we’ll be in touch
 					</ContactFormPrompt>
 					<InputGroup>
 						{inputs.map(input => {
@@ -238,22 +241,32 @@ export default function ContactForm(props) {
 
 const Form = styled.form`
 	text-align: left;
+	width: 100%;
 `;
 
 const ContactFormPrompt = styled.p`
 	text-align: left;
 	margin-bottom: 4rem;
-
 	font-family: 'Body', Arial, Serif;
 	font-size: 1.6rem;
+	@media (max-width: 843px) {
+		font-size: 1.4rem;
+		margin-bottom: 2rem;
+	}
+	@media (max-width: 350px) {
+		font-size: 1rem;
+	}
 `;
 
 const InputGroup = styled.div`
-	width: 56rem;
+	width: 100%;
 	height: 18.4rem;
 	flex-wrap: wrap;
 	display: flex;
 	column-gap: 1.6rem;
+	@media (max-width: 350px) {
+		height: 14.4rem;
+	}
 `;
 
 const Label = styled.label`
@@ -261,17 +274,20 @@ const Label = styled.label`
 	font-family: 'SmallText', Arial, Serif;
 	font-size: 1.4rem;
 	padding-left: 0.4rem;
+	@media (max-width: 350px) {
+		font-size: 1rem;
+	}
 `;
 
 const TextareaWrapper = styled.div`
-	width: 56rem;
+	width: 100%;
 	margin-top: 2rem;
 	display: flex;
 	flex-direction: column;
 `;
 
 const Textarea = styled.textarea`
-	width: 56rem;
+	width: 100%;
 	height: 12.4rem;
 	border-radius: 0.5rem;
 	border: 0.1rem solid ${props => props.theme.desktop.dark_3};
@@ -281,4 +297,7 @@ const Textarea = styled.textarea`
 	font-family: 'SmallText', Arial, Serif;
 	font-size: 1.4rem;
 	padding: 0.7rem 1rem;
+	@media (max-width: 350px) {
+		font-size: 1rem;
+	}
 `;

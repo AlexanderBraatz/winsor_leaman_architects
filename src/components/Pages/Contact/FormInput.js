@@ -1,14 +1,19 @@
 import styled from 'styled-components';
+import React, { useContext } from 'react';
+import { ResponsiveContext } from '../../../ResponsiveContext';
 
 export default function FormInput(props) {
-	const { label, type, name, required, errorMessage } = props.input;
+	const { label, type, name, required, errorMessage, shortErrorMessage } =
+		props.input;
 	const { showError, onBlur } = props;
-
+	const { isDesktop } = useContext(ResponsiveContext);
 	return (
 		<InputWrapper>
 			<Label
 				className={showError ? 'invalidLabel' : ''}
-				children={showError ? errorMessage : label}
+				children={
+					!showError ? label : isDesktop ? errorMessage : shortErrorMessage
+				}
 			/>
 			<Input
 				className={showError ? 'invalidInput' : ''}
@@ -37,6 +42,10 @@ const Label = styled.label`
 	&.invalidLabel {
 		color: ${props => props.theme.desktop.error_1};
 	}
+
+	@media (max-width: 350px) {
+		font-size: 1rem;
+	}
 `;
 
 const Input = styled.input`
@@ -52,5 +61,18 @@ const Input = styled.input`
 	padding-left: 1rem;
 	&.invalidInput {
 		border: 0.1rem solid ${props => props.theme.desktop.error_1};
+		background-color: ${props => props.theme.desktop.error_2};
+	}
+	@media (max-width: 843px) {
+		width: 24.9rem;
+	}
+	@media (max-width: 550px) {
+		width: 15.6rem;
+		height: 3.2rem;
+	}
+	@media (max-width: 350px) {
+		max-width: 13.5rem;
+		height: 2.2rem;
+		font-size: 1rem;
 	}
 `;

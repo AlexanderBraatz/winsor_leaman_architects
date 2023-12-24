@@ -50,6 +50,14 @@ const Button = styled.button`
 	background-color: transparent;
 	position: relative;
 	z-index: 2;
+
+	@media (max-width: 550px) {
+		width: 32.8rem;
+		height: 4.8rem;
+	}
+	@media (max-width: 350px) {
+		width: 28.8rem;
+	}
 `;
 const Text = styled.p`
 	color: ${props => props.theme.desktop.grey_5};
@@ -76,6 +84,14 @@ const Background = styled.div`
 
 	// effect transition timing
 	transition: left 0.4s linear, background-color 0.4s linear;
+
+	@media (max-width: 550px) {
+		width: 32.8rem;
+		height: 4.8rem;
+	}
+	@media (max-width: 350px) {
+		width: 28.8rem;
+	}
 `;
 
 const Loader = styled.div`
