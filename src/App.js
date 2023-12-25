@@ -89,6 +89,7 @@ const App = () => {
 const Container = styled.div`
 	width: 100vw;
 	overflow-x: hidden;
+	background-color: black;
 `;
 const StyledApp = styled.div`
 	background-color: ${props => props.theme.desktop.dark_1};
