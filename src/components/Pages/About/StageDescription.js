@@ -69,7 +69,10 @@ const Circle = styled.div`
 		opacity: 1;
 	}
 `;
-const StyledCancel = styled(Cancel)``;
+const StyledCancel = styled(Cancel)`
+	position: relative;
+	top: 0.2rem;
+`;
 
 const Text = styled.p`
 	color: ${props => props.theme.desktop.grey_5};
@@ -98,7 +101,7 @@ const LittleCircle = styled.div`
 	width: 0.2rem;
 	height: 0.2rem;
 	border-radius: 100%;
-	background-color: ${props => props.theme.desktop.dark_1};
+	background-color: ${props => props.theme.desktop.grey_5};
 `;
 
 const StyledListItem = styled.li`

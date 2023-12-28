@@ -1,14 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import InteractiveTimeline from './InteractiveTimeline';
-// import WhoWeAre from '../../../assets/images/WhoWeAreLargeCropped.jpeg';
-import RIBALogo from '../../../assets/images/RIBALogoLarge.png';
-import ARBLogo from '../../../assets/images/ARBLogoLarge.jpeg';
 
 import PictureOfMrWinsor from '../../../assets/images/About/PictureOfMrWinsor.jpeg';
 import JamesPlaceholder from '../../../assets/images/About/JamesPlaceholder.jpeg';
-import Frame114 from '../../../assets/images/About/Frame114.svg';
-import LogoWhiteOnBlackJpgjpg1 from '../../../assets/images/About/LogoWhiteOnBlackJpgjpg1.svg';
+
 import { ReactComponent as Frame114svg } from '../../../assets/images/About/Frame114.svg';
 import { ReactComponent as LogoWhiteOnBlackJpgjpg1svg } from '../../../assets/images/About/LogoWhiteOnBlackJpgjpg1.svg';
 

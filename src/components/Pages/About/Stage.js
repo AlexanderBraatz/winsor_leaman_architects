@@ -1,35 +1,70 @@
-import React from 'react';
 import styled from 'styled-components';
 import { ReactComponent as ArrowUpRight } from '../../../assets/images/ArrowUpRightDark_5.svg';
 import { ReactComponent as ArrowDownRight } from '../../../assets/images/ArrowDownRightDark_5.svg';
+import { ReactComponent as ArrowUpRightSmaller } from '../../../assets/images/Line76.svg';
+import { ReactComponent as ArrowDownRightSmaller } from '../../../assets/images/Line77.svg';
+
+import React, { useContext } from 'react';
+import { ResponsiveContext } from '../../../ResponsiveContext';
 
 export default function Stage({
 	stage: {
 		key,
 		color,
 		name,
-		bottom,
 		left,
+		bottom,
+		leftSmall,
+		bottomSmall,
 		followedByArrow,
 		arrowGoesUp,
 		arrowLeft,
 		arrowBottom,
+		arrowLeftSmall,
+		arrowBottomSmall,
 		updateSelectedStage
 	}
 }) {
+	const { isDesktop } = useContext(ResponsiveContext);
+	let SvgComponent = null;
+
+	if (followedByArrow) {
+		if (arrowGoesUp) {
+			SvgComponent = isDesktop ? StyledArrowUpRight : StyledArrowUpRightSmaller;
+		} else {
+			SvgComponent = isDesktop
+				? StyledArrowDownRight
+				: StyledArrowDownRightSmaller;
+		}
+	}
+
 	return (
 		<React.Fragment>
-			<Circle
-				style={{ backgroundColor: color, bottom: bottom, left: left }}
-				onClick={() => updateSelectedStage(key)}
-			>
-				<Text>{name}</Text>
-			</Circle>
-			{!followedByArrow ? null : arrowGoesUp ? (
-				<StyledArrowUpRight style={{ bottom: arrowBottom, left: arrowLeft }} />
+			{isDesktop ? (
+				<Circle
+					style={{ backgroundColor: color, bottom: bottom, left: left }}
+					onClick={() => updateSelectedStage(key)}
+				>
+					<Text>{name}</Text>
+				</Circle>
 			) : (
-				<StyledArrowDownRight
-					style={{ bottom: arrowBottom, left: arrowLeft }}
+				<Circle
+					style={{
+						backgroundColor: color,
+						bottom: bottomSmall,
+						left: leftSmall
+					}}
+					onClick={() => updateSelectedStage(key)}
+				>
+					<Text>{name}</Text>
+				</Circle>
+			)}
+
+			{!SvgComponent ? null : isDesktop ? (
+				<SvgComponent style={{ bottom: arrowBottom, left: arrowLeft }} />
+			) : (
+				<SvgComponent
+					style={{ bottom: arrowBottomSmall, left: arrowLeftSmall }}
 				/>
 			)}
 		</React.Fragment>
@@ -78,5 +113,11 @@ const StyledArrowUpRight = styled(ArrowUpRight)`
 	position: absolute;
 `;
 const StyledArrowDownRight = styled(ArrowDownRight)`
+	position: absolute;
+`;
+const StyledArrowUpRightSmaller = styled(ArrowUpRightSmaller)`
+	position: absolute;
+`;
+const StyledArrowDownRightSmaller = styled(ArrowDownRightSmaller)`
 	position: absolute;
 `;
