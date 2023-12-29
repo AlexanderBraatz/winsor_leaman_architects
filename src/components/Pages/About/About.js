@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import InteractiveTimeline from './InteractiveTimeline';
+import ResponsiveInteractiveTimeline from './ResponsiveInteractiveTimeline';
 
 import PictureOfMrWinsor from '../../../assets/images/About/PictureOfMrWinsor.jpeg';
 import JamesPlaceholder from '../../../assets/images/About/JamesPlaceholder.jpeg';
@@ -12,7 +12,7 @@ export default function About() {
 	return (
 		<React.Fragment>
 			<Heading>About</Heading>
-			<InteractiveTimeline />
+			<ResponsiveInteractiveTimeline />
 			<Content>
 				<SubHeading>Who we are</SubHeading>
 				<StyledDiv>
@@ -57,14 +57,8 @@ export default function About() {
 					</ImagesContainer>
 				</StyledDiv>
 				<LogoWrapper>
-					<StyledRIBALogo
-						//	src={LogoWhiteOnBlackJpgjpg1}
-						alt="RIBA logo"
-					/>
-					<StyledARBLogo
-						//	src={Frame114}
-						alt="ARB logo"
-					/>
+					<StyledRIBALogo alt="RIBA logo" />
+					<StyledARBLogo alt="ARB logo" />
 				</LogoWrapper>
 			</Content>
 		</React.Fragment>
@@ -89,7 +83,7 @@ const Heading = styled.h1`
 		padding-left: 6.4rem;
 	}
 	@media (max-width: 740px) {
-		width: 30rem;
+		width: 32.8rem;
 		margin-top: 2.4rem;
 		margin-bottom: 2.4rem;
 		padding-left: 0rem;
@@ -112,7 +106,6 @@ const SubHeading = styled.h2`
 	font-size: 3.6rem;
 	font-weight: 300;
 	text-align: left;
-	//height: 5.2rem;
 	color: ${props => props.theme.desktop.grey_5};
 	@media (max-width: 843px) {
 		font-size: 2.2rem;

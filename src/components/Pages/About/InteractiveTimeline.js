@@ -9,7 +9,7 @@ export default function InteractiveTimeline(props) {
 	const { isDesktop } = useContext(ResponsiveContext);
 	const theme = useTheme();
 
-	const [selectedStage, setSelectedStage] = useState(1);
+	const [selectedStage, setSelectedStage] = useState(0);
 
 	const updateSelectedStage = useCallback(key => {
 		setSelectedStage(key);

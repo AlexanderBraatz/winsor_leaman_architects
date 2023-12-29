@@ -3,7 +3,6 @@ import { ReactComponent as ArrowUpRight } from '../../../assets/images/ArrowUpRi
 import { ReactComponent as ArrowDownRight } from '../../../assets/images/ArrowDownRightDark_5.svg';
 import { ReactComponent as ArrowUpRightSmaller } from '../../../assets/images/Line76.svg';
 import { ReactComponent as ArrowDownRightSmaller } from '../../../assets/images/Line77.svg';
-
 import React, { useContext } from 'react';
 import { ResponsiveContext } from '../../../ResponsiveContext';
 
