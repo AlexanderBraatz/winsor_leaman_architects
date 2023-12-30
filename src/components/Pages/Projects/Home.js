@@ -18,42 +18,42 @@ export default function Home(props) {
 			src: housesHome_desktop,
 			text: 'Houses',
 			size: 'large',
-			to: 'houses/1'
+			to: '/projects/houses/1'
 		},
 		{
 			name: 'card2',
 			src: extensionsHome_desktop,
 			text: 'Extensions',
 			size: 'large',
-			to: 'extensions/1'
+			to: '/projects/extensions/1'
 		},
 		{
 			name: 'card3',
 			src: renovationHome_desktop,
 			text: 'Renovation',
 			size: 'small',
-			to: 'renovation/1'
+			to: '/projects/renovation/1'
 		},
 		{
 			name: 'card4',
 			src: flatHome_desktop,
 			text: 'Flats',
 			size: 'small',
-			to: 'flats/1'
+			to: '/projects/flats/1'
 		},
 		{
 			name: 'card5',
 			src: churchesHome_desktop,
 			text: 'Churches',
 			size: 'small',
-			to: 'churches/1'
+			to: '/projects/churches/1'
 		},
 		{
 			name: 'card6',
 			src: heroImageDesktop1commercial,
 			text: 'Commercial',
 			size: 'small',
-			to: 'commercial/1'
+			to: '/projects/commercial/1'
 		}
 	];
 	return (
