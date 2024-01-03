@@ -211,7 +211,7 @@ const StyledDropdownMenu = styled.div`
 	top: 6.3rem;
 	z-index: 4;
 	left: 100vw;
-	transition: left 0.3s ease-in-out;
+	transition: left 0.15s ease-in-out;
 	display: block;
 	&.isMenuOpen {
 		left: 0vw;

@@ -62,6 +62,7 @@ const Image = ({ image, handleClick }) => {
 	return (
 		<ImageContainer width={image.width}>
 			<StyledImage
+				loading="lazy"
 				src={image.image}
 				width={image.width}
 				alt={image.description}
@@ -73,6 +74,7 @@ const Image = ({ image, handleClick }) => {
 const LargeImage = ({ image }) => {
 	return (
 		<LargeStyledImage
+			loading="lazy"
 			src={image.largeImage}
 			alt={image.description}
 		/>

@@ -1,4 +1,5 @@
 @font-face {
+	font-display: swap;
 	font-family: 'Heading1';
 	src: url(./jost-3-cufonfonts/Jost-SemiBold.ttf) format('truetype');
 	/* fontweight:700; */
@@ -6,6 +7,7 @@
 	/* h1  */
 }
 @font-face {
+	font-display: swap;
 	font-family: 'Heading2';
 	src: url(./jost-3-cufonfonts/Jost-Regular.ttf) format('truetype');
 	/* font-weight:400; */
@@ -13,6 +15,7 @@
 	/* h1  */
 }
 @font-face {
+	font-display: swap;
 	font-family: 'Heading3';
 	src: url(./jost-3-cufonfonts/Jost-Light.ttf) format('truetype');
 	/* font-weight:300; */
@@ -20,6 +23,7 @@
 	/* h2 */
 }
 @font-face {
+	font-display: swap;
 	font-family: 'Subheading';
 	src: url(./jost-3-cufonfonts/Jost-ExtraLight.ttf) format('truetype');
 	/* font-weight:200; */
@@ -27,6 +31,7 @@
 	/* h3 */
 }
 @font-face {
+	font-display: swap;
 	font-family: 'Logo';
 	src: url(./jost-3-cufonfonts/Jost-ExtraLight.ttf) format('truetype');
 	/* font-weight:300; in design*/
@@ -35,6 +40,7 @@
 	/* p */
 }
 @font-face {
+	font-display: swap;
 	font-family: 'Button';
 	src: url(./jost-3-cufonfonts/Jost-Medium.ttf) format('truetype');
 	/* font-weight:500; */
@@ -43,6 +49,7 @@
 	/* p */
 }
 @font-face {
+	font-display: swap;
 	font-family: 'Body';
 	src: url(./jost-3-cufonfonts/Jost-Regular.ttf) format('truetype');
 	/* font-weight:400; */
@@ -50,6 +57,7 @@
 	/* p */
 }
 @font-face {
+	font-display: swap;
 	font-family: 'SmallText';
 	src: url(./jost-3-cufonfonts/Jost-Light.ttf) format('truetype');
 	/* font-weight:300; */

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 import housesHome_desktop from '../../../assets/images/ProjectCategories/Houses_7/1MalboroughHouse/HeroImages/Hero_desktop.jpg';
 import extensionsHome_desktop from '../../../assets/images/ProjectCategories/Extensions_8/1HouseinAbbotsLeigh/SecondaryImages/Desktop/Secondary1_desktop.jpg';
@@ -9,6 +9,13 @@ import flatHome_desktop from '../../../assets/images/ProjectCategories/Flats_4/3
 import churchesHome_desktop from '../../../assets/images/ProjectCategories/Churches_6/2TheOldChapel/HeroImages/Hero_desktop.jpg';
 import heroImageDesktop1commercial from '../../../assets/images/ProjectCategories/Commercial_5/1StPetersHospiceGardenRoom/HeroImages/Hero_desktop.jpg';
 
+import housesHome_desktop_20px_small from '../../../assets/images/ProjectCategories/Houses_7/1MalboroughHouse/HeroImages/Hero_desktop-20px-small.jpg';
+import extensionsHome_desktop_20px_small from '../../../assets/images/ProjectCategories/Extensions_8/1HouseinAbbotsLeigh/SecondaryImages/Desktop/Secondary1_desktop-20px-small.jpg';
+import renovationHome_desktop_20px_small from '../../../assets/images/ProjectCategories/Renovation_7/2HouseinLongAshton/HeroImages/Hero_desktop-20px-small.jpg';
+import flatHome_desktop_20px_small from '../../../assets/images/ProjectCategories/Flats_4/3PhoenixWorksFlats/HeroImages/Hero_desktop-20px-small.jpg';
+import churchesHome_desktop_20px_small from '../../../assets/images/ProjectCategories/Churches_6/2TheOldChapel/HeroImages/Hero_desktop-20px-small.jpg';
+import heroImageDesktop1commercial_20px_small from '../../../assets/images/ProjectCategories/Commercial_5/1StPetersHospiceGardenRoom/HeroImages/Hero_desktop-20px-small.jpg';
+
 import { ReactComponent as Arrow } from '../../../assets/images/Arrow.svg';
 
 export default function Home(props) {
@@ -16,6 +23,7 @@ export default function Home(props) {
 		{
 			name: 'card1',
 			src: housesHome_desktop,
+			placeholder: housesHome_desktop_20px_small,
 			text: 'Houses',
 			size: 'large',
 			to: '/projects/houses/1'
@@ -23,6 +31,7 @@ export default function Home(props) {
 		{
 			name: 'card2',
 			src: extensionsHome_desktop,
+			placeholder: extensionsHome_desktop_20px_small,
 			text: 'Extensions',
 			size: 'large',
 			to: '/projects/extensions/1'
@@ -30,6 +39,7 @@ export default function Home(props) {
 		{
 			name: 'card3',
 			src: renovationHome_desktop,
+			placeholder: renovationHome_desktop_20px_small,
 			text: 'Renovation',
 			size: 'small',
 			to: '/projects/renovation/1'
@@ -37,6 +47,7 @@ export default function Home(props) {
 		{
 			name: 'card4',
 			src: flatHome_desktop,
+			placeholder: flatHome_desktop_20px_small,
 			text: 'Flats',
 			size: 'small',
 			to: '/projects/flats/1'
@@ -44,6 +55,7 @@ export default function Home(props) {
 		{
 			name: 'card5',
 			src: churchesHome_desktop,
+			placeholder: churchesHome_desktop_20px_small,
 			text: 'Churches',
 			size: 'small',
 			to: '/projects/churches/1'
@@ -51,11 +63,13 @@ export default function Home(props) {
 		{
 			name: 'card6',
 			src: heroImageDesktop1commercial,
+			placeholder: heroImageDesktop1commercial_20px_small,
 			text: 'Commercial',
 			size: 'small',
 			to: '/projects/commercial/1'
 		}
 	];
+
 	return (
 		<>
 			<Container>
@@ -65,11 +79,9 @@ export default function Home(props) {
 						to={card.to}
 						key={i}
 					>
-						<Image
-							className={'image'}
-							src={card.src}
-						/>
-						<Haze />
+						<PlaceholderAndImage card={card} />
+
+						<Haze className="haze" />
 						<CardCenter className="center">
 							<TextCOntainer>
 								<Text className={`${card.size}Text`}>{card.text}</Text>
@@ -80,6 +92,52 @@ export default function Home(props) {
 					</Card>
 				))}
 			</Container>
+		</>
+	);
+}
+
+function PlaceholderAndImage({ card }) {
+	const [isImageLoaded, setIsImageLoaded] = useState(false);
+	const [isImageComplete, setIsImageComplete] = useState(false);
+	const blurredImageRef = useRef(null); // tagged the image below
+
+	useEffect(() => {
+		const img = blurredImageRef.current;
+
+		const loaded = () => {
+			setIsImageLoaded(true);
+		};
+
+		const complete = () => {
+			setIsImageComplete(true);
+		};
+
+		if (img.complete) {
+			complete();
+			loaded();
+		} else {
+			img.addEventListener('load', loaded);
+
+			return () => {
+				img.removeEventListener('load', loaded);
+			};
+		}
+	}, []);
+
+	return (
+		<>
+			<Placeholder
+				placeholder={card.placeholder}
+				className={`blurred-img ${!isImageComplete ? 'NotComplete' : ''} ${
+					isImageLoaded ? 'loaded' : ''
+				}`}
+			>
+				<Image
+					ref={blurredImageRef}
+					className={'image'}
+					src={card.src}
+				/>
+			</Placeholder>
 		</>
 	);
 }
@@ -108,13 +166,13 @@ const Card = styled(Link)`
 	cursor: pointer;
 	position: relative;
 	overflow: hidden;
-	&:hover > .image {
+	&:hover > div > .image {
 		transform: scale(1.1);
+	}
 
-		& ~ .center > .underline {
-			width: 100%;
-			background-color: ${props => props.theme.desktop.grey_5};
-		}
+	&:hover > .center .underline {
+		width: 100%;
+		background-color: ${props => props.theme.desktop.grey_5};
 	}
 	&:hover > .haze {
 		transform: scale(1.1);
@@ -169,14 +227,66 @@ const Image = styled.img`
 	top: 0;
 	left: 0;
 	z-index: 1;
-	transition: transform 0.3s linear;
 	width: 100%;
 	height: 100%;
 	pointer-events: none;
 	object-fit: cover;
+
+	opacity: 1;
+	transition: transform 0.3s linear;
+`;
+const Placeholder = styled.div`
+	pointer-events: none;
+	background-image: url(${props => props.placeholder});
+	transform: scale(1.05);
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 100%;
+	filter: blur(0px);
+
+	&.NotComplete {
+		transition: filter 250ms ease-in-out;
+		filter: blur(5px);
+	}
+	&.NotComplete img {
+		transition: transform 0.3s linear, opacity 250ms ease-in-out;
+
+		opacity: 0;
+	}
+
+	&.loaded {
+		filter: blur(0px);
+	}
+	&::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		opacity: 0;
+		animation: pulse 2.5s infinite;
+		background-color: ${props => props.theme.desktop.grey_5};
+	}
+	&.loaded::before {
+		animation: none;
+		content: none;
+	}
+
+	@keyframes pulse {
+		0% {
+			opacity: 0;
+		}
+		50% {
+			opacity: 0.2;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+	&.loaded img {
+		opacity: 1;
+	}
 `;
 const Haze = styled.div`
-	transition: transform 0.3s linear;
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -189,8 +299,8 @@ const Haze = styled.div`
 		rgba(32, 43, 48, 0.6) 0%,
 		rgba(32, 43, 48, 0.228) 100%
 	);
-
 	pointer-events: none;
+	transition: transform 0.3s linear, opacity 250ms ease-in-out;
 `;
 
 const CardCenter = styled.div`
@@ -264,7 +374,7 @@ const StyledArrow = styled(Arrow)`
 `;
 
 const Underline = styled.div`
-	width: 0%;
+	width: 50%;
 	height: 0.2rem;
 	background-color: transparent;
 	transition: width 0.3s, background-color 0.3s;

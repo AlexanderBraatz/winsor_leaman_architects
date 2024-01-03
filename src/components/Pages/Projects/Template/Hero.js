@@ -16,14 +16,15 @@ export default function Hero({
 			/>
 			<HeroImageContainer>
 				<HeroImage
+					loading="lazy"
 					src={hero.heroImageDesktop}
-					sizes=""
+					// sizes=""
 					// srcSet={`${hero.heroImageMobile} 1200w,${hero.heroImageTablet} 1366w,${hero.heroImageDesktop} 2400w`}
-					// 					srcset="
-					//     https://placehold.co/800x200/png   800w,
-					//     https://placehold.co/1600x400/png 1600w,
-					//     https://placehold.co/3200x800/png 3200w
-					//   "
+					srcSet="
+					    https://placehold.co/800x200/png   800w,
+					    https://placehold.co/1600x400/png 1600w,
+					    https://placehold.co/3200x800/png 3200w
+					  "
 					alt={hero.alt}
 				/>
 				<ImageLabel>

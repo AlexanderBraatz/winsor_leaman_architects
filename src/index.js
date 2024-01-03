@@ -5,6 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { ResponsiveProvider } from './ResponsiveContext';
 //assets
+import './assets/fonts/fonts.css';
 import theme from './assets/themes';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

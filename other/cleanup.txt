@@ -8,4 +8,4 @@ refactor pages cards into a map of an array
 fix fonts 
 fix image organisation
 fix images on smaller screens if load time bad
-uploadto ionos
+write good read me

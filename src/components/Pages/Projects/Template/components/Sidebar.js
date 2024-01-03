@@ -33,7 +33,10 @@ const CustomNavElement = ({ thumbnail, id }) => {
 				className={`hoverImage ${isActive ? 'activeImage' : ''}`}
 				to={thumbnail.to}
 			>
-				<Image src={thumbnail.thumbnailDesktop} />
+				<Image
+					loading="lazy"
+					src={thumbnail.thumbnailDesktop}
+				/>
 			</ImageContainer>
 		</NavElement>
 	);
