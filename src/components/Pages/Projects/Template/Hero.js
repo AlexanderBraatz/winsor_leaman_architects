@@ -24,14 +24,9 @@ export default function Hero({
 				<HeroImageContainer>
 					<HeroImage
 						loading="lazy"
-						src={hero.heroImageDesktop}
-						// sizes=""
-						// srcSet={`${hero.heroImageMobile} 1200w,${hero.heroImageTablet} 1366w,${hero.heroImageDesktop} 2400w`}
-						// srcSet="
-						//     https://placehold.co/800x200/png   800w,
-						//     https://placehold.co/1600x400/png 1600w,
-						//     https://placehold.co/3200x800/png 3200w
-						//   "
+						src={hero.heroImageMobile}
+						srcSet={`${hero.heroImageMobile} 1200w,${hero.heroImageTablet} 1366w,${hero.heroImageDesktop} 2400w`}
+						sizes="(max-width: 843px) 100vw, calc(100vw - 230px)"
 						alt={hero.alt}
 					/>
 					<ImageLabel onClick={handleClick}>

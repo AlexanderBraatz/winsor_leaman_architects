@@ -16,15 +16,25 @@ import thumbnailDesktop5 from '../../../../assets/images/ProjectCategories/Comme
 //hero ---------------------------------------------------------------------------------------------------
 //1StPetersHospiceGardenRoom
 import heroImageDesktop1 from '../../../../assets/images/ProjectCategories/Commercial_5/1StPetersHospiceGardenRoom/HeroImages/Hero_desktop.jpg';
+import heroImageTablet1 from '../../../../assets/images/ProjectCategories/Commercial_5/1StPetersHospiceGardenRoom/HeroImages/Hero_tablet.jpg';
+import heroImageMobile1 from '../../../../assets/images/ProjectCategories/Commercial_5/1StPetersHospiceGardenRoom/HeroImages/Hero_mobile.jpg';
 //2BrunelManorHotel
 import heroImageDesktop2 from '../../../../assets/images/ProjectCategories/Commercial_5/2BrunelManorHotel/HeroImages/Hero_desktop.jpg';
+import heroImageTablet2 from '../../../../assets/images/ProjectCategories/Commercial_5/2BrunelManorHotel/HeroImages/Hero_tablet.jpg';
+import heroImageMobile2 from '../../../../assets/images/ProjectCategories/Commercial_5/2BrunelManorHotel/HeroImages/Hero_mobile.jpg';
 //4DaisychainNursery from extensions
 import heroImageDesktop3 from '../../../../assets/images/ProjectCategories/Extensions_8/4DaisychainNursery/HeroImages/Hero_desktop.jpg';
+import heroImageTablet3 from '../../../../assets/images/ProjectCategories/Extensions_8/4DaisychainNursery/HeroImages/Hero_tablet.jpg';
+import heroImageMobile3 from '../../../../assets/images/ProjectCategories/Extensions_8/4DaisychainNursery/HeroImages/Hero_mobile.jpg';
 
 //4VantagePark
 import heroImageDesktop4 from '../../../../assets/images/ProjectCategories/Commercial_5/4VantagePark/HeroImages/Hero_desktop.jpg';
+import heroImageTablet4 from '../../../../assets/images/ProjectCategories/Commercial_5/4VantagePark/HeroImages/Hero_tablet.jpg';
+import heroImageMobile4 from '../../../../assets/images/ProjectCategories/Commercial_5/4VantagePark/HeroImages/Hero_mobile.jpg';
 //5KeynshamHotelandFlats
 import heroImageDesktop5 from '../../../../assets/images/ProjectCategories/Commercial_5/5KeynshamHotelandFlats/HeroImages/Hero_desktop.jpg';
+import heroImageTablet5 from '../../../../assets/images/ProjectCategories/Commercial_5/5KeynshamHotelandFlats/HeroImages/Hero_tablet.jpg';
+import heroImageMobile5 from '../../../../assets/images/ProjectCategories/Commercial_5/5KeynshamHotelandFlats/HeroImages/Hero_mobile.jpg';
 
 //SecondaryImages ---------------------------------------------------------------------------------------------------
 //desktop
@@ -90,6 +100,8 @@ const Commercial = () => {
 				1: {
 					hero: {
 						heroImageDesktop: heroImageDesktop1,
+						heroImageTablet: heroImageTablet1,
+						heroImageMobile: heroImageMobile1,
 						alt: `St Peter's Hospice Garden Room`
 					},
 					imageLabel: `St Peter's Hospice Garden Room`
@@ -97,6 +109,8 @@ const Commercial = () => {
 				2: {
 					hero: {
 						heroImageDesktop: heroImageDesktop2,
+						heroImageTablet: heroImageTablet2,
+						heroImageMobile: heroImageMobile2,
 						alt: 'Brunel Manor Hotel'
 					},
 					imageLabel: 'Brunel Manor Hotel'
@@ -104,6 +118,8 @@ const Commercial = () => {
 				3: {
 					hero: {
 						heroImageDesktop: heroImageDesktop3,
+						heroImageTablet: heroImageTablet3,
+						heroImageMobile: heroImageMobile3,
 						alt: 'Daisychain Nursery'
 					},
 					imageLabel: 'Daisychain Nursery'
@@ -111,6 +127,8 @@ const Commercial = () => {
 				4: {
 					hero: {
 						heroImageDesktop: heroImageDesktop4,
+						heroImageTablet: heroImageTablet4,
+						heroImageMobile: heroImageMobile4,
 						alt: 'Vantage Park'
 					},
 					imageLabel: 'Vantage Park'
@@ -118,6 +136,8 @@ const Commercial = () => {
 				5: {
 					hero: {
 						heroImageDesktop: heroImageDesktop5,
+						heroImageTablet: heroImageTablet5,
+						heroImageMobile: heroImageMobile5,
 						alt: 'Keynsham Hotel and Flats'
 					},
 					imageLabel: 'Keynsham Hotel and Flats'

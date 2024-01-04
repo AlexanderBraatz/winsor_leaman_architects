@@ -20,18 +20,32 @@ import thumbnailDesktop7 from '../../../../assets/images/ProjectCategories/Renov
 //hero ---------------------------------------------------------------------------------------------------
 //1FarminPucklechurch
 import heroImageDesktop1 from '../../../../assets/images/ProjectCategories/Renovation_7/1FarminPucklechurch/HeroImages/Hero_desktop.jpg';
+import heroImageTablet1 from '../../../../assets/images/ProjectCategories/Renovation_7/1FarminPucklechurch/HeroImages/Hero_tablet.jpg';
+import heroImageMobile1 from '../../../../assets/images/ProjectCategories/Renovation_7/1FarminPucklechurch/HeroImages/Hero_mobile.jpg';
 //2HouseinLongAshton
 import heroImageDesktop2 from '../../../../assets/images/ProjectCategories/Renovation_7/2HouseinLongAshton/HeroImages/Hero_desktop.jpg';
+import heroImageTablet2 from '../../../../assets/images/ProjectCategories/Renovation_7/2HouseinLongAshton/HeroImages/Hero_tablet.jpg';
+import heroImageMobile2 from '../../../../assets/images/ProjectCategories/Renovation_7/2HouseinLongAshton/HeroImages/Hero_mobile.jpg';
 //2TheOldChapel
 import heroImageDesktop3 from '../../../../assets/images/ProjectCategories/Churches_6/2TheOldChapel/HeroImages/Hero_desktop.jpg';
+import heroImageTablet3 from '../../../../assets/images/ProjectCategories/Churches_6/2TheOldChapel/HeroImages/Hero_tablet.jpg';
+import heroImageMobile3 from '../../../../assets/images/ProjectCategories/Churches_6/2TheOldChapel/HeroImages/Hero_mobile.jpg';
 //4HouseinClifton
 import heroImageDesktop4 from '../../../../assets/images/ProjectCategories/Renovation_7/4HouseinClifton/HeroImages/Hero_desktop.jpg';
+import heroImageTablet4 from '../../../../assets/images/ProjectCategories/Renovation_7/4HouseinClifton/HeroImages/Hero_tablet.jpg';
+import heroImageMobile4 from '../../../../assets/images/ProjectCategories/Renovation_7/4HouseinClifton/HeroImages/Hero_mobile.jpg';
 //2FlatsinCotham
 import heroImageDesktop5 from '../../../../assets/images/ProjectCategories/Flats_4/2FlatsinCotham/HeroImages/Hero_desktop.jpg';
+import heroImageTablet5 from '../../../../assets/images/ProjectCategories/Flats_4/2FlatsinCotham/HeroImages/Hero_tablet.jpg';
+import heroImageMobile5 from '../../../../assets/images/ProjectCategories/Flats_4/2FlatsinCotham/HeroImages/Hero_mobile.jpg';
 //2BrunelManorHotel
 import heroImageDesktop6 from '../../../../assets/images/ProjectCategories/Commercial_5/2BrunelManorHotel/HeroImages/Hero_desktop.jpg';
+import heroImageTablet6 from '../../../../assets/images/ProjectCategories/Commercial_5/2BrunelManorHotel/HeroImages/Hero_tablet.jpg';
+import heroImageMobile6 from '../../../../assets/images/ProjectCategories/Commercial_5/2BrunelManorHotel/HeroImages/Hero_mobile.jpg';
 //7HouseinFailand
 import heroImageDesktop7 from '../../../../assets/images/ProjectCategories/Renovation_7/7HouseinFailand/HeroImages/Hero_desktop.jpg';
+// import heroImageTablet7 from '../../../../assets/images/ProjectCategories/Renovation_7/7HouseinFailand/HeroImages/Hero_tablet.jpg';
+// import heroImageMobile7 from '../../../../assets/images/ProjectCategories/Renovation_7/7HouseinFailand/HeroImages/Hero_mobile.jpg';
 
 //SecondaryImages ---------------------------------------------------------------------------------------------------
 //desktop
@@ -116,6 +130,8 @@ const Renovation = () => {
 				1: {
 					hero: {
 						heroImageDesktop: heroImageDesktop1,
+						heroImageTablet: heroImageTablet1,
+						heroImageMobile: heroImageMobile1,
 						alt: 'Farm in Pucklechurch'
 					},
 					imageLabel: 'Farm in Pucklechurch'
@@ -123,6 +139,8 @@ const Renovation = () => {
 				2: {
 					hero: {
 						heroImageDesktop: heroImageDesktop2,
+						heroImageTablet: heroImageTablet2,
+						heroImageMobile: heroImageMobile2,
 						alt: 'House in Long Ashton'
 					},
 					imageLabel: 'House in Long Ashton'
@@ -130,6 +148,8 @@ const Renovation = () => {
 				3: {
 					hero: {
 						heroImageDesktop: heroImageDesktop3,
+						heroImageTablet: heroImageTablet3,
+						heroImageMobile: heroImageMobile3,
 						alt: 'The Old Chapel'
 					},
 					imageLabel: 'The Old Chapel'
@@ -137,6 +157,8 @@ const Renovation = () => {
 				4: {
 					hero: {
 						heroImageDesktop: heroImageDesktop4,
+						heroImageTablet: heroImageTablet4,
+						heroImageMobile: heroImageMobile4,
 						alt: 'House in Clifton'
 					},
 					imageLabel: 'House in Clifton'
@@ -144,6 +166,8 @@ const Renovation = () => {
 				5: {
 					hero: {
 						heroImageDesktop: heroImageDesktop5,
+						heroImageTablet: heroImageTablet5,
+						heroImageMobile: heroImageMobile5,
 						alt: 'Flats in Cotham'
 					},
 					imageLabel: 'Flats in Cotham'
@@ -151,6 +175,8 @@ const Renovation = () => {
 				6: {
 					hero: {
 						heroImageDesktop: heroImageDesktop6,
+						heroImageTablet: heroImageTablet6,
+						heroImageMobile: heroImageMobile6,
 						alt: 'Brunel Manor Hotel'
 					},
 					imageLabel: 'Brunel Manor Hotel'
@@ -158,6 +184,8 @@ const Renovation = () => {
 				7: {
 					hero: {
 						heroImageDesktop: heroImageDesktop7,
+						heroImageTablet: heroImageDesktop7,
+						heroImageMobile: heroImageDesktop7,
 						alt: 'House in Failand'
 					},
 					imageLabel: 'House in Failand'

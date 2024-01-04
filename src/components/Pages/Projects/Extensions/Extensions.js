@@ -15,14 +15,24 @@ import thumbnailDesktop5 from '../../../../assets/images/ProjectCategories/Exten
 //hero ---------------------------------------------------------------------------------------------------
 //1HouseinAbbotsLeigh
 import heroImageDesktop1 from '../../../../assets/images/ProjectCategories/Extensions_8/1HouseinAbbotsLeigh/HeroImages/Hero_desktop.jpg';
+import heroImageTablet1 from '../../../../assets/images/ProjectCategories/Extensions_8/1HouseinAbbotsLeigh/HeroImages/Hero_tablet.jpg';
+import heroImageMobile1 from '../../../../assets/images/ProjectCategories/Extensions_8/1HouseinAbbotsLeigh/HeroImages/Hero_mobile.jpg';
 //2HouseinWestbury_on_Trym
 import heroImageDesktop2 from '../../../../assets/images/ProjectCategories/Extensions_8/2HouseinWestbury_on_Trym/HeroImages/Hero_desktop.jpg';
+import heroImageTablet2 from '../../../../assets/images/ProjectCategories/Extensions_8/2HouseinWestbury_on_Trym/HeroImages/Hero_tablet.jpg';
+import heroImageMobile2 from '../../../../assets/images/ProjectCategories/Extensions_8/2HouseinWestbury_on_Trym/HeroImages/Hero_mobile.jpg';
 //3GardenOffice
 import heroImageDesktop3 from '../../../../assets/images/ProjectCategories/Extensions_8/3GardenOffice/HeroImages/Hero_desktop.jpg';
+import heroImageTablet3 from '../../../../assets/images/ProjectCategories/Extensions_8/3GardenOffice/HeroImages/Hero_tablet.jpg';
+import heroImageMobile3 from '../../../../assets/images/ProjectCategories/Extensions_8/3GardenOffice/HeroImages/Hero_mobile.jpg';
 //4DaisychainNursery
 import heroImageDesktop4 from '../../../../assets/images/ProjectCategories/Extensions_8/4DaisychainNursery/HeroImages/Hero_desktop.jpg';
+import heroImageTablet4 from '../../../../assets/images/ProjectCategories/Extensions_8/4DaisychainNursery/HeroImages/Hero_tablet.jpg';
+import heroImageMobile4 from '../../../../assets/images/ProjectCategories/Extensions_8/4DaisychainNursery/HeroImages/Hero_mobile.jpg';
 //6HouseinRedland
 import heroImageDesktop5 from '../../../../assets/images/ProjectCategories/Extensions_8/6HouseinRedland/HeroImages/Hero_desktop.jpg';
+import heroImageTablet5 from '../../../../assets/images/ProjectCategories/Extensions_8/6HouseinRedland/HeroImages/Hero_tablet.jpg';
+import heroImageMobile5 from '../../../../assets/images/ProjectCategories/Extensions_8/6HouseinRedland/HeroImages/Hero_mobile.jpg';
 
 //SecondaryImages ---------------------------------------------------------------------------------------------------
 //desktop
@@ -89,6 +99,8 @@ const Extensions = () => {
 				1: {
 					hero: {
 						heroImageDesktop: heroImageDesktop1,
+						heroImageTablet: heroImageTablet1,
+						heroImageMobile: heroImageMobile1,
 						alt: 'Rownham Hill'
 					},
 					imageLabel: 'Rownham Hill'
@@ -96,6 +108,8 @@ const Extensions = () => {
 				2: {
 					hero: {
 						heroImageDesktop: heroImageDesktop2,
+						heroImageTablet: heroImageTablet2,
+						heroImageMobile: heroImageMobile2,
 						alt: 'House in Westbury-on-Trym'
 					},
 					imageLabel: 'House in Westbury-on-Trym'
@@ -103,6 +117,8 @@ const Extensions = () => {
 				3: {
 					hero: {
 						heroImageDesktop: heroImageDesktop3,
+						heroImageTablet: heroImageTablet3,
+						heroImageMobile: heroImageMobile3,
 						alt: 'Garden Office'
 					},
 					imageLabel: 'Garden Office'
@@ -110,6 +126,8 @@ const Extensions = () => {
 				4: {
 					hero: {
 						heroImageDesktop: heroImageDesktop4,
+						heroImageTablet: heroImageTablet4,
+						heroImageMobile: heroImageMobile4,
 						alt: 'Daisychain Nursery'
 					},
 					imageLabel: 'Daisychain Nursery'
@@ -117,6 +135,8 @@ const Extensions = () => {
 				5: {
 					hero: {
 						heroImageDesktop: heroImageDesktop5,
+						heroImageTablet: heroImageTablet5,
+						heroImageMobile: heroImageMobile5,
 						alt: 'House in Redland'
 					},
 					imageLabel: 'House in Redland'

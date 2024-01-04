@@ -14,12 +14,20 @@ import thumbnailDesktop4 from '../../../../assets/images/ProjectCategories/Flats
 //hero ---------------------------------------------------------------------------------------------------
 //1FlatsinBedminster
 import heroImageDesktop1 from '../../../../assets/images/ProjectCategories/Flats_4/1FlatsinBedminster/HeroImages/Hero_desktop.jpg';
+import heroImageTablet1 from '../../../../assets/images/ProjectCategories/Flats_4/1FlatsinBedminster/HeroImages/Hero_tablet.jpg';
+import heroImageMobile1 from '../../../../assets/images/ProjectCategories/Flats_4/1FlatsinBedminster/HeroImages/Hero_mobile.jpg';
 //2FlatsinCotham
 import heroImageDesktop2 from '../../../../assets/images/ProjectCategories/Flats_4/2FlatsinCotham/HeroImages/Hero_desktop.jpg';
+import heroImageTablet2 from '../../../../assets/images/ProjectCategories/Flats_4/2FlatsinCotham/HeroImages/Hero_tablet.jpg';
+import heroImageMobile2 from '../../../../assets/images/ProjectCategories/Flats_4/2FlatsinCotham/HeroImages/Hero_mobile.jpg';
 //3PhoenixWorksFlats
 import heroImageDesktop3 from '../../../../assets/images/ProjectCategories/Flats_4/3PhoenixWorksFlats/HeroImages/Hero_desktop.jpg';
+import heroImageTablet3 from '../../../../assets/images/ProjectCategories/Flats_4/3PhoenixWorksFlats/HeroImages/Hero_tablet.jpg';
+import heroImageMobile3 from '../../../../assets/images/ProjectCategories/Flats_4/3PhoenixWorksFlats/HeroImages/Hero_mobile.jpg';
 //4FlatsinWeston_Super_Mare
 import heroImageDesktop4 from '../../../../assets/images/ProjectCategories/Flats_4/4FlatsinWeston_Super_Mare/HeroImages/Hero_desktop.jpg';
+import heroImageTablet4 from '../../../../assets/images/ProjectCategories/Flats_4/4FlatsinWeston_Super_Mare/HeroImages/Hero_tablet.jpg';
+import heroImageMobile4 from '../../../../assets/images/ProjectCategories/Flats_4/4FlatsinWeston_Super_Mare/HeroImages/Hero_mobile.jpg';
 
 //SecondaryImages ---------------------------------------------------------------------------------------------------
 //desktop
@@ -71,6 +79,8 @@ const Flats = () => {
 				1: {
 					hero: {
 						heroImageDesktop: heroImageDesktop1,
+						heroImageTablet: heroImageTablet1,
+						heroImageMobile: heroImageMobile1,
 						alt: 'Flats in Bedminster'
 					},
 					imageLabel: 'Flats in Bedminster'
@@ -78,6 +88,8 @@ const Flats = () => {
 				2: {
 					hero: {
 						heroImageDesktop: heroImageDesktop2,
+						heroImageTablet: heroImageTablet2,
+						heroImageMobile: heroImageMobile2,
 						alt: 'Flats in Cotham'
 					},
 					imageLabel: 'Flats in Cotham'
@@ -85,6 +97,8 @@ const Flats = () => {
 				3: {
 					hero: {
 						heroImageDesktop: heroImageDesktop3,
+						heroImageTablet: heroImageTablet3,
+						heroImageMobile: heroImageMobile3,
 						alt: 'Phoenix Works Flats'
 					},
 					imageLabel: 'Phoenix Works Flats'
@@ -92,6 +106,8 @@ const Flats = () => {
 				4: {
 					hero: {
 						heroImageDesktop: heroImageDesktop4,
+						heroImageTablet: heroImageTablet4,
+						heroImageMobile: heroImageMobile4,
 						alt: 'Flats in Weston-Super-Mare'
 					},
 					imageLabel: 'Flats in Weston-Super-Mare'

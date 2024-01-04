@@ -98,7 +98,7 @@ export default function Home(props) {
 
 function PlaceholderAndImage({ card }) {
 	const [isImageLoaded, setIsImageLoaded] = useState(false);
-	const [isImageComplete, setIsImageComplete] = useState(false);
+	const [isImageComplete, setIsImageComplete] = useState(true);
 	const blurredImageRef = useRef(null); // tagged the image below
 
 	useEffect(() => {
@@ -108,21 +108,20 @@ function PlaceholderAndImage({ card }) {
 			setIsImageLoaded(true);
 		};
 
-		const complete = () => {
-			setIsImageComplete(true);
+		const notComplete = () => {
+			setIsImageComplete(false);
 		};
-
 		if (img.complete) {
-			complete();
 			loaded();
 		} else {
+			notComplete();
 			img.addEventListener('load', loaded);
 
 			return () => {
 				img.removeEventListener('load', loaded);
 			};
 		}
-	}, []);
+	}, [card]);
 
 	return (
 		<>

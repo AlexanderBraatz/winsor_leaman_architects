@@ -18,16 +18,28 @@ import thumbnailDesktop6 from '../../../../assets/images/ProjectCategories/House
 //hero ---------------------------------------------------------------------------------------------------
 //1MalboroughHouse
 import heroImageDesktop1 from '../../../../assets/images/ProjectCategories/Houses_7/1MalboroughHouse/HeroImages/Hero_desktop.jpg';
+import heroImageTablet1 from '../../../../assets/images/ProjectCategories/Houses_7/1MalboroughHouse/HeroImages/Hero_tablet.jpg';
+import heroImageMobile1 from '../../../../assets/images/ProjectCategories/Houses_7/1MalboroughHouse/HeroImages/Hero_mobile.jpg';
 //2HouseinStapleton
 import heroImageDesktop2 from '../../../../assets/images/ProjectCategories/Houses_7/2HouseinStapleton/HeroImages/Hero_desktop.jpg';
+import heroImageTablet2 from '../../../../assets/images/ProjectCategories/Houses_7/2HouseinStapleton/HeroImages/Hero_tablet.jpg';
+import heroImageMobile2 from '../../../../assets/images/ProjectCategories/Houses_7/2HouseinStapleton/HeroImages/Hero_mobile.jpg';
 //3HouseinClifton
 import heroImageDesktop3 from '../../../../assets/images/ProjectCategories/Houses_7/3HouseinClifton/HeroImages/Hero_desktop.jpg';
+import heroImageTablet3 from '../../../../assets/images/ProjectCategories/Houses_7/3HouseinClifton/HeroImages/Hero_tablet.jpg';
+import heroImageMobile3 from '../../../../assets/images/ProjectCategories/Houses_7/3HouseinClifton/HeroImages/Hero_mobile.jpg';
 //4UndergroundHouse
 import heroImageDesktop4 from '../../../../assets/images/ProjectCategories/Houses_7/4UndergroundHouse/HeroImages/Hero_desktop.jpg';
+import heroImageTablet4 from '../../../../assets/images/ProjectCategories/Houses_7/4UndergroundHouse/HeroImages/Hero_tablet.jpg';
+import heroImageMobile4 from '../../../../assets/images/ProjectCategories/Houses_7/4UndergroundHouse/HeroImages/Hero_mobile.jpg';
 //5HouseinKnowle
 import heroImageDesktop5 from '../../../../assets/images/ProjectCategories/Houses_7/5HouseinKnowle/HeroImages/Hero_desktop.jpg';
+import heroImageTablet5 from '../../../../assets/images/ProjectCategories/Houses_7/5HouseinKnowle/HeroImages/Hero_tablet.jpg';
+import heroImageMobile5 from '../../../../assets/images/ProjectCategories/Houses_7/5HouseinKnowle/HeroImages/Hero_mobile.jpg';
 //6HouseinBrislington
 import heroImageDesktop6 from '../../../../assets/images/ProjectCategories/Houses_7/6HouseinBrislington/HeroImages/Hero_desktop.jpg';
+import heroImageTablet6 from '../../../../assets/images/ProjectCategories/Houses_7/6HouseinBrislington/HeroImages/Hero_tablet.jpg';
+import heroImageMobile6 from '../../../../assets/images/ProjectCategories/Houses_7/6HouseinBrislington/HeroImages/Hero_mobile.jpg';
 
 //SecondaryImages ---------------------------------------------------------------------------------------------------
 //desktop
@@ -99,6 +111,8 @@ const Houses = () => {
 				1: {
 					hero: {
 						heroImageDesktop: heroImageDesktop1,
+						heroImageTablet: heroImageTablet1,
+						heroImageMobile: heroImageMobile1,
 						alt: 'Malborough House'
 					},
 					imageLabel: 'Malborough House'
@@ -106,6 +120,8 @@ const Houses = () => {
 				2: {
 					hero: {
 						heroImageDesktop: heroImageDesktop2,
+						heroImageTablet: heroImageTablet2,
+						heroImageMobile: heroImageMobile2,
 						alt: 'House in Stapleton'
 					},
 					imageLabel: 'House in Stapleton'
@@ -113,6 +129,8 @@ const Houses = () => {
 				3: {
 					hero: {
 						heroImageDesktop: heroImageDesktop3,
+						heroImageTablet: heroImageTablet3,
+						heroImageMobile: heroImageMobile3,
 						alt: 'House in Clifton'
 					},
 					imageLabel: 'House in Clifton'
@@ -120,6 +138,8 @@ const Houses = () => {
 				4: {
 					hero: {
 						heroImageDesktop: heroImageDesktop4,
+						heroImageTablet: heroImageTablet4,
+						heroImageMobile: heroImageMobile4,
 						alt: 'Underground House'
 					},
 					imageLabel: 'Underground House'
@@ -127,6 +147,8 @@ const Houses = () => {
 				5: {
 					hero: {
 						heroImageDesktop: heroImageDesktop5,
+						heroImageTablet: heroImageTablet5,
+						heroImageMobile: heroImageMobile5,
 						alt: 'House in Knowle'
 					},
 					imageLabel: 'House in Knowle'
@@ -134,6 +156,8 @@ const Houses = () => {
 				6: {
 					hero: {
 						heroImageDesktop: heroImageDesktop6,
+						heroImageTablet: heroImageTablet6,
+						heroImageMobile: heroImageMobile6,
 						alt: 'House in Brislington'
 					},
 					imageLabel: 'House in Brislington'
