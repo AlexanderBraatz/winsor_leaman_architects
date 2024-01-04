@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Sidebar from './components/Sidebar.js';
 import { ReactComponent as InfoIcon } from '../../../../assets/images/ProjectHero/Info-2.svg';
 import styled from 'styled-components';
@@ -8,33 +8,47 @@ export default function Hero({
 	showcaseProps: { hero, imageLabel },
 	id
 }) {
+	const div = useRef();
+	const handleClick = () => {
+		div.current.scrollIntoView({
+			behavior: 'smooth'
+		});
+	};
 	return (
-		<StyledHero>
-			<Sidebar
-				sideBarProps={sideBarProps}
-				id={id}
-			/>
-			<HeroImageContainer>
-				<HeroImage
-					loading="lazy"
-					src={hero.heroImageDesktop}
-					// sizes=""
-					// srcSet={`${hero.heroImageMobile} 1200w,${hero.heroImageTablet} 1366w,${hero.heroImageDesktop} 2400w`}
-					srcSet="
-					    https://placehold.co/800x200/png   800w,
-					    https://placehold.co/1600x400/png 1600w,
-					    https://placehold.co/3200x800/png 3200w
-					  "
-					alt={hero.alt}
+		<>
+			<StyledHero>
+				<Sidebar
+					sideBarProps={sideBarProps}
+					id={id}
 				/>
-				<ImageLabel>
-					<LabelText>{imageLabel}</LabelText>
-					<LabelIcon />
-				</ImageLabel>
-			</HeroImageContainer>
-		</StyledHero>
+				<HeroImageContainer>
+					<HeroImage
+						loading="lazy"
+						src={hero.heroImageDesktop}
+						// sizes=""
+						// srcSet={`${hero.heroImageMobile} 1200w,${hero.heroImageTablet} 1366w,${hero.heroImageDesktop} 2400w`}
+						// srcSet="
+						//     https://placehold.co/800x200/png   800w,
+						//     https://placehold.co/1600x400/png 1600w,
+						//     https://placehold.co/3200x800/png 3200w
+						//   "
+						alt={hero.alt}
+					/>
+					<ImageLabel onClick={handleClick}>
+						<LabelText>{imageLabel}</LabelText>
+						<LabelIcon />
+					</ImageLabel>
+				</HeroImageContainer>
+			</StyledHero>
+			<SimpleAnchor ref={div}></SimpleAnchor>
+		</>
 	);
 }
+
+const SimpleAnchor = styled.div`
+	height: 0px;
+	pointer-events: none;
+`;
 
 const StyledHero = styled.div`
 	/* max-width: 153.6rem; */

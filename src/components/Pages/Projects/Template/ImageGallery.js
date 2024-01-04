@@ -10,11 +10,16 @@ const ImageGallery = ({ imageGalleryProps: { images } }) => {
 
 	const handleLeftCLick = () => {
 		setEnlargedImage(enlargedImage - 1);
+		if (enlargedImage - 1 < 0) {
+			setEnlargedImage(images.length - 1);
+		} else {
+			setEnlargedImage(enlargedImage - 1);
+		}
 	};
 
 	const handleRightCLick = () => {
 		if (enlargedImage + 1 === images.length) {
-			setEnlargedImage(-1);
+			setEnlargedImage(0);
 		} else {
 			setEnlargedImage(enlargedImage + 1);
 		}
