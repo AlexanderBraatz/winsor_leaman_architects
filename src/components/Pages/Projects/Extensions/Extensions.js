@@ -14,22 +14,27 @@ import thumbnailDesktop5 from '../../../../assets/images/ProjectCategories/Exten
 
 //hero ---------------------------------------------------------------------------------------------------
 //1HouseinAbbotsLeigh
+import heroImageDesktop_20px_small1 from '../../../../assets/images/ProjectCategories/Extensions_8/1HouseinAbbotsLeigh/HeroImages/Hero_desktop-20px-small.jpg';
 import heroImageDesktop1 from '../../../../assets/images/ProjectCategories/Extensions_8/1HouseinAbbotsLeigh/HeroImages/Hero_desktop.jpg';
 import heroImageTablet1 from '../../../../assets/images/ProjectCategories/Extensions_8/1HouseinAbbotsLeigh/HeroImages/Hero_tablet.jpg';
 import heroImageMobile1 from '../../../../assets/images/ProjectCategories/Extensions_8/1HouseinAbbotsLeigh/HeroImages/Hero_mobile.jpg';
 //2HouseinWestbury_on_Trym
+import heroImageDesktop_20px_small2 from '../../../../assets/images/ProjectCategories/Extensions_8/2HouseinWestbury_on_Trym/HeroImages/Hero_desktop-20px-small.jpg';
 import heroImageDesktop2 from '../../../../assets/images/ProjectCategories/Extensions_8/2HouseinWestbury_on_Trym/HeroImages/Hero_desktop.jpg';
 import heroImageTablet2 from '../../../../assets/images/ProjectCategories/Extensions_8/2HouseinWestbury_on_Trym/HeroImages/Hero_tablet.jpg';
 import heroImageMobile2 from '../../../../assets/images/ProjectCategories/Extensions_8/2HouseinWestbury_on_Trym/HeroImages/Hero_mobile.jpg';
 //3GardenOffice
+import heroImageDesktop_20px_small3 from '../../../../assets/images/ProjectCategories/Extensions_8/3GardenOffice/HeroImages/Hero_desktop-20px-small.jpg';
 import heroImageDesktop3 from '../../../../assets/images/ProjectCategories/Extensions_8/3GardenOffice/HeroImages/Hero_desktop.jpg';
 import heroImageTablet3 from '../../../../assets/images/ProjectCategories/Extensions_8/3GardenOffice/HeroImages/Hero_tablet.jpg';
 import heroImageMobile3 from '../../../../assets/images/ProjectCategories/Extensions_8/3GardenOffice/HeroImages/Hero_mobile.jpg';
 //4DaisychainNursery
+import heroImageDesktop_20px_small4 from '../../../../assets/images/ProjectCategories/Extensions_8/4DaisychainNursery/HeroImages/Hero_desktop-20px-small.jpg';
 import heroImageDesktop4 from '../../../../assets/images/ProjectCategories/Extensions_8/4DaisychainNursery/HeroImages/Hero_desktop.jpg';
 import heroImageTablet4 from '../../../../assets/images/ProjectCategories/Extensions_8/4DaisychainNursery/HeroImages/Hero_tablet.jpg';
 import heroImageMobile4 from '../../../../assets/images/ProjectCategories/Extensions_8/4DaisychainNursery/HeroImages/Hero_mobile.jpg';
 //6HouseinRedland
+import heroImageDesktop_20px_small5 from '../../../../assets/images/ProjectCategories/Extensions_8/6HouseinRedland/HeroImages/Hero_desktop-20px-small.jpg';
 import heroImageDesktop5 from '../../../../assets/images/ProjectCategories/Extensions_8/6HouseinRedland/HeroImages/Hero_desktop.jpg';
 import heroImageTablet5 from '../../../../assets/images/ProjectCategories/Extensions_8/6HouseinRedland/HeroImages/Hero_tablet.jpg';
 import heroImageMobile5 from '../../../../assets/images/ProjectCategories/Extensions_8/6HouseinRedland/HeroImages/Hero_mobile.jpg';
@@ -98,6 +103,7 @@ const Extensions = () => {
 			showcaseProps: {
 				1: {
 					hero: {
+						placeholder: heroImageDesktop_20px_small1,
 						heroImageDesktop: heroImageDesktop1,
 						heroImageTablet: heroImageTablet1,
 						heroImageMobile: heroImageMobile1,
@@ -107,6 +113,7 @@ const Extensions = () => {
 				},
 				2: {
 					hero: {
+						placeholder: heroImageDesktop_20px_small2,
 						heroImageDesktop: heroImageDesktop2,
 						heroImageTablet: heroImageTablet2,
 						heroImageMobile: heroImageMobile2,
@@ -116,6 +123,7 @@ const Extensions = () => {
 				},
 				3: {
 					hero: {
+						placeholder: heroImageDesktop_20px_small3,
 						heroImageDesktop: heroImageDesktop3,
 						heroImageTablet: heroImageTablet3,
 						heroImageMobile: heroImageMobile3,
@@ -125,6 +133,7 @@ const Extensions = () => {
 				},
 				4: {
 					hero: {
+						placeholder: heroImageDesktop_20px_small4,
 						heroImageDesktop: heroImageDesktop4,
 						heroImageTablet: heroImageTablet4,
 						heroImageMobile: heroImageMobile4,
@@ -134,6 +143,7 @@ const Extensions = () => {
 				},
 				5: {
 					hero: {
+						placeholder: heroImageDesktop_20px_small5,
 						heroImageDesktop: heroImageDesktop5,
 						heroImageTablet: heroImageTablet5,
 						heroImageMobile: heroImageMobile5,

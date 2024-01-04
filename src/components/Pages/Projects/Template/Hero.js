@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import Sidebar from './components/Sidebar.js';
 import { ReactComponent as InfoIcon } from '../../../../assets/images/ProjectHero/Info-2.svg';
 import styled from 'styled-components';
@@ -22,13 +22,7 @@ export default function Hero({
 					id={id}
 				/>
 				<HeroImageContainer>
-					<HeroImage
-						loading="lazy"
-						src={hero.heroImageMobile}
-						srcSet={`${hero.heroImageMobile} 1200w,${hero.heroImageTablet} 1366w,${hero.heroImageDesktop} 2400w`}
-						sizes="(max-width: 843px) 100vw, calc(100vw - 230px)"
-						alt={hero.alt}
-					/>
+					<PlaceholderAndImage hero={hero} />
 					<ImageLabel onClick={handleClick}>
 						<LabelText>{imageLabel}</LabelText>
 						<LabelIcon />
@@ -38,7 +32,107 @@ export default function Hero({
 			<SimpleAnchor ref={div}></SimpleAnchor>
 		</>
 	);
+
+	function PlaceholderAndImage({ hero }) {
+		const [isImageLoaded, setIsImageLoaded] = useState(false);
+		const [isImageComplete, setIsImageComplete] = useState(true);
+		const blurredImageRef = useRef(null); // tagged the image below
+
+		useEffect(() => {
+			const img = blurredImageRef.current;
+
+			const loaded = () => {
+				setIsImageLoaded(true);
+			};
+
+			const notComplete = () => {
+				setIsImageComplete(false);
+			};
+			if (img.complete) {
+				loaded();
+			} else {
+				notComplete();
+				img.addEventListener('load', loaded);
+
+				return () => {
+					img.removeEventListener('load', loaded);
+				};
+			}
+		}, []);
+
+		return (
+			<>
+				<Placeholder
+					fetchpriority="high"
+					placeholder={hero.placeholder}
+					className={`blurred-img ${!isImageComplete ? 'NotComplete' : ''} ${
+						isImageLoaded ? 'loaded' : ''
+					}`}
+				>
+					<HeroImage
+						fetchpriority="high"
+						src={hero.heroImageMobile}
+						srcSet={`${hero.heroImageMobile} 1200w,${hero.heroImageTablet} 1366w,${hero.heroImageDesktop} 2400w`}
+						sizes="(max-width: 843px) 100vw, calc(100vw - 230px)"
+						alt={hero.alt}
+						ref={blurredImageRef}
+						className={'image'}
+					/>
+				</Placeholder>
+			</>
+		);
+	}
 }
+
+const Placeholder = styled.div`
+	background-image: url(${props => props.placeholder});
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 100%;
+	filter: blur(0px);
+
+	&.NotComplete {
+		transition: filter 250ms ease-in-out;
+		filter: blur(5px);
+	}
+	&.NotComplete img {
+		transition: transform 0.3s linear, opacity 250ms ease-in-out;
+
+		opacity: 0;
+	}
+
+	&.loaded {
+		filter: blur(0px);
+	}
+	&::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		opacity: 0;
+		animation: pulse 2.5s infinite;
+		background-color: ${props => props.theme.desktop.grey_5};
+	}
+	&.loaded::before {
+		animation: none;
+		content: none;
+	}
+
+	@keyframes pulse {
+		0% {
+			opacity: 0;
+		}
+		50% {
+			opacity: 0.2;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+	&.loaded img {
+		opacity: 1;
+	}
+`;
 
 const SimpleAnchor = styled.div`
 	height: 0px;
@@ -46,9 +140,7 @@ const SimpleAnchor = styled.div`
 `;
 
 const StyledHero = styled.div`
-	/* max-width: 153.6rem; */
 	width: 100vw;
-	/* height: 61.3rem; */
 	height: calc(
 		100vh - 4.7rem - 10.4rem
 	); // accounting for the ProjectsNavBar and PageNavbar
@@ -66,7 +158,6 @@ const StyledHero = styled.div`
 `;
 
 const HeroImageContainer = styled.div`
-	/* max-width: 130.9rem; */
 	height: 100%;
 	position: relative;
 	margin-left: 3.9rem;
@@ -84,6 +175,9 @@ const HeroImage = styled.img`
 	max-height: auto;
 	object-fit: cover;
 	object-position: center;
+	background-color: ${props => props.theme.desktop.dark_3};
+	opacity: 1;
+	transition: transform 0.3s linear;
 	@media (max-width: 843px) {
 		min-width: 100%;
 		max-width: auto;

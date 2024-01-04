@@ -22,7 +22,6 @@ const ResponsiveProvider = ({ children }) => {
 			window.removeEventListener('resize', handleResize);
 		};
 	}, []);
-	console.log(children);
 	return (
 		<ResponsiveContext.Provider value={{ isDesktop, isTablet, isMobile }}>
 			{children}

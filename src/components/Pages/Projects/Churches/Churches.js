@@ -37,26 +37,32 @@ import thumbnailMobile6 from '../../../../assets/images/ProjectCategories/Church
 import heroImage from '../../../../assets/images/ProjectHero/hero.png';
 
 //hero 1BradleyStokeEvangelicalChurch
+import heroImageDesktop_20px_small1 from '../../../../assets/images/ProjectCategories/Churches_6/1BradleyStokeEvangelicalChurch/HeroImages/Hero_desktop-20px-small.jpg';
 import heroImageDesktop1 from '../../../../assets/images/ProjectCategories/Churches_6/1BradleyStokeEvangelicalChurch/HeroImages/Hero_desktop.jpg';
 import heroImageTablet1 from '../../../../assets/images/ProjectCategories/Churches_6/1BradleyStokeEvangelicalChurch/HeroImages/Hero_tablet.jpg';
 import heroImageMobile1 from '../../../../assets/images/ProjectCategories/Churches_6/1BradleyStokeEvangelicalChurch/HeroImages/Hero_mobile.jpg';
 //hero 2TheOldChapel
+import heroImageDesktop_20px_small2 from '../../../../assets/images/ProjectCategories/Churches_6/2TheOldChapel/HeroImages/Hero_desktop-20px-small.jpg';
 import heroImageDesktop2 from '../../../../assets/images/ProjectCategories/Churches_6/2TheOldChapel/HeroImages/Hero_desktop.jpg';
 import heroImageTablet2 from '../../../../assets/images/ProjectCategories/Churches_6/2TheOldChapel/HeroImages/Hero_tablet.jpg';
 import heroImageMobile2 from '../../../../assets/images/ProjectCategories/Churches_6/2TheOldChapel/HeroImages/Hero_mobile.jpg';
 //hero 3RedlandParish
+import heroImageDesktop_20px_small3 from '../../../../assets/images/ProjectCategories/Churches_6/3RedlandParish/HeroImages/Hero_desktop-20px-small.jpg';
 import heroImageDesktop3 from '../../../../assets/images/ProjectCategories/Churches_6/3RedlandParish/HeroImages/Hero_desktop.jpg';
 import heroImageTablet3 from '../../../../assets/images/ProjectCategories/Churches_6/3RedlandParish/HeroImages/Hero_tablet.jpg';
 import heroImageMobile3 from '../../../../assets/images/ProjectCategories/Churches_6/3RedlandParish/HeroImages/Hero_mobile.jpg';
 //hero 4StMaryontheQuay
+import heroImageDesktop_20px_small4 from '../../../../assets/images/ProjectCategories/Churches_6/4StMaryontheQuay/HeroImages/Hero_desktop-20px-small.jpg';
 import heroImageDesktop4 from '../../../../assets/images/ProjectCategories/Churches_6/4StMaryontheQuay/HeroImages/Hero_desktop.jpg';
 import heroImageTablet4 from '../../../../assets/images/ProjectCategories/Churches_6/4StMaryontheQuay/HeroImages/Hero_tablet.jpg';
 import heroImageMobile4 from '../../../../assets/images/ProjectCategories/Churches_6/4StMaryontheQuay/HeroImages/Hero_mobile.jpg';
 //hero 5AxbridgeParish
+import heroImageDesktop_20px_small5 from '../../../../assets/images/ProjectCategories/Churches_6/5AxbridgeParish/HeroImages/Hero_desktop-20px-small.jpg';
 import heroImageDesktop5 from '../../../../assets/images/ProjectCategories/Churches_6/5AxbridgeParish/HeroImages/Hero_desktop.jpg';
 import heroImageTablet5 from '../../../../assets/images/ProjectCategories/Churches_6/5AxbridgeParish/HeroImages/Hero_tablet.jpg';
 import heroImageMobile5 from '../../../../assets/images/ProjectCategories/Churches_6/5AxbridgeParish/HeroImages/Hero_mobile.jpg';
 //6BroadStreetChurch
+import heroImageDesktop_20px_small6 from '../../../../assets/images/ProjectCategories/Churches_6/6BroadStreetChurch/HeroImages/Hero_desktop-20px-small.jpg';
 import heroImageDesktop6 from '../../../../assets/images/ProjectCategories/Churches_6/6BroadStreetChurch/HeroImages/Hero_desktop.jpg';
 import heroImageTablet6 from '../../../../assets/images/ProjectCategories/Churches_6/6BroadStreetChurch/HeroImages/Hero_tablet.jpg';
 import heroImageMobile6 from '../../../../assets/images/ProjectCategories/Churches_6/6BroadStreetChurch/HeroImages/Hero_mobile.jpg';
@@ -147,6 +153,7 @@ const Churches = () => {
 				1: {
 					hero: {
 						heroImage,
+						placeholder: heroImageDesktop_20px_small1,
 						heroImageDesktop: heroImageDesktop1,
 						heroImageTablet: heroImageTablet1,
 						heroImageMobile: heroImageMobile1,
@@ -157,6 +164,7 @@ const Churches = () => {
 				2: {
 					hero: {
 						heroImage,
+						placeholder: heroImageDesktop_20px_small2,
 						heroImageDesktop: heroImageDesktop2,
 						heroImageTablet: heroImageTablet2,
 						heroImageMobile: heroImageMobile2,
@@ -167,6 +175,7 @@ const Churches = () => {
 				3: {
 					hero: {
 						heroImage,
+						placeholder: heroImageDesktop_20px_small3,
 						heroImageDesktop: heroImageDesktop3,
 						heroImageTablet: heroImageTablet3,
 						heroImageMobile: heroImageMobile3,
@@ -177,6 +186,7 @@ const Churches = () => {
 				4: {
 					hero: {
 						heroImage,
+						placeholder: heroImageDesktop_20px_small4,
 						heroImageDesktop: heroImageDesktop4,
 						heroImageTablet: heroImageTablet4,
 						heroImageMobile: heroImageMobile4,
@@ -187,6 +197,7 @@ const Churches = () => {
 				5: {
 					hero: {
 						heroImage,
+						placeholder: heroImageDesktop_20px_small5,
 						heroImageDesktop: heroImageDesktop5,
 						heroImageTablet: heroImageTablet5,
 						heroImageMobile: heroImageMobile5,
@@ -197,6 +208,7 @@ const Churches = () => {
 				6: {
 					hero: {
 						heroImage,
+						placeholder: heroImageDesktop_20px_small6,
 						heroImageDesktop: heroImageDesktop6,
 						heroImageTablet: heroImageTablet6,
 						heroImageMobile: heroImageMobile6,

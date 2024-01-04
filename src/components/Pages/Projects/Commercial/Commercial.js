@@ -15,23 +15,28 @@ import thumbnailDesktop5 from '../../../../assets/images/ProjectCategories/Comme
 
 //hero ---------------------------------------------------------------------------------------------------
 //1StPetersHospiceGardenRoom
+import heroImageDesktop_20px_small1 from '../../../../assets/images/ProjectCategories/Commercial_5/1StPetersHospiceGardenRoom/HeroImages/Hero_desktop-20px-small.jpg';
 import heroImageDesktop1 from '../../../../assets/images/ProjectCategories/Commercial_5/1StPetersHospiceGardenRoom/HeroImages/Hero_desktop.jpg';
 import heroImageTablet1 from '../../../../assets/images/ProjectCategories/Commercial_5/1StPetersHospiceGardenRoom/HeroImages/Hero_tablet.jpg';
 import heroImageMobile1 from '../../../../assets/images/ProjectCategories/Commercial_5/1StPetersHospiceGardenRoom/HeroImages/Hero_mobile.jpg';
 //2BrunelManorHotel
+import heroImageDesktop_20px_small2 from '../../../../assets/images/ProjectCategories/Commercial_5/2BrunelManorHotel/HeroImages/Hero_desktop-20px-small.jpg';
 import heroImageDesktop2 from '../../../../assets/images/ProjectCategories/Commercial_5/2BrunelManorHotel/HeroImages/Hero_desktop.jpg';
 import heroImageTablet2 from '../../../../assets/images/ProjectCategories/Commercial_5/2BrunelManorHotel/HeroImages/Hero_tablet.jpg';
 import heroImageMobile2 from '../../../../assets/images/ProjectCategories/Commercial_5/2BrunelManorHotel/HeroImages/Hero_mobile.jpg';
 //4DaisychainNursery from extensions
+import heroImageDesktop_20px_small3 from '../../../../assets/images/ProjectCategories/Extensions_8/4DaisychainNursery/HeroImages/Hero_desktop-20px-small.jpg';
 import heroImageDesktop3 from '../../../../assets/images/ProjectCategories/Extensions_8/4DaisychainNursery/HeroImages/Hero_desktop.jpg';
 import heroImageTablet3 from '../../../../assets/images/ProjectCategories/Extensions_8/4DaisychainNursery/HeroImages/Hero_tablet.jpg';
 import heroImageMobile3 from '../../../../assets/images/ProjectCategories/Extensions_8/4DaisychainNursery/HeroImages/Hero_mobile.jpg';
 
 //4VantagePark
+import heroImageDesktop_20px_small4 from '../../../../assets/images/ProjectCategories/Commercial_5/4VantagePark/HeroImages/Hero_desktop-20px-small.jpg';
 import heroImageDesktop4 from '../../../../assets/images/ProjectCategories/Commercial_5/4VantagePark/HeroImages/Hero_desktop.jpg';
 import heroImageTablet4 from '../../../../assets/images/ProjectCategories/Commercial_5/4VantagePark/HeroImages/Hero_tablet.jpg';
 import heroImageMobile4 from '../../../../assets/images/ProjectCategories/Commercial_5/4VantagePark/HeroImages/Hero_mobile.jpg';
 //5KeynshamHotelandFlats
+import heroImageDesktop_20px_small5 from '../../../../assets/images/ProjectCategories/Commercial_5/5KeynshamHotelandFlats/HeroImages/Hero_desktop-20px-small.jpg';
 import heroImageDesktop5 from '../../../../assets/images/ProjectCategories/Commercial_5/5KeynshamHotelandFlats/HeroImages/Hero_desktop.jpg';
 import heroImageTablet5 from '../../../../assets/images/ProjectCategories/Commercial_5/5KeynshamHotelandFlats/HeroImages/Hero_tablet.jpg';
 import heroImageMobile5 from '../../../../assets/images/ProjectCategories/Commercial_5/5KeynshamHotelandFlats/HeroImages/Hero_mobile.jpg';
@@ -99,6 +104,7 @@ const Commercial = () => {
 			showcaseProps: {
 				1: {
 					hero: {
+						placeholder: heroImageDesktop_20px_small1,
 						heroImageDesktop: heroImageDesktop1,
 						heroImageTablet: heroImageTablet1,
 						heroImageMobile: heroImageMobile1,
@@ -108,6 +114,7 @@ const Commercial = () => {
 				},
 				2: {
 					hero: {
+						placeholder: heroImageDesktop_20px_small2,
 						heroImageDesktop: heroImageDesktop2,
 						heroImageTablet: heroImageTablet2,
 						heroImageMobile: heroImageMobile2,
@@ -117,6 +124,7 @@ const Commercial = () => {
 				},
 				3: {
 					hero: {
+						placeholder: heroImageDesktop_20px_small3,
 						heroImageDesktop: heroImageDesktop3,
 						heroImageTablet: heroImageTablet3,
 						heroImageMobile: heroImageMobile3,
@@ -126,6 +134,7 @@ const Commercial = () => {
 				},
 				4: {
 					hero: {
+						placeholder: heroImageDesktop_20px_small4,
 						heroImageDesktop: heroImageDesktop4,
 						heroImageTablet: heroImageTablet4,
 						heroImageMobile: heroImageMobile4,
@@ -135,6 +144,7 @@ const Commercial = () => {
 				},
 				5: {
 					hero: {
+						placeholder: heroImageDesktop_20px_small5,
 						heroImageDesktop: heroImageDesktop5,
 						heroImageTablet: heroImageTablet5,
 						heroImageMobile: heroImageMobile5,

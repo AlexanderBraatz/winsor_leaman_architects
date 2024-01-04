@@ -13,18 +13,22 @@ import thumbnailDesktop4 from '../../../../assets/images/ProjectCategories/Flats
 
 //hero ---------------------------------------------------------------------------------------------------
 //1FlatsinBedminster
+import heroImageDesktop_20px_small1 from '../../../../assets/images/ProjectCategories/Flats_4/1FlatsinBedminster/HeroImages/Hero_desktop-20px-small.jpg';
 import heroImageDesktop1 from '../../../../assets/images/ProjectCategories/Flats_4/1FlatsinBedminster/HeroImages/Hero_desktop.jpg';
 import heroImageTablet1 from '../../../../assets/images/ProjectCategories/Flats_4/1FlatsinBedminster/HeroImages/Hero_tablet.jpg';
 import heroImageMobile1 from '../../../../assets/images/ProjectCategories/Flats_4/1FlatsinBedminster/HeroImages/Hero_mobile.jpg';
 //2FlatsinCotham
+import heroImageDesktop_20px_small2 from '../../../../assets/images/ProjectCategories/Flats_4/2FlatsinCotham/HeroImages/Hero_desktop-20px-small.jpg';
 import heroImageDesktop2 from '../../../../assets/images/ProjectCategories/Flats_4/2FlatsinCotham/HeroImages/Hero_desktop.jpg';
 import heroImageTablet2 from '../../../../assets/images/ProjectCategories/Flats_4/2FlatsinCotham/HeroImages/Hero_tablet.jpg';
 import heroImageMobile2 from '../../../../assets/images/ProjectCategories/Flats_4/2FlatsinCotham/HeroImages/Hero_mobile.jpg';
 //3PhoenixWorksFlats
+import heroImageDesktop_20px_small3 from '../../../../assets/images/ProjectCategories/Flats_4/3PhoenixWorksFlats/HeroImages/Hero_desktop-20px-small.jpg';
 import heroImageDesktop3 from '../../../../assets/images/ProjectCategories/Flats_4/3PhoenixWorksFlats/HeroImages/Hero_desktop.jpg';
 import heroImageTablet3 from '../../../../assets/images/ProjectCategories/Flats_4/3PhoenixWorksFlats/HeroImages/Hero_tablet.jpg';
 import heroImageMobile3 from '../../../../assets/images/ProjectCategories/Flats_4/3PhoenixWorksFlats/HeroImages/Hero_mobile.jpg';
 //4FlatsinWeston_Super_Mare
+import heroImageDesktop_20px_small4 from '../../../../assets/images/ProjectCategories/Flats_4/4FlatsinWeston_Super_Mare/HeroImages/Hero_desktop-20px-small.jpg';
 import heroImageDesktop4 from '../../../../assets/images/ProjectCategories/Flats_4/4FlatsinWeston_Super_Mare/HeroImages/Hero_desktop.jpg';
 import heroImageTablet4 from '../../../../assets/images/ProjectCategories/Flats_4/4FlatsinWeston_Super_Mare/HeroImages/Hero_tablet.jpg';
 import heroImageMobile4 from '../../../../assets/images/ProjectCategories/Flats_4/4FlatsinWeston_Super_Mare/HeroImages/Hero_mobile.jpg';
@@ -78,6 +82,7 @@ const Flats = () => {
 			showcaseProps: {
 				1: {
 					hero: {
+						placeholder: heroImageDesktop_20px_small1,
 						heroImageDesktop: heroImageDesktop1,
 						heroImageTablet: heroImageTablet1,
 						heroImageMobile: heroImageMobile1,
@@ -87,6 +92,7 @@ const Flats = () => {
 				},
 				2: {
 					hero: {
+						placeholder: heroImageDesktop_20px_small2,
 						heroImageDesktop: heroImageDesktop2,
 						heroImageTablet: heroImageTablet2,
 						heroImageMobile: heroImageMobile2,
@@ -96,6 +102,7 @@ const Flats = () => {
 				},
 				3: {
 					hero: {
+						placeholder: heroImageDesktop_20px_small3,
 						heroImageDesktop: heroImageDesktop3,
 						heroImageTablet: heroImageTablet3,
 						heroImageMobile: heroImageMobile3,
@@ -105,6 +112,7 @@ const Flats = () => {
 				},
 				4: {
 					hero: {
+						placeholder: heroImageDesktop_20px_small4,
 						heroImageDesktop: heroImageDesktop4,
 						heroImageTablet: heroImageTablet4,
 						heroImageMobile: heroImageMobile4,
