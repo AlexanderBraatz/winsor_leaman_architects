@@ -44,7 +44,20 @@ const DescriptionContainer = styled.div`
 	margin: auto;
 	@media (max-width: 843px) {
 		max-width: 38.5rem;
-		padding: 0 1.6rem;
+	}
+
+	@media (max-width: 480px) {
+		max-width: 37rem;
+		padding: 0 0.8rem;
+	}
+	@media (max-width: 375px) {
+		max-width: 34rem;
+	}
+	@media (max-width: 340px) {
+		max-width: 30rem;
+	}
+	@media (max-width: 300px) {
+		max-width: 27rem;
 	}
 `;
 const Heading = styled.h2`
@@ -112,6 +125,22 @@ const FeedbackContainer = styled.div`
 	width: 60.8rem;
 	margin: auto;
 	padding: 4rem 0 5.6rem 0;
+	@media (max-width: 843px) {
+		max-width: 38.5rem;
+	}
+	@media (max-width: 480px) {
+		max-width: 37rem;
+		padding: 2rem 0.8rem 3.2rem 0.8rem;
+	}
+	@media (max-width: 375px) {
+		max-width: 34rem;
+	}
+	@media (max-width: 340px) {
+		max-width: 30rem;
+	}
+	@media (max-width: 300px) {
+		max-width: 27rem;
+	}
 `;
 const FeedbackHeading = styled.div`
 	font-family: 'SmallText';
