@@ -63,14 +63,12 @@ export default function Hero({
 		return (
 			<>
 				<Placeholder
-					fetchpriority="high"
 					placeholder={hero.placeholder}
 					className={`blurred-img ${!isImageComplete ? 'NotComplete' : ''} ${
 						isImageLoaded ? 'loaded' : ''
 					}`}
 				>
 					<HeroImage
-						fetchpriority="high"
 						src={hero.heroImageMobile}
 						srcSet={`${hero.heroImageMobile} 1200w,${hero.heroImageTablet} 1366w,${hero.heroImageDesktop} 2400w`}
 						sizes="(max-width: 843px) 100vw, calc(100vw - 230px)"
@@ -152,13 +150,10 @@ const StyledHero = styled.div`
 		/* height: calc(100vh - 9.6rem - 4.7rem); */
 		height: fit-content;
 	}
-	@media (max-width: 480px) {
-		/* height: calc(100vh - 6.4rem); */
-	}
 `;
 
 const HeroImageContainer = styled.div`
-	height: 100%;
+	/* height: 100%; */
 	position: relative;
 	margin-left: 3.9rem;
 	overflow: hidden;
@@ -182,9 +177,11 @@ const HeroImage = styled.img`
 		min-width: 100%;
 		max-width: auto;
 		max-height: 56vh;
+		min-height: 38vh;
 	}
 	@media (max-width: 480px) {
 		max-height: 42vh;
+		min-height: 20vh;
 	}
 `;
 const ImageLabel = styled.div`
@@ -197,6 +194,7 @@ const ImageLabel = styled.div`
 	display: flex;
 	align-items: center;
 	padding: 0.8rem 1.6rem;
+	cursor: pointer;
 	@media (max-width: 843px) {
 		display: none;
 	}

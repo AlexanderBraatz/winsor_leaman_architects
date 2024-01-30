@@ -177,7 +177,6 @@ const ImageContainer = styled(Link)`
 	overflow: hidden;
 	margin-left: 0rem;
 	transition: margin-left 0.25s;
-	transition: border 0.25s;
 	&.activeImage {
 		margin-left: 2rem;
 	}

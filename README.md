@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+# Blueprints to Pixels: The Digital Transformation of my Client’s architecture site.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<a href="https://winsor-leaman-architects.co.uk" target="_blank">Winsor-Leaman-Architects.co.uk</a> is built using React.js and serves as an engaging digital gallery, showcasing the firm's projects and integrating a contact form. The site highlights the firm's portfolio and stands as a key component in its strategy for client engagement."
 
-## Available Scripts
+![app preview](./other/preview/Desktop.png)
 
-In the project directory, you can run:
+## Why does this project exist?
 
-### `npm start`
+I began my journey with this project at a networking event in Bristol, where I connected with the Winsor family. The family had a unique vision: they wanted to revamp the father's architecture firm website and, at the same time, provide his daughter, an aspiring UX designer, with a chance to gain real-world design and project experience.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The project was driven by three primary goals:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Developing a Modern, User-Friendly Digital Showcase** <br/>The aim was to create an engaging online platform to exhibit over 30 of the firm's architectural projects.
+- **Streamlining Client Communication** <br/>A key requirement was to integrate a straightforward method for potential clients to contact the firm.
+- **Fostering Collaboration** <br/>An essential part of the project was to collaborate closely with the UX designer, ensuring her design vision was effectively translated into the website.
 
-### `npm test`
+To meet these goals, I steered the project by identifying and communicating the essential features needed, and led the development, deployment and maintenance. I made improvements over the original single page site by building a dynamic multi-page website. A lightweight architecture was used, including modular reusable components, client-side rendering and third-party services to ensure a swift and efficient delivery of the website, prioritising the client's needs and scalability.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## What is it made of?
 
-### `npm run build`
+### User Interface Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Contact form with feedback for validation, loading and submission success
+- Navigation between pages and content
+- Indication of current page navigation location
+- Image galleries
+- Interactive Components
+- Responsive to different screen sizes, including mobile and tablet
+- Precise implementation of Figma design
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Technologies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- JavaScript
+- React
+- react-router-dom
+- Email.js
+- Styled-components
+- JSX
+- HTML
+- CSS
+- IONOS hosting
+- Git
 
-### `npm run eject`
+## 🚀 Quick Start Guide
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Follow these steps to quickly set up and run the Winsor-Leaman-Architects.co.uk on your local machine.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Prerequisites
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Ensure you have the following installed:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Node.js
+- npm
+- Git
 
-## Learn More
+### Installation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Clone the Repository**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Open your terminal.
+- Clone the repository using Git:
 
-### Code Splitting
+  ```
+  git clone https://github.com/AlexanderBraatz/winsor_leaman_architects.git winsor-leaman-clone
+  ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Navigate to the project directory:
 
-### Analyzing the Bundle Size
+  ```
+  cd winsor-leaman-clone
+  ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Install Dependencies**
 
-### Making a Progressive Web App
+- Inside the project directory, run the following command to install the necessary dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+  ```
+  npm install
+  ```
 
-### Advanced Configuration
+**Run the Application**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Once the installation is complete, start the app by running:
 
-### Deployment
+  ```
+  npm start
+  ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- This will launch the app in development mode.
+- Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Now, you should see the Winsor-Leaman-Architects app running locally on your machine.
