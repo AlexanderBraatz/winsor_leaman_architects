@@ -49,7 +49,7 @@ import heroImageDesktop6 from '../../../../assets/images/ProjectCategories/Comme
 import heroImageTablet6 from '../../../../assets/images/ProjectCategories/Commercial_5/2BrunelManorHotel/HeroImages/Hero_tablet.jpg';
 import heroImageMobile6 from '../../../../assets/images/ProjectCategories/Commercial_5/2BrunelManorHotel/HeroImages/Hero_mobile.jpg';
 //7HouseinFailand
-import heroImageDesktop_20px_small7 from '../../../../assets/images/ProjectCategories/Renovation_7/7HouseinFailand/HeroImages/Hero_desktop-20px-small.jpg';
+//import heroImageDesktop_20px_small7 from '../../../../assets/images/ProjectCategories/Renovation_7/7HouseinFailand/HeroImages/Hero_desktop-20px-small.jpg';
 import heroImageDesktop7 from '../../../../assets/images/ProjectCategories/Renovation_7/7HouseinFailand/HeroImages/Hero_desktop.jpg';
 // import heroImageTablet7 from '../../../../assets/images/ProjectCategories/Renovation_7/7HouseinFailand/HeroImages/Hero_tablet.jpg';
 // import heroImageMobile7 from '../../../../assets/images/ProjectCategories/Renovation_7/7HouseinFailand/HeroImages/Hero_mobile.jpg';

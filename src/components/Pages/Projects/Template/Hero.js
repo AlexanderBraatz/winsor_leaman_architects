@@ -86,8 +86,9 @@ const Placeholder = styled.div`
 	background-image: url(${props => props.placeholder});
 	background-size: cover;
 	background-position: center;
-	width: 100%;
+	max-width: 100%;
 	height: 100%;
+	object-fit: cover;
 	filter: blur(0px);
 
 	&.NotComplete {
@@ -166,7 +167,7 @@ const HeroImageContainer = styled.div`
 `;
 const HeroImage = styled.img`
 	max-width: 100%;
-	min-height: 100%;
+	height: 100%;
 	max-height: auto;
 	object-fit: cover;
 	object-position: center;
