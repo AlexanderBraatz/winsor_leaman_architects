@@ -1,4 +1,5 @@
 const colors = {
+	dark_extra: '#1C2427',
 	dark_1: '#202B30',
 	dark_2: '#2A363B',
 	dark_3: '#354147',

@@ -23,10 +23,6 @@ export default function Hero({
 				/>
 				<HeroImageContainer>
 					<PlaceholderAndImage hero={hero} />
-					<ImageLabel onClick={handleClick}>
-						<LabelText>{imageLabel}</LabelText>
-						<LabelIcon />
-					</ImageLabel>
 				</HeroImageContainer>
 			</StyledHero>
 			<SimpleAnchor ref={div}></SimpleAnchor>
@@ -61,48 +57,62 @@ export default function Hero({
 		}, []);
 
 		return (
-			<>
-				<Placeholder
-					placeholder={hero.placeholder}
-					className={`blurred-img ${!isImageComplete ? 'NotComplete' : ''} ${
-						isImageLoaded ? 'loaded' : ''
-					}`}
-				>
+			<StyledPlaceholderAndImage>
+				<ImageAndLabelContainer>
+					<Placeholder
+						src={hero.placeholder}
+						className={`blurred-img ${!isImageComplete ? 'NotComplete' : ''} ${
+							isImageLoaded ? 'loaded' : ''
+						}`}
+					></Placeholder>
 					<HeroImage
 						src={hero.heroImageMobile}
 						srcSet={`${hero.heroImageMobile} 1200w,${hero.heroImageTablet} 1366w,${hero.heroImageDesktop} 2400w`}
 						sizes="(max-width: 843px) 100vw, calc(100vw - 230px)"
 						alt={hero.alt}
 						ref={blurredImageRef}
-						className={'image'}
+						className={`image blurred-img ${isImageLoaded ? 'loaded' : ''}`}
 					/>
-				</Placeholder>
-			</>
+					<ImageLabel onClick={handleClick}>
+						<LabelText>{imageLabel}</LabelText>
+						<LabelIcon />
+					</ImageLabel>
+				</ImageAndLabelContainer>
+			</StyledPlaceholderAndImage>
 		);
 	}
 }
 
-const Placeholder = styled.div`
-	background-image: url(${props => props.placeholder});
-	background-size: cover;
-	background-position: center;
-	max-width: 100%;
+const StyledPlaceholderAndImage = styled.div`
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+`;
+
+const ImageAndLabelContainer = styled.div`
+	position: relative;
+	max-width: fit-content;
+	height: 100%;
+`;
+const Placeholder = styled.img`
+	filter: blur(0px);
 	height: 100%;
 	object-fit: cover;
-	filter: blur(0px);
-
+	position: relative;
+	width: fit-content;
 	&.NotComplete {
 		transition: filter 250ms ease-in-out;
 		filter: blur(5px);
 	}
 	&.NotComplete img {
+		// this is so the image fades in after it is loaded
 		transition: transform 0.3s linear, opacity 250ms ease-in-out;
-
 		opacity: 0;
 	}
 
 	&.loaded {
-		filter: blur(0px);
+		display: none; // hides placeholder if the placeholder is wider then the image after the image has loaded
 	}
 	&::before {
 		content: '';
@@ -128,9 +138,6 @@ const Placeholder = styled.div`
 			opacity: 0;
 		}
 	}
-	&.loaded img {
-		opacity: 1;
-	}
 `;
 
 const SimpleAnchor = styled.div`
@@ -140,6 +147,7 @@ const SimpleAnchor = styled.div`
 
 const StyledHero = styled.div`
 	width: 100vw;
+	background-color: ${props => props.theme.desktop.dark_extra};
 	height: calc(
 		100vh - 4.7rem - 10.4rem
 	); // accounting for the ProjectsNavBar and PageNavbar
@@ -148,13 +156,15 @@ const StyledHero = styled.div`
 	justify-content: left;
 	@media (max-width: 843px) {
 		flex-direction: column;
-		/* height: calc(100vh - 9.6rem - 4.7rem); */
+		// height: calc(100vh - 9.6rem - 4.7rem);
 		height: fit-content;
+		height: 500px;
 	}
 `;
 
 const HeroImageContainer = styled.div`
 	/* height: 100%; */
+	width: 100%;
 	position: relative;
 	margin-left: 3.9rem;
 	overflow: hidden;
@@ -163,6 +173,7 @@ const HeroImageContainer = styled.div`
 	align-items: center;
 	@media (max-width: 843px) {
 		margin-left: 0rem;
+		height: 100%;
 	}
 `;
 const HeroImage = styled.img`
@@ -172,9 +183,13 @@ const HeroImage = styled.img`
 	object-fit: cover;
 	object-position: center;
 	background-color: ${props => props.theme.desktop.dark_3};
-	opacity: 1;
+	opacity: 0;
 	transition: transform 0.3s linear;
-	@media (max-width: 843px) {
+	position: relative;
+	&.loaded {
+		opacity: 1;
+	}
+	/* @media (max-width: 843px) {
 		min-width: 100%;
 		max-width: auto;
 		max-height: 56vh;
@@ -183,7 +198,7 @@ const HeroImage = styled.img`
 	@media (max-width: 480px) {
 		max-height: 42vh;
 		min-height: 20vh;
-	}
+	} */
 `;
 const ImageLabel = styled.div`
 	background-color: ${props => props.theme.desktop.dark_3};
