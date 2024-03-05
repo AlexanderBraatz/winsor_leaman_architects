@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import ResponsiveInteractiveTimeline from './ResponsiveInteractiveTimeline';
 
 import PictureOfMrWinsor from '../../../assets/images/About/PictureOfMrWinsor.jpeg';
-import JamesPlaceholder from '../../../assets/images/About/JamesPlaceholder.jpeg';
+import JamesPicture from '../../../assets/images/About/james_picture.jpeg';
 
 import { ReactComponent as Frame114svg } from '../../../assets/images/About/Frame114.svg';
 import { ReactComponent as LogoWhiteOnBlackJpgjpg1svg } from '../../../assets/images/About/LogoWhiteOnBlackJpgjpg1.svg';
@@ -14,48 +14,61 @@ export default function About() {
 			<Heading>About</Heading>
 			<ResponsiveInteractiveTimeline />
 			<Content>
-				<SubHeading>Who we are</SubHeading>
-				<StyledDiv>
-					<Text>
-						We are a small practice founded in 2004 with expertise in simple,
-						sensitive and economical buildings. <br />
-						<br />
-						We aim to create beautiful buildings using the best materials and
-						the latest and most reliable building techniques. We design
-						extensions and private houses, affordable social housing, commercial
-						and leisure developments as well as being specialists in the
-						alteration and renovation of historic buildings and churches. <br />
-						<br />
-						We deliver a quality service that gives our clients good value for
-						money. We achieve this through our use of the latest computer and
-						software technology including our project management and
-						specification software, designed in-house. <br />
-						<br />
-						At the end of each stage of the project, we give our clients a
-						detailed breakdown of costs and communicate well to ensure they have
-						a real-time perspective of what’s happening.
-					</Text>
-					<ImagesContainer>
-						<ImageWrapper>
-							<StyledImage
-								src={PictureOfMrWinsor}
-								alt="picture of Richard Winsor"
-							/>
-							<ImageLabel>
+				<SubHeading>About us</SubHeading>
+
+				<Text>
+					We are a small practice founded in 2004 with expertise in simple,
+					sensitive and economical buildings. <br />
+					<br />
+					We aim to create beautiful buildings using the best materials and the
+					latest and most reliable building techniques. We design extensions and
+					private houses, affordable social housing, commercial and leisure
+					developments as well as being specialists in the alteration and
+					renovation of historic buildings and churches. <br />
+					<br />
+					We deliver a quality service that gives our clients good value for
+					money. We achieve this through our use of the latest computer and
+					software technology including our project management and specification
+					software, designed in-house. <br />
+					<br />
+					At the end of each stage of the project, we give our clients a
+					detailed breakdown of costs and communicate well to ensure they have a
+					real-time perspective of what’s happening.
+				</Text>
+				<StaffProfileSection>
+					<StaffProfileWrapper>
+						<StyledImage
+							src={PictureOfMrWinsor}
+							alt="picture of Richard Winsor"
+						/>
+						<ImageLabelWrapper>
+							<ImageLabelName>Richard Winsor</ImageLabelName>
+							<ImageLabelParagraph>
 								Richard Winsor qualified as an architect in 1968 and has worked
 								on projects ranging from residential homes to commercial
 								buildings.
-							</ImageLabel>
-						</ImageWrapper>
-						<ImageWrapper>
-							<StyledImage
-								src={JamesPlaceholder}
-								alt="James"
-							/>
-							<ImageLabel className="second">Paragraph about James</ImageLabel>
-						</ImageWrapper>
-					</ImagesContainer>
-				</StyledDiv>
+							</ImageLabelParagraph>
+						</ImageLabelWrapper>
+					</StaffProfileWrapper>
+					<StaffProfileWrapper id="second">
+						<StyledImage
+							src={JamesPicture}
+							alt="James"
+						/>
+						<ImageLabelWrapper id="secondImageLabelWrapper">
+							<ImageLabelName>James Gillespie</ImageLabelName>
+							<ImageLabelParagraph className="second">
+								A part 1 qualified architect who has also recently acquired a
+								master’s degree in construction project management. James has
+								worked at Winsor & Leaman Architects for four years and has
+								enjoyed providing clients with both value and satisfaction. He
+								has a meticulous attention to detail combined with a creative
+								touch.
+							</ImageLabelParagraph>
+						</ImageLabelWrapper>
+					</StaffProfileWrapper>
+				</StaffProfileSection>
+
 				<LogoWrapper>
 					<StyledRIBALogo alt="RIBA logo" />
 					<StyledARBLogo alt="ARB logo" />
@@ -98,108 +111,138 @@ const Content = styled.div`
 		width: 70.7rem;
 	}
 	@media (max-width: 740px) {
-		width: 30rem;
+		width: 32.8rem;
 	}
 `;
 const SubHeading = styled.h2`
 	font-family: 'Heading3', Arial, Serif;
-	font-size: 3.6rem;
+	font-size: 4.8rem;
 	font-weight: 300;
 	text-align: left;
 	color: ${props => props.theme.desktop.grey_5};
+	margin-bottom: 6.4rem;
 	@media (max-width: 843px) {
-		font-size: 2.2rem;
+		font-size: 2.8rem;
 		margin-top: 2.4rem;
 		margin-bottom: 2.4rem;
 	}
 	@media (max-width: 740px) {
+		font-size: 2.8rem;
+		margin-bottom: 2.4rem;
 	}
 `;
-const StyledDiv = styled.div`
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	padding: 4rem 0;
-	@media (max-width: 843px) {
-		padding: 2.4rem 0;
-	}
-	@media (max-width: 740px) {
-		flex-direction: column;
-	}
-`;
+
 const Text = styled.p`
 	color: ${props => props.theme.desktop.grey_5};
-	font-family: 'Body', Arial, Serif;
+	font-family: 'Logo', Arial, Serif;
 	font-size: 1.6rem;
 	text-align: left;
-	width: 40rem;
+	width: 100%;
+	padding-bottom: 6.4rem;
 	@media (max-width: 843px) {
 		font-size: 1.4rem;
-		width: 34rem;
+		font-family: 'Logo', Arial, Serif;
+		padding-bottom: 5.6rem;
 	}
 	@media (max-width: 740px) {
 		font-size: 1.4rem;
 		width: 32rem;
 		font-weight: 400;
-		margin-bottom: 2.4rem;
+		padding-bottom: 4.8rem;
 	}
 `;
 
-const ImagesContainer = styled.div`
-	width: fit-content;
+const StaffProfileSection = styled.div`
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+	@media (max-width: 843px) {
+		gap: 2.4rem;
+	}
 `;
-const ImageWrapper = styled.div`
-	width: 41rem;
+const StaffProfileWrapper = styled.div`
+	width: 100%;
 	display: flex;
 	flex-direction: row;
+	gap: 3.2rem;
 	align-items: center;
-	margin-bottom: 2.4rem;
 	@media (max-width: 843px) {
-		width: 34.8rem;
+		align-items: center;
+
+		&#second {
+			height: 15.4rem;
+		}
 	}
 	@media (max-width: 740px) {
-		background-color: ${props => props.theme.desktop.dark_3};
-		width: 32rem;
+		width: 100%;
+		flex-direction: column;
+		gap: 1.6rem;
+		height: 22.7rem;
+		&#second {
+			height: 30.8rem;
+		}
 	}
 `;
 
 const StyledImage = styled.img`
-	margin: 1.6rem;
-	width: 17.3rem;
+	min-width: 17.3rem;
 	height: 14rem;
+	object-fit: cover;
+
 	@media (max-width: 843px) {
-		width: 12rem;
-		height: 9.7rem;
+		min-width: 12.3rem;
+		height: 10rem;
 	}
 	@media (max-width: 740px) {
-		margin: 2.7rem 1.6rem;
+		min-width: 11.1rem;
+		height: 9rem;
 	}
 `;
+const ImageLabelWrapper = styled.div`
+	/* background-color: blue; */
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
+	justify-content: flex-start;
 
-const ImageLabel = styled.p`
-	font-family: 'Body', Arial, Serif;
+	height: 14rem;
+	@media (max-width: 843px) {
+		height: 10rem;
+		&#secondImageLabelWrapper {
+			height: fit-content;
+		}
+	}
+`;
+const ImageLabelName = styled.p`
+	font-family: 'Heading3', Arial, Serif;
+	font-size: 2.8rem;
+	color: ${props => props.theme.desktop.grey_5};
+	width: 100%;
+	text-align: left;
+	@media (max-width: 843px) {
+		font-size: 2.2rem;
+		font-family: 'Logo', Arial, Serif;
+		font-weight: 300;
+	}
+	@media (max-width: 740px) {
+		width: 100%;
+		text-align: center;
+	}
+`;
+const ImageLabelParagraph = styled.p`
+	font-family: 'Logo', Arial, Serif;
 	font-size: 1.6rem;
 	text-align: left;
 	color: ${props => props.theme.desktop.grey_5};
-	height: 14rem;
-	min-width: 17.3rem;
-	line-height: 2.2rem;
-	margin: 1.6rem;
-	vertical-align: middle;
-	&.second {
-		line-height: 14rem;
-	}
+
+	width: 100%;
+
 	@media (max-width: 843px) {
-		font-size: 1.4rem;
-		line-height: 2rem;
-		height: 10rem;
-		width: 18rem;
-		&.second {
-			line-height: 10rem;
-		}
+		font-size: 1.6rem;
 	}
 	@media (max-width: 740px) {
-		width: 16rem;
+		width: 100%;
 		min-width: 16rem;
 		height: 12rem;
 		margin-left: 0rem;
