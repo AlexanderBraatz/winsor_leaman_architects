@@ -5,16 +5,14 @@ import ResponsiveInteractiveTimeline from './ResponsiveInteractiveTimeline';
 import PictureOfMrWinsor from '../../../assets/images/About/PictureOfMrWinsor.jpeg';
 import JamesPicture from '../../../assets/images/About/james_picture.jpeg';
 
+import RIBALogoWhiteOnDark from '../../../assets/images/About/RIBALogoWhiteOnDark.png';
 import { ReactComponent as Frame114svg } from '../../../assets/images/About/Frame114.svg';
-import { ReactComponent as LogoWhiteOnBlackJpgjpg1svg } from '../../../assets/images/About/LogoWhiteOnBlackJpgjpg1.svg';
 
 export default function About() {
 	return (
 		<React.Fragment>
-			<Heading>About</Heading>
-			<ResponsiveInteractiveTimeline />
 			<Content>
-				<SubHeading>About us</SubHeading>
+				<Heading>About us</Heading>
 
 				<Text>
 					We are a small practice founded in 2004 with expertise in simple,
@@ -68,40 +66,18 @@ export default function About() {
 						</ImageLabelWrapper>
 					</StaffProfileWrapper>
 				</StaffProfileSection>
-
 				<LogoWrapper>
-					<StyledRIBALogo alt="RIBA logo" />
+					<StyledRIBALogo
+						src={RIBALogoWhiteOnDark}
+						alt="RIBA logo"
+					/>
 					<StyledARBLogo alt="ARB logo" />
 				</LogoWrapper>
 			</Content>
+			<ResponsiveInteractiveTimeline />
 		</React.Fragment>
 	);
 }
-
-const Heading = styled.h1`
-	width: 84.8rem;
-	margin: auto;
-	margin-top: 5.35rem;
-	margin-bottom: 4.8rem;
-	text-align: left;
-	font-family: 'Heading2', Arial, Serif;
-	font-size: 4.8rem;
-	font-weight: 400;
-	letter-spacing: -0.048rem;
-	color: ${props => props.theme.desktop.grey_5};
-	@media (max-width: 843px) {
-		font-size: 2.8rem;
-		margin-top: 2.4rem;
-		margin-bottom: 2.4rem;
-		padding-left: 6.4rem;
-	}
-	@media (max-width: 740px) {
-		width: 32.8rem;
-		margin-top: 2.4rem;
-		margin-bottom: 2.4rem;
-		padding-left: 0rem;
-	}
-`;
 
 const Content = styled.div`
 	width: 84.8rem;
@@ -114,7 +90,7 @@ const Content = styled.div`
 		width: 32.8rem;
 	}
 `;
-const SubHeading = styled.h2`
+const Heading = styled.h2`
 	font-family: 'Heading3', Arial, Serif;
 	font-size: 4.8rem;
 	font-weight: 300;
@@ -252,16 +228,46 @@ const LogoWrapper = styled.div`
 	width: 8.96rem;
 	display: flex;
 	align-items: center;
-	height: 10.3rem;
+	/* height: 10.3rem; */
+	padding-top: 9.5rem;
+	padding-bottom: 8.8rem;
 	gap: 4rem;
+	/* background-color: red; */
+	@media (max-width: 843px) {
+		padding-top: 4.4rem;
+		padding-bottom: 4.4rem;
+		gap: 3rem;
+	}
+
+	@media (max-width: 740px) {
+		padding-top: 6.5rem;
+		padding-bottom: 4.4rem;
+	}
 `;
 
-const StyledRIBALogo = styled(LogoWhiteOnBlackJpgjpg1svg)`
-	min-width: 11rem;
-	min-height: 6rem;
+const StyledRIBALogo = styled.img`
+	width: 11rem;
+	height: 5rem;
+	object-fit: cover;
+	@media (max-width: 843px) {
+		width: 10.2rem;
+		height: 4.5rem;
+	}
+	@media (max-width: 740px) {
+		width: 9rem;
+		height: 4rem;
+	}
 `;
 
 const StyledARBLogo = styled(Frame114svg)`
 	min-height: 6rem;
 	min-width: 11rem;
+	@media (max-width: 843px) {
+		min-height: 4.5rem;
+		min-width: 9rem;
+	}
+	@media (max-width: 740px) {
+		min-height: 4rem;
+		min-width: 8rem;
+	}
 `;
