@@ -18,6 +18,13 @@ export default function ResponsiveInteractiveTimeline() {
 	}, []);
 
 	return (
-		<div>{is740 ? <MobileInteractiveTimeline /> : <InteractiveTimeline />}</div>
+		// <div>{is740 ? <MobileInteractiveTimeline /> : <InteractiveTimeline />}</div>
+		<div>
+			{true ? (
+				<MobileInteractiveTimeline is740={is740} />
+			) : (
+				<InteractiveTimeline />
+			)}
+		</div>
 	);
 }
