@@ -10,24 +10,15 @@ export default function ContactForm(props) {
 	const inputs = [
 		{
 			id: 1,
-			label: 'First Name*',
+			label: 'Name*',
 			type: 'text',
-			name: 'first_name',
+			name: 'name',
 			required: true,
-			errorMessage: 'Please enter your first name*',
-			shortErrorMessage: 'First Name*'
+			errorMessage: 'Please enter your name*',
+			shortErrorMessage: 'Name*'
 		},
 		{
 			id: 2,
-			label: 'Last Name*',
-			type: 'text',
-			name: 'last_name',
-			required: true,
-			errorMessage: 'Please enter your last name*',
-			shortErrorMessage: 'Last Name*'
-		},
-		{
-			id: 3,
 			label: 'Email*',
 			type: 'email',
 			name: 'email',
@@ -35,41 +26,14 @@ export default function ContactForm(props) {
 			errorMessage: 'Please enter a valid email*',
 			shortErrorMessage: 'valid email*',
 			pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
-		},
-		{
-			id: 4,
-			label: 'Phone',
-			type: 'tel',
-			name: 'phone'
-		},
-		{
-			id: 5,
-			label: 'Postcode of Project*',
-			type: 'text',
-			name: 'postcode_of_project',
-			required: true,
-			errorMessage: 'Please enter a valid postcode*',
-			shortErrorMessage: 'valid postcode*',
-			pattern:
-				/^([Gg][Ii][Rr] 0[Aa]{2})|((([A-Za-z][0-9]{1,2})|(([A-Za-z][A-Ha-hJ-Yj-y][0-9]{1,2})|(([A-Za-z][0-9][A-Za-z])|([A-Za-z][A-Ha-hJ-Yj-y][0-9][A-Za-z]?))))\s?[0-9][A-Za-z]{2})$/
-		},
-		{
-			id: 6,
-			label: 'Budget',
-			type: 'text',
-			name: 'budget'
 		}
 	];
 
 	// track user input in state
 
 	const [values, setValues] = useState({
-		first_name: '',
-		last_name: '',
+		name: '',
 		email: '',
-		phone: '',
-		postcode_of_project: '',
-		budget: '',
 		comments: ''
 	});
 
@@ -90,10 +54,8 @@ export default function ContactForm(props) {
 	};
 
 	const [blurValues, setBlurValues] = useState({
-		first_name: false,
-		last_name: false,
-		email: false,
-		postcode_of_project: false
+		name: false,
+		email: false
 	});
 
 	const handleOnBlur = name => {
@@ -104,16 +66,13 @@ export default function ContactForm(props) {
 	};
 
 	const validEmailRef = useRef(false);
-	const validPostcodeRef = useRef(false);
 
 	const shouldShowError = (
 		name,
 		values,
 		isValidEmail,
-		isValidPostCode,
 		input,
-		validEmailRef,
-		validPostcodeRef
+		validEmailRef
 	) => {
 		// if the input is not required it never needs to show an error
 		if (!input.required) {
@@ -131,16 +90,6 @@ export default function ContactForm(props) {
 
 					return true;
 				}
-				// postcode_of_project shows error in the same way as email
-			} else if (name === 'postcode_of_project') {
-				if (isValidPostCode) {
-					validPostcodeRef.current = true;
-					return false;
-				} else {
-					validPostcodeRef.current = false;
-					return true;
-				}
-				//  other required values show an error if nothing was entered
 			} else if (values[name].length > 0) {
 				return false;
 			} else {
@@ -158,7 +107,7 @@ export default function ContactForm(props) {
 	const [clicked, setClicked] = useState(false);
 	const sendEmail = e => {
 		e.preventDefault();
-		if (validEmailRef.current && validPostcodeRef.current) {
+		if (validEmailRef.current) {
 			setClicked(true);
 			emailjs
 				.sendForm(
@@ -171,7 +120,7 @@ export default function ContactForm(props) {
 					result => {
 						e.target.reset();
 						setValues({
-							first_name: '',
+							name: '',
 							last_name: '',
 							email: '',
 							phone: '',
@@ -199,19 +148,13 @@ export default function ContactForm(props) {
 					</ContactFormPrompt>
 					<InputGroup>
 						{inputs.map(input => {
-							const isValidPostCode = hasValidPattern(
-								'postcode_of_project',
-								values
-							);
 							const isValidEmail = hasValidPattern('email', values);
 							const showError = shouldShowError(
 								input.name,
 								values,
 								isValidEmail,
-								isValidPostCode,
 								input,
-								validEmailRef,
-								validPostcodeRef
+								validEmailRef
 							);
 							return (
 								<FormInput
@@ -260,7 +203,7 @@ const ContactFormPrompt = styled.p`
 
 const InputGroup = styled.div`
 	width: 100%;
-	height: 18.4rem;
+	height: 6.4rem;
 	flex-wrap: wrap;
 	display: flex;
 	column-gap: 1.6rem;
@@ -281,7 +224,6 @@ const Label = styled.label`
 
 const TextareaWrapper = styled.div`
 	width: 100%;
-	margin-top: 2rem;
 	display: flex;
 	flex-direction: column;
 `;
@@ -292,7 +234,6 @@ const Textarea = styled.textarea`
 	border-radius: 0.5rem;
 	border: 0.1rem solid ${props => props.theme.desktop.dark_3};
 	background-color: ${props => props.theme.desktop.dark_3};
-
 	color: ${props => props.theme.desktop.grey_5};
 	font-family: 'SmallText', Arial, Serif;
 	font-size: 1.4rem;

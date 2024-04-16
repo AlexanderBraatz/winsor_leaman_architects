@@ -10,12 +10,12 @@ export default function Contact() {
 			<Heading>Contact Us</Heading>
 			<StyledSection>
 				<ContactInfo>
-					XX Oakfield Road
+					35 Oakfield Road
 					<br /> Clifton
 					<br /> Bristol
-					<br /> BS8 XXX
+					<br /> BS8 2AT
 					<br />
-					<br /> Tel: 0117923xxxx
+					<br /> Tel: 01179238617
 				</ContactInfo>
 				{!isDesktop ? <Divider /> : <></>}
 				<ContactFormWrapper>
