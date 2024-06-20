@@ -189,7 +189,7 @@ const Form = styled.form`
 
 const ContactFormPrompt = styled.p`
 	text-align: left;
-	margin-bottom: 4rem;
+	margin-bottom: 2.2rem;
 	font-family: 'Body', Arial, Serif;
 	font-size: 1.6rem;
 	@media (max-width: 843px) {

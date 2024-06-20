@@ -7,7 +7,7 @@ export default function Contact() {
 	const { isDesktop } = useContext(ResponsiveContext);
 	return (
 		<Container>
-			<Heading>Contact Us</Heading>
+			<Heading>Contact us</Heading>
 			<StyledSection>
 				<ContactInfo>
 					35 Oakfield Road
