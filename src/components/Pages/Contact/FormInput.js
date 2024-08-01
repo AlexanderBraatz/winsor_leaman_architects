@@ -52,8 +52,8 @@ const Input = styled.input`
 	width: 27.2rem;
 	height: 3.6rem;
 	border-radius: 0.5rem;
-	border: 0.1rem solid ${props => props.theme.desktop.dark_3};
-	background-color: ${props => props.theme.desktop.dark_3};
+	border: 0.1rem solid ${props => props.theme.desktop.dark_4};
+	background-color: ${props => props.theme.desktop.dark_2};
 
 	color: ${props => props.theme.desktop.grey_5};
 	font-family: 'SmallText', Arial, Serif;
@@ -62,6 +62,12 @@ const Input = styled.input`
 	&.invalidInput {
 		border: 0.1rem solid ${props => props.theme.desktop.error_1};
 		background-color: ${props => props.theme.desktop.error_2};
+	}
+
+	&:focus {
+		outline: none;
+		border: 0.2rem solid ${props => props.theme.desktop.dark_5};
+		background-color: ${props => props.theme.desktop.dark_2};
 	}
 	@media (max-width: 843px) {
 		width: 24.9rem;

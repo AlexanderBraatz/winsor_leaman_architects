@@ -40,7 +40,7 @@ const Container = styled.div`
 const Button = styled.button`
 	//styles
 	width: 8.9rem;
-	height: 3.6rem;
+	height: 3.2rem;
 	border-radius: 0.5rem;
 	border: none;
 

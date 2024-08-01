@@ -169,7 +169,7 @@ export default function ContactForm(props) {
 						})}
 					</InputGroup>
 					<TextareaWrapper>
-						<Label>Other comments</Label>
+						<Label>Comment</Label>
 						<Textarea name="comments" />
 					</TextareaWrapper>
 					<SubmitButton
@@ -226,18 +226,23 @@ const TextareaWrapper = styled.div`
 	width: 100%;
 	display: flex;
 	flex-direction: column;
+	margin-top: 0.6rem;
 `;
 
 const Textarea = styled.textarea`
 	width: 100%;
 	height: 12.4rem;
 	border-radius: 0.5rem;
-	border: 0.1rem solid ${props => props.theme.desktop.dark_3};
-	background-color: ${props => props.theme.desktop.dark_3};
-	color: ${props => props.theme.desktop.grey_5};
+	border: 0.1rem solid ${props => props.theme.desktop.dark_4};
+	background-color: ${props => props.theme.desktop.dark_2};
+	color: ${props => props.theme.desktop.grey_3};
 	font-family: 'SmallText', Arial, Serif;
 	font-size: 1.4rem;
 	padding: 0.7rem 1rem;
+	&:focus {
+		outline: none;
+		border: 0.2rem solid ${props => props.theme.desktop.dark_5};
+	}
 	@media (max-width: 350px) {
 		font-size: 1rem;
 	}
