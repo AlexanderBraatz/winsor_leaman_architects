@@ -10,6 +10,10 @@ body {
 	overflow-x: hidden;
 	max-width: 100%;
 	background-color: #202b30;
+	width: 100%; /* Prevents inconsistencies between window.innerWidth and media queries caused by scrollbar width */
+	/* Since the scrollbar is not a child of the body and window.innerWidth excludes it, this solution works. However, in Safari, media queries and responsive layouts may be off by approximately 15px due to the scrollbar width. */
+	/* overflow-y: scroll;  */
+	/* Always show scrollbar to prevent shifting of content */
 }
 html {
 	scroll-behavior: smooth;

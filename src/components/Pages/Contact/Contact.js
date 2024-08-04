@@ -35,7 +35,6 @@ const Container = styled.div`
 		padding: 0 1.6rem;
 		margin: 2.4rem auto 0 auto;
 		width: fit-content;
-		//background-color: aliceblue;
 	}
 `;
 

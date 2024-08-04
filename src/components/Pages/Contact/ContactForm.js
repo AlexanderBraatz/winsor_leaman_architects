@@ -14,8 +14,7 @@ export default function ContactForm(props) {
 			type: 'text',
 			name: 'name',
 			required: true,
-			errorMessage: 'Please enter your name*',
-			shortErrorMessage: 'Name*'
+			errorMessage: 'Please enter your name*'
 		},
 		{
 			id: 2,
@@ -24,7 +23,6 @@ export default function ContactForm(props) {
 			name: 'email',
 			required: true,
 			errorMessage: 'Please enter a valid email*',
-			shortErrorMessage: 'valid email*',
 			pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
 		}
 	];
@@ -169,7 +167,7 @@ export default function ContactForm(props) {
 						})}
 					</InputGroup>
 					<TextareaWrapper>
-						<Label>Comment</Label>
+						<Label>Other comments</Label>
 						<Textarea name="comments" />
 					</TextareaWrapper>
 					<SubmitButton
@@ -197,7 +195,7 @@ const ContactFormPrompt = styled.p`
 		margin-bottom: 2rem;
 	}
 	@media (max-width: 350px) {
-		font-size: 1rem;
+		font-size: 1.2rem;
 	}
 `;
 
@@ -207,8 +205,11 @@ const InputGroup = styled.div`
 	flex-wrap: wrap;
 	display: flex;
 	column-gap: 1.6rem;
-	@media (max-width: 350px) {
+	margin-bottom: 0.6rem;
+	@media (max-width: 550px) {
+		flex-direction: column;
 		height: 14.4rem;
+		margin-bottom: 0.1rem;
 	}
 `;
 
@@ -217,16 +218,12 @@ const Label = styled.label`
 	font-family: 'SmallText', Arial, Serif;
 	font-size: 1.4rem;
 	padding-left: 0.4rem;
-	@media (max-width: 350px) {
-		font-size: 1rem;
-	}
 `;
 
 const TextareaWrapper = styled.div`
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	margin-top: 0.6rem;
 `;
 
 const Textarea = styled.textarea`
@@ -239,11 +236,9 @@ const Textarea = styled.textarea`
 	font-family: 'SmallText', Arial, Serif;
 	font-size: 1.4rem;
 	padding: 0.7rem 1rem;
+	resize: none;
 	&:focus {
 		outline: none;
 		border: 0.2rem solid ${props => props.theme.desktop.dark_5};
-	}
-	@media (max-width: 350px) {
-		font-size: 1rem;
 	}
 `;

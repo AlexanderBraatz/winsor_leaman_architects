@@ -7,6 +7,8 @@ const colors = {
 	dark_5: '#656C6F',
 	error_1: '#F07C6A',
 	error_2: '#4C3733',
+	error_stroke: '#93554B', //alteration colour
+	error_fill: '#4C3733', //alteration colour
 	gradient_1: '#1A5152',
 	gradient_2: '#16514B',
 	gradient_3: '#185041',
