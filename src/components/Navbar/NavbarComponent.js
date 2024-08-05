@@ -45,7 +45,7 @@ function CustomLink({ to, onProjects, children, ...props }) {
 }
 
 const Navbar = styled.nav`
-	height: 10.4rem;
+	height: 9.2rem;
 	display: flex;
 	justify-content: space-between;
 	padding: 2rem 6.4rem;
@@ -56,7 +56,7 @@ const Navbar = styled.nav`
 		background-color: ${props => props.theme.desktop.dark_1};
 	}
 	@media (max-width: 843px) {
-		height: 9.6rem;
+		height: 8rem;
 		padding: 2rem 2.4rem;
 	}
 `;
@@ -99,7 +99,7 @@ const StyledLinkList = styled.ul`
 	justify-content: space-between;
 	width: 57.5rem;
 	@media (max-width: 843px) {
-		width: 43rem;
+		width: 48rem;
 	}
 `;
 const StyledCustomLink = styled.li`

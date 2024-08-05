@@ -47,7 +47,7 @@ const StyledProjectsContainer = styled.div`
 	background-color: ${props => props.theme.desktop.dark_1};
 `;
 const Navbar = styled.nav`
-	padding: 1rem 6.4rem;
+	padding: 1rem 2.4rem;
 	height: 4.7rem;
 	background-color: ${props => props.theme.desktop.dark_2};
 	@media (max-width: 602px) {
