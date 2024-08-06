@@ -50,6 +50,9 @@ const Navbar = styled.nav`
 	padding: 1rem 6.4rem;
 	height: 4.7rem;
 	background-color: ${props => props.theme.desktop.dark_2};
+	@media (max-width: 843px) {
+		padding: 1rem 2.4rem;
+	}
 	@media (max-width: 602px) {
 		padding: 1rem 2.4rem;
 	}

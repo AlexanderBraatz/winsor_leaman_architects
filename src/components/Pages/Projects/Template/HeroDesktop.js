@@ -1,13 +1,15 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect, useContext } from 'react';
 import Sidebar from './components/Sidebar.js';
 import { ReactComponent as InfoIcon } from '../../../../assets/images/ProjectHero/Info-2.svg';
 import styled from 'styled-components';
+import { ResponsiveContext } from './../../../../ResponsiveContext.js';
 
 export default function Hero({
 	sideBarProps,
 	showcaseProps: { hero, imageLabel },
 	id
 }) {
+	const { isDesktop } = useContext(ResponsiveContext);
 	const div = useRef();
 	const handleClick = () => {
 		div.current.scrollIntoView({
@@ -22,9 +24,9 @@ export default function Hero({
 					id={id}
 				/>
 				<HeroImageAndPlaceholderContainer>
-					<LeftSpacer></LeftSpacer>
+					{!isDesktop ? <></> : <LeftSpacer></LeftSpacer>}
 					<PlaceholderAndImage hero={hero} />
-					<RightSpacer></RightSpacer>
+					{!isDesktop ? <></> : <RightSpacer></RightSpacer>}
 				</HeroImageAndPlaceholderContainer>
 			</StyledHero>
 			<SimpleAnchor ref={div}></SimpleAnchor>
@@ -90,14 +92,12 @@ const StyledPlaceholderAndImage = styled.div`
 	height: 100%;
 	display: flex;
 	justify-content: center;
-	/* flex-shrink: 0; */
 `;
 
 const ImageAndLabelContainer = styled.div`
 	position: relative;
 	max-width: fit-content;
 	height: 100%;
-	background-color: red;
 `;
 const Placeholder = styled.img`
 	filter: blur(0px);
@@ -160,40 +160,23 @@ const StyledHero = styled.div`
 	justify-content: left;
 	@media (max-width: 843px) {
 		flex-direction: column;
-		// height: calc(100vh - 9.6rem - 4.7rem);
 		height: fit-content;
-		height: 500px;
 	}
 `;
 
 const HeroImageAndPlaceholderContainer = styled.div`
-	/* height: 100%; */
 	min-width: calc(100vw);
 	position: relative;
 	left: -22.7rem;
 	z-index: 0;
-	/* max-width: auto; */
 	display: flex;
 	justify-content: space-between;
-
-	/* position: relative;
-	overflow: hidden;
-	justify-content: center;
-	align-items: center; */
-	background-color: red;
-	background-color: ${props => props.theme.desktop.dark_1};
+	background-color: ${props => props.theme.desktop.dark_extra};
 	@media (max-width: 843px) {
-		height: 100%;
+		left: 0rem;
+		justify-content: center;
 	}
 `;
-
-// iwant the image container not to be what fills the space but the spacers to fill the space
-// the image container should be the size of the image
-// the spacers should fill the space
-//ai says:
-// this can be done by setting the width of the image container to fit-content
-// and the spacers to flex-grow: 1
-// the spacers should be the same size as the image container becas
 
 const HeroImage = styled.img`
 	flex-grow: 0;
@@ -207,36 +190,31 @@ const HeroImage = styled.img`
 	max-height: auto;
 	object-fit: cover;
 	object-position: center;
-	background-color: ${props => props.theme.desktop.dark_3};
+	background-color: ${props => props.theme.desktop.dark_extra};
 	opacity: 0;
 	transition: transform 0.3s linear;
 	position: relative;
 	&.loaded {
 		opacity: 1;
 	}
-	/* @media (max-width: 843px) {
-		min-width: 100%;
-		max-width: auto;
-		max-height: 56vh;
-		min-height: 38vh;
+	@media (max-width: 843px) {
+		height: 61.3rem;
 	}
 	@media (max-width: 480px) {
-		max-height: 42vh;
-		min-height: 20vh;
-	} */
+		height: 24rem;
+	}
 `;
 
 const LeftSpacer = styled.div`
 	flex-shrink: 0;
 	width: 22.7rem;
 	background-color: green;
-	background-color: ${props => props.theme.desktop.dark_1};
+	background-color: ${props => props.theme.desktop.dark_extra};
 `;
 const RightSpacer = styled.div`
-	/* background-color: blue; */
 	width: 22.7rem;
 	flex-shrink: 1000;
-	background-color: ${props => props.theme.desktop.dark_1};
+	background-color: ${props => props.theme.desktop.dark_extra};
 `;
 const ImageLabel = styled.div`
 	background-color: ${props => props.theme.desktop.dark_3};
