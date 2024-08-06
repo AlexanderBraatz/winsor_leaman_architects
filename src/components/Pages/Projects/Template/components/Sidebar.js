@@ -43,14 +43,17 @@ const CustomNavElement = ({ thumbnail, id }) => {
 };
 
 const SideBar = styled.div`
-	width: 22.7rem;
+	width: 26.6rem;
+	z-index: 1;
+	background-color: ${props => props.theme.desktop.dark_1};
 
 	/* height: 61.3rem; */
 	height: 100%;
-
+	padding-right: 3.9rem;
 	display: flex;
 	flex-direction: column;
 	@media (max-width: 843px) {
+		margin-left: 0rem;
 		width: 100%;
 		height: 12rem;
 		background-color: ${props => props.theme.desktop.dark_2};
