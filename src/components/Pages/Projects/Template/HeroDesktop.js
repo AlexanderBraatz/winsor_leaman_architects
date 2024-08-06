@@ -97,6 +97,7 @@ const ImageAndLabelContainer = styled.div`
 	position: relative;
 	max-width: fit-content;
 	height: 100%;
+	background-color: red;
 `;
 const Placeholder = styled.img`
 	filter: blur(0px);
@@ -198,6 +199,11 @@ const HeroImage = styled.img`
 	flex-grow: 0;
 	max-width: 100%;
 	height: 100%;
+	height: calc(
+		100vh - 4.7rem - 9.2rem
+	); // <--this fixes the bug on firefox where Firefox does scale down the image but not the wrapper which keeps the original width of the image as its own width.
+	// the bug probably accures because Firefox is unable to find the correct reference height value for all the cascaded height: x%; of the nested elements
+	// source: Firefox - container does not adapt width to content when image is scaled down on stack overflow
 	max-height: auto;
 	object-fit: cover;
 	object-position: center;
