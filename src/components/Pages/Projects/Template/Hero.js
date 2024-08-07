@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect, useContext } from 'react';
 import Sidebar from './components/Sidebar.js';
-import { ReactComponent as InfoIcon } from '../../../../assets/images/ProjectHero/Info-2.svg';
+import { ReactComponent as ArrowIcon } from '../../../../assets/images/ProjectHero/arrow_Hero_Label.svg';
 import styled from 'styled-components';
 import { ResponsiveContext } from './../../../../ResponsiveContext.js';
 
@@ -172,7 +172,6 @@ const HeroImageAndPlaceholderContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
 	background-color: ${props => props.theme.desktop.dark_extra};
-	/* background-color: blue; */
 	@media (max-width: 843px) {
 		left: 0rem;
 		justify-content: center;
@@ -236,11 +235,11 @@ const LabelText = styled.p`
 	color: ${props => props.theme.desktop.grey_5};
 	text-align: right;
 	font-family: 'SubHeading', Arial, Serif;
-	font-size: 2.8rem;
+	font-size: 2.4rem;
 	line-height: 4rem;
 	margin-right: 2rem;
 `;
-const LabelIcon = styled(InfoIcon)`
-	width: 3.6rem;
-	height: 3.6rem;
+const LabelIcon = styled(ArrowIcon)`
+	width: 2.4rem;
+	height: 2.4rem;
 `;
