@@ -30,6 +30,7 @@ const TextContent = ({
 const Container = styled.div`
 	display: flex;
 	flex-direction: column;
+	width: 100%;
 	color: ${props => props.theme.desktop.grey_5};
 	margin-top: 4rem;
 	@media (max-width: 843px) {
@@ -40,13 +41,14 @@ const Container = styled.div`
 	}
 `;
 const DescriptionContainer = styled.div`
-	max-width: 60.8rem;
+	width: 60.8rem;
 	margin: auto;
 	@media (max-width: 843px) {
 		max-width: 38.5rem;
 	}
 
 	@media (max-width: 480px) {
+		width: auto;
 		max-width: 37rem;
 		padding: 0 0.8rem;
 	}
@@ -75,9 +77,9 @@ const Heading = styled.h2`
 `;
 const Year = styled.p`
 	font-family: 'Body';
-	font-size: 28px;
-	font-weight: 400;
-	line-height: 40px;
+	font-size: 22px;
+	font-weight: 300;
+	line-height: 32px;
 	letter-spacing: 0em;
 	text-align: left;
 	color: ${props => props.theme.desktop.grey_2};
@@ -97,13 +99,12 @@ const Divider = styled.div`
 
 const DescriptionText = styled.p`
 	font-family: 'Logo';
-	font-size: 2.2rem;
+	font-size: 16px;
+	line-height: 22px;
 	font-weight: 400;
-	line-height: 40px;
 	letter-spacing: 0em;
 	text-align: left;
 	margin-top: 2.4rem;
-	line-height: 32px;
 	white-space: pre-wrap;
 	@media (max-width: 843px) {
 		font-size: 16px;
@@ -118,7 +119,7 @@ const DescriptionText = styled.p`
 `;
 
 const FeedbackBackground = styled.div`
-	background-color: ${props => props.theme.desktop.dark_3};
+	background-color: ${props => props.theme.desktop.dark_1};
 	margin-top: 4rem;
 `;
 const FeedbackContainer = styled.div`
@@ -162,9 +163,9 @@ const FeedbackHeading = styled.div`
 `;
 const FeedbackText = styled.div`
 	font-family: 'SmallText';
-	font-size: 22px;
+	font-size: 16px;
+	line-height: 22px;
 	font-weight: 300;
-	line-height: 32px;
 	letter-spacing: 0em;
 	text-align: left;
 	margin-top: 2.4rem;

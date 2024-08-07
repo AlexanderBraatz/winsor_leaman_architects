@@ -45,7 +45,7 @@ const CustomNavElement = ({ thumbnail, id }) => {
 const SideBar = styled.div`
 	width: 26.6rem;
 	z-index: 1;
-	background-color: ${props => props.theme.desktop.dark_1};
+	background-color: ${props => props.theme.desktop.dark_extra};
 
 	/* height: 61.3rem; */
 	height: 100%;
