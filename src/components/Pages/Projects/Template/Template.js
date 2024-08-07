@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import HeroDesktop from './HeroDesktop';
+import Hero from './Hero';
 import TextContent from './TextContent';
 import ImageGallery from './ImageGallery';
 import { useParams } from 'react-router-dom';
@@ -8,7 +8,7 @@ const Template = ({ data }) => {
 	let { id } = useParams();
 	return (
 		<Fragment>
-			<HeroDesktop
+			<Hero
 				sideBarProps={data.heroProps.sideBarProps}
 				showcaseProps={data.heroProps.showcaseProps[id]}
 				id={id}

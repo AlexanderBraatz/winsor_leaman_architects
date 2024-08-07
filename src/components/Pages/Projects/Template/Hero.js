@@ -1,13 +1,15 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect, useContext } from 'react';
 import Sidebar from './components/Sidebar.js';
 import { ReactComponent as InfoIcon } from '../../../../assets/images/ProjectHero/Info-2.svg';
 import styled from 'styled-components';
+import { ResponsiveContext } from './../../../../ResponsiveContext.js';
 
 export default function Hero({
 	sideBarProps,
 	showcaseProps: { hero, imageLabel },
 	id
 }) {
+	const { isDesktop } = useContext(ResponsiveContext);
 	const div = useRef();
 	const handleClick = () => {
 		div.current.scrollIntoView({
@@ -21,9 +23,11 @@ export default function Hero({
 					sideBarProps={sideBarProps}
 					id={id}
 				/>
-				<HeroImageContainer>
+				<HeroImageAndPlaceholderContainer>
+					{!isDesktop ? <></> : <LeftSpacer></LeftSpacer>}
 					<PlaceholderAndImage hero={hero} />
-				</HeroImageContainer>
+					{!isDesktop ? <></> : <RightSpacer></RightSpacer>}
+				</HeroImageAndPlaceholderContainer>
 			</StyledHero>
 			<SimpleAnchor ref={div}></SimpleAnchor>
 		</>
@@ -84,7 +88,7 @@ export default function Hero({
 }
 
 const StyledPlaceholderAndImage = styled.div`
-	width: 100%;
+	max-width: fit-content;
 	height: 100%;
 	display: flex;
 	justify-content: center;
@@ -149,56 +153,69 @@ const StyledHero = styled.div`
 	width: 100vw;
 	background-color: ${props => props.theme.desktop.dark_extra};
 	height: calc(
-		100vh - 4.7rem - 10.4rem
+		100vh - 4.7rem - 9.2rem
 	); // accounting for the ProjectsNavBar and PageNavbar
 	display: flex;
 	margin: auto;
 	justify-content: left;
 	@media (max-width: 843px) {
 		flex-direction: column;
-		// height: calc(100vh - 9.6rem - 4.7rem);
 		height: fit-content;
-		height: 500px;
 	}
 `;
 
-const HeroImageContainer = styled.div`
-	/* height: 100%; */
-	width: 100%;
+const HeroImageAndPlaceholderContainer = styled.div`
+	min-width: calc(100vw);
 	position: relative;
-	margin-left: 3.9rem;
-	overflow: hidden;
+	left: -22.7rem;
+	z-index: 0;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	justify-content: space-between;
+	background-color: ${props => props.theme.desktop.dark_extra};
+	/* background-color: blue; */
 	@media (max-width: 843px) {
-		margin-left: 0rem;
-		height: 100%;
+		left: 0rem;
+		justify-content: center;
 	}
 `;
+
 const HeroImage = styled.img`
+	flex-grow: 0;
 	max-width: 100%;
 	height: 100%;
+	height: calc(
+		100vh - 4.7rem - 9.2rem
+	); // <--this fixes the bug on firefox where Firefox does scale down the image but not the wrapper which keeps the original width of the image as its own width.
+	// the bug probably accures because Firefox is unable to find the correct reference height value for all the cascaded height: x%; of the nested elements
+	// source: Firefox - container does not adapt width to content when image is scaled down on stack overflow
 	max-height: auto;
 	object-fit: cover;
 	object-position: center;
-	background-color: ${props => props.theme.desktop.dark_3};
+	background-color: ${props => props.theme.desktop.dark_extra};
 	opacity: 0;
 	transition: transform 0.3s linear;
 	position: relative;
 	&.loaded {
 		opacity: 1;
 	}
-	/* @media (max-width: 843px) {
-		min-width: 100%;
-		max-width: auto;
-		max-height: 56vh;
-		min-height: 38vh;
+	@media (max-width: 843px) {
+		height: 61.3rem;
 	}
 	@media (max-width: 480px) {
-		max-height: 42vh;
-		min-height: 20vh;
-	} */
+		height: 24rem;
+	}
+`;
+
+const LeftSpacer = styled.div`
+	flex-shrink: 0;
+	width: 22.7rem;
+	background-color: green;
+	background-color: ${props => props.theme.desktop.dark_extra};
+`;
+const RightSpacer = styled.div`
+	width: 22.7rem;
+	flex-shrink: 1000;
+	background-color: ${props => props.theme.desktop.dark_extra};
 `;
 const ImageLabel = styled.div`
 	background-color: ${props => props.theme.desktop.dark_3};
