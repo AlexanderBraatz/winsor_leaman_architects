@@ -87,16 +87,21 @@ const LargeImage = ({ image }) => {
 };
 
 const Container = styled.div`
-	padding-top: 4rem;
-	padding-bottom: 2.4rem;
+	padding: 6.4rem;
+	background-color: red;
+	@media (max-width: 843px) {
+		padding: 2.4rem;
+	}
 `;
 
 const ImageGalleryContainer = styled.div`
 	width: 60.9rem;
+	/* width: 140.8rem; */
 	display: flex;
 	flex-wrap: wrap;
 	margin: auto;
 	column-gap: 1.6rem;
+	background-color: blue;
 	& div:last-child {
 		max-width: 48.686%; //calculated from half the row minus half the width of the grid gap of 16px
 	}
@@ -126,6 +131,7 @@ const ImageContainer = styled.div`
 	height: 37.7rem;
 	background-color: ${props => props.theme.desktop.dark_1};
 	width: calc(${props => props.width});
+	/* width: calc(${props => props.width} / 1.5); */
 	margin-bottom: 1.6rem;
 	@media (max-width: 843px) {
 		height: 16.4rem;
