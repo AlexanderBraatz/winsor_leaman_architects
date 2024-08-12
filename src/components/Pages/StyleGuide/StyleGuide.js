@@ -58,8 +58,7 @@ export default function StyleGuide() {
 	];
 
 	const galleryAllRows = useRef([]);
-	const galleryContainerHeightInPxRef = useRef(367);
-	const testColour = useRef('#ccc'); //remeber to relode the local host to see the effect of changing the ref value
+	const ImageContainerHeightInPxRef = useRef(367); //used in aspect ratio calculation and to set height
 
 	const createGalleryRows = () => {
 		const pixelStringToNumber = string => {
@@ -75,13 +74,11 @@ export default function StyleGuide() {
 
 		images.forEach((image, i) => {
 			let aspectRatio = image.naturalWidthInPx / image.naturalHeightInPx;
-			let currentImageWidth =
-				galleryContainerHeightInPxRef.current * aspectRatio;
+			let currentImageWidth = ImageContainerHeightInPxRef.current * aspectRatio;
 
 			//add image src to row and its width to total
 			rowImagesArr.push(image);
 			currentRowImagesTotalWidth += currentImageWidth;
-			console.log(`${currentRowImagesTotalWidth} < ${rowWidth}`);
 
 			if (currentRowImagesTotalWidth > rowWidth) {
 				//if row is now full
@@ -103,21 +100,20 @@ export default function StyleGuide() {
 			<Container>
 				{galleryAllRows.current.map((row, i) => {
 					return (
-						<ImageGalleryContainer>
+						<ImageGalleryRow key={i}>
 							{row.map((image, index) => {
 								return (
 									<PictureElement
 										image={image}
 										// handleClick={() => setEnlargedImage(index)}
 										key={index}
-										galleryContainerHeightInPxRef={
-											galleryContainerHeightInPxRef.current
+										ImageContainerHeightInPxRef={
+											ImageContainerHeightInPxRef.current
 										}
-										testColour={testColour.current}
 									/>
 								);
 							})}
-						</ImageGalleryContainer>
+						</ImageGalleryRow>
 					);
 				})}
 			</Container>
@@ -128,23 +124,18 @@ export default function StyleGuide() {
 const PictureElement = ({
 	image,
 	handleClick,
-	galleryContainerHeightInPxRef,
-	testColour
+	ImageContainerHeightInPxRef
 }) => {
 	let aspectRatio = image.naturalWidthInPx / image.naturalHeightInPx;
-	let calculatedWidth = galleryContainerHeightInPxRef * aspectRatio;
+	let calculatedWidth = ImageContainerHeightInPxRef * aspectRatio;
 	return (
 		<ImageContainer
-			calculatedWidth={calculatedWidth}
-			heightUsedInCalculatingTheWidthAndToSetHeight={
-				galleryContainerHeightInPxRef
-			}
-			testColour={testColour}
+			width={`${calculatedWidth}px`}
+			height={`${ImageContainerHeightInPxRef}px`}
 		>
-			<StyledImage
+			<StyledImg
 				loading="lazy"
 				src={image.image}
-				calculatedWidth={calculatedWidth}
 				alt={image.description}
 				onClick={handleClick}
 			/>
@@ -153,30 +144,28 @@ const PictureElement = ({
 };
 const Container = styled.div`
 	padding: 6.4rem;
-	background-color: red;
+	/* background-color: red; */
 	@media (max-width: 843px) {
 		padding: 2.4rem;
 	}
 `;
 
-const ImageGalleryContainer = styled.div`
+const ImageGalleryRow = styled.div`
 	width: 140.8rem;
 	display: flex;
 	margin: auto;
 	column-gap: 1.6rem;
-	background-color: blue;
-	margin-bottom: 2rem;
+	margin-bottom: 1.6rem;
+	/* background-color: blue; */
 `;
 
-const ImageContainer = styled.div.attrs(props => ({
-	style: {
-		width: `${props.calculatedWidth}px`,
-		height: `${props.heightUsedInCalculatingTheWidthAndToSetHeight}px`,
-		backgroundColor: `${props.testColour}`
-	}
-}))``;
+const ImageContainer = styled.div`
+	width: calc(${props => props.width});
+	height: calc(${props => props.height});
+	background-color: calc(${props => props.backgroundColor});
+`;
 
-const StyledImage = styled.img`
+const StyledImg = styled.img`
 	height: 100%;
 	background-color: ${props => props.theme.desktop.dark_1};
 	object-fit: cover;
