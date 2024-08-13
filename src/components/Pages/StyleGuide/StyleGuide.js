@@ -1,5 +1,6 @@
 import { styled } from 'styled-components';
-import { useRef } from 'react';
+import { useRef, useContext, useState, useEffect } from 'react';
+import { ResponsiveContext } from '../../../ResponsiveContext';
 
 //1BradleyStokeEvangelicalChurch
 import Secondary1_desktop1 from '../../../assets//images/ProjectCategories/Churches_6/1BradleyStokeEvangelicalChurch/SecondaryImages/Desktop/Secondary1_desktop.jpg';
@@ -57,24 +58,95 @@ export default function StyleGuide() {
 		}
 	];
 
-	const galleryAllRows = useRef([]);
-	const ImageContainerHeightInPxRef = useRef(367); //used in aspect ratio calculation and to set height
+	const { isMobile, isTablet, isDesktop } = useContext(ResponsiveContext);
 
-	const createGalleryRows = () => {
-		const pixelStringToNumber = string => {
-			let str = string;
-			str = str.slice(0, -2);
-			let number = Number(str);
-			return number;
+	const ResponsiveConfig = useRef({
+		ImageContainerHeightInPxRef: 7,
+		ImageGalleryRowWidthInPxRef: 1408,
+		ContainerPaddingInPx: 64,
+		MarginBetweenRowsInPx: 16,
+		ColumnGapInPx: 16
+	});
+
+	if (isMobile) {
+		ResponsiveConfig.current = {
+			ImageContainerHeightInPxRef: 140,
+			ImageGalleryRowWidthInPxRef: 344,
+			ContainerPaddingInPx: 8,
+			MarginBetweenRowsInPx: 8,
+			ColumnGapInPx: 8
 		};
-		const rowWidth = pixelStringToNumber('1408px');
+	} else if (isTablet) {
+		ResponsiveConfig.current = {
+			ImageContainerHeightInPxRef: 173,
+			ImageGalleryRowWidthInPxRef: 786,
+			ContainerPaddingInPx: 24,
+			MarginBetweenRowsInPx: 8,
+			ColumnGapInPx: 8
+		};
+	} else if (isDesktop) {
+		ResponsiveConfig.current = {
+			ImageContainerHeightInPxRef: 367,
+			ImageGalleryRowWidthInPxRef: 1408,
+			ContainerPaddingInPx: 64,
+			MarginBetweenRowsInPx: 16,
+			ColumnGapInPx: 16
+		};
+	} else {
+		ResponsiveConfig.current = {
+			ImageContainerHeightInPxRef: 367,
+			ImageGalleryRowWidthInPxRef: 1408,
+			ContainerPaddingInPx: 64,
+			MarginBetweenRowsInPx: 16,
+			ColumnGapInPx: 16
+		};
+	}
+
+	const [
+		imageGalleryRowWidthFromWindowWidthInPxState,
+		setImageGalleryRowWidthFromWindowWidthInPxState
+	] = useState(
+		Math.min(
+			window.innerWidth - ResponsiveConfig.current.ContainerPaddingInPx,
+			1408
+		)
+	);
+
+	const handleResize = () => {
+		setImageGalleryRowWidthFromWindowWidthInPxState(
+			Math.min(
+				window.innerWidth - ResponsiveConfig.current.ContainerPaddingInPx,
+				1408
+			)
+		);
+	};
+
+	useEffect(() => {
+		window.addEventListener('resize', handleResize);
+
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
+	}, []);
+
+	console.log(imageGalleryRowWidthFromWindowWidthInPxState);
+	console.log(ResponsiveConfig.current);
+
+	console.log('mobile is ', isMobile);
+	console.log('Tablet is ', isTablet);
+	console.log('Desktop is ', isDesktop);
+
+	const galleryAllRows = useRef([]);
+	const createGalleryRows = () => {
+		const rowWidth = ResponsiveConfig.current.ImageGalleryRowWidthInPxRef;
 		let rowsArr = [];
 		let rowImagesArr = [];
 		let currentRowImagesTotalWidth = 0;
 
 		images.forEach((image, i) => {
 			let aspectRatio = image.naturalWidthInPx / image.naturalHeightInPx;
-			let currentImageWidth = ImageContainerHeightInPxRef.current * aspectRatio;
+			let currentImageWidth =
+				ResponsiveConfig.current.ImageContainerHeightInPxRef * aspectRatio;
 
 			//add image src to row and its width to total
 			rowImagesArr.push(image);
@@ -96,19 +168,26 @@ export default function StyleGuide() {
 	galleryAllRows.current = createGalleryRows();
 
 	return (
-		<>
-			<Container>
+		<BackgroundColor>
+			<Container
+				className={`margin_${ResponsiveConfig.current.ContainerPaddingInPx}px`}
+			>
 				{galleryAllRows.current.map((row, i) => {
 					return (
-						<ImageGalleryRow key={i}>
+						<ImageGalleryRow
+							width={`${ResponsiveConfig.current.ImageGalleryRowWidthInPxRef}px`}
+							key={i}
+							className={`margin_bottom_${ResponsiveConfig.current.MarginBetweenRowsInPx}px column_gap_${ResponsiveConfig.current.ColumnGapInPx}px`}
+						>
 							{row.map((image, index) => {
 								return (
 									<PictureElement
+										ResponsiveConfig={ResponsiveConfig}
 										image={image}
 										// handleClick={() => setEnlargedImage(index)}
 										key={index}
-										ImageContainerHeightInPxRef={
-											ImageContainerHeightInPxRef.current
+										ImageContainerHeightConfigInPx={
+											ResponsiveConfig.current.ImageContainerHeightInPxRef
 										}
 									/>
 								);
@@ -117,21 +196,28 @@ export default function StyleGuide() {
 					);
 				})}
 			</Container>
-		</>
+		</BackgroundColor>
 	);
 }
+const BackgroundColor = styled.div`
+	// might remove in implementation , only here for not having margin of container mess up background look
+	background-color: ${props => props.theme.desktop.dark_1};
+	height: fit-content;
+`;
 
 const PictureElement = ({
 	image,
 	handleClick,
-	ImageContainerHeightInPxRef
+	ImageContainerHeightConfigInPx
+	// ResponsiveConfig
 }) => {
 	let aspectRatio = image.naturalWidthInPx / image.naturalHeightInPx;
-	let calculatedWidth = ImageContainerHeightInPxRef * aspectRatio;
+	let calculatedWidth = ImageContainerHeightConfigInPx * aspectRatio;
 	return (
 		<ImageContainer
 			width={`${calculatedWidth}px`}
-			height={`${ImageContainerHeightInPxRef}px`}
+			height={`${ImageContainerHeightConfigInPx}px`}
+			// className={`margin_bottom_${ResponsiveConfig.current.MarginBetweenRowsInPx}px`}
 		>
 			<StyledImg
 				loading="lazy"
@@ -143,26 +229,51 @@ const PictureElement = ({
 	);
 };
 const Container = styled.div`
-	padding: 6.4rem;
+	/* margin: 6.4rem; */
+	/* margin: calc(${props => props.margin}); */
 	/* background-color: red; */
-	@media (max-width: 843px) {
+	/* @media (max-width: 843px) {
 		padding: 2.4rem;
+	} */
+	&.margin_64px {
+		margin: 64px;
+	}
+	&.margin_24px {
+		margin: 24px;
+	}
+	&.margin_8px {
+		margin: 8px;
 	}
 `;
 
 const ImageGalleryRow = styled.div`
-	width: 140.8rem;
+	/* width: 140.8rem; */
+	width: calc(${props => props.width});
 	display: flex;
 	margin: auto;
 	column-gap: 1.6rem;
 	margin-bottom: 1.6rem;
 	/* background-color: blue; */
+	&.margin_bottom_64px {
+		margin-bottom: 64px;
+	}
+	&.margin_bottom_24px {
+		margin-bottom: 24px;
+	}
+	&.margin_bottom_8px {
+		margin-bottom: 8px;
+	}
+	&.column_gap_16px {
+		column-gap: 16px;
+	}
+	&.column_gap_8px {
+		column-gap: 8px;
+	}
 `;
 
 const ImageContainer = styled.div`
 	width: calc(${props => props.width});
 	height: calc(${props => props.height});
-	background-color: calc(${props => props.backgroundColor});
 `;
 
 const StyledImg = styled.img`
