@@ -107,7 +107,9 @@ export default function StyleGuide() {
 		setImageGalleryRowWidthFromWindowWidthInPxState
 	] = useState(
 		Math.min(
-			window.innerWidth - ResponsiveConfig.current.ContainerPaddingInPx,
+			window.innerWidth -
+				ResponsiveConfig.current.ContainerPaddingInPx -
+				ResponsiveConfig.current.ContainerPaddingInPx,
 			1408
 		)
 	);
@@ -115,7 +117,9 @@ export default function StyleGuide() {
 	const handleResize = () => {
 		setImageGalleryRowWidthFromWindowWidthInPxState(
 			Math.min(
-				window.innerWidth - ResponsiveConfig.current.ContainerPaddingInPx,
+				window.innerWidth -
+					ResponsiveConfig.current.ContainerPaddingInPx -
+					ResponsiveConfig.current.ContainerPaddingInPx,
 				1408
 			)
 		);
@@ -129,16 +133,9 @@ export default function StyleGuide() {
 		};
 	}, []);
 
-	console.log(imageGalleryRowWidthFromWindowWidthInPxState);
-	console.log(ResponsiveConfig.current);
-
-	console.log('mobile is ', isMobile);
-	console.log('Tablet is ', isTablet);
-	console.log('Desktop is ', isDesktop);
-
 	const galleryAllRows = useRef([]);
 	const createGalleryRows = () => {
-		const rowWidth = ResponsiveConfig.current.ImageGalleryRowWidthInPxRef;
+		const rowWidth = imageGalleryRowWidthFromWindowWidthInPxState;
 		let rowsArr = [];
 		let rowImagesArr = [];
 		let currentRowImagesTotalWidth = 0;
@@ -175,7 +172,8 @@ export default function StyleGuide() {
 				{galleryAllRows.current.map((row, i) => {
 					return (
 						<ImageGalleryRow
-							width={`${ResponsiveConfig.current.ImageGalleryRowWidthInPxRef}px`}
+							// width={`${ResponsiveConfig.current.ImageGalleryRowWidthInPxRef}px`}
+							width={`${imageGalleryRowWidthFromWindowWidthInPxState}px`}
 							key={i}
 							className={`margin_bottom_${ResponsiveConfig.current.MarginBetweenRowsInPx}px column_gap_${ResponsiveConfig.current.ColumnGapInPx}px`}
 						>
@@ -209,7 +207,6 @@ const PictureElement = ({
 	image,
 	handleClick,
 	ImageContainerHeightConfigInPx
-	// ResponsiveConfig
 }) => {
 	let aspectRatio = image.naturalWidthInPx / image.naturalHeightInPx;
 	let calculatedWidth = ImageContainerHeightConfigInPx * aspectRatio;
@@ -217,7 +214,6 @@ const PictureElement = ({
 		<ImageContainer
 			width={`${calculatedWidth}px`}
 			height={`${ImageContainerHeightConfigInPx}px`}
-			// className={`margin_bottom_${ResponsiveConfig.current.MarginBetweenRowsInPx}px`}
 		>
 			<StyledImg
 				loading="lazy"
@@ -229,12 +225,6 @@ const PictureElement = ({
 	);
 };
 const Container = styled.div`
-	/* margin: 6.4rem; */
-	/* margin: calc(${props => props.margin}); */
-	/* background-color: red; */
-	/* @media (max-width: 843px) {
-		padding: 2.4rem;
-	} */
 	&.margin_64px {
 		margin: 64px;
 	}
@@ -247,13 +237,11 @@ const Container = styled.div`
 `;
 
 const ImageGalleryRow = styled.div`
-	/* width: 140.8rem; */
 	width: calc(${props => props.width});
 	display: flex;
 	margin: auto;
 	column-gap: 1.6rem;
 	margin-bottom: 1.6rem;
-	/* background-color: blue; */
 	&.margin_bottom_64px {
 		margin-bottom: 64px;
 	}
