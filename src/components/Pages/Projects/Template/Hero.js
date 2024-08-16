@@ -150,7 +150,8 @@ const SimpleAnchor = styled.div`
 `;
 
 const StyledHero = styled.div`
-	width: 100vw;
+	/* wid th: 100vw; */
+	width: 100%;
 	background-color: ${props => props.theme.desktop.dark_extra};
 	height: calc(
 		100vh - 4.7rem - 9.2rem
@@ -165,7 +166,9 @@ const StyledHero = styled.div`
 `;
 
 const HeroImageAndPlaceholderContainer = styled.div`
-	min-width: calc(100vw);
+	/* min-width: calc(100vw); */
+	/* not sure if this is the way  */
+	min-width: 100%;
 	position: relative;
 	left: -22.7rem;
 	z-index: 0;

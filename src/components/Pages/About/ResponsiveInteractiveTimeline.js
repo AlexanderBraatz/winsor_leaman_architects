@@ -3,10 +3,14 @@ import InteractiveTimeline from './InteractiveTimeline';
 import MobileInteractiveTimeline from './MobileInteractiveTimeline';
 
 export default function ResponsiveInteractiveTimeline() {
-	const [is740, setIs740] = useState(window.innerWidth <= 740);
+	// const [is740, setIs740] = useState(window.innerWidth <= 740);
+	const [is740, setIs740] = useState(
+		window.matchMedia('(max-width: 740px)').matches
+	);
 
 	const handleResize = () => {
-		setIs740(window.innerWidth <= 740);
+		// setIs740(window.innerWidth <= 740);
+		setIs740(window.matchMedia('(max-width: 740px)').matches);
 	};
 
 	useEffect(() => {

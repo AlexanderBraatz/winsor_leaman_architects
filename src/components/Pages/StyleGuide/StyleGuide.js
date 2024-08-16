@@ -107,7 +107,7 @@ export default function StyleGuide() {
 		setImageGalleryRowWidthFromWindowWidthInPxState
 	] = useState(
 		Math.min(
-			window.innerWidth -
+			document.body.clientWidth -
 				ResponsiveConfig.current.ContainerPaddingInPx -
 				ResponsiveConfig.current.ContainerPaddingInPx,
 			1408
@@ -115,9 +115,10 @@ export default function StyleGuide() {
 	);
 
 	const handleResize = () => {
+		console.log(document.body.clientWidth);
 		setImageGalleryRowWidthFromWindowWidthInPxState(
 			Math.min(
-				window.innerWidth -
+				document.body.clientWidth -
 					ResponsiveConfig.current.ContainerPaddingInPx -
 					ResponsiveConfig.current.ContainerPaddingInPx,
 				1408
@@ -139,7 +140,7 @@ export default function StyleGuide() {
 		let rowsArr = [];
 		let rowImagesArr = [];
 		let currentRowImagesTotalWidth = 0;
-
+		console.log(currentRowImagesTotalWidth);
 		images.forEach((image, i) => {
 			let aspectRatio = image.naturalWidthInPx / image.naturalHeightInPx;
 			let currentImageWidth =
@@ -148,13 +149,17 @@ export default function StyleGuide() {
 			//add image src to row and its width to total
 			rowImagesArr.push(image);
 			currentRowImagesTotalWidth += currentImageWidth;
-
 			if (currentRowImagesTotalWidth > rowWidth) {
 				//if row is now full
 				rowsArr.push(rowImagesArr);
 				rowImagesArr = [];
 				currentRowImagesTotalWidth = 0;
 			}
+			// else {
+			// 	// tis should acount for the gaps but it seams to be makin the problem worse : look into why the flex-gap is growing when the images get close to the limit of their own  width
+			// 	currentRowImagesTotalWidth +=
+			// 		ResponsiveConfig.current.MarginBetweenRowsInPx;
+			// }
 		});
 		//if there is anything left in an unfilled row add that to the gallery as well
 		if (rowImagesArr) {
@@ -262,6 +267,7 @@ const ImageGalleryRow = styled.div`
 const ImageContainer = styled.div`
 	width: calc(${props => props.width});
 	height: calc(${props => props.height});
+	background-color: blue;
 `;
 
 const StyledImg = styled.img`
@@ -269,7 +275,7 @@ const StyledImg = styled.img`
 	background-color: ${props => props.theme.desktop.dark_1};
 	object-fit: cover;
 	cursor: pointer;
-	max-width: 100%;
+	width: 100%;
 `;
 // const TestContainer = styled.div`
 // 	display: flex;

@@ -204,7 +204,8 @@ const StyledHamburgerExit = styled(HamburgerExit)`
 // Navbar links
 
 const StyledDropdownMenu = styled.div`
-	width: 100vw;
+	/* width: 100vw; */
+	width: 100%;
 	min-height: calc(100vh - 6.3rem);
 	background-color: ${props => props.theme.desktop.dark_1};
 	position: absolute;
@@ -225,7 +226,8 @@ const StyledLinkList = styled.ul`
 	display: flex;
 	flex-direction: column;
 	justify-content: top;
-	width: 100vw;
+	/* width: 100vw; */
+	width: 100%;
 	padding-top: 1.6rem;
 	padding-left: 2.4rem;
 `;
@@ -235,7 +237,8 @@ const ProjectsMenu = styled.ul`
 	display: flex;
 	flex-direction: column;
 	justify-content: top;
-	width: 100vw;
+	/* width: 100vw; */
+	width: 100%;
 
 	margin-left: 3.2rem;
 `;

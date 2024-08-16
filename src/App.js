@@ -87,13 +87,15 @@ const App = () => {
 };
 
 const Container = styled.div`
-	width: 100vw;
+	/* width: 100vw; */
+	width: 100%;
 	overflow-x: hidden;
 	background-color: black;
 `;
 const StyledApp = styled.div`
 	background-color: ${props => props.theme.desktop.dark_1};
-	width: 100vw;
+	/* width: 100vw; */
+	width: 100%;
 `;
 const BodyContainer = styled.div`
 	text-align: center;

@@ -54,6 +54,7 @@ const SideBar = styled.div`
 	flex-direction: column;
 	@media (max-width: 843px) {
 		margin-left: 0rem;
+		padding-right: 0rem;
 		width: 100%;
 		height: 12rem;
 		background-color: ${props => props.theme.desktop.dark_2};

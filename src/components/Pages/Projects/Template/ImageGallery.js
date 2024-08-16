@@ -160,7 +160,7 @@ const StyledImage = styled.img`
 
 const ScreenOverlay = styled.div`
 	position: fixed;
-	width: 100vw;
+	width: 100vw; // should this be 100% to acount for how scrollbar messes with things ?? yes but i am redooing the whole component anyway
 	height: 100vh;
 	top: 0;
 	left: 0;
