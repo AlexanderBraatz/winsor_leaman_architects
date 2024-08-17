@@ -67,6 +67,7 @@ import Secondary2_desktop4 from '../../../../assets/images/ProjectCategories/Ext
 import Secondary3_desktop4 from '../../../../assets/images/ProjectCategories/Extensions_8/4DaisychainNursery/SecondaryImages/Desktop/Secondary3_desktop.jpg';
 import Secondary4_desktop4 from '../../../../assets/images/ProjectCategories/Extensions_8/4DaisychainNursery/SecondaryImages/Desktop/Secondary4_desktop.jpg';
 import Secondary5_desktop4 from '../../../../assets/images/ProjectCategories/Extensions_8/4DaisychainNursery/SecondaryImages/Desktop/Secondary5_desktop.jpg';
+import Secondary6_desktop3 from '../../../../assets/images/ProjectCategories/Extensions_8/4DaisychainNursery/SecondaryImages/Desktop/Secondary6_desktop.jpg';
 
 //6HouseinRedland
 import Secondary1_desktop5 from '../../../../assets/images/ProjectCategories/Extensions_8/6HouseinRedland/SecondaryImages/Desktop/Secondary1_desktop.jpg';
@@ -168,6 +169,9 @@ const Extensions = () => {
 						largeImage: Secondary1_desktop1,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1705,
+						explicitIndex: 0,
 						description: 'description'
 					},
 					{
@@ -175,6 +179,9 @@ const Extensions = () => {
 						largeImage: Secondary2_desktop1,
 						width: '189px',
 						largeWidth: '40rem',
+						naturalWidthInPx: 1892,
+						naturalHeightInPx: 2400,
+						explicitIndex: 1,
 						description: 'description'
 					},
 					{
@@ -182,6 +189,9 @@ const Extensions = () => {
 						largeImage: Secondary3_desktop1,
 						width: '240px',
 						largeWidth: '28.4rem',
+						naturalWidthInPx: 2179,
+						naturalHeightInPx: 2400,
+						explicitIndex: 2,
 						description: 'description'
 					},
 					{
@@ -189,6 +199,9 @@ const Extensions = () => {
 						largeImage: Secondary4_desktop1,
 						width: '240px',
 						largeWidth: '37.4rem',
+						naturalWidthInPx: 1867,
+						naturalHeightInPx: 2400,
+						explicitIndex: 3,
 						description: 'description'
 					}
 				]
@@ -209,6 +222,9 @@ const Extensions = () => {
 						largeImage: Secondary1_desktop2,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1349,
+						explicitIndex: 0,
 						description: 'description'
 					},
 					{
@@ -216,6 +232,9 @@ const Extensions = () => {
 						largeImage: Secondary2_desktop2,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1324,
+						explicitIndex: 1,
 						description: 'description'
 					},
 					{
@@ -223,6 +242,9 @@ const Extensions = () => {
 						largeImage: Secondary3_desktop2,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1782,
+						explicitIndex: 2,
 						description: 'description'
 					},
 					{
@@ -230,6 +252,9 @@ const Extensions = () => {
 						largeImage: Secondary4_desktop2,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1600,
+						explicitIndex: 3,
 						description: 'description'
 					},
 					{
@@ -237,6 +262,9 @@ const Extensions = () => {
 						largeImage: Secondary5_desktop2,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1600,
+						explicitIndex: 4,
 						description: 'description'
 					},
 					{
@@ -244,6 +272,9 @@ const Extensions = () => {
 						largeImage: Secondary6_desktop2,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1877,
+						explicitIndex: 5,
 						description: 'description'
 					},
 					{
@@ -251,6 +282,9 @@ const Extensions = () => {
 						largeImage: Secondary7_desktop2,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1600,
+						explicitIndex: 6,
 						description: 'description'
 					},
 					{
@@ -258,6 +292,9 @@ const Extensions = () => {
 						largeImage: Secondary8_desktop2,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1600,
+						explicitIndex: 7,
 						description: 'description'
 					}
 				]
@@ -278,6 +315,9 @@ const Extensions = () => {
 						largeImage: Secondary1_desktop3,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1593,
+						explicitIndex: 0,
 						description: 'description'
 					}
 				]
@@ -299,6 +339,9 @@ const Extensions = () => {
 						largeImage: Secondary1_desktop4,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1600,
+						explicitIndex: 0,
 						description: 'description'
 					},
 					{
@@ -306,6 +349,9 @@ const Extensions = () => {
 						largeImage: Secondary2_desktop4,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1600,
+						explicitIndex: 1,
 						description: 'description'
 					},
 					{
@@ -313,6 +359,9 @@ const Extensions = () => {
 						largeImage: Secondary3_desktop4,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1600,
+						explicitIndex: 2,
 						description: 'description'
 					},
 					{
@@ -320,6 +369,9 @@ const Extensions = () => {
 						largeImage: Secondary4_desktop4,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1466,
+						explicitIndex: 3,
 						description: 'description'
 					},
 					{
@@ -327,6 +379,19 @@ const Extensions = () => {
 						largeImage: Secondary5_desktop4,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1400,
+						explicitIndex: 4,
+						description: 'description'
+					},
+					{
+						image: Secondary6_desktop3,
+						largeImage: Secondary6_desktop3,
+						width: '240px',
+						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1400,
+						explicitIndex: 5,
 						description: 'description'
 					}
 				]
@@ -347,6 +412,9 @@ const Extensions = () => {
 						largeImage: Secondary1_desktop5,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1348,
+						explicitIndex: 0,
 						description: 'description'
 					},
 					{
@@ -354,6 +422,9 @@ const Extensions = () => {
 						largeImage: Secondary2_desktop5,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1416,
+						explicitIndex: 1,
 						description: 'description'
 					},
 					{
@@ -361,6 +432,9 @@ const Extensions = () => {
 						largeImage: Secondary3_desktop5,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1299,
+						explicitIndex: 2,
 						description: 'description'
 					}
 				]

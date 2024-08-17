@@ -220,6 +220,9 @@ const Renovation = () => {
 						largeImage: Secondary1_desktop1,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1265,
+						explicitIndex: 0,
 						description: 'description'
 					},
 					{
@@ -227,6 +230,9 @@ const Renovation = () => {
 						largeImage: Secondary2_desktop1,
 						width: '240px',
 						largeWidth: '40rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1541,
+						explicitIndex: 1,
 						description: 'description'
 					},
 					{
@@ -234,6 +240,9 @@ const Renovation = () => {
 						largeImage: Secondary3_desktop1,
 						width: '240px',
 						largeWidth: '28.4rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1258,
+						explicitIndex: 2,
 						description: 'description'
 					},
 					{
@@ -241,6 +250,9 @@ const Renovation = () => {
 						largeImage: Secondary4_desktop1,
 						width: '240px',
 						largeWidth: '37.4rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1403,
+						explicitIndex: 3,
 						description: 'description'
 					},
 					{
@@ -248,6 +260,9 @@ const Renovation = () => {
 						largeImage: Secondary5_desktop1,
 						width: '240px',
 						largeWidth: '38.6rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1739,
+						explicitIndex: 4,
 						description: 'description'
 					},
 					{
@@ -255,6 +270,9 @@ const Renovation = () => {
 						largeImage: Secondary6_desktop1,
 						width: '180px',
 						largeWidth: '38.6rem',
+						naturalWidthInPx: 1800,
+						naturalHeightInPx: 2400,
+						explicitIndex: 5,
 						description: 'description'
 					},
 					{
@@ -262,6 +280,9 @@ const Renovation = () => {
 						largeImage: Secondary7_desktop1,
 						width: '240px',
 						largeWidth: '38.6rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1800,
+						explicitIndex: 6,
 						description: 'description'
 					}
 				]
@@ -282,6 +303,9 @@ const Renovation = () => {
 						largeImage: Secondary1_desktop2,
 						width: '180px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 1903,
+						naturalHeightInPx: 2400,
+						explicitIndex: 0,
 						description: 'description'
 					},
 					{
@@ -289,6 +313,9 @@ const Renovation = () => {
 						largeImage: Secondary2_desktop2,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1800,
+						explicitIndex: 1,
 						description: 'description'
 					},
 					{
@@ -296,6 +323,9 @@ const Renovation = () => {
 						largeImage: Secondary3_desktop2,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1800,
+						explicitIndex: 2,
 						description: 'description'
 					},
 					{
@@ -303,6 +333,9 @@ const Renovation = () => {
 						largeImage: Secondary4_desktop2,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1842,
+						explicitIndex: 3,
 						description: 'description'
 					},
 					{
@@ -310,6 +343,9 @@ const Renovation = () => {
 						largeImage: Secondary5_desktop2,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2055,
+						naturalHeightInPx: 2400,
+						explicitIndex: 4,
 						description: 'description'
 					}
 				]
@@ -330,6 +366,9 @@ const Renovation = () => {
 						largeImage: Secondary1_desktop3,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1622,
+						explicitIndex: 0,
 						description: 'description'
 					},
 					{
@@ -337,6 +376,9 @@ const Renovation = () => {
 						largeImage: Secondary2_desktop3,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1800,
+						explicitIndex: 1,
 						description: 'description'
 					}
 				]
@@ -357,6 +399,9 @@ const Renovation = () => {
 						largeImage: Secondary1_desktop4,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1347,
+						explicitIndex: 0,
 						description: 'description'
 					},
 					{
@@ -364,6 +409,9 @@ const Renovation = () => {
 						largeImage: Secondary2_desktop4,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1548,
+						explicitIndex: 1,
 						description: 'description'
 					},
 					{
@@ -371,6 +419,9 @@ const Renovation = () => {
 						largeImage: Secondary3_desktop4,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1800,
+						explicitIndex: 2,
 						description: 'description'
 					},
 					{
@@ -378,6 +429,9 @@ const Renovation = () => {
 						largeImage: Secondary4_desktop4,
 						width: '180px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 1739,
+						naturalHeightInPx: 2400,
+						explicitIndex: 3,
 						description: 'description'
 					},
 					{
@@ -385,6 +439,9 @@ const Renovation = () => {
 						largeImage: Secondary5_desktop4,
 						width: '180px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 1776,
+						naturalHeightInPx: 2400,
+						explicitIndex: 4,
 						description: 'description'
 					}
 				]
@@ -405,6 +462,9 @@ const Renovation = () => {
 						largeImage: Secondary1_desktop5,
 						width: '180px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 1788,
+						naturalHeightInPx: 2400,
+						explicitIndex: 0,
 						description: 'description'
 					},
 					{
@@ -412,6 +472,9 @@ const Renovation = () => {
 						largeImage: Secondary2_desktop5,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1800,
+						explicitIndex: 1,
 						description: 'description'
 					},
 					{
@@ -419,6 +482,9 @@ const Renovation = () => {
 						largeImage: Secondary3_desktop5,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1800,
+						explicitIndex: 2,
 						description: 'description'
 					},
 					{
@@ -426,6 +492,9 @@ const Renovation = () => {
 						largeImage: Secondary4_desktop5,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1800,
+						explicitIndex: 3,
 						description: 'description'
 					},
 					{
@@ -433,6 +502,9 @@ const Renovation = () => {
 						largeImage: Secondary5_desktop5,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2290,
+						naturalHeightInPx: 2400,
+						explicitIndex: 4,
 						description: 'description'
 					}
 				]
@@ -453,6 +525,9 @@ const Renovation = () => {
 						largeImage: Secondary1_desktop6,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1015,
+						explicitIndex: 0,
 						description: 'description'
 					},
 					{
@@ -460,6 +535,9 @@ const Renovation = () => {
 						largeImage: Secondary2_desktop6,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 2390,
+						explicitIndex: 1,
 						description: 'description'
 					},
 					{
@@ -467,6 +545,9 @@ const Renovation = () => {
 						largeImage: Secondary3_desktop6,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1800,
+						explicitIndex: 2,
 						description: 'description'
 					},
 					{
@@ -474,6 +555,9 @@ const Renovation = () => {
 						largeImage: Secondary4_desktop6,
 						width: '180px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 1691,
+						naturalHeightInPx: 2400,
+						explicitIndex: 3,
 						description: 'description'
 					}
 				]
@@ -494,6 +578,9 @@ const Renovation = () => {
 						largeImage: Secondary1_desktop7,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 807,
+						naturalHeightInPx: 343,
+						explicitIndex: 0,
 						description: 'description'
 					}
 				]

@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import Hero from './Hero';
 import TextContent from './TextContent';
-import ImageGallery from './ImageGallery';
+import ResponsiveImageGallery from './ResponsiveImageGallery';
 import { useParams } from 'react-router-dom';
 
 const Template = ({ data }) => {
@@ -14,7 +14,7 @@ const Template = ({ data }) => {
 				id={id}
 			/>
 			<TextContent textContentProps={data[id].textContentProps} />
-			<ImageGallery imageGalleryProps={data[id].imageGalleryProps} />
+			<ResponsiveImageGallery imageGalleryProps={data[id].imageGalleryProps} />
 		</Fragment>
 	);
 };

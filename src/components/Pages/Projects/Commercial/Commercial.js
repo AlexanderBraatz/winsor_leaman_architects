@@ -63,6 +63,7 @@ import Secondary2_desktop3 from '../../../../assets/images/ProjectCategories/Ext
 import Secondary3_desktop3 from '../../../../assets/images/ProjectCategories/Extensions_8/4DaisychainNursery/SecondaryImages/Desktop/Secondary3_desktop.jpg';
 import Secondary4_desktop3 from '../../../../assets/images/ProjectCategories/Extensions_8/4DaisychainNursery/SecondaryImages/Desktop/Secondary4_desktop.jpg';
 import Secondary5_desktop3 from '../../../../assets/images/ProjectCategories/Extensions_8/4DaisychainNursery/SecondaryImages/Desktop/Secondary5_desktop.jpg';
+import Secondary6_desktop3 from '../../../../assets/images/ProjectCategories/Extensions_8/4DaisychainNursery/SecondaryImages/Desktop/Secondary6_desktop.jpg';
 
 //4VantagePark
 import Secondary1_desktop4 from '../../../../assets/images/ProjectCategories/Commercial_5/4VantagePark/SecondaryImages/Desktop/Secondary1_desktop.jpg';
@@ -169,6 +170,9 @@ const Commercial = () => {
 						largeImage: Secondary1_desktop1,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1600,
+						explicitIndex: 0,
 						description: 'description'
 					},
 					{
@@ -176,6 +180,9 @@ const Commercial = () => {
 						largeImage: Secondary2_desktop1,
 						width: '240px',
 						largeWidth: '40rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1600,
+						explicitIndex: 1,
 						description: 'description'
 					},
 					{
@@ -183,6 +190,9 @@ const Commercial = () => {
 						largeImage: Secondary2_desktop1,
 						width: '240px',
 						largeWidth: '28.4rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1600,
+						explicitIndex: 2,
 						description: 'description'
 					},
 					{
@@ -190,6 +200,9 @@ const Commercial = () => {
 						largeImage: Secondary4_desktop1,
 						width: '240px',
 						largeWidth: '37.4rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1349,
+						explicitIndex: 3,
 						description: 'description'
 					},
 					{
@@ -197,6 +210,9 @@ const Commercial = () => {
 						largeImage: Secondary5_desktop1,
 						width: '240px',
 						largeWidth: '38.6rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1772,
+						explicitIndex: 4,
 						description: 'description'
 					}
 				]
@@ -217,6 +233,9 @@ const Commercial = () => {
 						largeImage: Secondary1_desktop2,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1015,
+						explicitIndex: 0,
 						description: 'description'
 					},
 					{
@@ -224,6 +243,9 @@ const Commercial = () => {
 						largeImage: Secondary2_desktop2,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 2390,
+						explicitIndex: 1,
 						description: 'description'
 					},
 					{
@@ -231,6 +253,9 @@ const Commercial = () => {
 						largeImage: Secondary3_desktop2,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1800,
+						explicitIndex: 2,
 						description: 'description'
 					},
 					{
@@ -238,6 +263,9 @@ const Commercial = () => {
 						largeImage: Secondary4_desktop2,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 1691,
+						naturalHeightInPx: 2400,
+						explicitIndex: 3,
 						description: 'description'
 					}
 				]
@@ -259,6 +287,9 @@ const Commercial = () => {
 						largeImage: Secondary1_desktop3,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1600,
+						explicitIndex: 0,
 						description: 'description'
 					},
 					{
@@ -266,6 +297,9 @@ const Commercial = () => {
 						largeImage: Secondary2_desktop3,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1600,
+						explicitIndex: 1,
 						description: 'description'
 					},
 					{
@@ -273,6 +307,9 @@ const Commercial = () => {
 						largeImage: Secondary3_desktop3,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1600,
+						explicitIndex: 2,
 						description: 'description'
 					},
 					{
@@ -280,6 +317,9 @@ const Commercial = () => {
 						largeImage: Secondary4_desktop3,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1466,
+						explicitIndex: 3,
 						description: 'description'
 					},
 					{
@@ -287,6 +327,19 @@ const Commercial = () => {
 						largeImage: Secondary5_desktop3,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1400,
+						explicitIndex: 4,
+						description: 'description'
+					},
+					{
+						image: Secondary6_desktop3,
+						largeImage: Secondary6_desktop3,
+						width: '240px',
+						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1400,
+						explicitIndex: 5,
 						description: 'description'
 					}
 				]
@@ -307,6 +360,9 @@ const Commercial = () => {
 						largeImage: Secondary1_desktop4,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1350,
+						explicitIndex: 0,
 						description: 'description'
 					}
 				]
@@ -327,6 +383,9 @@ const Commercial = () => {
 						largeImage: Secondary1_desktop5,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1350,
+						explicitIndex: 0,
 						description: 'description'
 					},
 					{
@@ -334,6 +393,9 @@ const Commercial = () => {
 						largeImage: Secondary2_desktop5,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1350,
+						explicitIndex: 1,
 						description: 'description'
 					},
 					{
@@ -341,6 +403,9 @@ const Commercial = () => {
 						largeImage: Secondary3_desktop5,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1350,
+						explicitIndex: 2,
 						description: 'description'
 					},
 					{
@@ -348,6 +413,9 @@ const Commercial = () => {
 						largeImage: Secondary4_desktop5,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1350,
+						explicitIndex: 3,
 						description: 'description'
 					},
 					{
@@ -355,6 +423,9 @@ const Commercial = () => {
 						largeImage: Secondary5_desktop5,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1350,
+						explicitIndex: 4,
 						description: 'description'
 					}
 				]

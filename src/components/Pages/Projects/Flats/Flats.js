@@ -137,6 +137,9 @@ const Flats = () => {
 						largeImage: Secondary1_desktop1,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1600,
+						explicitIndex: 0,
 						description: 'description'
 					},
 					{
@@ -144,6 +147,9 @@ const Flats = () => {
 						largeImage: Secondary2_desktop1,
 						width: '240px',
 						largeWidth: '40rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1600,
+						explicitIndex: 1,
 						description: 'description'
 					},
 					{
@@ -151,6 +157,9 @@ const Flats = () => {
 						largeImage: Secondary3_desktop1,
 						width: '240px',
 						largeWidth: '28.4rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1304,
+						explicitIndex: 2,
 						description: 'description'
 					},
 					{
@@ -158,6 +167,9 @@ const Flats = () => {
 						largeImage: Secondary4_desktop1,
 						width: '240px',
 						largeWidth: '37.4rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1433,
+						explicitIndex: 3,
 						description: 'description'
 					},
 					{
@@ -165,6 +177,9 @@ const Flats = () => {
 						largeImage: Secondary5_desktop1,
 						width: '240px',
 						largeWidth: '38.6rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1433,
+						explicitIndex: 4,
 						description: 'description'
 					},
 					{
@@ -172,6 +187,9 @@ const Flats = () => {
 						largeImage: Secondary6_desktop1,
 						width: '240px',
 						largeWidth: '38.6rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1258,
+						explicitIndex: 5,
 						description: 'description'
 					}
 				]
@@ -192,6 +210,9 @@ const Flats = () => {
 						largeImage: Secondary1_desktop2,
 						width: '180px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 1788,
+						naturalHeightInPx: 2400,
+						explicitIndex: 0,
 						description: 'description'
 					},
 					{
@@ -199,6 +220,9 @@ const Flats = () => {
 						largeImage: Secondary2_desktop2,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1800,
+						explicitIndex: 1,
 						description: 'description'
 					},
 					{
@@ -206,6 +230,9 @@ const Flats = () => {
 						largeImage: Secondary3_desktop2,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1800,
+						explicitIndex: 2,
 						description: 'description'
 					},
 					{
@@ -213,6 +240,9 @@ const Flats = () => {
 						largeImage: Secondary4_desktop2,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1800,
+						explicitIndex: 3,
 						description: 'description'
 					},
 					{
@@ -220,6 +250,9 @@ const Flats = () => {
 						largeImage: Secondary5_desktop2,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2290,
+						naturalHeightInPx: 2400,
+						explicitIndex: 4,
 						description: 'description'
 					}
 				]
@@ -240,6 +273,9 @@ const Flats = () => {
 						largeImage: Secondary1_desktop3,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1882,
+						explicitIndex: 0,
 						description: 'description'
 					},
 					{
@@ -247,6 +283,9 @@ const Flats = () => {
 						largeImage: Secondary2_desktop3,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 2074,
+						explicitIndex: 1,
 						description: 'description'
 					}
 				]

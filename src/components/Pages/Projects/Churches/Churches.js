@@ -233,6 +233,9 @@ const Churches = () => {
 						largeImage: Secondary1_desktop1,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1441,
+						explicitIndex: 0,
 						description: 'description'
 					},
 					{
@@ -240,13 +243,19 @@ const Churches = () => {
 						largeImage: Secondary2_desktop1,
 						width: '240px',
 						largeWidth: '40rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1525,
+						explicitIndex: 1,
 						description: 'description'
 					},
 					{
 						image: Secondary3_desktop1,
-						largeImage: Secondary2_desktop1,
+						largeImage: Secondary3_desktop1,
 						width: '240px',
 						largeWidth: '28.4rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1525,
+						explicitIndex: 2,
 						description: 'description'
 					},
 					{
@@ -254,6 +263,9 @@ const Churches = () => {
 						largeImage: Secondary4_desktop1,
 						width: '240px',
 						largeWidth: '37.4rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1600,
+						explicitIndex: 3,
 						description: 'description'
 					},
 					{
@@ -261,6 +273,9 @@ const Churches = () => {
 						largeImage: Secondary5_desktop1,
 						width: '240px',
 						largeWidth: '38.6rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1580,
+						explicitIndex: 4,
 						description: 'description'
 					}
 				]
@@ -281,6 +296,9 @@ const Churches = () => {
 						largeImage: Secondary1_desktop2,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1622,
+						explicitIndex: 0,
 						description: 'description'
 					},
 					{
@@ -288,6 +306,9 @@ const Churches = () => {
 						largeImage: Secondary2_desktop2,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1800,
+						explicitIndex: 1,
 						description: 'description'
 					}
 				]
@@ -308,6 +329,9 @@ const Churches = () => {
 						largeImage: Secondary1_desktop3,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 1801,
+						naturalHeightInPx: 2400,
+						explicitIndex: 0,
 						description: 'description'
 					},
 					{
@@ -315,6 +339,9 @@ const Churches = () => {
 						largeImage: Secondary2_desktop3,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 1801,
+						naturalHeightInPx: 2400,
+						explicitIndex: 1,
 						description: 'description'
 					}
 				]
@@ -335,6 +362,9 @@ const Churches = () => {
 						largeImage: Secondary1_desktop4,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 2182,
+						explicitIndex: 0,
 						description: 'description'
 					},
 					{
@@ -342,6 +372,9 @@ const Churches = () => {
 						largeImage: Secondary2_desktop4,
 						width: '180px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 1810,
+						naturalHeightInPx: 2400,
+						explicitIndex: 1,
 						description: 'description'
 					},
 					{
@@ -349,6 +382,9 @@ const Churches = () => {
 						largeImage: Secondary3_desktop4,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1583,
+						explicitIndex: 2,
 						description: 'description'
 					},
 					{
@@ -356,6 +392,9 @@ const Churches = () => {
 						largeImage: Secondary4_desktop4,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1800,
+						explicitIndex: 3,
 						description: 'description'
 					},
 					{
@@ -363,6 +402,9 @@ const Churches = () => {
 						largeImage: Secondary5_desktop4,
 						width: '180px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 1800,
+						naturalHeightInPx: 2400,
+						explicitIndex: 4,
 						description: 'description'
 					},
 					{
@@ -370,6 +412,9 @@ const Churches = () => {
 						largeImage: Secondary6_desktop4,
 						width: '240px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1800,
+						explicitIndex: 5,
 						description: 'description'
 					},
 					{
@@ -377,6 +422,9 @@ const Churches = () => {
 						largeImage: Secondary7_desktop4,
 						width: '180px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 1800,
+						naturalHeightInPx: 2400,
+						explicitIndex: 7,
 						description: 'description'
 					}
 				]
@@ -397,6 +445,9 @@ const Churches = () => {
 						largeImage: Secondary1_desktop5,
 						width: '169px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 1687,
+						naturalHeightInPx: 2400,
+						explicitIndex: 0,
 						description: 'description'
 					},
 					{
@@ -404,6 +455,9 @@ const Churches = () => {
 						largeImage: Secondary2_desktop5,
 						width: '180px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 1800,
+						naturalHeightInPx: 2400,
+						explicitIndex: 1,
 						description: 'description'
 					},
 					{
@@ -411,6 +465,9 @@ const Churches = () => {
 						largeImage: Secondary3_desktop5,
 						width: '590px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1159,
+						explicitIndex: 2,
 						description: 'description'
 					},
 					{
@@ -418,6 +475,9 @@ const Churches = () => {
 						largeImage: Secondary4_desktop5,
 						width: '590px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1048,
+						explicitIndex: 3,
 						description: 'description'
 					},
 					{
@@ -425,6 +485,9 @@ const Churches = () => {
 						largeImage: Secondary5_desktop5,
 						width: '196px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 1961,
+						naturalHeightInPx: 2400,
+						explicitIndex: 4,
 						description: 'description'
 					}
 				]
@@ -445,6 +508,9 @@ const Churches = () => {
 						largeImage: Secondary1_desktop6,
 						width: '180px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 1698,
+						naturalHeightInPx: 2400,
+						explicitIndex: 0,
 						description: 'description'
 					},
 					{
@@ -452,6 +518,9 @@ const Churches = () => {
 						largeImage: Secondary2_desktop6,
 						width: '180px',
 						largeWidth: '27rem',
+						naturalWidthInPx: 1698,
+						naturalHeightInPx: 2400,
+						explicitIndex: 1,
 						description: 'description'
 					}
 				]

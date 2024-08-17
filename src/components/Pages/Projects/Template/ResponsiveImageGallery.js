@@ -1,72 +1,14 @@
 import { styled } from 'styled-components';
 import { useRef, useContext, useState, useEffect } from 'react';
-import { ResponsiveContext } from '../../../ResponsiveContext';
+import { ResponsiveContext } from '../../../../ResponsiveContext';
 
-import { ReactComponent as Chevron_left } from '../../../assets/images/Projects/ImageGallery/chevron_left.svg';
-import { ReactComponent as Chevron_right } from '../../../assets/images/Projects/ImageGallery/chevron_right.svg';
-import { ReactComponent as Close } from '../../../assets/images/Projects/ImageGallery/close.svg';
+import { ReactComponent as Chevron_left } from '../../../../assets/images/Projects/ImageGallery/chevron_left.svg';
+import { ReactComponent as Chevron_right } from '../../../../assets/images/Projects/ImageGallery/chevron_right.svg';
+import { ReactComponent as Close } from '../../../../assets/images/Projects/ImageGallery/close.svg';
 
-//1BradleyStokeEvangelicalChurch
-import Secondary1_desktop1 from '../../../assets//images/ProjectCategories/Churches_6/1BradleyStokeEvangelicalChurch/SecondaryImages/Desktop/Secondary1_desktop.jpg';
-import Secondary2_desktop1 from '../../../assets/images/ProjectCategories/Churches_6/1BradleyStokeEvangelicalChurch/SecondaryImages/Desktop/Secondary2_desktop.jpg';
-import Secondary3_desktop1 from '../../../assets/images/ProjectCategories/Churches_6/1BradleyStokeEvangelicalChurch/SecondaryImages/Desktop/Secondary3_desktop.jpg';
-import Secondary4_desktop1 from '../../../assets/images/ProjectCategories/Churches_6/1BradleyStokeEvangelicalChurch/SecondaryImages/Desktop/Secondary4_desktop.jpg';
-import Secondary5_desktop1 from '../../../assets/images/ProjectCategories/Churches_6/1BradleyStokeEvangelicalChurch/SecondaryImages/Desktop/Secondary5_desktop.jpg';
-
-export default function StyleGuide() {
-	const images = [
-		{
-			image: Secondary1_desktop1,
-			largeImage: Secondary1_desktop1,
-			width: '628px',
-			largeWidth: '27rem',
-			naturalWidthInPx: 2400,
-			naturalHeightInPx: 1441,
-			explicitIndex: 0,
-			description: 'one'
-		},
-		{
-			image: Secondary2_desktop1,
-			largeImage: Secondary2_desktop1,
-			width: '628px',
-			largeWidth: '40rem',
-			naturalWidthInPx: 2400,
-			naturalHeightInPx: 1525,
-			explicitIndex: 1,
-			description: 'two'
-		},
-		{
-			image: Secondary3_desktop1,
-			largeImage: Secondary3_desktop1,
-			width: '540px',
-			largeWidth: '28.4rem',
-			naturalWidthInPx: 2400,
-			naturalHeightInPx: 1525,
-			explicitIndex: 2,
-			description: 'three'
-		},
-		{
-			image: Secondary4_desktop1,
-			largeImage: Secondary4_desktop1,
-			width: '1540px',
-			largeWidth: '37.4rem',
-			naturalWidthInPx: 2400,
-			naturalHeightInPx: 1600,
-			explicitIndex: 3,
-			description: 'four'
-		},
-		{
-			image: Secondary5_desktop1,
-			largeImage: Secondary5_desktop1,
-			width: '140px',
-			largeWidth: '38.6rem',
-			naturalWidthInPx: 2400,
-			naturalHeightInPx: 1580,
-			explicitIndex: 4,
-			description: 'five'
-		}
-	];
-
+export default function ResponsiveImageGallery({
+	imageGalleryProps: { images }
+}) {
 	// large image logic
 	const [enlargedImage, setEnlargedImage] = useState(-1);
 
@@ -198,31 +140,33 @@ export default function StyleGuide() {
 
 	return (
 		<Container
-			className={`margin_${ResponsiveConfig.current.ContainerPaddingInPx}px`}
+			className={`padding_${ResponsiveConfig.current.ContainerPaddingInPx}px`}
 		>
-			{galleryAllRows.current.map((row, i) => {
-				return (
-					<ImageGalleryRow
-						width={`${imageGalleryRowWidthFromWindowWidthInPxState}px`}
-						key={i}
-						className={`margin_bottom_${ResponsiveConfig.current.MarginBetweenRowsInPx}px column_gap_${ResponsiveConfig.current.ColumnGapInPx}px`}
-					>
-						{row.map((image, index) => {
-							return (
-								<PictureElement
-									ResponsiveConfig={ResponsiveConfig}
-									image={image}
-									handleClick={() => setEnlargedImage(image.explicitIndex)}
-									key={image.explicitIndex}
-									ImageContainerHeightConfigInPx={
-										ResponsiveConfig.current.ImageContainerHeightInPxRef
-									}
-								/>
-							);
-						})}
-					</ImageGalleryRow>
-				);
-			})}
+			<GalleryRowsContainer>
+				{galleryAllRows.current.map((row, i) => {
+					return (
+						<ImageGalleryRow
+							width={`${imageGalleryRowWidthFromWindowWidthInPxState}px`}
+							key={i}
+							className={`margin_bottom_${ResponsiveConfig.current.MarginBetweenRowsInPx}px column_gap_${ResponsiveConfig.current.ColumnGapInPx}px`}
+						>
+							{row.map((image, index) => {
+								return (
+									<PictureElement
+										ResponsiveConfig={ResponsiveConfig}
+										image={image}
+										handleClick={() => setEnlargedImage(image.explicitIndex)}
+										key={image.explicitIndex}
+										ImageContainerHeightConfigInPx={
+											ResponsiveConfig.current.ImageContainerHeightInPxRef
+										}
+									/>
+								);
+							})}
+						</ImageGalleryRow>
+					);
+				})}
+			</GalleryRowsContainer>
 			{enlargedImage > -1 ? (
 				<>
 					<ScreenOverlay onClick={() => setEnlargedImage(-1)}></ScreenOverlay>
@@ -272,16 +216,17 @@ const PictureElement = ({
 	);
 };
 const Container = styled.div`
-	&.margin_64px {
-		margin: 64px;
+	&.padding_64px {
+		padding: 64px;
 	}
-	&.margin_24px {
-		margin: 24px;
+	&.padding_24px {
+		padding: 24px;
 	}
-	&.margin_8px {
-		margin: 8px;
+	&.padding_8px {
+		padding: 8px;
 	}
 `;
+const GalleryRowsContainer = styled.div``;
 
 const ImageGalleryRow = styled.div`
 	width: calc(${props => props.width});
@@ -304,12 +249,14 @@ const ImageGalleryRow = styled.div`
 	&.column_gap_8px {
 		column-gap: 8px;
 	}
+	&:last-child {
+		margin-bottom: 0px;
+	}
 `;
 
 const ImageContainer = styled.div`
 	width: calc(${props => props.width});
 	height: calc(${props => props.height});
-	background-color: blue;
 `;
 
 const StyledImg = styled.img`
@@ -397,6 +344,7 @@ const Gradient = styled.div`
 	justify-content: center;
 	width: 4.8rem;
 	height: 4.8rem;
+	z-index: 29;
 	background: radial-gradient(
 		40.62% 40.62% at 50% 50%,
 		rgba(32, 43, 48, 0.6) 0%,
@@ -464,41 +412,3 @@ const TopRight = styled.div`
 	}
 `;
 const X = styled(Close)``;
-
-// const TestContainer = styled.div`
-// 	display: flex;
-// 	align-items: flex-start;
-// 	flex-direction: column;
-// `;
-// const H1 = styled.h1`
-// 	font-family: 'Heading1', Arial, Serif;
-// 	font-size: 64px;
-// `;
-// const H2 = styled.h1`
-// 	font-family: 'Heading2', Arial, Serif;
-// 	font-size: 48px;
-// `;
-// const H3 = styled.h2`
-// 	font-family: 'Heading3', Arial, Serif;
-// 	font-size: 36px;
-// `;
-// const Subheading = styled.h3`
-// 	font-family: 'Subheading', Arial, Serif;
-// 	font-size: 32px;
-// `;
-// const Logo = styled.p`
-// 	font-family: 'Logo', Arial, Serif;
-// 	font-size: 28px;
-// `;
-// const Button = styled.p`
-// 	font-family: 'Button', Arial, Serif;
-// 	font-size: 22px;
-// `;
-// const Body = styled.p`
-// 	font-family: 'Body', Arial, Serif;
-// 	font-size: 16px;
-// `;
-// const SmallText = styled.p`
-// 	font-family: 'SmallText', Arial, Serif;
-// 	font-size: 14px;
-// `;
