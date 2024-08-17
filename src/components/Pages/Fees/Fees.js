@@ -6,7 +6,7 @@ export default function Fees() {
 		<Background>
 			<Container>
 				<Heading>Fees</Heading>
-				<Content>
+				<ContainerTextAndGraph>
 					<Text>
 						Our fees are negotiable, though the chart on the right gives an
 						estimate of how much we charge for a full service for each client
@@ -20,12 +20,12 @@ export default function Fees() {
 					</Text>
 					<GraphContainer>
 						{/* <StyledCostExpensesGraph /> */}
-						<Feediagram2Image
+						<FeedDiagram2Image
 							src={FeesImage}
 							alt="Graph displaying the fees and "
 						/>
 					</GraphContainer>
-				</Content>
+				</ContainerTextAndGraph>
 			</Container>
 		</Background>
 	);
@@ -54,17 +54,27 @@ const Heading = styled.h1`
 	text-align: left;
 	margin: auto;
 	margin-bottom: 2.8rem;
+	max-width: 84.8rem;
 	@media (max-width: 965px) {
-		max-width: 48rem;
+		max-width: 70.7rem;
+		font-size: 2.8rem;
+	}
+	@media (max-width: 777px) {
+		max-width: 32.8rem;
 	}
 `;
-const Content = styled.div`
+const ContainerTextAndGraph = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 100%;
-	gap: 4rem;
+	max-width: 84.8rem;
+	margin: auto;
+
 	@media (max-width: 965px) {
+		max-width: 70.7rem;
+	}
+	@media (max-width: 777px) {
+		max-width: 70.7rem;
 		flex-direction: column;
 	}
 `;
@@ -75,12 +85,27 @@ const Text = styled.p`
 	text-align: left;
 	max-width: 32.4rem;
 	@media (max-width: 965px) {
-		max-width: 48rem;
+		max-width: 27.2rem;
+		font-size: 1.4rem;
+		line-height: 2rem;
+	}
+	@media (max-width: 777px) {
+		max-width: 32.8rem;
 	}
 `;
-const GraphContainer = styled.div``;
+const GraphContainer = styled.div`
+	max-width: 48rem;
 
-const Feediagram2Image = styled.img`
+	@media (max-width: 965px) {
+		max-width: 39.9rem;
+	}
+	@media (max-width: 777px) {
+		margin-top: 2rem;
+		max-width: 32.8rem;
+	}
+`;
+
+const FeedDiagram2Image = styled.img`
 	width: 100%;
-	height: 100%;
+	object-fit: contain;
 `;

@@ -243,7 +243,7 @@ const ProjectsMenu = styled.ul`
 	margin-left: 3.2rem;
 `;
 const StyledCustomLink = styled.li`
-	width: fit-content;
+	width: 100%;
 	height: 5.6rem;
 	display: flex;
 	flex-direction: column;
@@ -255,4 +255,6 @@ const StyledLink = styled(Link)`
 	text-decoration: none;
 	font-weight: 500;
 	color: ${props => props.theme.desktop.grey_5};
+	height: 5.6rem;
+	line-height: 5.6rem;
 `;

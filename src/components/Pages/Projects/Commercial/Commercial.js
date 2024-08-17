@@ -187,7 +187,7 @@ const Commercial = () => {
 					},
 					{
 						image: Secondary3_desktop1,
-						largeImage: Secondary2_desktop1,
+						largeImage: Secondary3_desktop1,
 						width: '240px',
 						largeWidth: '28.4rem',
 						naturalWidthInPx: 2400,

@@ -230,7 +230,6 @@ const OuterContainer = styled.div`
 	}
 	@media (max-width: 740px) {
 		width: 32.8rem;
-		background-color: red;
 	}
 `;
 const Stage = styled.div`

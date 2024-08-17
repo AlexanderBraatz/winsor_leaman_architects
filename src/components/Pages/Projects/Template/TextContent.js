@@ -33,8 +33,10 @@ const Container = styled.div`
 	width: 100%;
 	color: ${props => props.theme.desktop.grey_5};
 	margin-top: 4rem;
+	padding-bottom: 5.6rem;
 	@media (max-width: 843px) {
 		margin-top: 3.2rem;
+		padding-bottom: 3.2rem;
 	}
 	@media (max-width: 480px) {
 		margin-top: 2.4rem;
@@ -121,17 +123,24 @@ const DescriptionText = styled.p`
 const FeedbackBackground = styled.div`
 	background-color: ${props => props.theme.desktop.dark_1};
 	margin-top: 4rem;
+	@media (max-width: 843px) {
+		margin-top: 3.2rem;
+	}
+	@media (max-width: 480px) {
+		margin-top: 2.4rem;
+	}
 `;
 const FeedbackContainer = styled.div`
 	width: 60.8rem;
 	margin: auto;
-	padding: 4rem 0 5.6rem 0;
+	padding: 4rem 0 0rem 0;
 	@media (max-width: 843px) {
 		max-width: 38.5rem;
+		padding: 2rem 0rem 0rem 0rem;
 	}
 	@media (max-width: 480px) {
 		max-width: 37rem;
-		padding: 2rem 0.8rem 3.2rem 0.8rem;
+		padding: 2rem 0.8rem 0rem 0.8rem;
 	}
 	@media (max-width: 375px) {
 		max-width: 34rem;

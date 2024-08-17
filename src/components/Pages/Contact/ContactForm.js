@@ -202,7 +202,6 @@ const ContactFormPrompt = styled.p`
 const InputGroup = styled.div`
 	width: 100%;
 	height: 6.4rem;
-	flex-wrap: wrap;
 	display: flex;
 	column-gap: 1.6rem;
 	margin-bottom: 0.6rem;
