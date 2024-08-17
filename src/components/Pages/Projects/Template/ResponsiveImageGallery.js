@@ -279,6 +279,7 @@ const LargeImage = ({ image }) => {
 };
 const ScreenOverlay = styled.div`
 	position: fixed;
+	z-index: 30;
 	width: 100vw; // may have to be % to account for scrollbar
 	height: 100vh;
 	top: 0;
