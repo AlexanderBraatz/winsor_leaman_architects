@@ -203,7 +203,7 @@ const Container = styled.div`
 
 const HeadingText = styled.h2`
 	color: ${props => props.theme.desktop.grey_5};
-	font-family: 'Logo', Arial, Serif;
+	font-family: 'Jost', Arial, Serif;
 	font-weight: 300;
 	letter-spacing: 0em;
 	text-align: left;
@@ -299,7 +299,7 @@ const StyledConstructionArrowM = styled(ConstructionArrowMobile)`
 
 const Text = styled.p`
 	color: ${props => props.theme.desktop.grey_5};
-	font-family: 'Logo', Arial, Serif;
+	font-family: 'Jost', Arial, Serif;
 	font-size: 1.4rem;
 	width: 90%; /* to text wrap "Pre- Construction*/
 	font-weight: 400;
@@ -345,7 +345,7 @@ const LittleCircle = styled.div`
 
 const StyledListItem = styled.li`
 	color: ${props => props.theme.desktop.grey_5};
-	font-family: 'Logo', Arial, Serif;
+	font-family: 'Jost', Arial, Serif;
 
 	font-size: 1.6rem;
 	font-weight: 400;

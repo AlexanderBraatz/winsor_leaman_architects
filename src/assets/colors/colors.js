@@ -7,17 +7,17 @@ const colors = {
 	dark_5: '#656C6F',
 	error_1: '#F07C6A',
 	error_2: '#4C3733',
-	error_stroke: '#93554B', //alteration colour
-	error_fill: '#4C3733', //alteration colour
-	gradient_1: '#1A5152',
-	gradient_2: '#16514B',
-	gradient_3: '#185041',
-	gradient_4: '#204F36',
+	error_stroke: '#93554B',
+	error_fill: '#4C3733',
+	primary: '#2C656D',
+	gradient_1: '#257374',
+	gradient_2: '#21786F',
+	gradient_3: '#237660',
+	gradient_4: '#2C6D4A',
 	grey_2: '#B1B1B1',
 	grey_3: '#CACACA',
 	grey_4: '#E4E4E4',
-	grey_5: '#F2F2F2',
-	primary: '#235158'
+	grey_5: '#F2F2F2'
 };
 
 export default colors;

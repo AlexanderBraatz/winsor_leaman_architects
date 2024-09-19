@@ -439,15 +439,37 @@ const Churches = () => {
 				feedbackText: ``
 			},
 			imageGalleryProps: {
+				//bryony was here x
 				images: [
 					{
-						image: Secondary1_desktop5,
-						largeImage: Secondary1_desktop5,
-						width: '169px',
+						image: Secondary4_desktop5,
+						largeImage: Secondary4_desktop5,
+						width: '590px',
 						largeWidth: '27rem',
-						naturalWidthInPx: 1687,
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1048,
+						explicitIndex: 3,
+						description: 'description'
+					},
+					{
+						image: Secondary3_desktop5,
+						largeImage: Secondary3_desktop5,
+						width: '590px',
+						largeWidth: '27rem',
+						naturalWidthInPx: 2400,
+						naturalHeightInPx: 1159,
+						explicitIndex: 2,
+						description: 'description'
+					},
+
+					{
+						image: Secondary5_desktop5,
+						largeImage: Secondary5_desktop5,
+						width: '196px',
+						largeWidth: '27rem',
+						naturalWidthInPx: 1961,
 						naturalHeightInPx: 2400,
-						explicitIndex: 0,
+						explicitIndex: 4,
 						description: 'description'
 					},
 					{
@@ -461,33 +483,13 @@ const Churches = () => {
 						description: 'description'
 					},
 					{
-						image: Secondary3_desktop5,
-						largeImage: Secondary3_desktop5,
-						width: '590px',
+						image: Secondary1_desktop5,
+						largeImage: Secondary1_desktop5,
+						width: '169px',
 						largeWidth: '27rem',
-						naturalWidthInPx: 2400,
-						naturalHeightInPx: 1159,
-						explicitIndex: 2,
-						description: 'description'
-					},
-					{
-						image: Secondary4_desktop5,
-						largeImage: Secondary4_desktop5,
-						width: '590px',
-						largeWidth: '27rem',
-						naturalWidthInPx: 2400,
-						naturalHeightInPx: 1048,
-						explicitIndex: 3,
-						description: 'description'
-					},
-					{
-						image: Secondary5_desktop5,
-						largeImage: Secondary5_desktop5,
-						width: '196px',
-						largeWidth: '27rem',
-						naturalWidthInPx: 1961,
+						naturalWidthInPx: 1687,
 						naturalHeightInPx: 2400,
-						explicitIndex: 4,
+						explicitIndex: 0,
 						description: 'description'
 					}
 				]

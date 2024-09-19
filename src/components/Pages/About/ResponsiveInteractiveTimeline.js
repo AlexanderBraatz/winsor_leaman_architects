@@ -1,3 +1,6 @@
+// InteractiveTimeline is was removed in the revisions requested by the client
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 import React, { useState, useEffect } from 'react';
 import InteractiveTimeline from './InteractiveTimeline';
 import MobileInteractiveTimeline from './MobileInteractiveTimeline';

@@ -1,3 +1,6 @@
+// InteractiveTimeline is was removed in the revisions requested by the client
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 import React, { useCallback, useState, useContext } from 'react';
 import styled, { useTheme } from 'styled-components';
 import Stage from './Stage';

@@ -91,7 +91,7 @@ const Content = styled.div`
 	}
 `;
 const Heading = styled.h2`
-	font-family: 'Heading3', Arial, Serif;
+	font-family: 'Jost', Arial, Serif;
 	font-size: 4.8rem;
 	font-weight: 300;
 	text-align: left;
@@ -99,6 +99,7 @@ const Heading = styled.h2`
 	margin-bottom: 6.4rem;
 	@media (max-width: 843px) {
 		font-size: 2.8rem;
+		font-weight: 300;
 		margin-top: 2.4rem;
 		margin-bottom: 2.4rem;
 	}
@@ -110,15 +111,20 @@ const Heading = styled.h2`
 
 const Text = styled.p`
 	color: ${props => props.theme.desktop.grey_5};
-	font-family: 'Logo', Arial, Serif;
+	font-family: 'Jost', Arial, Serif;
+	font-weight: 400;
+	line-height: 2.2rem;
 	font-size: 1.6rem;
 	text-align: left;
 	width: 100%;
 	padding-bottom: 6.4rem;
 	@media (max-width: 843px) {
 		font-size: 1.4rem;
-		font-family: 'Logo', Arial, Serif;
+		/* font-family: 'Jost', Arial, Serif; */
+		font-size: 1.4rem;
+		line-height: 2rem;
 		padding-bottom: 5.6rem;
+		/* background-color: red; */
 	}
 	@media (max-width: 740px) {
 		font-size: 1.4rem;
@@ -191,14 +197,15 @@ const ImageLabelWrapper = styled.div`
 	}
 `;
 const ImageLabelName = styled.p`
-	font-family: 'Heading3', Arial, Serif;
+	font-family: 'Jost', Arial, Serif;
 	font-size: 2.8rem;
+	font-weight: 300;
 	color: ${props => props.theme.desktop.grey_5};
 	width: 100%;
 	text-align: left;
 	@media (max-width: 843px) {
 		font-size: 2.2rem;
-		font-family: 'Logo', Arial, Serif;
+		font-family: 'Jost', Arial, Serif;
 		font-weight: 300;
 	}
 	@media (max-width: 740px) {
@@ -207,8 +214,9 @@ const ImageLabelName = styled.p`
 	}
 `;
 const ImageLabelParagraph = styled.p`
-	font-family: 'Logo', Arial, Serif;
+	font-family: 'Jost', Arial, Serif;
 	font-size: 1.6rem;
+	font-weight: 400;
 	text-align: left;
 	color: ${props => props.theme.desktop.grey_5};
 

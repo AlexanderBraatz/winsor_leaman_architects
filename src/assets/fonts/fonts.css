@@ -64,3 +64,138 @@
 	/* 	font-size: 14px; */
 	/* p */
 }
+/* Jost-Thin */
+@font-face {
+	font-display: swap;
+	font-family: 'Jost';
+	src: url(./jost-3-cufonfonts/Jost-Thin.ttf) format('truetype');
+	font-weight: 100;
+	font-style: normal;
+}
+@font-face {
+	font-display: swap;
+	font-family: 'Jost';
+	src: url(./jost-3-cufonfonts/Jost-ThinItalic.ttf) format('truetype');
+	font-weight: 100;
+	font-style: italic;
+}
+/* Jost-ExtraLight */
+@font-face {
+	font-display: swap;
+	font-family: 'Jost';
+	src: url(./jost-3-cufonfonts/Jost-ExtraLight.ttf) format('truetype');
+	font-weight: 200;
+	font-style: normal;
+}
+@font-face {
+	font-display: swap;
+	font-family: 'Jost';
+	src: url(./jost-3-cufonfonts/Jost-ExtraLightItalic.ttf) format('truetype');
+	font-weight: 200;
+	font-style: italic;
+}
+/* Jost-Light */
+@font-face {
+	font-display: swap;
+	font-family: 'Jost';
+	src: url(./jost-3-cufonfonts/Jost-Light.ttf) format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-display: swap;
+	font-family: 'Jost';
+	src: url(./jost-3-cufonfonts/Jost-LightItalic.ttf) format('truetype');
+	font-weight: 300;
+	font-style: italic;
+}
+/* Jost-Regular */
+@font-face {
+	font-display: swap;
+	font-family: 'Jost';
+	src: url(./jost-3-cufonfonts/Jost-Regular.ttf) format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-display: swap;
+	font-family: 'Jost';
+	src: url(./jost-3-cufonfonts/Jost-Italic.ttf) format('truetype');
+	font-weight: 400;
+	font-style: italic;
+}
+/* Jost-Medium */
+@font-face {
+	font-display: swap;
+	font-family: 'Jost';
+	src: url(./jost-3-cufonfonts/Jost-Medium.ttf) format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-display: swap;
+	font-family: 'Jost';
+	src: url(./jost-3-cufonfonts/Jost-MediumItalic.ttf) format('truetype');
+	font-weight: 500;
+	font-style: italic;
+}
+/* Jost-SemiBold */
+@font-face {
+	font-display: swap;
+	font-family: 'Jost';
+	src: url(./jost-3-cufonfonts/Jost-SemiBold.ttf) format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-display: swap;
+	font-family: 'Jost';
+	src: url(./jost-3-cufonfonts/Jost-SemiBoldItalic.ttf) format('truetype');
+	font-weight: 600;
+	font-style: italic;
+}
+/* Jost-Bold */
+@font-face {
+	font-display: swap;
+	font-family: 'Jost';
+	src: url(./jost-3-cufonfonts/Jost-SemiBold.ttf) format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-display: swap;
+	font-family: 'Jost';
+	src: url(./jost-3-cufonfonts/Jost-SemiBold.ttf) format('truetype');
+	font-weight: 700;
+	font-style: italic;
+}
+/* Jost-ExtraBold.ttf */
+@font-face {
+	font-display: swap;
+	font-family: 'Jost';
+	src: url(./jost-3-cufonfonts/Jost-ExtraBold.ttf) format('truetype');
+	font-weight: 800;
+	font-style: normal;
+}
+@font-face {
+	font-display: swap;
+	font-family: 'Jost';
+	src: url(./jost-3-cufonfonts/Jost-ExtraBoldItalic.ttf) format('truetype');
+	font-weight: 800;
+	font-style: italic;
+}
+/* Jost-Black */
+@font-face {
+	font-display: swap;
+	font-family: 'Jost';
+	src: url(./jost-3-cufonfonts/Jost-Black.ttf) format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+@font-face {
+	font-display: swap;
+	font-family: 'Jost';
+	src: url(./jost-3-cufonfonts/Jost-BlackItalic.ttf) format('truetype');
+	font-weight: 900;
+	font-style: italic;
+}
