@@ -167,7 +167,7 @@ export default function ContactForm(props) {
 						})}
 					</InputGroup>
 					<TextareaWrapper>
-						<Label>Other comments</Label>
+						<Label>Comment</Label>
 						<Textarea name="comments" />
 					</TextareaWrapper>
 					<SubmitButton
@@ -188,8 +188,10 @@ const Form = styled.form`
 const ContactFormPrompt = styled.p`
 	text-align: left;
 	margin-bottom: 2.2rem;
-	font-family: 'Body', Arial, Serif;
+	font-family: 'Jost', Arial, Serif;
+	font-weight: 400;
 	font-size: 1.6rem;
+	height: 2rem;
 	@media (max-width: 843px) {
 		font-size: 1.4rem;
 		margin-bottom: 2rem;
@@ -214,7 +216,8 @@ const InputGroup = styled.div`
 
 const Label = styled.label`
 	color: ${props => props.theme.desktop.grey_3};
-	font-family: 'SmallText', Arial, Serif;
+	font-family: 'Jost', Arial, Serif;
+	font-weight: 300;
 	font-size: 1.4rem;
 	padding-left: 0.4rem;
 `;
@@ -232,7 +235,8 @@ const Textarea = styled.textarea`
 	border: 0.1rem solid ${props => props.theme.desktop.dark_4};
 	background-color: ${props => props.theme.desktop.dark_2};
 	color: ${props => props.theme.desktop.grey_3};
-	font-family: 'SmallText', Arial, Serif;
+	font-family: 'Jost', Arial, Serif;
+	font-weight: 400;
 	font-size: 1.4rem;
 	padding: 0.7rem 1rem;
 	resize: none;

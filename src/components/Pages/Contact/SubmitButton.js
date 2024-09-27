@@ -61,7 +61,8 @@ const Button = styled.button`
 `;
 const Text = styled.p`
 	color: ${props => props.theme.desktop.grey_5};
-	font-family: 'Button', Arial, Serif;
+	font-family: 'Jost', Arial, Serif;
+	font-weight: 500;
 	font-size: 1.6rem;
 `;
 const Background = styled.div`

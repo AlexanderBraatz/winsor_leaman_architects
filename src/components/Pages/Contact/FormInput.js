@@ -30,7 +30,8 @@ const InputWrapper = styled.div`
 
 const Label = styled.label`
 	color: ${props => props.theme.desktop.grey_3};
-	font-family: 'SmallText', Arial, Serif;
+	font-family: 'Jost', Arial, Serif;
+	font-weight: 300;
 	font-size: 1.4rem;
 	padding-left: 0.4rem;
 	&.invalidLabel {
@@ -46,7 +47,8 @@ const Input = styled.input`
 	background-color: ${props => props.theme.desktop.dark_2};
 
 	color: ${props => props.theme.desktop.grey_3};
-	font-family: 'SmallText', Arial, Serif;
+	font-family: 'Jost', Arial, Serif;
+	font-weight: 400;
 	font-size: 1.4rem;
 	padding-left: 1rem;
 	&.invalidInput {

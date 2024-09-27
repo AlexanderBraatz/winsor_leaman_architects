@@ -257,7 +257,8 @@ const ImageLabel = styled.div`
 const LabelText = styled.p`
 	color: ${props => props.theme.desktop.grey_5};
 	text-align: right;
-	font-family: 'SubHeading', Arial, Serif;
+	font-family: 'Jost', Arial, Serif;
+	font-weight: 400;
 	font-size: 2.4rem;
 	line-height: 4rem;
 	margin-right: 2rem;

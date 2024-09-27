@@ -65,20 +65,20 @@ const DescriptionContainer = styled.div`
 	}
 `;
 const Heading = styled.h2`
-	font-family: 'Heading2';
-	font-size: 48px;
+	font-family: 'Jost', Arial, Serif;
 	font-weight: 400;
+	font-size: 48px;
 	line-height: 80px;
 	letter-spacing: -0.01em;
 	text-align: left;
 	@media (max-width: 843px) {
 		font-size: 28px;
 		line-height: 40px;
-		font-family: 'Heading3';
 	}
 `;
 const Year = styled.p`
-	font-family: 'Body';
+	font-family: 'Jost', Arial, Serif;
+
 	font-size: 22px;
 	font-weight: 300;
 	line-height: 32px;
@@ -89,7 +89,6 @@ const Year = styled.p`
 		font-size: 18px;
 		font-weight: 300;
 		line-height: 26px;
-		font-family: 'Heading3';
 	}
 `;
 const Divider = styled.div`
@@ -100,7 +99,7 @@ const Divider = styled.div`
 `;
 
 const DescriptionText = styled.p`
-	font-family: 'Logo';
+	font-family: 'Jost', Arial, Serif;
 	font-size: 16px;
 	line-height: 22px;
 	font-weight: 400;
@@ -152,10 +151,10 @@ const FeedbackContainer = styled.div`
 		max-width: 27rem;
 	}
 `;
-const FeedbackHeading = styled.div`
-	font-family: 'SmallText';
-	font-size: 36px;
+const FeedbackHeading = styled.h2`
+	font-family: 'Jost', Arial, Serif;
 	font-weight: 300;
+	font-size: 36px;
 	line-height: 56px;
 	letter-spacing: 0em;
 	text-align: left;
@@ -170,11 +169,11 @@ const FeedbackHeading = styled.div`
 		line-height: 26px;
 	}
 `;
-const FeedbackText = styled.div`
-	font-family: 'SmallText';
+const FeedbackText = styled.p`
+	font-family: 'Jost', Arial, Serif;
+	font-weight: 400;
 	font-size: 16px;
 	line-height: 22px;
-	font-weight: 300;
 	letter-spacing: 0em;
 	text-align: left;
 	margin-top: 2.4rem;
@@ -185,7 +184,7 @@ const FeedbackText = styled.div`
 	}
 	@media (max-width: 480px) {
 		font-size: 14px;
-		font-weight: 300;
+		font-weight: 400;
 		line-height: 20px;
 	}
 `;

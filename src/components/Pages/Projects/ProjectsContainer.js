@@ -76,7 +76,8 @@ const StyledCustomLink = styled.li`
 `;
 const StyledLink = styled(Link)`
 	color: ${props => props.theme.desktop.grey_5};
-	font-family: 'Button', Arial, Serif;
+	font-family: 'Jost', Arial, Serif;
+	font-weight: 500;
 	text-decoration: none;
 	font-size: 1.6rem;
 	padding: 0 0.3rem;

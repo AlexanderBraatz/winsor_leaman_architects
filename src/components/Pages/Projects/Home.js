@@ -380,8 +380,8 @@ const Text = styled.p`
 	transform: translateZ(0);
 
 	@media (min-width: 843px) {
-		font-family: 'Subheading', Arial, Serif;
-		font-weight: 200;
+		font-family: 'Jost', Arial, Serif;
+		font-weight: 300;
 		margin-right: 1rem;
 		font-size: 3.6rem;
 
@@ -390,13 +390,13 @@ const Text = styled.p`
 		}
 	}
 	@media (min-width: 480px) and (max-width: 843px) {
-		font-family: 'Subheading', Arial, Serif;
-		font-weight: 200;
+		font-family: 'Jost', Arial, Serif;
+		font-weight: 300;
 		margin-right: 1rem;
 		font-size: 3.6rem;
 	}
 	@media (max-width: 480px) {
-		font-family: 'Heading3', Arial, Serif;
+		font-family: 'Jost', Arial, Serif;
 		font-weight: 300;
 		margin-right: 0.6rem;
 		font-size: 2.2rem;

@@ -80,7 +80,8 @@ const StyledWLALogo = styled(WLALogo)`
 `;
 
 const LogoName = styled.h1`
-	font-family: 'Logo', Arial, Serif;
+	font-family: 'Jost', Arial, Serif;
+	font-weight: 400;
 	font-size: 2.8rem;
 	margin-left: 1.6rem;
 	@media (max-width: 1150px) {
@@ -115,7 +116,9 @@ const StyledCustomLink = styled.li`
 	}
 `;
 const StyledLink = styled(Link)`
-	font-family: 'Button', Arial, Serif;
+	font-family: 'Jost', Arial, Serif;
+	font-weight: 500;
+
 	font-size: 2.2rem;
 	text-decoration: none;
 
@@ -131,7 +134,7 @@ const StyledLink = styled(Link)`
 `;
 const Underline = styled.div`
 	width: 0%;
-	height: 0.2rem;
+	height: 0.15rem;
 	transition: width 0.3s;
 
 	background-color: ${props => props.theme.desktop.grey_5};

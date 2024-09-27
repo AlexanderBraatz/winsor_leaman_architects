@@ -65,7 +65,8 @@ const SideBar = styled.div`
 `;
 const SideHeading = styled.p`
 	color: ${props => props.theme.desktop.grey_5};
-	font-family: 'Button', Arial, Serif;
+	font-family: 'Jost', Arial, Serif;
+	font-weight: 500;
 	font-size: 1.6rem;
 	padding-left: 6.4rem;
 	margin-top: 3.7rem;
@@ -75,7 +76,8 @@ const SideHeading = styled.p`
 		display: none;
 	}
 	@media (max-width: 480px) {
-		font-family: 'Subheading', Arial, Serif;
+		font-family: 'Jost', Arial, Serif;
+		font-weight: 300;
 		padding-left: 1.6rem;
 		margin-top: 0.8rem;
 		height: fit-content;

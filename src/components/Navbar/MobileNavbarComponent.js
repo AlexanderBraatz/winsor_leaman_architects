@@ -180,7 +180,8 @@ const StyledWLALogo = styled(WLALogo)`
 `;
 
 const LogoName = styled.h1`
-	font-family: 'Logo', Arial, Serif;
+	font-family: 'Jost', Arial, Serif;
+	font-weight: 500;
 	font-size: 1.8rem;
 `;
 
@@ -250,10 +251,11 @@ const StyledCustomLink = styled.li`
 	justify-content: center;
 `;
 const StyledLink = styled(Link)`
-	font-family: 'Body', Arial, Serif;
+	font-family: 'Jost', Arial, Serif;
+	font-weight: 500;
+
 	font-size: 1.6rem;
 	text-decoration: none;
-	font-weight: 500;
 	color: ${props => props.theme.desktop.grey_5};
 	height: 5.6rem;
 	line-height: 5.6rem;

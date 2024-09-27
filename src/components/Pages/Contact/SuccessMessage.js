@@ -31,7 +31,8 @@ const Wrapper = styled.div`
 `;
 const Message = styled.p`
 	text-align: left;
-	font-family: 'Body', Arial, Serif;
+	font-family: 'Jost', Arial, Serif;
+	font-weight: 400;
 	font-size: 1.6rem;
 	position: absolute;
 	top: ${props => props.style.top};

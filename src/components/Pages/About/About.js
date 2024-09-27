@@ -92,18 +92,22 @@ const Content = styled.div`
 `;
 const Heading = styled.h2`
 	font-family: 'Jost', Arial, Serif;
+	font-weight: 400;
 	font-size: 4.8rem;
-	font-weight: 300;
 	text-align: left;
 	color: ${props => props.theme.desktop.grey_5};
 	margin-bottom: 6.4rem;
 	@media (max-width: 843px) {
+		font-family: 'Jost', Arial, Serif;
+		font-weight: 400;
 		font-size: 2.8rem;
 		font-weight: 300;
 		margin-top: 2.4rem;
 		margin-bottom: 2.4rem;
 	}
 	@media (max-width: 740px) {
+		font-family: 'Jost', Arial, Serif;
+		font-weight: 400;
 		font-size: 2.8rem;
 		margin-bottom: 2.4rem;
 	}
@@ -127,6 +131,8 @@ const Text = styled.p`
 		/* background-color: red; */
 	}
 	@media (max-width: 740px) {
+		font-family: 'Jost', Arial, Serif;
+		font-weight: 400;
 		font-size: 1.4rem;
 		width: 32rem;
 		font-weight: 400;
@@ -198,8 +204,8 @@ const ImageLabelWrapper = styled.div`
 `;
 const ImageLabelName = styled.p`
 	font-family: 'Jost', Arial, Serif;
-	font-size: 2.8rem;
 	font-weight: 300;
+	font-size: 2.8rem;
 	color: ${props => props.theme.desktop.grey_5};
 	width: 100%;
 	text-align: left;
@@ -209,6 +215,8 @@ const ImageLabelName = styled.p`
 		font-weight: 300;
 	}
 	@media (max-width: 740px) {
+		font-family: 'Jost', Arial, Serif;
+		font-weight: 300;
 		width: 100%;
 		text-align: center;
 	}
