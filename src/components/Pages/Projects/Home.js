@@ -254,8 +254,8 @@ const Placeholder = styled.div`
 const Container = styled.div`
 	display: grid;
 
-	max-width: 180rem;
-	max-height: 90rem;
+	/* max-width: 180rem; */
+	/* max-height: 90rem; */
 	height: 100%;
 	margin: 0 auto;
 
