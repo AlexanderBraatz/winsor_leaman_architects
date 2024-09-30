@@ -62,13 +62,19 @@ export default function Hero({
 
 		return (
 			<StyledPlaceholderAndImage>
-				<ImageAndLabelContainer>
-					<Placeholder
-						src={hero.placeholder}
-						className={`blurred-img ${!isImageComplete ? 'NotComplete' : ''} ${
-							isImageLoaded ? 'loaded' : ''
-						}`}
-					></Placeholder>
+				<ImageAndLabelContainer
+					className={`blurred-img ${!isImageComplete ? 'NotComplete' : ''} ${
+						isImageLoaded ? 'loaded' : ''
+					}`}
+				>
+					<PlaceholderBackgroundColourForLoadingAnimation>
+						<Placeholder
+							src={hero.placeholder}
+							className={`blurred-img ${
+								!isImageComplete ? 'NotComplete' : ''
+							} ${isImageLoaded ? 'loaded' : ''}`}
+						></Placeholder>
+					</PlaceholderBackgroundColourForLoadingAnimation>
 					<HeroImage
 						src={hero.heroImageMobile}
 						srcSet={`${hero.heroImageMobile} 1200w,${hero.heroImageTablet} 1366w,${hero.heroImageDesktop} 2400w`}
@@ -99,6 +105,9 @@ const ImageAndLabelContainer = styled.div`
 	max-width: fit-content;
 	height: 100%;
 `;
+const PlaceholderBackgroundColourForLoadingAnimation = styled.div`
+	background-color: ${props => props.theme.desktop.grey_5};
+`;
 const Placeholder = styled.img`
 	filter: blur(0px);
 	height: 100%;
@@ -117,41 +126,25 @@ const Placeholder = styled.img`
 	max-height: auto;
 	object-fit: cover;
 	object-position: center;
+	animation: pulse 1.5s infinite; // makes placeholder slightly transparent rather then animating a white element on top
+
 	&.NotComplete {
-		/* transition: filter 250ms ease-in-out; */
 		filter: blur(5px);
-	}
-	&.NotComplete img {
-		// this is so the image fades in after it is loaded
-		/* transition: transform 0.3s linear, opacity 250ms ease-in-out; */
-		opacity: 0;
 	}
 
 	&.loaded {
-		display: none; // hides placeholder if the placeholder is wider then the image after the image has loaded
-	}
-	&::before {
-		content: '';
-		position: absolute;
-		inset: 0;
-		opacity: 0;
-		animation: pulse 2.5s infinite;
-		background-color: ${props => props.theme.desktop.grey_5};
-	}
-	&.loaded::before {
-		animation: none;
-		content: none;
+		display: none; // hides placeholder so the heroImage which is a sibling element can replace it
 	}
 
 	@keyframes pulse {
 		0% {
-			opacity: 0;
+			opacity: 1;
 		}
 		50% {
-			opacity: 0.2;
+			opacity: 0.7;
 		}
 		100% {
-			opacity: 0;
+			opacity: 1;
 		}
 	}
 	@media (max-width: 843px) {
