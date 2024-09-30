@@ -113,7 +113,7 @@ const Placeholder = styled.img`
 	height: 100%;
 	object-fit: cover;
 	position: relative;
-	width: fit-content;
+	width: auto;
 	/* height: 200px;
 	width: 200px; */
 	max-width: 100%;
