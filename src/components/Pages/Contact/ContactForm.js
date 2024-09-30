@@ -119,11 +119,11 @@ export default function ContactForm(props) {
 						e.target.reset();
 						setValues({
 							name: '',
-							last_name: '',
+							// last_name: '',
 							email: '',
-							phone: '',
-							postcode_of_project: '',
-							budget: '',
+							// phone: '',
+							// postcode_of_project: '',
+							// budget: '',
 							comments: ''
 						});
 						setMessageHasSent(true);

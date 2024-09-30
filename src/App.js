@@ -19,70 +19,82 @@ import Flats from './components/Pages/Projects/Flats/Flats';
 import Churches from './components/Pages/Projects/Churches/Churches';
 import Commercial from './components/Pages/Projects/Commercial/Commercial';
 
+import { HelmetProvider, Helmet } from 'react-helmet-async';
+
 const App = () => {
+	const helmetContext = {};
 	return (
-		<Container>
-			<StyledApp className="App">
-				<ResponsiveNavbar />
-				<BodyContainer>
-					<Routes>
-						<Route
-							path=""
-							element={<Home />}
-						/>
-						<Route
-							path="/projects"
-							element={<Home />}
-						/>
-						<Route
-							path="/about"
-							element={<About />}
-						/>
-						<Route
-							path="/fees"
-							element={<Fees />}
-						/>
-						<Route
-							path="/contact"
-							element={<Contact />}
-						/>
-						<Route
-							path="/styleGuide"
-							element={<StyleGuide />}
-						/>
-						<Route
-							path="/projects"
-							element={<ProjectsContainer />}
-						>
+		<HelmetProvider context={helmetContext}>
+			<Container>
+				<Helmet>
+					<title>Winsor & Leaman Architects</title>
+					<meta
+						name="description"
+						content="We design extensions, private houses, commercial and leisure developments, as well as renovations of historic buildings and churches."
+					/>
+				</Helmet>
+				<StyledApp className="App">
+					<ResponsiveNavbar />
+					<BodyContainer>
+						<Routes>
 							<Route
-								path="extensions/:id?"
-								element={<Extensions />}
+								path=""
+								element={<Home />}
 							/>
 							<Route
-								path="houses/:id?"
-								element={<Houses />}
+								path="/projects"
+								element={<Home />}
 							/>
 							<Route
-								path="renovation/:id?"
-								element={<Renovation />}
+								path="/about"
+								element={<About />}
 							/>
 							<Route
-								path="flats/:id?"
-								element={<Flats />}
+								path="/fees"
+								element={<Fees />}
 							/>
 							<Route
-								path="churches/:id?"
-								element={<Churches />}
+								path="/contact"
+								element={<Contact />}
 							/>
 							<Route
-								path="commercial/:id?"
-								element={<Commercial />}
+								path="/styleGuide"
+								element={<StyleGuide />}
 							/>
-						</Route>
-					</Routes>
-				</BodyContainer>
-			</StyledApp>
-		</Container>
+							<Route
+								path="/projects"
+								element={<ProjectsContainer />}
+							>
+								<Route
+									path="extensions/:id?"
+									element={<Extensions />}
+								/>
+								<Route
+									path="houses/:id?"
+									element={<Houses />}
+								/>
+								<Route
+									path="renovation/:id?"
+									element={<Renovation />}
+								/>
+								<Route
+									path="flats/:id?"
+									element={<Flats />}
+								/>
+								<Route
+									path="churches/:id?"
+									element={<Churches />}
+								/>
+								<Route
+									path="commercial/:id?"
+									element={<Commercial />}
+								/>
+							</Route>
+						</Routes>
+					</BodyContainer>
+				</StyledApp>
+			</Container>
+		</HelmetProvider>
 	);
 };
 
