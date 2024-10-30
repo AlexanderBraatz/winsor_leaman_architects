@@ -8,6 +8,7 @@ export default function FormInput(props) {
 			<Label
 				className={showError ? 'invalidLabel' : ''}
 				children={!showError ? label : errorMessage}
+				for={name}
 			/>
 			<Input
 				className={showError ? 'invalidInput' : ''}
@@ -17,6 +18,7 @@ export default function FormInput(props) {
 				onChange={props.onChange}
 				value={props.value}
 				onBlur={onBlur}
+				id={name}
 			/>
 		</InputWrapper>
 	);

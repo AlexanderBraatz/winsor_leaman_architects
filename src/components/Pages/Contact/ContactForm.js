@@ -167,8 +167,11 @@ export default function ContactForm(props) {
 						})}
 					</InputGroup>
 					<TextareaWrapper>
-						<Label>Comment</Label>
-						<Textarea name="comments" />
+						<Label for="comments">Comment</Label>
+						<Textarea
+							name="comments"
+							id="comments"
+						/>
 					</TextareaWrapper>
 					<SubmitButton
 						clicked={clicked}
